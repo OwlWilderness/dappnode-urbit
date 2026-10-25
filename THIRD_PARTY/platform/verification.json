@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-10-24T23:11:34.495928+00:00",
+  "retrieval_file_hash_assertions": 22,
+  "unique_retrieved_files_checked": 18,
+  "license_files": 5,
+  "exact_version_upstream_licenses": 4,
+  "declared_files_unchanged": [
+    "build/Dockerfile",
+    "LICENSE.md"
+  ],
+  "local_absolute_paths_in_artifacts": false,
+  "citation_validation": "sources.py verify README.md --strict: citations OK",
+  "files_including_this_report": 22,
+  "limitations": [
+    "No image/container operations or installed-package inventory.",
+    "No authenticity/signature or complete legal-compliance verification.",
+    "Only the assigned platform subtree was written."
+  ]
+}

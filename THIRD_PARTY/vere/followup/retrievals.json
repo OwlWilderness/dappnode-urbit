@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "retrievals": [
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3.c.txt",
+      "bytes": 27558,
+      "sha256": "3eba7449dc6737e2bc8c6ee467390619515d6b8fdb2c772c78051852c3b24bc1",
+      "source_url": "https://raw.githubusercontent.com/BLAKE3-team/BLAKE3/5aa53f07f7188a569cadfc5daf1522972d9a9630/c/blake3.c",
+      "final_url": "https://raw.githubusercontent.com/BLAKE3-team/BLAKE3/5aa53f07f7188a569cadfc5daf1522972d9a9630/c/blake3.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3.h.txt",
+      "bytes": 2707,
+      "sha256": "14db1dd1a80a9856b241ccd1e96715efaf4fc0bcfca4bc1ec660747f9edaaa23",
+      "source_url": "https://raw.githubusercontent.com/BLAKE3-team/BLAKE3/5aa53f07f7188a569cadfc5daf1522972d9a9630/c/blake3.h",
+      "final_url": "https://raw.githubusercontent.com/BLAKE3-team/BLAKE3/5aa53f07f7188a569cadfc5daf1522972d9a9630/c/blake3.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3_impl.h.txt",
+      "bytes": 10313,
+      "sha256": "8f2de31b1498a6a572db2328d8d7e7a8dd904459c74a1c68b7fae34405c518ec",
+      "source_url": "https://raw.githubusercontent.com/BLAKE3-team/BLAKE3/5aa53f07f7188a569cadfc5daf1522972d9a9630/c/blake3_impl.h",
+      "final_url": "https://raw.githubusercontent.com/BLAKE3-team/BLAKE3/5aa53f07f7188a569cadfc5daf1522972d9a9630/c/blake3_impl.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/evidence/blake3-upstream-tree.json",
+      "bytes": 25545,
+      "sha256": "0df12f27bc88a94bdfc6ab64d6ac11924be24f6bc4651f8009c1c6a5a374360f",
+      "source_url": "https://api.github.com/repos/BLAKE3-team/BLAKE3/git/trees/5aa53f07f7188a569cadfc5daf1522972d9a9630?recursive=1",
+      "final_url": "https://api.github.com/repos/BLAKE3-team/BLAKE3/git/trees/5aa53f07f7188a569cadfc5daf1522972d9a9630?recursive=1",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 4194304
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/evidence/h2o-tree.json",
+      "bytes": 1268191,
+      "sha256": "a7fa8f7c6777e469577966f8b99a126892b897a69096167def40dd475d2f353c",
+      "source_url": "https://api.github.com/repos/pkova/h2o/git/trees/3bbfe369a5c31d38cc1717e5281ca6af89ecf787?recursive=1",
+      "final_url": "https://api.github.com/repos/pkova/h2o/git/trees/3bbfe369a5c31d38cc1717e5281ca6af89ecf787?recursive=1",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 4194304
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/evidence/urcrypt-tree.json",
+      "bytes": 47764,
+      "sha256": "55e873b40cd84c1fe71e709d78226d26d9f50e44bdebed6d94d052f2e0b14364",
+      "source_url": "https://api.github.com/repos/urbit/urcrypt/git/trees/6c93535d46adffcd1495f904bac91d43b2d6d555?recursive=1",
+      "final_url": "https://api.github.com/repos/urbit/urcrypt/git/trees/6c93535d46adffcd1495f904bac91d43b2d6d555?recursive=1",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 4194304
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kstring.h.txt",
+      "bytes": 6332,
+      "sha256": "0d02c7bf278381f57c9e5f2c420edd367bb4dd322ae4daf3d52c204d03656338",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/klib/kstring.h",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/klib/kstring.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kvec.h.txt",
+      "bytes": 2880,
+      "sha256": "5bce2705b84e7e25c3e3636d62b725407015b8a937a5d0db57b8ee120981daca",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/klib/kvec.h",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/klib/kvec.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.c.txt",
+      "bytes": 930,
+      "sha256": "2d69f7b768e6f86c38b50cdeb58a6f52a9156650f2d65cce6e81a846ff6519e0",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/curve25519.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/curve25519.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c.txt",
+      "bytes": 4591,
+      "sha256": "6ddd5a293c54ffc5d53448b6cb534f36d2f8f71c463b01dedde9493fab724075",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/ext/handy.h.txt",
+      "bytes": 1500,
+      "sha256": "4fcfcb98ec70e0ff5025a4b0ae17c61f87fff31bc2ea84c1dcdc88bbd3069ae7",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/ext/handy.h",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/ext/handy.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/poly1305.c.txt",
+      "bytes": 4901,
+      "sha256": "f3701c6cceaf626e22f16b8a9df23eafb512eafb6a53a7e1580cf4bd77019e39",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/poly1305.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/cifra/src/poly1305.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/micro-ecc/uECC.c.txt",
+      "bytes": 55371,
+      "sha256": "e63972fb13387e42cb9a350f2d3fedc2d00903feec37d6d6010a1402f97c207b",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/micro-ecc/uECC.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/deps/micro-ecc/uECC.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/asn1.c.txt",
+      "bytes": 11046,
+      "sha256": "d704e712966089258307f13bc8b43e5cc58069e4148e87e4045a63e9f0626210",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/asn1.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/asn1.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/cifra.c.txt",
+      "bytes": 19108,
+      "sha256": "3a2b1f437c7d6f6577a5f79bc79d0f8c99022054f603898018c4cc1dbedc106f",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/cifra.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/cifra.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/minicrypto-pem.c.txt",
+      "bytes": 13630,
+      "sha256": "c3b7397aa09db044698ebf81913487b149a9f8bdb14e4c2ce6ac1d87e3907a45",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/minicrypto-pem.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/minicrypto-pem.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/pembase64.c.txt",
+      "bytes": 11937,
+      "sha256": "98399718814bd27f932a4e7ecaeeec016f5a5a9d64bda413ea463111db6db5d5",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/pembase64.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/pembase64.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/uecc.c.txt",
+      "bytes": 6442,
+      "sha256": "33dcc52bad432ef07843a64f8068b55fe9b4ac57df295c8a85336d675f9b7f00",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/uecc.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/deps/picotls/lib/uecc.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/include/h2o/memory.h.txt",
+      "bytes": 14319,
+      "sha256": "db8a6ab6416bf549d592da6fbae616f975ce27b9dd3e4f369a8ad4ed15f93502",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/include/h2o/memory.h",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/include/h2o/memory.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/string.c.txt",
+      "bytes": 17324,
+      "sha256": "b4cd72c20509368f80ef89b742892a692caf8a5e929fad9082592e6b9fea7f6d",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/common/string.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/common/string.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/casper.c.txt",
+      "bytes": 7456,
+      "sha256": "ace8b7ae9ba1bd6b46630d5356a390e0420226cd9af22be9b19b9df199637966",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/http2/casper.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/http2/casper.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/hpack.c.txt",
+      "bytes": 36826,
+      "sha256": "f7004cc2f2a7e91e0ee23f54535b3aa8efd6e8fafe196875f5b0f4a9c925ac7b",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/http2/hpack.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/http2/hpack.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2.h.txt",
+      "bytes": 2865,
+      "sha256": "3c2de197dd23179f78c57deac7b73a6049778bf651c5db57e508b2cfce5e7559",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/argon2/src/blake2/blake2.h",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/argon2/src/blake2/blake2.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2b.c.txt",
+      "bytes": 12510,
+      "sha256": "52519ccbc1e48f489ff444091f630d05dadcc8f1ee61c5b7361e3a9618299c9a",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/argon2/src/blake2/blake2b.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/argon2/src/blake2/blake2b.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/opt.c.txt",
+      "bytes": 10298,
+      "sha256": "a4f86fd457fb46300530aef80064c3e05b7ca18b67ba06b29c1d383d8e2534a7",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/argon2/src/opt.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/argon2/src/opt.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3.c.txt",
+      "bytes": 27765,
+      "sha256": "55b23867aa8526c8b243758c4524dd899da502484f3bdeaf6a56df91e021b083",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_avx2_x86-64_unix.S.txt",
+      "bytes": 66050,
+      "sha256": "a2d95519fd9845cf80252110e21a93124e81c03da836eaac0bca0537be4f8324",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_avx2_x86-64_unix.S",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_avx2_x86-64_unix.S",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_avx512_x86-64_unix.S.txt",
+      "bytes": 89364,
+      "sha256": "ecf923dc9ccac941b751e7190c9f10b97535d1e8d6e0bb0888a979f5bc0a5fde",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_avx512_x86-64_unix.S",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_avx512_x86-64_unix.S",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_dispatch.c.txt",
+      "bytes": 8362,
+      "sha256": "d545f50842ede67a093a382d2c7c7c57fb8107d86af954f7cd2f60a22325d1e1",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_dispatch.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_dispatch.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_impl.h.txt",
+      "bytes": 10309,
+      "sha256": "80524859fb92c5604785878e883f3bcbdbf7425417f0efa4bd12c506047a6f46",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_impl.h",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_impl.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_portable.c.txt",
+      "bytes": 5889,
+      "sha256": "2bc25b0dad67b4329d0b49cfa075ab2b0d04e424addbddc4e9c389c52a192524",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_portable.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_portable.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_sse2_x86-64_unix.S.txt",
+      "bytes": 68858,
+      "sha256": "94baa998f4114bf57b99e1791a21e9f0bcdc4bd5803864eb30a2477440b7380c",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_sse2_x86-64_unix.S",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_sse2_x86-64_unix.S",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_sse41_x86-64_unix.S.txt",
+      "bytes": 61143,
+      "sha256": "135048e4a81a6f9e86960b115141874a55954dbfd2cd1e8e9818837b46b498ad",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_sse41_x86-64_unix.S",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3_sse41_x86-64_unix.S",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/ed25519/src/sha512.c.txt",
+      "bytes": 11088,
+      "sha256": "b34128b950036777c299943d624bd830a234a65932c394fdf455e4948258fb6d",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/ed25519/src/sha512.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/ed25519/src/sha512.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-check.c.txt",
+      "bytes": 1967,
+      "sha256": "115ae6745c0bca6b3f568a01d3a4347db2661b71c8c0c40755674708b6aad12c",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/crypto_scrypt-check.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/crypto_scrypt-check.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-hash.c.txt",
+      "bytes": 945,
+      "sha256": "2c529a5d9eb047ecdcf55e80d971b1e991b9cf427f349aea4acbf45f923f2679",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/crypto_scrypt-hash.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/crypto_scrypt-hash.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-nosse.c.txt",
+      "bytes": 9048,
+      "sha256": "d6502178c3a6ed422e52b674c34f938a0dda90d6526312a0f1f1e1177879bc0f",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/crypto_scrypt-nosse.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/crypto_scrypt-nosse.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.c.txt",
+      "bytes": 11062,
+      "sha256": "7ee478e6a215c64713071269c241b8181e3b9ec6e82ea9c0dfda9afb96b5759d",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/sha256.c",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/sha256.c",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.h.txt",
+      "bytes": 2710,
+      "sha256": "1183dd745f2c840493681102e1447dfbac4b5f059de1dced710cddd024512b29",
+      "source_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/sha256.h",
+      "final_url": "https://raw.githubusercontent.com/urbit/urcrypt/6c93535d46adffcd1495f904bac91d43b2d6d555/scrypt/sha256.h",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/cache.c.txt",
+      "source_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/common/cache.c",
+      "final_url": "https://raw.githubusercontent.com/pkova/h2o/3bbfe369a5c31d38cc1717e5281ca6af89ecf787/lib/common/cache.c",
+      "bytes": 8183,
+      "sha256": "2b9d79bb8cd53068814aea10e32d9a9ffa6f74f4a30b79b0ff8282768de2655e",
+      "git_blob": "cc8d8f00799cddfabe083313af469ddfd95ac793",
+      "method": "missing-public-primary-file-only",
+      "max_response_bytes": 1048576
+    }
+  ],
+  "archive_downloads": 0,
+  "source_code_executed": false,
+  "max_primary_response_bytes": 4194304,
+  "max_file_response_bytes": 1048576,
+  "retained_notice_hash_checks": 142,
+  "old_source_archive_location_checked_missing": "Historical retained source directory recorded in parent evidence no longer exists; no broad cache/private search performed.",
+  "limits": "Only pinned missing public per-file/tree evidence fetched. No mirror refetch, source exception search, upstream contact, build, runtime, Docker, or publication."
+}

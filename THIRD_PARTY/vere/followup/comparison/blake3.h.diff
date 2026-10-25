@@ -1,0 +1,11 @@
+--- upstream-1.5.0/c/blake3.h
++++ urcrypt-6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3.h
+@@ -61,6 +61,8 @@
+ } blake3_hasher;
+ 
+ BLAKE3_API const char *blake3_version(void);
++BLAKE3_API void blake3_hasher_init_raw(blake3_hasher *self, const uint8_t key[BLAKE3_KEY_LEN],
++                                       uint8_t flags);
+ BLAKE3_API void blake3_hasher_init(blake3_hasher *self);
+ BLAKE3_API void blake3_hasher_init_keyed(blake3_hasher *self,
+                                          const uint8_t key[BLAKE3_KEY_LEN]);

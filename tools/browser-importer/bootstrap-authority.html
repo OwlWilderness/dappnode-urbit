@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-AZQ3gICJrvRZ9Fp+ewBm3QzBddv9sVmAG4ELWZpC6mg='; style-src 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <title>Offline importer enrollment authority</title>
+  <style>
+    body { max-width: 42rem; margin: 2rem auto; padding: 0 1rem; font: 1rem/1.5 system-ui, sans-serif; color: #222; }
+    label { display: block; margin: 1rem 0; }
+    input { box-sizing: border-box; display: block; width: 100%; padding: .6rem; font: inherit; }
+    button { padding: .6rem 1rem; margin: .4rem .4rem .4rem 0; font: inherit; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Offline importer enrollment authority</h1>
+  <p>Open this file on your own computer in a secure browser context. It makes no network requests. This is a preparation tool, not the Dappnode setup or importer login page.</p>
+  <p>Generate an independent one-time authority. Store the <strong>authority</strong> in your own password manager. Only its SHA-256 digest belongs in the package configuration. Never send either value in chat, a screenshot, a URL, or a support log. This authority is not your ship key, Dappnode password, or eventual importer password.</p>
+  <button id="generate" type="button">Generate authority and digest</button>
+  <p id="message" role="status" aria-live="polite"></p>
+  <section id="result" hidden>
+    <label>One-time authority — keep private
+      <input id="authority" type="password" readonly autocomplete="off" spellcheck="false" aria-label="One-time authority">
+    </label>
+    <button id="reveal" type="button">Show or hide authority</button>
+    <label>SHA-256 digest — package configuration only
+      <input id="digest" type="text" readonly autocomplete="off" spellcheck="false" aria-label="SHA-256 digest">
+    </label>
+    <p>After saving the authority privately, enter the digest only through the separately approved authenticated Dappnode configuration flow. Then enroll at the verified private HTTPS importer origin. No target route or setup flow has been approved yet.</p>
+    <button id="clear" type="button">Clear this page</button>
+  </section>
+<script>
+(() => {
+  const el = id => document.getElementById(id);
+  const clear = () => {
+    el('authority').value = '';
+    el('digest').value = '';
+    el('authority').type = 'password';
+    el('result').hidden = true;
+  };
+  el('generate').addEventListener('click', async () => {
+    clear();
+    el('message').textContent = '';
+    if (!window.isSecureContext || !crypto.subtle || !crypto.getRandomValues) {
+      el('message').textContent = 'A secure browser context with Web Crypto is required.';
+      return;
+    }
+    try {
+      const bytes = new Uint8Array(32);
+      crypto.getRandomValues(bytes);
+      const authority = btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      bytes.fill(0);
+      const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(authority));
+      el('authority').value = authority;
+      el('digest').value = Array.from(new Uint8Array(hash), byte => byte.toString(16).padStart(2, '0')).join('');
+      el('result').hidden = false;
+      el('message').textContent = 'Save the authority privately before leaving this page.';
+    } catch {
+      clear();
+      el('message').textContent = 'Generation failed; no authority was retained.';
+    }
+  });
+  el('reveal').addEventListener('click', () => {
+    el('authority').type = el('authority').type === 'password' ? 'text' : 'password';
+  });
+  el('clear').addEventListener('click', () => { clear(); el('message').textContent = 'Cleared.'; });
+  window.addEventListener('pagehide', clear);
+})();
+</script>
+</body>
+</html>

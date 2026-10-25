@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Private pier importer</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main id="importer">
+  <header><p class="eyebrow">Internal administration · one stopped ship</p><h1>Import a pier</h1>
+    <p>Transfer a local ZIP over this private route. Importing never starts a ship. No Dappmanager cookie is trusted.</p></header>
+  <section class="gate" aria-labelledby="gate-title">
+    <h2 id="gate-title">Runtime remains locked</h2>
+    <p id="gate">BLOCKED_EMBEDDED_OPENSSL — Start is unavailable, including after a successful import.</p>
+    <label class="declaration"><input id="confirm-start" type="checkbox" disabled>I confirm the source and every other instance of this ship are stopped. Start this imported ship now.</label>
+    <button id="start" type="button" disabled>Start ship explicitly</button>
+    <button id="stop-runtime" type="button" disabled>Stop managed ship</button>
+    <p id="runtime-state">No runtime status available before sign in.</p>
+  </section>
+  <section id="login-panel" aria-labelledby="login-title">
+    <h2 id="login-title">Owner sign in</h2>
+    <form id="login-form">
+      <label for="username">Account</label><input id="username" name="username" autocomplete="username" value="owner">
+      <label for="password">Importer password</label><input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button id="login" type="submit">Sign in</button>
+    </form>
+    <p>The importer uses its own session. The password is cleared immediately on submission, never stored by this page.</p>
+  </section>
+  <section id="access-panel" hidden aria-labelledby="access-title">
+    <h2 id="access-title">Ship access code</h2>
+    <p>Re-enter your manager password to reveal the running ship's login code. It is hidden after 30 seconds. Copy manually only where you intend to sign in.</p>
+    <form id="access-form">
+      <label for="access-password">Manager password</label>
+      <input id="access-password" name="password" type="password" autocomplete="current-password" required>
+      <button id="reveal-access-code" type="submit" disabled>Reveal access code</button>
+      <button id="hide-access-code" type="button">Hide</button>
+    </form>
+    <output id="access-code" hidden aria-label="Ship login code"></output>
+  </section>
+  <section id="transfer-panel" hidden aria-labelledby="transfer-title">
+    <h2 id="transfer-title">Local ZIP transfer</h2>
+    <p>After a reload or interruption, reselect the original ZIP. Every retained byte is verified before resuming; the server's durable offset is authoritative.</p>
+    <form id="transfer-form">
+      <label for="zip">Pier ZIP</label><input id="zip" type="file" accept=".zip,application/zip" required aria-describedby="file-meta">
+      <p id="file-meta">No ZIP selected. Metadata stays in this page.</p>
+      <label for="budget">Maximum expanded size (GiB)</label><input id="budget" type="number" value="64" max="64" min="0.001" step="any" required aria-describedby="budget-help">
+      <p id="budget-help">Conservative hard ceiling: 64 GiB. Lower this to your expected expanded size. Capacity checks and archive validation remain server-side. A retained job keeps its original budget.</p>
+      <label class="declaration"><input id="stopped" type="checkbox" required>At the time of this transfer, the source ship is stopped and no other instance of this ship is running.</label>
+      <div class="actions"><button id="transfer" type="submit" disabled>Upload / resume</button><button id="pause" type="button" disabled>Pause</button><button id="cancel" type="button" disabled>Cancel incomplete import</button></div>
+    </form>
+    <div class="actions"><button id="refresh" type="button">Refresh status</button><button id="logout" type="button">Sign out</button></div>
+  </section>
+  <section aria-labelledby="status-title"><h2 id="status-title">Import status</h2>
+    <p id="state">Sign in to read server status.</p>
+    <label for="upload-progress">Durable upload</label><progress id="upload-progress" value="0" max="1"></progress><p id="upload-count">0 bytes</p>
+    <label for="extract-progress">Server extraction</label><progress id="extract-progress" value="0" max="1"></progress><p id="extract-count">0 bytes · 0 files</p>
+    <p id="capacity">Capacity is available after sign in.</p>
+    <p id="message" role="status" aria-live="polite">Sign in to begin.</p>
+  </section>
+  <noscript>JavaScript is required for bounded transfer. No ship can be started from this page.</noscript>
+</main>
+</body>
+</html>

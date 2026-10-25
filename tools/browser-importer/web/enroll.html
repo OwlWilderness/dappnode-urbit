@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Private importer enrollment</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./enroll.mjs"></script>
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">Private administration · no ship started</p><h1>Enroll importer access</h1></header>
+  <section>
+    <p>Use only the independently verified private HTTPS address. The Dappnode password and ship key are not enrollment authorities.</p>
+    <form id="enroll-form" autocomplete="off">
+      <label for="username">Account</label><input id="username" name="username" autocomplete="username" value="owner" readonly>
+      <label for="authority">One-time owner authority</label><input id="authority" name="authority" type="password" autocomplete="off" required>
+      <label for="password">New importer password</label><input id="password" name="password" type="password" autocomplete="new-password" required>
+      <button id="enroll" type="submit">Enroll access</button>
+    </form>
+    <p id="message" role="status" aria-live="polite">Enrollment grants importer login only. It never starts a ship.</p>
+  </section>
+  <noscript>JavaScript is required for enrollment. No ship can be started from this page.</noscript>
+</main>
+</body>
+</html>

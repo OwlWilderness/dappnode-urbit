@@ -1,0 +1,15 @@
+--- upstream-1.5.0/c/blake3.c
++++ urcrypt-6c93535d46adffcd1495f904bac91d43b2d6d555/blake3/blake3.c
+@@ -389,6 +389,12 @@
+ 
+ void blake3_hasher_init_derive_key(blake3_hasher *self, const char *context) {
+   blake3_hasher_init_derive_key_raw(self, context, strlen(context));
++}
++
++void blake3_hasher_init_raw(blake3_hasher *self, const uint8_t key[BLAKE3_KEY_LEN], uint8_t flags) {
++  uint32_t key_words[8];
++  load_key_words(key, key_words);
++  hasher_init_base(self, key_words, flags);
+ }
+ 
+ // As described in hasher_push_cv() below, we do "lazy merging", delaying

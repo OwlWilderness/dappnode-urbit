@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "upstream_revision": "5aa53f07f7188a569cadfc5daf1522972d9a9630",
+  "upstream_version": "1.5.0",
+  "urcrypt_revision": "6c93535d46adffcd1495f904bac91d43b2d6d555",
+  "selected_files": [
+    {
+      "vendored_path": "blake3/blake3.c",
+      "vendored_git_blob": "8fb3c4b050797e1f8609d1d0329316a4fede7a81",
+      "upstream_path": "c/blake3.c",
+      "upstream_git_blob": "692f4b0216485a87b469456851da6d3e8a70533b",
+      "identical": false,
+      "diff": {
+        "path": "THIRD_PARTY/vere/followup/comparison/blake3.c.diff",
+        "bytes": 565,
+        "sha256": "08b3dee620ea01c101d7b8af1b4ef5ceb73f64b1185ff2ffc39bf564e20bba9c"
+      }
+    },
+    {
+      "vendored_path": "blake3/blake3_dispatch.c",
+      "vendored_git_blob": "af6c3dadc7bbff8e9943a033a324064e62eac4ac",
+      "upstream_path": "c/blake3_dispatch.c",
+      "upstream_git_blob": "af6c3dadc7bbff8e9943a033a324064e62eac4ac",
+      "identical": true
+    },
+    {
+      "vendored_path": "blake3/blake3_portable.c",
+      "vendored_git_blob": "062dd1b47fb6424f4d3db4c6edd2f90efcb92973",
+      "upstream_path": "c/blake3_portable.c",
+      "upstream_git_blob": "062dd1b47fb6424f4d3db4c6edd2f90efcb92973",
+      "identical": true
+    },
+    {
+      "vendored_path": "blake3/blake3.h",
+      "vendored_git_blob": "3e02cd91ff4683184a4a62bce5fff96d5ff71497",
+      "upstream_path": "c/blake3.h",
+      "upstream_git_blob": "f694dcf27e4e79ef9eb002eeb623ffb4ce080ccf",
+      "identical": false,
+      "diff": {
+        "path": "THIRD_PARTY/vere/followup/comparison/blake3.h.diff",
+        "bytes": 534,
+        "sha256": "8ee61e6364c4da9cf7db4b346bee034ca2e68708077b7afb9814bd02cca73c82"
+      }
+    },
+    {
+      "vendored_path": "blake3/blake3_impl.h",
+      "vendored_git_blob": "04fa99e9d4a848badd7fa05b5383d0f2c01e50a4",
+      "upstream_path": "c/blake3_impl.h",
+      "upstream_git_blob": "beab5cf53c6fab2df04beccefbf912ad8b990e50",
+      "identical": false,
+      "diff": {
+        "path": "THIRD_PARTY/vere/followup/comparison/blake3_impl.h.diff",
+        "bytes": 1052,
+        "sha256": "5a642d4244c1fb3e56d3ea014541b590af341ce8ee657a68f6321570f9861bb8"
+      }
+    },
+    {
+      "vendored_path": "blake3/blake3_sse2_x86-64_unix.S",
+      "vendored_git_blob": "99f033fefb41ded0abbc5b5c51012d11e511fc56",
+      "upstream_path": "c/blake3_sse2_x86-64_unix.S",
+      "upstream_git_blob": "99f033fefb41ded0abbc5b5c51012d11e511fc56",
+      "identical": true
+    },
+    {
+      "vendored_path": "blake3/blake3_sse41_x86-64_unix.S",
+      "vendored_git_blob": "a3ff64269caaba80b4d7a3b0668a7bdca9f0090a",
+      "upstream_path": "c/blake3_sse41_x86-64_unix.S",
+      "upstream_git_blob": "a3ff64269caaba80b4d7a3b0668a7bdca9f0090a",
+      "identical": true
+    },
+    {
+      "vendored_path": "blake3/blake3_avx2_x86-64_unix.S",
+      "vendored_git_blob": "812bb8568295ad2a644f8170e01b7e2a552072a1",
+      "upstream_path": "c/blake3_avx2_x86-64_unix.S",
+      "upstream_git_blob": "812bb8568295ad2a644f8170e01b7e2a552072a1",
+      "identical": true
+    },
+    {
+      "vendored_path": "blake3/blake3_avx512_x86-64_unix.S",
+      "vendored_git_blob": "a06aede0f1a912bf92e4eee0e6a7200633d1ee21",
+      "upstream_path": "c/blake3_avx512_x86-64_unix.S",
+      "upstream_git_blob": "a06aede0f1a912bf92e4eee0e6a7200633d1ee21",
+      "identical": true
+    }
+  ],
+  "limit": "Selected AMD64 translation units plus two headers only; no complete source/version equivalence or modification authorization established. Binary membership unverified. Existing upstream LICENSE is reference evidence, not a legal determination."
+}

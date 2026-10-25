@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "scope": "Repository-relative owned follow-up files plus source-delivery entry points. FILES.json and verification.json intentionally excluded from their own content hash manifest.",
+  "files": [
+    {
+      "path": "THIRD_PARTY/SOURCE_DELIVERY.md",
+      "bytes": 6632,
+      "sha256": "c35284d77440d6b5f702e89dc6747cd93e4c6730ce2ff863b753afb6ba6ce838"
+    },
+    {
+      "path": "THIRD_PARTY/source-delivery.json",
+      "bytes": 6475,
+      "sha256": "37d761df90b8e77214ce817ead5c064b0b0ca60a517109c23612bab930956014"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/NOTICES.txt",
+      "bytes": 24821,
+      "sha256": "92a9d6d2337880725c1166106c839cfcc9e1fa66c1a45c74aaad64edef175398"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/README.md",
+      "bytes": 5832,
+      "sha256": "95018fc43d29b1ffab9554b3b841444eafbf3fa4b9f324fc55fc267748986b9b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/applicability.json",
+      "bytes": 20444,
+      "sha256": "d153424ab11c36d512273992ec26ce8d039617f52349aebd98453d2f21db17b7"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/archive-members.json",
+      "bytes": 250186,
+      "sha256": "804838bed4805d450d436f0db151f14bcfb68084e0c02a0841473e729270a443"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/blake3-comparison.json",
+      "bytes": 3599,
+      "sha256": "cc70d1e58b28ceb2bffe6c44ef97830108efd746cf7c7229a2d0817706281024"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/build-contract.json",
+      "bytes": 2918,
+      "sha256": "b5f395c0f23c56dbe9437303b8f3e3a972fc7e9d481277c3a657d9fd2a41b56f"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/blake3.c.diff",
+      "bytes": 565,
+      "sha256": "08b3dee620ea01c101d7b8af1b4ef5ceb73f64b1185ff2ffc39bf564e20bba9c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/blake3.h.diff",
+      "bytes": 534,
+      "sha256": "8ee61e6364c4da9cf7db4b346bee034ca2e68708077b7afb9814bd02cca73c82"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/blake3_impl.h.diff",
+      "bytes": 1052,
+      "sha256": "5a642d4244c1fb3e56d3ea014541b590af341ce8ee657a68f6321570f9861bb8"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3.c.txt",
+      "bytes": 27558,
+      "sha256": "3eba7449dc6737e2bc8c6ee467390619515d6b8fdb2c772c78051852c3b24bc1"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3.h.txt",
+      "bytes": 2707,
+      "sha256": "14db1dd1a80a9856b241ccd1e96715efaf4fc0bcfca4bc1ec660747f9edaaa23"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3_impl.h.txt",
+      "bytes": 10313,
+      "sha256": "8f2de31b1498a6a572db2328d8d7e7a8dd904459c74a1c68b7fae34405c518ec"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/dependency-lock.json",
+      "bytes": 44165,
+      "sha256": "30ff0a95e278319029d4d2fd22ce8f0787191be852d957e2893d23252bbfb6df"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/evidence/blake3-upstream-tree.json",
+      "bytes": 25545,
+      "sha256": "0df12f27bc88a94bdfc6ab64d6ac11924be24f6bc4651f8009c1c6a5a374360f"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/evidence/h2o-tree.json",
+      "bytes": 1268191,
+      "sha256": "a7fa8f7c6777e469577966f8b99a126892b897a69096167def40dd475d2f353c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/evidence/urcrypt-tree.json",
+      "bytes": 47764,
+      "sha256": "55e873b40cd84c1fe71e709d78226d26d9f50e44bdebed6d94d052f2e0b14364"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/materials/uvm-wrapper-source-snapshot.tar.gz",
+      "bytes": 120503,
+      "sha256": "838266c5aea6cf96d13d52de148e868b619c8e6a0ae7a4004f094089910cbe6c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/materials/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de.tar.gz",
+      "bytes": 5217760,
+      "sha256": "2fb75bf76ebe8a5cb8b42ca948eb968958f7f2ad318f5868320b4f9845ba29c0"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notice-review-inputs.json",
+      "bytes": 17522,
+      "sha256": "e75295e638a81a42116ae3bcd239dae1ea3f49e8f3e7e00af983b842b0bcb844"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kstring.h.txt",
+      "bytes": 6332,
+      "sha256": "0d02c7bf278381f57c9e5f2c420edd367bb4dd322ae4daf3d52c204d03656338"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kvec.h.txt",
+      "bytes": 2880,
+      "sha256": "5bce2705b84e7e25c3e3636d62b725407015b8a937a5d0db57b8ee120981daca"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.c.txt",
+      "bytes": 930,
+      "sha256": "2d69f7b768e6f86c38b50cdeb58a6f52a9156650f2d65cce6e81a846ff6519e0"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c.txt",
+      "bytes": 4591,
+      "sha256": "6ddd5a293c54ffc5d53448b6cb534f36d2f8f71c463b01dedde9493fab724075"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/ext/handy.h.txt",
+      "bytes": 1500,
+      "sha256": "4fcfcb98ec70e0ff5025a4b0ae17c61f87fff31bc2ea84c1dcdc88bbd3069ae7"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/poly1305.c.txt",
+      "bytes": 4901,
+      "sha256": "f3701c6cceaf626e22f16b8a9df23eafb512eafb6a53a7e1580cf4bd77019e39"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/micro-ecc/uECC.c.txt",
+      "bytes": 55371,
+      "sha256": "e63972fb13387e42cb9a350f2d3fedc2d00903feec37d6d6010a1402f97c207b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/asn1.c.txt",
+      "bytes": 11046,
+      "sha256": "d704e712966089258307f13bc8b43e5cc58069e4148e87e4045a63e9f0626210"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/cifra.c.txt",
+      "bytes": 19108,
+      "sha256": "3a2b1f437c7d6f6577a5f79bc79d0f8c99022054f603898018c4cc1dbedc106f"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/minicrypto-pem.c.txt",
+      "bytes": 13630,
+      "sha256": "c3b7397aa09db044698ebf81913487b149a9f8bdb14e4c2ce6ac1d87e3907a45"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/pembase64.c.txt",
+      "bytes": 11937,
+      "sha256": "98399718814bd27f932a4e7ecaeeec016f5a5a9d64bda413ea463111db6db5d5"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/uecc.c.txt",
+      "bytes": 6442,
+      "sha256": "33dcc52bad432ef07843a64f8068b55fe9b4ac57df295c8a85336d675f9b7f00"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/include/h2o/memory.h.txt",
+      "bytes": 14319,
+      "sha256": "db8a6ab6416bf549d592da6fbae616f975ce27b9dd3e4f369a8ad4ed15f93502"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/cache.c.txt",
+      "bytes": 8183,
+      "sha256": "2b9d79bb8cd53068814aea10e32d9a9ffa6f74f4a30b79b0ff8282768de2655e"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/string.c.txt",
+      "bytes": 17324,
+      "sha256": "b4cd72c20509368f80ef89b742892a692caf8a5e929fad9082592e6b9fea7f6d"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/casper.c.txt",
+      "bytes": 7456,
+      "sha256": "ace8b7ae9ba1bd6b46630d5356a390e0420226cd9af22be9b19b9df199637966"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/hpack.c.txt",
+      "bytes": 36826,
+      "sha256": "f7004cc2f2a7e91e0ee23f54535b3aa8efd6e8fafe196875f5b0f4a9c925ac7b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2.h.txt",
+      "bytes": 2865,
+      "sha256": "3c2de197dd23179f78c57deac7b73a6049778bf651c5db57e508b2cfce5e7559"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2b.c.txt",
+      "bytes": 12510,
+      "sha256": "52519ccbc1e48f489ff444091f630d05dadcc8f1ee61c5b7361e3a9618299c9a"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/opt.c.txt",
+      "bytes": 10298,
+      "sha256": "a4f86fd457fb46300530aef80064c3e05b7ca18b67ba06b29c1d383d8e2534a7"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3.c.txt",
+      "bytes": 27765,
+      "sha256": "55b23867aa8526c8b243758c4524dd899da502484f3bdeaf6a56df91e021b083"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_avx2_x86-64_unix.S.txt",
+      "bytes": 66050,
+      "sha256": "a2d95519fd9845cf80252110e21a93124e81c03da836eaac0bca0537be4f8324"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_avx512_x86-64_unix.S.txt",
+      "bytes": 89364,
+      "sha256": "ecf923dc9ccac941b751e7190c9f10b97535d1e8d6e0bb0888a979f5bc0a5fde"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_dispatch.c.txt",
+      "bytes": 8362,
+      "sha256": "d545f50842ede67a093a382d2c7c7c57fb8107d86af954f7cd2f60a22325d1e1"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_impl.h.txt",
+      "bytes": 10309,
+      "sha256": "80524859fb92c5604785878e883f3bcbdbf7425417f0efa4bd12c506047a6f46"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_portable.c.txt",
+      "bytes": 5889,
+      "sha256": "2bc25b0dad67b4329d0b49cfa075ab2b0d04e424addbddc4e9c389c52a192524"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_sse2_x86-64_unix.S.txt",
+      "bytes": 68858,
+      "sha256": "94baa998f4114bf57b99e1791a21e9f0bcdc4bd5803864eb30a2477440b7380c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_sse41_x86-64_unix.S.txt",
+      "bytes": 61143,
+      "sha256": "135048e4a81a6f9e86960b115141874a55954dbfd2cd1e8e9818837b46b498ad"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/ed25519/src/sha512.c.txt",
+      "bytes": 11088,
+      "sha256": "b34128b950036777c299943d624bd830a234a65932c394fdf455e4948258fb6d"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-check.c.txt",
+      "bytes": 1967,
+      "sha256": "115ae6745c0bca6b3f568a01d3a4347db2661b71c8c0c40755674708b6aad12c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-hash.c.txt",
+      "bytes": 945,
+      "sha256": "2c529a5d9eb047ecdcf55e80d971b1e991b9cf427f349aea4acbf45f923f2679"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-nosse.c.txt",
+      "bytes": 9048,
+      "sha256": "d6502178c3a6ed422e52b674c34f938a0dda90d6526312a0f1f1e1177879bc0f"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.c.txt",
+      "bytes": 11062,
+      "sha256": "7ee478e6a215c64713071269c241b8181e3b9ec6e82ea9c0dfda9afb96b5759d"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.h.txt",
+      "bytes": 2710,
+      "sha256": "1183dd745f2c840493681102e1447dfbac4b5f059de1dced710cddd024512b29"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/retrievals.json",
+      "bytes": 23164,
+      "sha256": "e69bd729771d56e1e35018dca1619b61d19da73be798028199df7dea826e7b12"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/develop.yml",
+      "bytes": 460,
+      "sha256": "e3d2728b652c9f6e2cfbd95a8060c0c514b72698a1f1cf5d6382265b8551cb11"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/docker-once.yml",
+      "bytes": 171,
+      "sha256": "2791c18a25a3dc0265765ee5e3a6cbabe5dbe6cc5907439642da393e007fdb69"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/docker-shared.yml",
+      "bytes": 1926,
+      "sha256": "a647ca231047501ff29717a5589b3f112c1a546fc742ceb253967a81e1c9549e"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/feature.yml",
+      "bytes": 314,
+      "sha256": "e6320beaa4b4d28894a8459271da2dce2c025c7e472aa587c698125dea147295"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/master.yml",
+      "bytes": 482,
+      "sha256": "e17b0aa9a7bc7cbd632408abc36827044dc2157f17f1225fba3fa26bf38e4123"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/next.yml",
+      "bytes": 381,
+      "sha256": "aff549c22fc0f9f7b39845047e67c2581b2d74e9e3719692f20f765b01e753a0"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/once.yml",
+      "bytes": 169,
+      "sha256": "5d1c9167f8f39008d28a66f5046708be1b165bb5c0c545ab50a66aac3024e836"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/release.yml",
+      "bytes": 460,
+      "sha256": "5f5086d18c2e6a7e6decf92d76e9ae886c551dbae5bf4bdee697f81da8f8f540"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/shared.yml",
+      "bytes": 6977,
+      "sha256": "334ce0ee0162ecb8cbff00cc1eec643a3296ecc4ce8a3ffbbb2e90f114e01b26"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/README.md",
+      "bytes": 1644,
+      "sha256": "985768972fc3ace0c03ad12b756149abc96ccdd36e4db4d083f45a4bfebb518b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/ext/libuv/patches/libuv/src/win/tty.c",
+      "bytes": 77461,
+      "sha256": "02792df7c51f5e22670ef4646afbf2bf6699aa5fdbd8dfc3381e9308e2414561"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/flake.lock",
+      "bytes": 1099,
+      "sha256": "8b555f8fc89c31f06b7111ef621663f901c8c651395d05b74afbc90eac796001"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/flake.nix",
+      "bytes": 4654,
+      "sha256": "1bd4c596f20b741043b6b470b57972b4f045595674377c70af37f0b00b191f08"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs.json",
+      "bytes": 32909,
+      "sha256": "239c1b39cf9ff4af5d4e1ce608bab735f6d5358bfbd73437be9656d4828e2b9b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/verify.py",
+      "bytes": 7292,
+      "sha256": "ef515c287e28387351dd8637e9f907bbfbae2105d1f4a4e477f0e179afd68d87"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/wrapper-source-lock.json",
+      "bytes": 7330,
+      "sha256": "2e6bae3ebcd003c403a4b87be949226275e4ac122f637f0d31ad0d70269a6163"
+    }
+  ],
+  "file_count": 72
+}

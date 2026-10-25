@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "packages": [
+    {
+      "name": "ca-certificates-bundle",
+      "version": "20260909-r0",
+      "source_origin": "ca-certificates",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "alpine_source_revision": "eb7078df3a16d666e8f7723f94bb92e00d4b9236",
+      "status": "PINNED_SOURCE_NOTICE_RECOVERED_GENERATED_BUNDLE_APPLICABILITY_REMAINS",
+      "installed_license": "MPL-2.0 AND MIT",
+      "applicable_grant_established": false,
+      "grant_scope_note": "Conservative package-wide assertion. Pinned certdata.txt has an express MPL-2.0 source-file grant (notice-bindings.json); not a denial of that grant. Generated-payload applicability/mixed declaration not resolved.",
+      "evidence_paths": [
+        "THIRD_PARTY/platform/followup/trust-bundle/evidence/tag.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-tag.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/README.md",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/VERSION",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/Makefile",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/certdata.txt",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/c_rehash.c",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/scripts/update-version.sh",
+        "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-commit.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/mk-ca-bundle.pl",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/split-ca-bundle.sh",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca.c",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca-certificates.8",
+        "THIRD_PARTY/platform/followup/trust-bundle/licenses/MPL-2.0.txt",
+        "THIRD_PARTY/platform/followup/trust-bundle/source-delivery-references.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/notice-bindings.json"
+      ],
+      "remaining_gaps": [
+        "Collected MPL-2.0 grant is established for the pinned certdata.txt Source Code Form; applicability and required notice/source delivery for the generated shipped certificate payload remain a scoped assessment, not legal clearance or a copyrightability conclusion.",
+        "The inherited installed/recipe MPL-2.0 AND MIT declaration is preserved. c_rehash.c expressly selects MIT but is not moved into this bundle subpackage; no separate MIT grant for certdata.txt was found. update-ca.c, split-ca-bundle.sh, Makefile and update-version.sh do not contain an express per-file license notice. Do not replace the mixed package declaration with MPL-only.",
+        "Pinned mk-ca-bundle.pl declares SPDX curl, not GPL; its referenced COPYING is absent from this tree. Full curl terms were not fetched because buildtool redistribution is outside this shipped-bundle notice resolution. The retained Alpine recipe GPL-script comment is not proof of a current GPL-licensed file.",
+        "Source-level packaging trace plus retained installed APK file list is not byte correspondence to the installed ca-certificates.crt. No image/trust-store/certificate payload readback or source regeneration was performed.",
+        "Only named relevant upstream files are delivered here, not a complete source tree, complete build environment or accepted corresponding-source fulfillment. Tree entries .gitignore, .gitlab-ci.yml and renovate.json are listed but not retrieved.",
+        "Parent must explicitly select these files in notice/context/source manifests and refresh its public-source delivery snapshot; no final image inclusion has been verified."
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tag.json",
+      "sha256": "30c9bbc34046353f9e48d30b250a77c69cd0a8444efc141df163d8d1efb5ac62",
+      "bytes": 935,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/tags/20260909",
+      "http_status": 200
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-commit.json",
+      "sha256": "7a28125cf4dfa7c7a14417aa7b0985a20194dd79ea7f9c6618b4760067860650",
+      "bytes": 1759,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/tree?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b&recursive=true&per_page=100",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/tree?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b&recursive=true&per_page=100",
+      "http_status": 200,
+      "license_binding": "recursive commit tree; identical to tag tree"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-tag.json",
+      "sha256": "7a28125cf4dfa7c7a14417aa7b0985a20194dd79ea7f9c6618b4760067860650",
+      "bytes": 1759,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/tree?ref=20260909&recursive=true&per_page=100",
+      "http_status": 200
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/licenses/MPL-2.0.txt",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726,
+      "url": "https://www.mozilla.org/media/MPL/2.0/index.txt",
+      "resolved_url": "https://www.mozilla.org/media/MPL/2.0/index.txt",
+      "http_status": 200,
+      "license_binding": "certdata.txt lines 2-4 expressly select MPL v.2.0; publisher versioned full text, not a current package-license substitution"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/notice-bindings.json",
+      "sha256": "8ef755e23119e0319a8f8fc25116c6f6731e6db7e8e5810c2efcf15e1d948565",
+      "bytes": 3160,
+      "kind": "generated-evidence-index"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source-delivery-references.json",
+      "sha256": "bf1158a4bc4a4cb6886f8e3bf856509c75c68fc670e7af212e1387b596a77510",
+      "bytes": 2489,
+      "kind": "generated-evidence-index"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/Makefile",
+      "sha256": "4e317305a283703ccc79828ebf5728acb3ae1bf8fe3e857ab39496470acaa2db",
+      "bytes": 1583,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/Makefile/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/Makefile/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "Makefile",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "3559e88acc748bc6c075ca8ec01300c05ba58726",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/README.md",
+      "sha256": "f035dad569493e311659b9b79be908ce75a5363a958e8ada9b3c37b58707b913",
+      "bytes": 548,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/README.md/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/README.md/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "README.md",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "9259e731e963b2a7cc1323862a5a03457028c8d1",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/VERSION",
+      "sha256": "a0c57a29bd21b44efec475c17b0ccfb6ee78e19a32b7193f9a11d187c0885ca3",
+      "bytes": 9,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/VERSION/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/VERSION/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "VERSION",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "36ab5ef9684caeadbb89166cc7ed3736a0589fcd",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/c_rehash.c",
+      "sha256": "a68fedc0edd976b9f35ecfdcb252d80dc12084b1bc4e945be7dc42c437d8b540",
+      "bytes": 9533,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/c_rehash.c/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/c_rehash.c/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "c_rehash.c",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "e847c1a09ab354778a0b51224325fc139957600b",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/certdata.txt",
+      "sha256": "beb7e6dfe6499926e52c075c27bcfbe4c957f8609c575b3860273ae2806f63eb",
+      "bytes": 1375050,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/certdata.txt/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/certdata.txt/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "certdata.txt",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "0a451693c675b9dba2805271516d672db913a204",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/mk-ca-bundle.pl",
+      "sha256": "8e278f4982210b37e4f9a048bd6ed23df41e4a054085bd73f8242628f03d09ca",
+      "bytes": 24902,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/mk-ca-bundle.pl/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/mk-ca-bundle.pl/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "mk-ca-bundle.pl",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "e2e9acf629a7d05a427dda02ca746d79cee5664b",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/scripts/update-version.sh",
+      "sha256": "21b27bb720c823c459480dc246cf3ee54269551f9b8440af18caf81047120328",
+      "bytes": 865,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/scripts%2Fupdate-version.sh/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/scripts%2Fupdate-version.sh/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "scripts/update-version.sh",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "2d9c38a107a71efc76980b97f28ef18d5b86263d",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/split-ca-bundle.sh",
+      "sha256": "973dbde5636a8c7900704b536a526156ead98acf358f6e7b9869067c4fa8b41c",
+      "bytes": 288,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/split-ca-bundle.sh/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/split-ca-bundle.sh/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "split-ca-bundle.sh",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "80217ec39fe30a64cba56a25aef99dff068159b6",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca-certificates.8",
+      "sha256": "b3091ed40fe42a59b9e31742f4b47d99db3260298ffeafe1b129fe17ef37359c",
+      "bytes": 2312,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/update-ca-certificates.8/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/update-ca-certificates.8/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "update-ca-certificates.8",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "d7f880904b7b657781af2eb7e429ba3270b8dbe2",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca.c",
+      "sha256": "fff6ee69a2f5705e0ae5a0214f0e1fff029b14adef49359160cf9a5c867d5df4",
+      "bytes": 7736,
+      "url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/update-ca.c/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "resolved_url": "https://gitlab.alpinelinux.org/api/v4/projects/alpine%2Fca-certificates/repository/files/update-ca.c/raw?ref=5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "http_status": 200,
+      "source_path": "update-ca.c",
+      "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "git_blob_sha1": "0260f830356b34fab20bf08f9ecf170f5eb35fdf",
+      "git_blob_verified": true
+    }
+  ],
+  "coverage_complete": false,
+  "complete_coverage": false,
+  "full_corresponding_source_delivered": false,
+  "corresponding_source_complete": false,
+  "legal_clearance": false,
+  "source_archive_downloaded_again": false,
+  "local_trust_store_read": false,
+  "source_modified": false,
+  "readme_and_inventory_excluded_from_files_to_avoid_recursive_hashing": true
+}

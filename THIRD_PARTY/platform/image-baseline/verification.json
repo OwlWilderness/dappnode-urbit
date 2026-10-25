@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "PASS_HOST_TESTS_AND_RETAINED_PUBLIC_IMAGE_STREAM_READBACK",
+  "host_tests": 15,
+  "host_test_exit": 0,
+  "actual_stream_exit": 0,
+  "independent_replay_inventory_equal": true,
+  "hash_assertions": 65,
+  "parsed_json_before_this_record": 10,
+  "python_ast_files": 2,
+  "git_diff_check_exit": 0,
+  "git_diff_check_caveat": "Git diff does not enumerate untracked files; AST/JSON/hash readbacks above checked the new artifacts.",
+  "source_archive_checksum_matches": 14,
+  "image_id": "sha256:eacbb5f0b1b9e21df26e7d4b4d63d89b27985fecc4f3580f2dfac44c5243786a",
+  "rootfs_layers": 10,
+  "apk_records": 36,
+  "config_parsed": false,
+  "image_or_layer_archive_written": false,
+  "container_created_or_executed": false,
+  "complete_notice_coverage": false,
+  "legal_clearance": false,
+  "final_image_verified": false
+}

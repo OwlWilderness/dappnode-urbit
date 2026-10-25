@@ -1,0 +1,489 @@
+SUPPLEMENTARY SOURCE-PINNED PER-FILE NOTICES
+
+Not a complete binary notice set or legal clearance. Full original files and
+primary URL/content hashes are retained in retrievals.json. Blocks below are
+verbatim leading source comments, not substitute license grants.
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kstring.h.txt
+SHA256(full source): 0d02c7bf278381f57c9e5f2c420edd367bb4dd322ae4daf3d52c204d03656338
+/* The MIT License
+
+   Copyright (c) by Attractive Chaos <attractor@live.co.uk> 
+
+   Permission is hereby granted, free of charge, to any person obtaining
+   a copy of this software and associated documentation files (the
+   "Software"), to deal in the Software without restriction, including
+   without limitation the rights to use, copy, modify, merge, publish,
+   distribute, sublicense, and/or sell copies of the Software, and to
+   permit persons to whom the Software is furnished to do so, subject to
+   the following conditions:
+
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+   BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+*/
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kvec.h.txt
+SHA256(full source): 5bce2705b84e7e25c3e3636d62b725407015b8a937a5d0db57b8ee120981daca
+/* The MIT License
+
+   Copyright (c) 2008, by Attractive Chaos <attractor@live.co.uk>
+
+   Permission is hereby granted, free of charge, to any person obtaining
+   a copy of this software and associated documentation files (the
+   "Software"), to deal in the Software without restriction, including
+   without limitation the rights to use, copy, modify, merge, publish,
+   distribute, sublicense, and/or sell copies of the Software, and to
+   permit persons to whom the Software is furnished to do so, subject to
+   the following conditions:
+
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+   BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+*/
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.c.txt
+SHA256(full source): 2d69f7b768e6f86c38b50cdeb58a6f52a9156650f2d65cce6e81a846ff6519e0
+/*
+ * cifra - embedded cryptography library
+ * Written in 2014 by Joseph Birr-Pixton <jpixton@gmail.com>
+ *
+ * To the extent possible under law, the author(s) have dedicated all
+ * copyright and related and neighboring rights to this software to the
+ * public domain worldwide. This software is distributed without any
+ * warranty.
+ *
+ * You should have received a copy of the CC0 Public Domain Dedication
+ * along with this software. If not, see
+ * <http://creativecommons.org/publicdomain/zero/1.0/>.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c.txt
+SHA256(full source): 6ddd5a293c54ffc5d53448b6cb534f36d2f8f71c463b01dedde9493fab724075
+/* This is based on tweetnacl.  Some typedefs have been
+ * replaced with their stdint equivalents.
+ *
+ * Original code was public domain. */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/poly1305.c.txt
+SHA256(full source): f3701c6cceaf626e22f16b8a9df23eafb512eafb6a53a7e1580cf4bd77019e39
+/*
+ * cifra - embedded cryptography library
+ * Written in 2014 by Joseph Birr-Pixton <jpixton@gmail.com>
+ *
+ * To the extent possible under law, the author(s) have dedicated all
+ * copyright and related and neighboring rights to this software to the
+ * public domain worldwide. This software is distributed without any
+ * warranty.
+ *
+ * You should have received a copy of the CC0 Public Domain Dedication
+ * along with this software. If not, see
+ * <http://creativecommons.org/publicdomain/zero/1.0/>.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/micro-ecc/uECC.c.txt
+SHA256(full source): e63972fb13387e42cb9a350f2d3fedc2d00903feec37d6d6010a1402f97c207b
+/* Copyright 2014, Kenneth MacKay. Licensed under the BSD 2-clause license. */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/asn1.c.txt
+SHA256(full source): d704e712966089258307f13bc8b43e5cc58069e4148e87e4045a63e9f0626210
+/*
+* Copyright (c) 2016 Christian Huitema <huitema@huitema.net>
+*
+* Permission to use, copy, modify, and distribute this software for any
+* purpose with or without fee is hereby granted, provided that the above
+* copyright notice and this permission notice appear in all copies.
+*
+* THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+* WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+* MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+* ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+* WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+* ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+* OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+*/
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/cifra.c.txt
+SHA256(full source): 3a2b1f437c7d6f6577a5f79bc79d0f8c99022054f603898018c4cc1dbedc106f
+/*
+ * Copyright (c) 2016 DeNA Co., Ltd., Kazuho Oku
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/minicrypto-pem.c.txt
+SHA256(full source): c3b7397aa09db044698ebf81913487b149a9f8bdb14e4c2ce6ac1d87e3907a45
+/*
+ * Copyright (c) 2017,2018 Christian Huitema
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/pembase64.c.txt
+SHA256(full source): 98399718814bd27f932a4e7ecaeeec016f5a5a9d64bda413ea463111db6db5d5
+/*
+* Copyright (c) 2016 Christian Huitema <huitema@huitema.net>
+*
+* Permission to use, copy, modify, and distribute this software for any
+* purpose with or without fee is hereby granted, provided that the above
+* copyright notice and this permission notice appear in all copies.
+*
+* THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+* WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+* MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+* ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+* WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+* ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+* OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+*/
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/uecc.c.txt
+SHA256(full source): 33dcc52bad432ef07843a64f8068b55fe9b4ac57df295c8a85336d675f9b7f00
+/*
+ * Copyright (c) 2016 DeNA Co., Ltd., Kazuho Oku
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/include/h2o/memory.h.txt
+SHA256(full source): db8a6ab6416bf549d592da6fbae616f975ce27b9dd3e4f369a8ad4ed15f93502
+/*
+ * Copyright (c) 2014,2015 DeNA Co., Ltd., Kazuho Oku, Justin Zhu
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/lib/common/cache.c.txt
+SHA256(full source): 2b9d79bb8cd53068814aea10e32d9a9ffa6f74f4a30b79b0ff8282768de2655e
+/*
+ * Copyright (c) 2014-2016 DeNA Co., Ltd., Kazuho Oku
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/lib/common/string.c.txt
+SHA256(full source): b4cd72c20509368f80ef89b742892a692caf8a5e929fad9082592e6b9fea7f6d
+/*
+ * Copyright (c) 2014-2016 DeNA Co., Ltd., Kazuho Oku, Justin Zhu, Fastly, Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/lib/http2/casper.c.txt
+SHA256(full source): ace8b7ae9ba1bd6b46630d5356a390e0420226cd9af22be9b19b9df199637966
+/*
+ * Copyright (c) 2015 DeNA Co., Ltd., Kazuho Oku
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/h2o/lib/http2/hpack.c.txt
+SHA256(full source): f7004cc2f2a7e91e0ee23f54535b3aa8efd6e8fafe196875f5b0f4a9c925ac7b
+/*
+ * Copyright (c) 2014-2016 DeNA Co., Ltd., Kazuho Oku, Fastly, Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2.h.txt
+SHA256(full source): 3c2de197dd23179f78c57deac7b73a6049778bf651c5db57e508b2cfce5e7559
+/*
+ * Argon2 reference source code package - reference C implementations
+ *
+ * Copyright 2015
+ * Daniel Dinu, Dmitry Khovratovich, Jean-Philippe Aumasson, and Samuel Neves
+ *
+ * You may use this work under the terms of a Creative Commons CC0 1.0
+ * License/Waiver or the Apache Public License 2.0, at your option. The terms of
+ * these licenses can be found at:
+ *
+ * - CC0 1.0 Universal : http://creativecommons.org/publicdomain/zero/1.0
+ * - Apache 2.0        : http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * You should have received a copy of both of these licenses along with this
+ * software. If not, they may be obtained at the above URLs.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2b.c.txt
+SHA256(full source): 52519ccbc1e48f489ff444091f630d05dadcc8f1ee61c5b7361e3a9618299c9a
+/*
+ * Argon2 reference source code package - reference C implementations
+ *
+ * Copyright 2015
+ * Daniel Dinu, Dmitry Khovratovich, Jean-Philippe Aumasson, and Samuel Neves
+ *
+ * You may use this work under the terms of a Creative Commons CC0 1.0
+ * License/Waiver or the Apache Public License 2.0, at your option. The terms of
+ * these licenses can be found at:
+ *
+ * - CC0 1.0 Universal : http://creativecommons.org/publicdomain/zero/1.0
+ * - Apache 2.0        : http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * You should have received a copy of both of these licenses along with this
+ * software. If not, they may be obtained at the above URLs.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/opt.c.txt
+SHA256(full source): a4f86fd457fb46300530aef80064c3e05b7ca18b67ba06b29c1d383d8e2534a7
+/*
+ * Argon2 reference source code package - reference C implementations
+ *
+ * Copyright 2015
+ * Daniel Dinu, Dmitry Khovratovich, Jean-Philippe Aumasson, and Samuel Neves
+ *
+ * You may use this work under the terms of a Creative Commons CC0 1.0
+ * License/Waiver or the Apache Public License 2.0, at your option. The terms of
+ * these licenses can be found at:
+ *
+ * - CC0 1.0 Universal : http://creativecommons.org/publicdomain/zero/1.0
+ * - Apache 2.0        : http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * You should have received a copy of both of these licenses along with this
+ * software. If not, they may be obtained at the above URLs.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/urcrypt/ed25519/src/sha512.c.txt
+SHA256(full source): b34128b950036777c299943d624bd830a234a65932c394fdf455e4948258fb6d
+/* LibTomCrypt, modular cryptographic library -- Tom St Denis
+ *
+ * LibTomCrypt is a library that provides various cryptographic
+ * algorithms in a highly modular and flexible manner.
+ *
+ * The library is free for all purposes without any express
+ * guarantee it works.
+ *
+ * Tom St Denis, tomstdenis@gmail.com, http://libtom.org
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-nosse.c.txt
+SHA256(full source): d6502178c3a6ed422e52b674c34f938a0dda90d6526312a0f1f1e1177879bc0f
+/*-
+ * Copyright 2009 Colin Percival
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ *
+ * This file was originally written by Colin Percival as part of the Tarsnap
+ * online backup system.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.c.txt
+SHA256(full source): 7ee478e6a215c64713071269c241b8181e3b9ec6e82ea9c0dfda9afb96b5759d
+/*-
+ * Copyright 2005,2007,2009 Colin Percival
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+SOURCE: THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.h.txt
+SHA256(full source): 1183dd745f2c840493681102e1447dfbac4b5f059de1dced710cddd024512b29
+/*-
+ * Copyright 2005,2007,2009 Colin Percival
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ *
+ * $FreeBSD: src/lib/libmd/sha256.h,v 1.2 2006/01/17 15:35:56 phk Exp $
+ */

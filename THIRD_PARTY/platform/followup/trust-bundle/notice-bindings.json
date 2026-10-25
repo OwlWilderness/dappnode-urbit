@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+  "entries": [
+    {
+      "source": "THIRD_PARTY/platform/followup/trust-bundle/source/certdata.txt",
+      "lines": "2-4",
+      "notice_type": "MPL-2.0 Source Code Form notice",
+      "full_license": "THIRD_PARTY/platform/followup/trust-bundle/licenses/MPL-2.0.txt",
+      "applicable_grant_established": true,
+      "scope": "Pinned certdata.txt as supplied upstream; not an assertion about copyrightability, all CA rights or fulfillment of generated-bundle distribution conditions"
+    },
+    {
+      "source": "THIRD_PARTY/platform/followup/trust-bundle/source/c_rehash.c",
+      "lines": "1-9",
+      "notice_type": "Copyright 2013-2014 Timo Teräs; MIT license selected by reference",
+      "scope": "Utility compiled/installed to main package by Makefile, not bundle() output; no independent MIT grant asserted over certdata.txt"
+    },
+    {
+      "source": "THIRD_PARTY/platform/followup/trust-bundle/source/mk-ca-bundle.pl",
+      "lines": "1-24",
+      "notice_type": "Daniel Stenberg et al.; SPDX curl; references absent COPYING",
+      "scope": "Buildtool not copied into bundle; no full curl-license substitution or cross-origin fetch"
+    },
+    {
+      "source": "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca-certificates.8",
+      "lines": "59-61",
+      "notice_type": "Fumitoshi UKAI / Debian authorship attribution",
+      "scope": "Documentation not copied into bundle"
+    }
+  ],
+  "remaining_gaps": [
+    "Collected MPL-2.0 grant is established for the pinned certdata.txt Source Code Form; applicability and required notice/source delivery for the generated shipped certificate payload remain a scoped assessment, not legal clearance or a copyrightability conclusion.",
+    "The inherited installed/recipe MPL-2.0 AND MIT declaration is preserved. c_rehash.c expressly selects MIT but is not moved into this bundle subpackage; no separate MIT grant for certdata.txt was found. update-ca.c, split-ca-bundle.sh, Makefile and update-version.sh do not contain an express per-file license notice. Do not replace the mixed package declaration with MPL-only.",
+    "Pinned mk-ca-bundle.pl declares SPDX curl, not GPL; its referenced COPYING is absent from this tree. Full curl terms were not fetched because buildtool redistribution is outside this shipped-bundle notice resolution. The retained Alpine recipe GPL-script comment is not proof of a current GPL-licensed file.",
+    "Source-level packaging trace plus retained installed APK file list is not byte correspondence to the installed ca-certificates.crt. No image/trust-store/certificate payload readback or source regeneration was performed.",
+    "Only named relevant upstream files are delivered here, not a complete source tree, complete build environment or accepted corresponding-source fulfillment. Tree entries .gitignore, .gitlab-ci.yml and renovate.json are listed but not retrieved.",
+    "Parent must explicitly select these files in notice/context/source manifests and refresh its public-source delivery snapshot; no final image inclusion has been verified."
+  ]
+}

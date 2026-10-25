@@ -1,0 +1,15 @@
+{
+  "tag": "releases/gcc-15.2.0",
+  "repository": "gcc-mirror/gcc",
+  "commit": "5115c7e447fc07457443df874bf57840e8316d5f",
+  "ref": {
+    "ref": "refs/tags/releases/gcc-15.2.0",
+    "node_id": "MDM6UmVmMjI3MTE1MDM6cmVmcy90YWdzL3JlbGVhc2VzL2djYy0xNS4yLjA=",
+    "url": "https://api.github.com/repos/gcc-mirror/gcc/git/refs/tags/releases/gcc-15.2.0",
+    "object": {
+      "sha": "dcd428f94ffb464418f996ffb70dfa398f5caa3f",
+      "type": "tag",
+      "url": "https://api.github.com/repos/gcc-mirror/gcc/git/tags/dcd428f94ffb464418f996ffb70dfa398f5caa3f"
+    }
+  }
+}

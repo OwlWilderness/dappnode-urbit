@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "git_head": "38a9dfaa95c55e7e45532a3eca8c033fcfc2f1c5",
+  "dirty_snapshot": true,
+  "source_files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "62a95beb01e175cd98f00cadaaada2a22c2c0a01e85b1969d5e104e0e5f61cdf",
+      "bytes": 796
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "5e2d5c67827752d9072896ddd127348dc63870865ceaaa8f3b74c162ca682eca",
+      "bytes": 181
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "ea1b2b919d4f2520a92806b664c174ad741766cfc34ecb7f7c9fc888fb3afa3c",
+      "bytes": 1361
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "be17005284c79a1d7553c6c74ed99c836158649d9c667c58da4273909c22f863",
+      "bytes": 1905
+    },
+    {
+      "path": "LICENSES/GPL-3.0-only.txt",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+      "bytes": 34674
+    },
+    {
+      "path": "README.md",
+      "sha256": "474b6323c73e14392a6230ede7dd1a0613466390d45e24e2edcea9cfd9561f4a",
+      "bytes": 7802
+    },
+    {
+      "path": "assets/uvm-avatar.svg",
+      "sha256": "6d72fc78033304f21203d5f9377afb327edb5fd41e9c5fb1dd49abb706910c61",
+      "bytes": 4903
+    },
+    {
+      "path": "avatar-urbit.png",
+      "sha256": "71a4c10e1ed0228348cd78aebb774a4c5fad5c139f5e089ebce2ad140a915b1f",
+      "bytes": 2077
+    },
+    {
+      "path": "build/Dockerfile",
+      "sha256": "e4e3c3b1541ba28df7a2ab4bb1b5405ce848b177b5b3d7f466d9a255cbdc167e",
+      "bytes": 2277
+    },
+    {
+      "path": "build/docker-entrypoint.sh",
+      "sha256": "2c7b57372c20ee050e5afc3030998bd2be9d509a29899331b19d145d3eebd854",
+      "bytes": 145
+    },
+    {
+      "path": "build/install_vere.py",
+      "sha256": "6804656dc8eceed66422c69b6160a339ace12df1a3703cc92f1bb0901367cb85",
+      "bytes": 3674
+    },
+    {
+      "path": "build/vere-release.json",
+      "sha256": "5d9fc5036f55c1938c1cba75afe5e18a6fd047526797f4e216b16a441dec0537",
+      "bytes": 422
+    },
+    {
+      "path": "build/volume_guard.py",
+      "sha256": "8a43c7746b78e59ca8e920283c1e0c069cac1319e61d261867c46673ea630055",
+      "bytes": 1444
+    },
+    {
+      "path": "dappnode_package.json",
+      "sha256": "c53f9d85b513001067c835c2ede8b02edbdc18147fb9f86778b6e4184ded65ea",
+      "bytes": 1803
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "edcbff5bea7556d92186cd47dea9aed1546bd9e485a5b06062d195a6a03e4e9c",
+      "bytes": 986
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "48de37696f948e4c885ea6864f03a830ba03f0afcd1095fb5eed1b81c76769f7",
+      "bytes": 200085
+    },
+    {
+      "path": "package.json",
+      "sha256": "9f27ef56b0b83354324384f17437d31cdc513af781a814ba993665211abeba41",
+      "bytes": 461
+    },
+    {
+      "path": "scripts/inventory-public-image.py",
+      "sha256": "f6608e87cd632d2def3f93c86c7bda5b9c0f949b357e76fad162a008cc7e8faf",
+      "bytes": 9981
+    },
+    {
+      "path": "scripts/prepare-release.mjs",
+      "sha256": "0e8d452ad37fe965b14dbd0140b7910ec41b00bb1dd0f548d8cc621abb9903e3",
+      "bytes": 6370
+    },
+    {
+      "path": "scripts/render-avatar.py",
+      "sha256": "e9ba13d723ca0d1dcc8a50cbdffed0d6d455cd16da827728711e8c67646dd038",
+      "bytes": 4967
+    },
+    {
+      "path": "scripts/sdk.mjs",
+      "sha256": "cb2f7c2916312d675620a1fe9b94020433230a0e45146f46feaf188b2628ee2e",
+      "bytes": 2364
+    },
+    {
+      "path": "scripts/validate-package.mjs",
+      "sha256": "973a83436ae8d1e567e69d58737538e0921a6d116fae27a7af71038f0d848b45",
+      "bytes": 465
+    },
+    {
+      "path": "scripts/verify-notice-packaging.py",
+      "sha256": "be52cc1a4d110e4d6575dc745a8af4f9cfad8c56f2573819873df4cdce1f8439",
+      "bytes": 5371
+    },
+    {
+      "path": "setup-wizard.yaml",
+      "sha256": "48853f0022b5d588a6531c241f6390760bf62ac156807c61f3456810ce3e5e60",
+      "bytes": 3010
+    },
+    {
+      "path": "tools/browser-importer/archive.py",
+      "sha256": "7d4ca9c3ad19564e1927bcbf0e28783c9d857a53b44bcf00e83575e60c164b57",
+      "bytes": 16558
+    },
+    {
+      "path": "tools/browser-importer/backend_tls.py",
+      "sha256": "209e414939a4b81960a764b139e08844396f6421a7c22e4d7574fe3e0a57dad4",
+      "bytes": 6157
+    },
+    {
+      "path": "tools/browser-importer/bootstrap-authority.html",
+      "sha256": "345d9b53e5b2c56bc6c24898dbeb4ce69d26344c21170395bdc87509046a051f",
+      "bytes": 3921
+    },
+    {
+      "path": "tools/browser-importer/enrollment.py",
+      "sha256": "6b327741e5d2370d248a7e95179d9d3c51ee247507aa19499e36e0f5804f77d0",
+      "bytes": 5734
+    },
+    {
+      "path": "tools/browser-importer/importer.py",
+      "sha256": "bb87b669cdca73d90cfe531677e04fb21a1231e855b13e2bbc7d64e5eb5558bd",
+      "bytes": 18706
+    },
+    {
+      "path": "tools/browser-importer/managed_service.py",
+      "sha256": "3c9d43df418209c8bbe6435bc875866c65fcf1831ed868da6643c428e42d8098",
+      "bytes": 443
+    },
+    {
+      "path": "tools/browser-importer/owner_tls.py",
+      "sha256": "abfd71949a423aca5b509b559a4014eb18b385ef4c4410ae71dc898b52da6ed0",
+      "bytes": 14268
+    },
+    {
+      "path": "tools/browser-importer/package_service.py",
+      "sha256": "c48e8ea6b7dbd435426b7ce22e4a4e246b71a771d522c5339784dd122adcbfd5",
+      "bytes": 16038
+    },
+    {
+      "path": "tools/browser-importer/runtime.py",
+      "sha256": "3f47c30fba35e7ec236f2b0800970d4fb548136a71c5c538c5986d4102397ed2",
+      "bytes": 11014
+    },
+    {
+      "path": "tools/browser-importer/server.py",
+      "sha256": "88d2bb5f4342407431a6a06fdf0fa1400e87725e2972a746acfe035d4ff33e22",
+      "bytes": 24476
+    },
+    {
+      "path": "tools/browser-importer/web/app.mjs",
+      "sha256": "2b962ced30eb1907c793cfde0583a4d52bf7d86b98ddc6c502746ccfcbcbb971",
+      "bytes": 13758
+    },
+    {
+      "path": "tools/browser-importer/web/enroll.html",
+      "sha256": "87d66da1f001d7182adb70918c50a3061f09ffde01b0b637f7e02b7fd6b32e88",
+      "bytes": 1413
+    },
+    {
+      "path": "tools/browser-importer/web/enroll.mjs",
+      "sha256": "a841dcfe91e4ccf09f2a4a8b88aea319b78a10fd40c7e417d3ff3c57484b09fd",
+      "bytes": 1171
+    },
+    {
+      "path": "tools/browser-importer/web/index.html",
+      "sha256": "ea35498e63cb986284ac4bb385f4178e63771ea7890143d582518139bea01676",
+      "bytes": 4073
+    },
+    {
+      "path": "tools/browser-importer/web/style.css",
+      "sha256": "65a306c85d6179f685464cdbf1b9cff6d26212d51378f154b8e00be50b7d7c04",
+      "bytes": 1550
+    }
+  ],
+  "source_archive": {
+    "path": "THIRD_PARTY/vere/followup/materials/uvm-wrapper-source-snapshot.tar.gz",
+    "bytes": 120503,
+    "sha256": "838266c5aea6cf96d13d52de148e868b619c8e6a0ae7a4004f094089910cbe6c"
+  },
+  "scope": "Point-in-time public source snapshot. This is not a committed release, final-image binding, or complete source-delivery bundle. Modes normalized to 0644 in inert archive; build tools may invoke sh/python explicitly. Parent packaging edits after this snapshot require recapture.",
+  "status": "HISTORICAL_PRE_INTEGRATION_SNAPSHOT_REQUIRES_REFRESH",
+  "release_binding_accepted": false,
+  "refresh_required": true,
+  "refresh_reason": "Parent concurrently integrates notice Dockerfile/context, build/notice-files.json, and final inclusion. Do not use these historical Dockerfile/.dockerignore hashes as a final release source freeze.",
+  "final_dockerfile_or_context_lock": false
+}

@@ -1,0 +1,15 @@
+{
+  "tag": "v6_6_20260516",
+  "repository": "ThomasDickey/ncurses-snapshots",
+  "commit": "21be30e63c0c633dfded6a748ec5e7e491fe7e06",
+  "ref": {
+    "ref": "refs/tags/v6_6_20260516",
+    "node_id": "MDM6UmVmNjUxNDk1MzM6cmVmcy90YWdzL3Y2XzZfMjAyNjA1MTY=",
+    "url": "https://api.github.com/repos/ThomasDickey/ncurses-snapshots/git/refs/tags/v6_6_20260516",
+    "object": {
+      "sha": "2185df1c532a4616ecfb10b70c447c2b04dde001",
+      "type": "tag",
+      "url": "https://api.github.com/repos/ThomasDickey/ncurses-snapshots/git/tags/2185df1c532a4616ecfb10b70c447c2b04dde001"
+    }
+  }
+}

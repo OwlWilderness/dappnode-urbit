@@ -1,3 +1,20 @@
 # DAppNodeSDK release directories
 build_*
 .idea/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+.env*
+*.key
+*.pem
+*.p12
+*.pfx
+*.tar
+*.tgz
+*.txz
+*.zip
+/pier/
+/piers/
+/uploads/
+/control/

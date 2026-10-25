@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "git_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+  "build_and_workflow_files": [
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/develop.yml",
+      "bytes": 460,
+      "sha256": "e3d2728b652c9f6e2cfbd95a8060c0c514b72698a1f1cf5d6382265b8551cb11",
+      "upstream_path": ".github/workflows/develop.yml",
+      "git_blob": "36aedc0d605c3b1dd6ca351a710f036d539add53",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/develop.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/docker-once.yml",
+      "bytes": 171,
+      "sha256": "2791c18a25a3dc0265765ee5e3a6cbabe5dbe6cc5907439642da393e007fdb69",
+      "upstream_path": ".github/workflows/docker-once.yml",
+      "git_blob": "2f17659a43775dffc922a18ef8c9d8167804fe8d",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/docker-once.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/docker-shared.yml",
+      "bytes": 1926,
+      "sha256": "a647ca231047501ff29717a5589b3f112c1a546fc742ceb253967a81e1c9549e",
+      "upstream_path": ".github/workflows/docker-shared.yml",
+      "git_blob": "e2a9c62f4e4f074bd8a1d0334e8e394b9009e209",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/docker-shared.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/feature.yml",
+      "bytes": 314,
+      "sha256": "e6320beaa4b4d28894a8459271da2dce2c025c7e472aa587c698125dea147295",
+      "upstream_path": ".github/workflows/feature.yml",
+      "git_blob": "d78b911e13f6b38579cc3354b65bee58a7211daf",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/feature.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/master.yml",
+      "bytes": 482,
+      "sha256": "e17b0aa9a7bc7cbd632408abc36827044dc2157f17f1225fba3fa26bf38e4123",
+      "upstream_path": ".github/workflows/master.yml",
+      "git_blob": "02a2b84c58cbc27df977f69a3ec03fc239f24bba",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/master.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/next.yml",
+      "bytes": 381,
+      "sha256": "aff549c22fc0f9f7b39845047e67c2581b2d74e9e3719692f20f765b01e753a0",
+      "upstream_path": ".github/workflows/next.yml",
+      "git_blob": "71738ad940867a9833aaf9bdf0fc8886f779b3ec",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/next.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/once.yml",
+      "bytes": 169,
+      "sha256": "5d1c9167f8f39008d28a66f5046708be1b165bb5c0c545ab50a66aac3024e836",
+      "upstream_path": ".github/workflows/once.yml",
+      "git_blob": "10811804a4af1d34203fa2bec13f72093bcf12f3",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/once.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/release.yml",
+      "bytes": 460,
+      "sha256": "5f5086d18c2e6a7e6decf92d76e9ae886c551dbae5bf4bdee697f81da8f8f540",
+      "upstream_path": ".github/workflows/release.yml",
+      "git_blob": "ca4a907b07c7982a3fa909ed5ef1ff8c939dacad",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/release.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/shared.yml",
+      "bytes": 6977,
+      "sha256": "334ce0ee0162ecb8cbff00cc1eec643a3296ecc4ce8a3ffbbb2e90f114e01b26",
+      "upstream_path": ".github/workflows/shared.yml",
+      "git_blob": "b0b8b6342beab96223a87fa5de05c2e66fd1a2f9",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/.github/workflows/shared.yml"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/README.md",
+      "bytes": 1644,
+      "sha256": "985768972fc3ace0c03ad12b756149abc96ccdd36e4db4d083f45a4bfebb518b",
+      "upstream_path": "README.md",
+      "git_blob": "5f2e0ca6b4de591dbdb0c6a855a0ed9210ce7ac2",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/README.md"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/build.zig",
+      "sha256": "d9d728703b3f61dc9352e5e9c856221d9e9272105434e6df2bb9c02e84ea4c34",
+      "bytes": 24549,
+      "reused": true,
+      "upstream_path": "build.zig",
+      "git_blob": "0eab14d78c0093267357bfdce56fe9336bdceb95",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/build.zig.zon",
+      "sha256": "e471f021d34da0915edf5bfd2de6b0707845bd614aba515efbcdb8e16821b68c",
+      "bytes": 1819,
+      "reused": true,
+      "upstream_path": "build.zig.zon",
+      "git_blob": "84e8ef293a0e648ff23fef91bd70f5db6e889dcc",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/avahi/build.zig",
+      "sha256": "08ff013b0b06cbfe376b6c4c89fdd7dfb3a4565be1e7602f68a82e5ec4c7ca51",
+      "bytes": 28761,
+      "reused": true,
+      "upstream_path": "ext/avahi/build.zig",
+      "git_blob": "dc3f536f091c6510b7ddb4765ef9e90eec051cc5",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/avahi/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/avahi/build.zig.zon",
+      "sha256": "57b2fd54049ce3bb7c80d1df2cfa4ade65c7d3eb52372a5b73e9b956b2515289",
+      "bytes": 744,
+      "reused": true,
+      "upstream_path": "ext/avahi/build.zig.zon",
+      "git_blob": "b9abb4ecb516cdad377589ced748a20e8adb575b",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/avahi/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/backtrace/build.zig",
+      "sha256": "cd1d05a68f9dbfca41bb5995c46c0f55bface7a3b15cae0cb1d3add2b22e0eea",
+      "bytes": 6331,
+      "reused": true,
+      "upstream_path": "ext/backtrace/build.zig",
+      "git_blob": "2dd9a25cfb8c536f4d86088172fbcfda3eafba05",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/backtrace/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/backtrace/build.zig.zon",
+      "sha256": "30580f1b9e6f3e42651420b468fd4989d40da276774d8c435a55251ef56fa84c",
+      "bytes": 389,
+      "reused": true,
+      "upstream_path": "ext/backtrace/build.zig.zon",
+      "git_blob": "230fa0177022c399913c29b2e8af4882fa2eb987",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/backtrace/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/curl/build.zig",
+      "sha256": "4dd65bc503cd544d5e084e653fa33cdc5df7aca90e4e241f5d822466708d88a3",
+      "bytes": 17385,
+      "reused": true,
+      "upstream_path": "ext/curl/build.zig",
+      "git_blob": "2a8669b963fc613e035f29576139933aca554618",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/curl/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/curl/build.zig.zon",
+      "sha256": "d52647076f731bab3d2e9235b796cddb23cae4d80c7ea9dec56d87171c76ab0b",
+      "bytes": 418,
+      "reused": true,
+      "upstream_path": "ext/curl/build.zig.zon",
+      "git_blob": "220d033fae20ff986a5ae0dbf09a86f2eb1c4ee4",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/curl/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/gmp/build.zig",
+      "sha256": "db33216a0081414f2acf3085ef84e4728f6234b8698f1edefb1199d1bdf29f05",
+      "bytes": 28646,
+      "reused": true,
+      "upstream_path": "ext/gmp/build.zig",
+      "git_blob": "5346445bb41f763791291a0e56a032f11147f2a7",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/gmp/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/gmp/build.zig.zon",
+      "sha256": "ef2ad2b58797b2044824a94d87ffffc9f67025210cdb0d3d6eb1859067814672",
+      "bytes": 340,
+      "reused": true,
+      "upstream_path": "ext/gmp/build.zig.zon",
+      "git_blob": "41572e338dcd488a28472808e934ca52c6ffee6a",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/gmp/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+      "sha256": "942bad939c453827422ff413f20cc083f097f5f74927f20df3a1b6d6d6fe033d",
+      "bytes": 12826,
+      "reused": true,
+      "upstream_path": "ext/h2o/build.zig",
+      "git_blob": "fc3ed909ef20be3efdc392594c470e685431d912",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/h2o/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig.zon",
+      "sha256": "f34b10dac1bf01e4de26c545c55cede029bae7b86396019279eec5ea9782cb70",
+      "bytes": 1041,
+      "reused": true,
+      "upstream_path": "ext/h2o/build.zig.zon",
+      "git_blob": "8f74e745e438f9c4149c82937ebc966d0020c880",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/h2o/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/libuv/build.zig",
+      "sha256": "98464a374f2beb91337445d5c9e065bacf17b9fc09a9436fd97639bc478e6b59",
+      "bytes": 4408,
+      "reused": true,
+      "upstream_path": "ext/libuv/build.zig",
+      "git_blob": "5a2c8649244c530500cbdc939d89bf6a7a463f57",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/libuv/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/libuv/build.zig.zon",
+      "sha256": "bc42d7aea7bf6593932348dbd1cfcb0b51a6bbea62f941f6e70955d6ea98bbb4",
+      "bytes": 335,
+      "reused": true,
+      "upstream_path": "ext/libuv/build.zig.zon",
+      "git_blob": "35e72b3056ba9a3fc0c4c0435c3edc7467e3eb57",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/libuv/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/lmdb/build.zig",
+      "sha256": "a7bbdf70a79437cca07efe5ab2a1aa1df1c586eeb8bd57c66aaef9e5d34340b6",
+      "bytes": 1114,
+      "reused": true,
+      "upstream_path": "ext/lmdb/build.zig",
+      "git_blob": "0a80b2924070492e4955e254078c5da68726103a",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/lmdb/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/lmdb/build.zig.zon",
+      "sha256": "5db2f751b131fb26ee40390166683eee43bb35b7f34ec51fbd22db9e7d6f06e6",
+      "bytes": 361,
+      "reused": true,
+      "upstream_path": "ext/lmdb/build.zig.zon",
+      "git_blob": "c462e5077917644e8d9588234310b8a9777d2f47",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/lmdb/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/murmur3/build.zig",
+      "sha256": "7a6526dc1fb99853405e6af1e4c52de55f7fbeec2bd08ff1789f739434f17cfe",
+      "bytes": 902,
+      "reused": true,
+      "upstream_path": "ext/murmur3/build.zig",
+      "git_blob": "4a6293eb0a624c7e765f34771dd3f2be16e58a9c",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/murmur3/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/murmur3/build.zig.zon",
+      "sha256": "c879afc6432b43b985456d90262d675ec4471b44ada00ea66050aa1b4bf35f83",
+      "bytes": 125,
+      "reused": true,
+      "upstream_path": "ext/murmur3/build.zig.zon",
+      "git_blob": "957c2976755bda6f8c14c8f1e7b1c522fbad90d6",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/murmur3/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/nasm/build.zig",
+      "sha256": "7380d2100c954f1a7357c98b9741ba3e9191589efe6a01dce903a8699f6091f1",
+      "bytes": 30270,
+      "reused": true,
+      "upstream_path": "ext/nasm/build.zig",
+      "git_blob": "83b4458ec69052275d7f32c5358b5f2674dc31f7",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/nasm/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/nasm/build.zig.zon",
+      "sha256": "20601838868996c776f82b3e5fe821ec15082deea85ad3a4262195bdb2f276c6",
+      "bytes": 466,
+      "reused": true,
+      "upstream_path": "ext/nasm/build.zig.zon",
+      "git_blob": "b45ff7793d9b2c768ba540c4ec838766c7cfc2f3",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/nasm/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/natpmp/build.zig",
+      "sha256": "c992cb8ac4594a598b58c5072b12a324c958906cd90c56378683aefa0d15d188",
+      "bytes": 1241,
+      "reused": true,
+      "upstream_path": "ext/natpmp/build.zig",
+      "git_blob": "2883696ad4d5bd6823ef5bb2c92f562de41a435b",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/natpmp/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/natpmp/build.zig.zon",
+      "sha256": "917c76e6c7802646ef7a62d3d71e194de4162b7df53d494af7cef99c8357ca0f",
+      "bytes": 365,
+      "reused": true,
+      "upstream_path": "ext/natpmp/build.zig.zon",
+      "git_blob": "80682f05981005f7e130c108d3471d370404e572",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/natpmp/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/openssl/build.zig",
+      "sha256": "2bfcdfc57877a763e854848f89fe2caa594cf1608f693f24f96de87079d4f0a8",
+      "bytes": 38099,
+      "reused": true,
+      "upstream_path": "ext/openssl/build.zig",
+      "git_blob": "46724bfde9cac9c235114cb671edf03a581e7135",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/openssl/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/openssl/build.zig.zon",
+      "sha256": "8b27bcbb962fe501c0f06cadb66c74bdd3a6260bd40858843ae59e41a36e3c98",
+      "bytes": 674,
+      "reused": true,
+      "upstream_path": "ext/openssl/build.zig.zon",
+      "git_blob": "8298d4a6af1e24075cf0fff34ce70a0a6a60c0e8",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/openssl/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/pdjson/build.zig",
+      "sha256": "4985ac902f4b60a47823275f2db938d6bf63a5e0c3a7575ea1a001d8af596064",
+      "bytes": 886,
+      "reused": true,
+      "upstream_path": "ext/pdjson/build.zig",
+      "git_blob": "7b37f31ac01f9f72eda82f4886f48e25007539a7",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/pdjson/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/pdjson/build.zig.zon",
+      "sha256": "3a7fdc396455a8fd7a0ae8b06681ade7a6bf2f9968ffac98af5828892905d8cf",
+      "bytes": 369,
+      "reused": true,
+      "upstream_path": "ext/pdjson/build.zig.zon",
+      "git_blob": "28febf887970946594287f2a0315ac20e4db6628",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/pdjson/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/sigsegv/build.zig",
+      "sha256": "bf3203be30b7f0c78e01c913fb636eb407ce5bfa3846d60b0fb3b7cced01f55a",
+      "bytes": 4384,
+      "reused": true,
+      "upstream_path": "ext/sigsegv/build.zig",
+      "git_blob": "3b7e2103487d16afd08f933b61a51cdcdb9f09bf",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/sigsegv/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/sigsegv/build.zig.zon",
+      "sha256": "4d4a3f5cb2040f7c7eebbfd1518396352c944c6ebf2dc71f12d1ccf005906862",
+      "bytes": 595,
+      "reused": true,
+      "upstream_path": "ext/sigsegv/build.zig.zon",
+      "git_blob": "0b1b8b4ca251d9e98e9602c77a8553c95b4d908a",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/sigsegv/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/softblas/build.zig",
+      "sha256": "581386e08813fe630f2f0b505926cd89cb1404753ef0dfb85c34fc48bd94df66",
+      "bytes": 2531,
+      "reused": true,
+      "upstream_path": "ext/softblas/build.zig",
+      "git_blob": "560e4977fc87d133256294c80ed84490895b312e",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/softblas/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/softblas/build.zig.zon",
+      "sha256": "af9f1483f1fca5ca81d43df6d94e57c9b51cfd9c258f3bceb388aacb2dffb925",
+      "bytes": 445,
+      "reused": true,
+      "upstream_path": "ext/softblas/build.zig.zon",
+      "git_blob": "8f657dfb98dd2c82c922c96d87d9ece5215953af",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/softblas/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/softfloat/build.zig",
+      "sha256": "9f3429bf952647059e2a9e835296fd2db28f45e8ff24f4f3ab55a1f4bfa6636b",
+      "bytes": 25559,
+      "reused": true,
+      "upstream_path": "ext/softfloat/build.zig",
+      "git_blob": "87b08ad68d11281f264731187857ba8a9904f7a9",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/softfloat/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/softfloat/build.zig.zon",
+      "sha256": "e31b0196bd1e4c7f6d2176f5fc33a6c6da49a7a09a7a937dd1c82f99c594dc8a",
+      "bytes": 390,
+      "reused": true,
+      "upstream_path": "ext/softfloat/build.zig.zon",
+      "git_blob": "e77bfa2b9d15aca95ab8ef170282175d0ec59fab",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/softfloat/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/tracy/build.zig",
+      "sha256": "6338ffb3990e10208bb3d5ce6fbdb2b88d472a4631794ccf25fad5dba8da2d8d",
+      "bytes": 1491,
+      "reused": true,
+      "upstream_path": "ext/tracy/build.zig",
+      "git_blob": "d012b9177edbb6ea91e866da4d62160a748c648f",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/tracy/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/tracy/build.zig.zon",
+      "sha256": "5ca00e8522da9ca506b8a732c6b8cc1e7a20b7f984ee169f5f7db56c76166fc2",
+      "bytes": 334,
+      "reused": true,
+      "upstream_path": "ext/tracy/build.zig.zon",
+      "git_blob": "08319d1edad5f640cc3d92bdc7e2181b60951da4",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/tracy/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/unwind/build.zig",
+      "sha256": "274ee0af19bae3bdae2b88db78493bb73822991ad1f7670caac644da67e1c1a8",
+      "bytes": 8248,
+      "reused": true,
+      "upstream_path": "ext/unwind/build.zig",
+      "git_blob": "1d3897e8561eb7069842958bdbef62173e39f81e",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/unwind/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/unwind/build.zig.zon",
+      "sha256": "f3618a47755253539ac70ec9770681dc7f05c500dccd2ddae0975d4e0d275e12",
+      "bytes": 375,
+      "reused": true,
+      "upstream_path": "ext/unwind/build.zig.zon",
+      "git_blob": "635a150b0eb938c7f9c7e63e11948883c4ee43ac",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/unwind/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/urcrypt/build.zig",
+      "sha256": "e56c7b287026d6843f3b4c2bb865194c41d6247595e292d4900a7f3a3c18fd9d",
+      "bytes": 13329,
+      "reused": true,
+      "upstream_path": "ext/urcrypt/build.zig",
+      "git_blob": "7a98c90e2f01a4b13c4f2ef6d6b44ad8d5aebf18",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/urcrypt/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/urcrypt/build.zig.zon",
+      "sha256": "ece29139d60d4b43b7ea3c8e8be65627ba1556dd86852c641a9ac7b5b962749f",
+      "bytes": 865,
+      "reused": true,
+      "upstream_path": "ext/urcrypt/build.zig.zon",
+      "git_blob": "24311b9f1767c07849439554af3abfd1dd8f11b5",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/urcrypt/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/wasm3/build.zig",
+      "sha256": "8cac56a4c686d3cea6e089e87e9cb54c05d64aab3003ce1844a5c7f62f88bf7a",
+      "bytes": 3203,
+      "reused": true,
+      "upstream_path": "ext/wasm3/build.zig",
+      "git_blob": "7a522a8164d8418ddbf027b0b9ae613c68a25d25",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/wasm3/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/wasm3/build.zig.zon",
+      "sha256": "a9009c2d68a9a08c994632a5299ac3afc3012a0d9b77f38184fe549a496e8fd8",
+      "bytes": 479,
+      "reused": true,
+      "upstream_path": "ext/wasm3/build.zig.zon",
+      "git_blob": "41fe8043ca916cdbbf25ef8e476eb4056347a58e",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/wasm3/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/whereami/build.zig",
+      "sha256": "a607efc12145ba83cd1f65c8076d1d5b059449756bc977289b2f256d8b9e8e65",
+      "bytes": 764,
+      "reused": true,
+      "upstream_path": "ext/whereami/build.zig",
+      "git_blob": "01d617dcc3a9cc02b04119d77881ded972d67949",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/whereami/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/ext/whereami/build.zig.zon",
+      "sha256": "1b6dd85404d40204211544b8f0b9c45ddf16905972e8e397d79adaea81e6715f",
+      "bytes": 375,
+      "reused": true,
+      "upstream_path": "ext/whereami/build.zig.zon",
+      "git_blob": "67ec3af0bbe1fbfd09b114b47cd2e3d299668ca5",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/whereami/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/flake.lock",
+      "bytes": 1099,
+      "sha256": "8b555f8fc89c31f06b7111ef621663f901c8c651395d05b74afbc90eac796001",
+      "upstream_path": "flake.lock",
+      "git_blob": "10f88e0e4367fde1d13b0f7fbf6f258e4eb61323",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/flake.lock"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/flake.nix",
+      "bytes": 4654,
+      "sha256": "1bd4c596f20b741043b6b470b57972b4f045595674377c70af37f0b00b191f08",
+      "upstream_path": "flake.nix",
+      "git_blob": "05237289b38fa2c6f267a84015161d728e951dda",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/flake.nix"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/c3/build.zig",
+      "sha256": "2c396b649a6e6b74055a1c7cf5987c7a7bad479107ccbad60a066a238c7afa0c",
+      "bytes": 1752,
+      "reused": true,
+      "upstream_path": "pkg/c3/build.zig",
+      "git_blob": "2e074a46fa155f33a9f389aef4119fe9aaa93468",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/c3/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/c3/build.zig.zon",
+      "sha256": "0133e840504d9eab65340281c4027ec686f3f42aee3505e55ed5a48a1ac2b40e",
+      "bytes": 391,
+      "reused": true,
+      "upstream_path": "pkg/c3/build.zig.zon",
+      "git_blob": "98a26f1ed1286bbe040d53304e02ea503eaef27b",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/c3/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/ent/build.zig",
+      "sha256": "b6a2beef07e76b35d4874c86736af4e5cdaa585d70cbd962fb6bbd5dc138a57f",
+      "bytes": 1032,
+      "reused": true,
+      "upstream_path": "pkg/ent/build.zig",
+      "git_blob": "483c1757cf5c4e5cd70b4a9653abcf59c5d9fa18",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/ent/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/noun/build.zig",
+      "sha256": "a68ffff6ea0ff3093ca5c379eba02c704444da10e7e1e72e6d74085c27266d43",
+      "bytes": 10687,
+      "reused": true,
+      "upstream_path": "pkg/noun/build.zig",
+      "git_blob": "d73e80f42564ce00abaa92a199dbdb776e905abe",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/noun/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/noun/build.zig.zon",
+      "sha256": "7e8bfba28c5dfc2fc8712181634188481c8b0531efca4a91da4d1112deab36c9",
+      "bytes": 1759,
+      "reused": true,
+      "upstream_path": "pkg/noun/build.zig.zon",
+      "git_blob": "a5c72a90d976a0f64a5d5a88806ed933a068aeac",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/noun/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/past/build.zig",
+      "sha256": "53478bc66fccf8b1b1473467c07205cdd10c44570aaae90b33c53fe81aa95f4a",
+      "bytes": 2199,
+      "reused": true,
+      "upstream_path": "pkg/past/build.zig",
+      "git_blob": "1e7aa7d3b71e12590775278beb02c1003e49df19",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/past/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/past/build.zig.zon",
+      "sha256": "eef28e851b6c4e3456f505ffd4da8d513669fe0483a637b5b8a67109a6709163",
+      "bytes": 547,
+      "reused": true,
+      "upstream_path": "pkg/past/build.zig.zon",
+      "git_blob": "f69189b6bbe69df06c47421aa16ce94fadc9abfe",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/past/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/ur/build.zig",
+      "sha256": "044277fc4ab55cffdbddbdc80346db09cb334d87114fc519967831cda99adc83",
+      "bytes": 1183,
+      "reused": true,
+      "upstream_path": "pkg/ur/build.zig",
+      "git_blob": "6e20968cb47cc947d5e750cfabba65efd8430f23",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/ur/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/ur/build.zig.zon",
+      "sha256": "bc936578f9123c470d0cef8ec6305053b4094682afb31ef441013d7ce021e323",
+      "bytes": 223,
+      "reused": true,
+      "upstream_path": "pkg/ur/build.zig.zon",
+      "git_blob": "2330f4518bdc9cf7c2fb4e8f1ac533fe7749c728",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/ur/build.zig.zon"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/vere/build.zig",
+      "sha256": "a2d42d40f83b368c47297eea5dc868a55d4f1516205c6964b372af2260fde4e5",
+      "bytes": 7086,
+      "reused": true,
+      "upstream_path": "pkg/vere/build.zig",
+      "git_blob": "5f4429fd0c0184f8c9b70ceda2e173bc9fd06e4c",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/build.zig"
+    },
+    {
+      "path": "THIRD_PARTY/vere/evidence/vere/pkg/vere/build.zig.zon",
+      "sha256": "3cc7e03c14ebe85f388dba5340fcabf2d9e2b9f8547118f0cf3eb944458c83e2",
+      "bytes": 1562,
+      "reused": true,
+      "upstream_path": "pkg/vere/build.zig.zon",
+      "git_blob": "2d1b2ffaf41dbfd3056c37639810fd74a2d7094b",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/build.zig.zon"
+    }
+  ],
+  "patch_replacement_files": [
+    {
+      "path": "THIRD_PARTY/vere/notices/vere/ext/h2o/patches/h2o-2.2.6/deps/klib/kopen.c",
+      "sha256": "2c0a0d4a1e32c29f052e97753731c42d082e500ac6cce23076a7e69260a3a309",
+      "bytes": 9089,
+      "reused": true,
+      "upstream_path": "ext/h2o/patches/h2o-2.2.6/deps/klib/kopen.c",
+      "git_blob": "095fb4e0f0660f7a95fb1d19d71131d84638dfd6",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/h2o/patches/h2o-2.2.6/deps/klib/kopen.c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/notices/vere/ext/h2o/patches/h2o-2.2.6/deps/klib/ksw.c",
+      "sha256": "c61b8fe016123648d32054fecd0f3b9d0c83d5ccae51d8fc3f58ef26938d3bee",
+      "bytes": 22285,
+      "reused": true,
+      "upstream_path": "ext/h2o/patches/h2o-2.2.6/deps/klib/ksw.c",
+      "git_blob": "05af32f9fd62818a159efc482e7d20c3fec011ad",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/h2o/patches/h2o-2.2.6/deps/klib/ksw.c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/notices/vere/ext/h2o/patches/h2o-2.2.6/deps/klib/test/kbit_test.c",
+      "sha256": "d1fd2281ef327f9c7234843cb6880273f9ebdc4c4716617bdf5ed061c4322e8a",
+      "bytes": 4815,
+      "reused": true,
+      "upstream_path": "ext/h2o/patches/h2o-2.2.6/deps/klib/test/kbit_test.c",
+      "git_blob": "ece2a45cb6208dd6f2e2460b90a438b1f6826233",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/h2o/patches/h2o-2.2.6/deps/klib/test/kbit_test.c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/notices/vere/ext/h2o/patches/h2o-2.2.6/deps/picohttpparser/picohttpparser.c",
+      "sha256": "14c34511a53046542f9bb2a3798c0d8e9e337851b79ee3b52772d09895829d87",
+      "bytes": 25071,
+      "reused": true,
+      "upstream_path": "ext/h2o/patches/h2o-2.2.6/deps/picohttpparser/picohttpparser.c",
+      "git_blob": "c786f4bc44178af05f5464cc301a9d3275b5d221",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/h2o/patches/h2o-2.2.6/deps/picohttpparser/picohttpparser.c"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs/vere/ext/libuv/patches/libuv/src/win/tty.c",
+      "bytes": 77461,
+      "sha256": "02792df7c51f5e22670ef4646afbf2bf6699aa5fdbd8dfc3381e9308e2414561",
+      "upstream_path": "ext/libuv/patches/libuv/src/win/tty.c",
+      "git_blob": "34739013a3c7745edbea56a62c086d2548d17de5",
+      "source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/libuv/patches/libuv/src/win/tty.c"
+    }
+  ],
+  "scope": "Exact pinned source files, not proof of official binary build provenance. Replacement files are compiled selectively, not all applied as unified diffs.",
+  "source_archive": {
+    "path": "THIRD_PARTY/vere/followup/materials/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de.tar.gz",
+    "bytes": 5217760,
+    "sha256": "2fb75bf76ebe8a5cb8b42ca948eb968958f7f2ad318f5868320b4f9845ba29c0",
+    "source_url": "https://github.com/urbit/vere/tree/8ddc4b786979574dbfcb655e3db1b634f658d0de",
+    "origin": "git archive from retained public local object store; not upstream release archive bytes",
+    "git_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+    "git_tree": "eba678731a5fa96f79f0ef40175e09bf733b4be8",
+    "verified_blob_count": 1094,
+    "complete_git_blob_set": true,
+    "submodule_sources_included": false,
+    "historical_binary_inputs_authenticated": false
+  }
+}

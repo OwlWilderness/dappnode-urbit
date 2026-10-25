@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "PASS_FILE_INTEGRITY_NOT_DELIVERY_COMPLETENESS",
+  "owned_file_hash_checks": 72,
+  "retained_evidence_hash_checks": 142,
+  "upstream_build_patch_blob_checks": 70,
+  "vere_archive_blob_checks": 1094,
+  "wrapper_archive_file_checks": 39,
+  "retrieval_hash_checks": 40,
+  "json_files_parsed_excluding_result": 14,
+  "local_documentation_links_checked": 33,
+  "applicability_records": 13,
+  "supplementary_notice_blocks": 23,
+  "historical_wrapper_snapshot_changed_paths_observed": [
+    "build/Dockerfile",
+    "scripts/inventory-public-image.py",
+    "scripts/verify-notice-packaging.py"
+  ],
+  "wrapper_refresh_required": true,
+  "release_blocked": true,
+  "final_image_built": false,
+  "written_offer_issued": false,
+  "complete_corresponding_source_delivery": false,
+  "legal_clearance": false,
+  "build_runtime_docker_or_network_performed": false
+}

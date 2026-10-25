@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+  "declared_zig_version": "0.15.2",
+  "version_evidence": {
+    "path": "THIRD_PARTY/vere/followup/source-inputs/vere/.github/workflows/shared.yml",
+    "lines": [
+      75,
+      91
+    ]
+  },
+  "declared_live_build_argv": [
+    "zig",
+    "build",
+    "-Dall",
+    "-Drelease",
+    "--summary",
+    "all"
+  ],
+  "commands_executed": false,
+  "toolchain_archive_included": false,
+  "historical_binary_build_recipe_authenticated": false,
+  "official_binary_build_inputs_verified": false,
+  "script_like_source_files": [
+    {
+      "path": "boot-fake-ship.sh",
+      "bytes": 1582,
+      "sha256": "f899e25701970cbe53b8a3c85b98218e30c7fd2d808931393581a1dc924e6295",
+      "git_blob": "c7578cfa23146e19e18576cf4fb01dfe53ad322b"
+    },
+    {
+      "path": "docker/Dockerfile",
+      "bytes": 313,
+      "sha256": "7d7a3a2d3527e634b7342f5d664478af00e59edf0fcba4153b7826c5bfd97ae5",
+      "git_blob": "715153414447d36e57405356b85cd3040cb4a66b"
+    },
+    {
+      "path": "docker/get_urbit_code.sh",
+      "bytes": 248,
+      "sha256": "8102831f7e2710d2c2ab64715e22bed99be1ba3f56d0e3ac0799dc60dae4ffef",
+      "git_blob": "4873a045da6f37ba666e3e961d76ed55972b90b4"
+    },
+    {
+      "path": "docker/reset_urbit_code.sh",
+      "bytes": 567,
+      "sha256": "fa803ab381bd41fc72a979e465de291541ad1da4c61bdaa676822d1fa1a044db",
+      "git_blob": "20af60d7fc9089c624547b65c049273624f7a53a"
+    },
+    {
+      "path": "docker/start_urbit.sh",
+      "bytes": 1561,
+      "sha256": "5a91c2f56dea6ec57d8a2c62593c0cd1be830a62ebe0c3bf0a930a84f0668f82",
+      "git_blob": "809f2f12a5ab81f332ebeb76a0b290ac59543a11"
+    },
+    {
+      "path": "flake.nix",
+      "bytes": 4654,
+      "sha256": "1bd4c596f20b741043b6b470b57972b4f045595674377c70af37f0b00b191f08",
+      "git_blob": "05237289b38fa2c6f267a84015161d728e951dda"
+    },
+    {
+      "path": "pkg/vere/ca_bundle/ca_bundle.sh",
+      "bytes": 1235,
+      "sha256": "7ad969785d5f0fd21db1f1101687a2b6f946b20435a1ef2bb649444e5af7da98",
+      "git_blob": "c28c9bec564f0ad16ac9666617a8eb476a5c3156"
+    },
+    {
+      "path": "pkg/vere/ivory/ivory.sh",
+      "bytes": 1269,
+      "sha256": "77b6e7acf3e4e4dfb6011e8d2ca308da1c985e77c0272166d67be9e8e4ab0097",
+      "git_blob": "02b96fa46c5cb646d2ab45e31a9da3c370686dad"
+    },
+    {
+      "path": "test-fake-ship.sh",
+      "bytes": 4146,
+      "sha256": "170c544b534643189135ca7b6ac0ee96e6d800cd6ff9195c633d8d7c1c15c050",
+      "git_blob": "c3712189509b2949dba1e012491979bcffb2407b"
+    }
+  ],
+  "all_script_bytes_in_vere_archive": true,
+  "limitations": [
+    "Workflow action tags and external toolchain objects not authenticated or bundled.",
+    "The exact source archive contains build scripts, not all external source archives they reference.",
+    "No binary reproduction, linking membership, runtime or source sufficiency established."
+  ]
+}

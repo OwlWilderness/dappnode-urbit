@@ -1,0 +1,1078 @@
+{
+  "schema_version": 1,
+  "declarations": [
+    {
+      "name": "macos_sdk",
+      "kind": "url",
+      "value": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM"
+    },
+    {
+      "name": "pkg_c3",
+      "kind": "path",
+      "value": "./pkg/c3",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_ent",
+      "kind": "path",
+      "value": "./pkg/ent",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_ur",
+      "kind": "path",
+      "value": "./pkg/ur",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_noun",
+      "kind": "path",
+      "value": "./pkg/noun",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_past",
+      "kind": "path",
+      "value": "./pkg/past",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_vere",
+      "kind": "path",
+      "value": "./pkg/vere",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "curl",
+      "kind": "path",
+      "value": "./ext/curl",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "gmp",
+      "kind": "path",
+      "value": "./ext/gmp",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "h2o",
+      "kind": "path",
+      "value": "./ext/h2o",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "libuv",
+      "kind": "path",
+      "value": "./ext/libuv",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "lmdb",
+      "kind": "path",
+      "value": "./ext/lmdb",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "natpmp",
+      "kind": "path",
+      "value": "./ext/natpmp",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "openssl",
+      "kind": "path",
+      "value": "./ext/openssl",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "sigsegv",
+      "kind": "path",
+      "value": "./ext/sigsegv",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "urcrypt",
+      "kind": "path",
+      "value": "./ext/urcrypt",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "whereami",
+      "kind": "path",
+      "value": "./ext/whereami",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "zlib",
+      "kind": "url",
+      "value": "https://github.com/allyourcodebase/zlib/archive/61e7df7e996ec5a5f13a653db3c419adb340d6ef.tar.gz",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": "zlib-1.3.1-ZZQ7lbYMAAB1hTSOKSXAKAgHsfDcyWNH_37ojw5WSpgR"
+    },
+    {
+      "name": "wasm3",
+      "kind": "path",
+      "value": "./ext/wasm3",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "tracy",
+      "kind": "path",
+      "value": "./ext/tracy",
+      "manifest": "evidence/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "avahi",
+      "kind": "url",
+      "value": "https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz",
+      "manifest": "evidence/vere/ext/avahi/build.zig.zon",
+      "zig_hash": "N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5"
+    },
+    {
+      "name": "dbus",
+      "kind": "url",
+      "value": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.8.tar.xz",
+      "manifest": "evidence/vere/ext/avahi/build.zig.zon",
+      "zig_hash": "N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN"
+    },
+    {
+      "name": "expat",
+      "kind": "url",
+      "value": "https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.xz",
+      "manifest": "evidence/vere/ext/avahi/build.zig.zon",
+      "zig_hash": "N-V-__8AABFoMgCxh01WjWFoh4nrLx8v4e0G9muwSAAA32Rc"
+    },
+    {
+      "name": "backtrace",
+      "kind": "url",
+      "value": "https://github.com/ianlancetaylor/libbacktrace/archive/4ead348bb45f753121ca0bd44170ff8352d4c514.tar.gz",
+      "manifest": "evidence/vere/ext/backtrace/build.zig.zon",
+      "zig_hash": "N-V-__8AADzSKgBaRtVnvQd2FZXVZ4ehq7SHwyHiBL8xSONl"
+    },
+    {
+      "name": "curl",
+      "kind": "url",
+      "value": "https://github.com/curl/curl/releases/download/curl-8_9_1/curl-8.9.1.tar.gz",
+      "manifest": "evidence/vere/ext/curl/build.zig.zon",
+      "zig_hash": "N-V-__8AAFnEQQHzY3X3pCO43EGxRhLWhfSOAwsl0PbraQER"
+    },
+    {
+      "name": "openssl",
+      "kind": "path",
+      "value": "../openssl",
+      "manifest": "evidence/vere/ext/curl/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "gmp",
+      "kind": "url",
+      "value": "https://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/gmp-6.3.0.tar.xz",
+      "manifest": "evidence/vere/ext/gmp/build.zig.zon",
+      "zig_hash": "N-V-__8AAE5fAwHUYgLBeqNatYSKf3qBK3l8nwdpjyY8igK0"
+    },
+    {
+      "name": "h2o",
+      "kind": "url",
+      "value": "https://github.com/pkova/h2o/archive/3bbfe369a5c31d38cc1717e5281ca6af89ecf787.tar.gz",
+      "manifest": "evidence/vere/ext/h2o/build.zig.zon",
+      "zig_hash": "N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076"
+    },
+    {
+      "name": "libuv",
+      "kind": "path",
+      "value": "../libuv",
+      "manifest": "evidence/vere/ext/h2o/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "openssl",
+      "kind": "path",
+      "value": "../openssl",
+      "manifest": "evidence/vere/ext/h2o/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "curl",
+      "kind": "path",
+      "value": "../curl",
+      "manifest": "evidence/vere/ext/h2o/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "zlib",
+      "kind": "url",
+      "value": "https://github.com/allyourcodebase/zlib/archive/61e7df7e996ec5a5f13a653db3c419adb340d6ef.tar.gz",
+      "manifest": "evidence/vere/ext/h2o/build.zig.zon",
+      "zig_hash": "zlib-1.3.1-ZZQ7lbYMAAB1hTSOKSXAKAgHsfDcyWNH_37ojw5WSpgR"
+    },
+    {
+      "name": "sse2neon",
+      "kind": "url",
+      "value": "https://github.com/DLTcollab/sse2neon/archive/refs/tags/v1.5.1.tar.gz",
+      "manifest": "evidence/vere/ext/h2o/build.zig.zon",
+      "zig_hash": "N-V-__8AAPihCgDO1A74r0pFZaoafeZ41DR435smSDwGLbLb"
+    },
+    {
+      "name": "patches",
+      "kind": "path",
+      "value": "./patches",
+      "manifest": "evidence/vere/ext/h2o/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "libuv",
+      "kind": "url",
+      "value": "https://dist.libuv.org/dist/v1.50.0/libuv-v1.50.0.tar.gz",
+      "manifest": "evidence/vere/ext/libuv/build.zig.zon",
+      "zig_hash": "N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg"
+    },
+    {
+      "name": "lmdb",
+      "kind": "url",
+      "value": "https://github.com/LMDB/lmdb/archive/40d3741b7d40ba4c75cb91dd9987ce692d376d71.tar.gz",
+      "manifest": "evidence/vere/ext/lmdb/build.zig.zon",
+      "zig_hash": "N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4"
+    },
+    {
+      "name": "natpmp",
+      "kind": "url",
+      "value": "http://deb.debian.org/debian/pool/main/libn/libnatpmp/libnatpmp_20230423.orig.tar.gz",
+      "manifest": "evidence/vere/ext/natpmp/build.zig.zon",
+      "zig_hash": "N-V-__8AAKudAQA_d3eW8d8dskxBlLzGBg0qe-4u6ohSfCM2"
+    },
+    {
+      "name": "nasm",
+      "kind": "path",
+      "value": "../nasm",
+      "manifest": "evidence/vere/ext/openssl/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "macos_sdk",
+      "kind": "url",
+      "value": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "manifest": "evidence/vere/ext/openssl/build.zig.zon",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM"
+    },
+    {
+      "name": "openssl",
+      "kind": "url",
+      "value": "https://github.com/openssl/openssl/releases/download/OpenSSL_1_1_1w/openssl-1.1.1w.tar.gz",
+      "manifest": "evidence/vere/ext/openssl/build.zig.zon",
+      "zig_hash": "N-V-__8AANidegJCsKafw97uPGA7EQRvFWkwRuXPz1aFjgKL"
+    },
+    {
+      "name": "pdjson",
+      "kind": "url",
+      "value": "https://github.com/skeeto/pdjson/archive/67108d883061043e55d0fb13961ac1b6fc8a485c.tar.gz",
+      "manifest": "evidence/vere/ext/pdjson/build.zig.zon",
+      "zig_hash": "N-V-__8AADC9AACneJx7RTm9Hui7GCYJ2Qdv8Z_CUCbJphyi"
+    },
+    {
+      "name": "macos_sdk",
+      "kind": "url",
+      "value": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "manifest": "evidence/vere/ext/sigsegv/build.zig.zon",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM"
+    },
+    {
+      "name": "sigsegv",
+      "kind": "url",
+      "value": "https://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/libsigsegv-2.14.tar.gz",
+      "manifest": "evidence/vere/ext/sigsegv/build.zig.zon",
+      "zig_hash": "N-V-__8AAHQhHwCCMyKUtQhO0AMsY182In-wQIwXVhenOql5"
+    },
+    {
+      "name": "softfloat",
+      "kind": "path",
+      "value": "../softfloat",
+      "manifest": "evidence/vere/ext/softblas/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "softblas",
+      "kind": "url",
+      "value": "https://github.com/urbit/SoftBLAS/archive/cbffb33f19ea02f9ffbd184d445123c57929ec53.tar.gz",
+      "manifest": "evidence/vere/ext/softblas/build.zig.zon",
+      "zig_hash": "N-V-__8AAJD5MgBhfBHYae8jFlcaQw9R-TRw4tcUFB3rO9-q"
+    },
+    {
+      "name": "softfloat",
+      "kind": "url",
+      "value": "https://github.com/ucb-bar/berkeley-softfloat-3/archive/5c06db33fc1e2130f67c045327b0ec949032df1d.tar.gz",
+      "manifest": "evidence/vere/ext/softfloat/build.zig.zon",
+      "zig_hash": "N-V-__8AAJjNHACk0uvy2j8WATPrbK9KmbnnuYeYIN6PO9nl"
+    },
+    {
+      "name": "tracy",
+      "kind": "url",
+      "value": "https://github.com/wolfpld/tracy/archive/v0.12.2.tar.gz",
+      "manifest": "evidence/vere/ext/tracy/build.zig.zon",
+      "zig_hash": "N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb"
+    },
+    {
+      "name": "unwind",
+      "kind": "url",
+      "value": "https://github.com/libunwind/libunwind/archive/7cc4c20fbcf65a9c855fb9d950fad8d0e29b092e.tar.gz",
+      "manifest": "evidence/vere/ext/unwind/build.zig.zon",
+      "zig_hash": "N-V-__8AAA54RADHKA70ncWBovi6ApxYOAQQubuxcBr6y6Ey"
+    },
+    {
+      "name": "aes_siv",
+      "kind": "url",
+      "value": "https://github.com/dfoxfranke/libaes_siv/archive/9681279cfaa6e6399bb7ca3afbbc27fc2e19df4b.tar.gz",
+      "manifest": "evidence/vere/ext/urcrypt/build.zig.zon",
+      "zig_hash": "N-V-__8AADRgAQComAaFJaS9o75BOcaFVew6nO8D7ZTGMRXd"
+    },
+    {
+      "name": "openssl",
+      "kind": "path",
+      "value": "../openssl",
+      "manifest": "evidence/vere/ext/urcrypt/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "secp256k1",
+      "kind": "url",
+      "value": "https://github.com/bitcoin-core/secp256k1/archive/refs/tags/v0.5.1.tar.gz",
+      "manifest": "evidence/vere/ext/urcrypt/build.zig.zon",
+      "zig_hash": "N-V-__8AAJ4DSwC7aDpt90TmGPWKAI6q4-titwp4M0zsZ2vY"
+    },
+    {
+      "name": "urcrypt",
+      "kind": "url",
+      "value": "https://github.com/urbit/urcrypt/archive/6c93535d46adffcd1495f904bac91d43b2d6d555.tar.gz",
+      "manifest": "evidence/vere/ext/urcrypt/build.zig.zon",
+      "zig_hash": "N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb"
+    },
+    {
+      "name": "softfloat",
+      "kind": "path",
+      "value": "../softfloat",
+      "manifest": "evidence/vere/ext/wasm3/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "whereami",
+      "kind": "url",
+      "value": "https://github.com/gpakosz/whereami/archive/ba364cd54fd431c76c045393b6522b4bff547f50.tar.gz",
+      "manifest": "evidence/vere/ext/whereami/build.zig.zon",
+      "zig_hash": "N-V-__8AALQtAQBEQG8__NumxBzcv4ws_jGX2zVgxvG6p6gs"
+    },
+    {
+      "name": "macos_sdk",
+      "kind": "url",
+      "value": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "manifest": "evidence/vere/pkg/c3/build.zig.zon",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM"
+    },
+    {
+      "name": "macos_sdk",
+      "kind": "url",
+      "value": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM"
+    },
+    {
+      "name": "pkg_c3",
+      "kind": "path",
+      "value": "../c3",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_ent",
+      "kind": "path",
+      "value": "../ent",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_ur",
+      "kind": "path",
+      "value": "../ur",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "backtrace",
+      "kind": "path",
+      "value": "../../ext/backtrace",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "gmp",
+      "kind": "path",
+      "value": "../../ext/gmp",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "murmur3",
+      "kind": "path",
+      "value": "../../ext/murmur3",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "openssl",
+      "kind": "path",
+      "value": "../../ext/openssl",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pdjson",
+      "kind": "path",
+      "value": "../../ext/pdjson",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "sigsegv",
+      "kind": "path",
+      "value": "../../ext/sigsegv",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "softblas",
+      "kind": "path",
+      "value": "../../ext/softblas",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "softfloat",
+      "kind": "path",
+      "value": "../../ext/softfloat",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "unwind",
+      "kind": "path",
+      "value": "../../ext/unwind",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "urcrypt",
+      "kind": "path",
+      "value": "../../ext/urcrypt",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "whereami",
+      "kind": "path",
+      "value": "../../ext/whereami",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "zlib",
+      "kind": "url",
+      "value": "https://github.com/allyourcodebase/zlib/archive/61e7df7e996ec5a5f13a653db3c419adb340d6ef.tar.gz",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": "zlib-1.3.1-ZZQ7lbYMAAB1hTSOKSXAKAgHsfDcyWNH_37ojw5WSpgR"
+    },
+    {
+      "name": "wasm3",
+      "kind": "path",
+      "value": "../../ext/wasm3",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "tracy",
+      "kind": "path",
+      "value": "../../ext/tracy",
+      "manifest": "evidence/vere/pkg/noun/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "macos_sdk",
+      "kind": "url",
+      "value": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "manifest": "evidence/vere/pkg/past/build.zig.zon",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM"
+    },
+    {
+      "name": "pkg_c3",
+      "kind": "path",
+      "value": "../c3",
+      "manifest": "evidence/vere/pkg/past/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_noun",
+      "kind": "path",
+      "value": "../noun",
+      "manifest": "evidence/vere/pkg/past/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "gmp",
+      "kind": "path",
+      "value": "../../ext/gmp",
+      "manifest": "evidence/vere/pkg/past/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "murmur3",
+      "kind": "path",
+      "value": "../../ext/murmur3",
+      "manifest": "evidence/vere/pkg/ur/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "macos_sdk",
+      "kind": "url",
+      "value": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM"
+    },
+    {
+      "name": "pkg_c3",
+      "kind": "path",
+      "value": "../c3",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_ent",
+      "kind": "path",
+      "value": "../ent",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_ur",
+      "kind": "path",
+      "value": "../ur",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_noun",
+      "kind": "path",
+      "value": "../noun",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "pkg_past",
+      "kind": "path",
+      "value": "../past",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "avahi",
+      "kind": "path",
+      "value": "../../ext/avahi",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "curl",
+      "kind": "path",
+      "value": "../../ext/curl",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "gmp",
+      "kind": "path",
+      "value": "../../ext/gmp",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "h2o",
+      "kind": "path",
+      "value": "../../ext/h2o",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "libuv",
+      "kind": "path",
+      "value": "../../ext/libuv",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "lmdb",
+      "kind": "path",
+      "value": "../../ext/lmdb",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "natpmp",
+      "kind": "path",
+      "value": "../../ext/natpmp",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "openssl",
+      "kind": "path",
+      "value": "../../ext/openssl",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "urcrypt",
+      "kind": "path",
+      "value": "../../ext/urcrypt",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": null
+    },
+    {
+      "name": "zlib",
+      "kind": "url",
+      "value": "https://github.com/allyourcodebase/zlib/archive/61e7df7e996ec5a5f13a653db3c419adb340d6ef.tar.gz",
+      "manifest": "evidence/vere/pkg/vere/build.zig.zon",
+      "zig_hash": "zlib-1.3.1-ZZQ7lbYMAAB1hTSOKSXAKAgHsfDcyWNH_37ojw5WSpgR"
+    },
+    {
+      "name": "wasm3",
+      "kind": "url",
+      "value": "https://github.com/urbit/wasm3/archive/be8cbeafa8b2301350484ecb494ed0288589d985.tar.gz",
+      "zig_hash": "N-V-__8AAHEiSQD6ts4e3wCZ7CFp6FAQU4Dg5kBTwgSQpIDY",
+      "manifest": "evidence/vere/ext/wasm3/build.zig.zon"
+    }
+  ],
+  "components": [
+    {
+      "component": "aes_siv",
+      "version_or_revision": "9681279cfaa6e6399bb7ca3afbbc27fc2e19df4b",
+      "declared_source_url": "https://github.com/dfoxfranke/libaes_siv/archive/9681279cfaa6e6399bb7ca3afbbc27fc2e19df4b.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/dfoxfranke/libaes_siv/tar.gz/9681279cfaa6e6399bb7ca3afbbc27fc2e19df4b",
+      "zig_hash": "N-V-__8AADRgAQComAaFJaS9o75BOcaFVew6nO8D7ZTGMRXd",
+      "source_archive_sha256": "1916a428dff480e06b09dc0fb1c9d849c048f838dc9b8d141452233b508f6bb1",
+      "source_archive_bytes": 21974,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "avahi",
+      "version_or_revision": "0.8",
+      "declared_source_url": "https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz",
+      "retrieved_source_url": "https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz",
+      "zig_hash": "N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5",
+      "source_archive_sha256": "060309d7a333d38d951bc27598c677af1796934dbd98e1024e7ad8de798fedda",
+      "source_archive_bytes": 1591458,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "backtrace",
+      "version_or_revision": "4ead348bb45f753121ca0bd44170ff8352d4c514",
+      "declared_source_url": "https://github.com/ianlancetaylor/libbacktrace/archive/4ead348bb45f753121ca0bd44170ff8352d4c514.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/ianlancetaylor/libbacktrace/tar.gz/4ead348bb45f753121ca0bd44170ff8352d4c514",
+      "zig_hash": "N-V-__8AADzSKgBaRtVnvQd2FZXVZ4ehq7SHwyHiBL8xSONl",
+      "source_archive_sha256": "609c17352ec38eaf5ff6618fcbfb38cd8fa0e94a15a0d9aa259df514bbf47fcd",
+      "source_archive_bytes": 683836,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "curl",
+      "version_or_revision": "8.9.1",
+      "declared_source_url": "https://github.com/curl/curl/releases/download/curl-8_9_1/curl-8.9.1.tar.gz",
+      "retrieved_source_url": "https://github.com/curl/curl/releases/download/curl-8_9_1/curl-8.9.1.tar.gz",
+      "zig_hash": "N-V-__8AAFnEQQHzY3X3pCO43EGxRhLWhfSOAwsl0PbraQER",
+      "source_archive_sha256": "291124a007ee5111997825940b3876b3048f7d31e73e9caa681b80fe48b2dcd5",
+      "source_archive_bytes": 4200000,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "dbus",
+      "version_or_revision": "1.14.8",
+      "declared_source_url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.8.tar.xz",
+      "retrieved_source_url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.8.tar.xz",
+      "zig_hash": "N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN",
+      "source_archive_sha256": "a6bd5bac5cf19f0c3c594bdae2565a095696980a683a0ef37cb6212e093bde35",
+      "source_archive_bytes": 1371236,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "ent",
+      "version_or_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+      "declared_source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/ent/LICENSE",
+      "retrieved_source_url": null,
+      "zig_hash": null,
+      "source_archive_sha256": null,
+      "source_archive_bytes": null,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "expat",
+      "version_or_revision": "2.5.0",
+      "declared_source_url": "https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.xz",
+      "retrieved_source_url": "https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.xz",
+      "zig_hash": "N-V-__8AABFoMgCxh01WjWFoh4nrLx8v4e0G9muwSAAA32Rc",
+      "source_archive_sha256": "ef2420f0232c087801abf705e89ae65f6257df6b7931d37846a193ef2e8cdcbe",
+      "source_archive_bytes": 460560,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "gmp",
+      "version_or_revision": "6.3.0",
+      "declared_source_url": "https://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/gmp-6.3.0.tar.xz",
+      "retrieved_source_url": "https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz",
+      "zig_hash": "N-V-__8AAE5fAwHUYgLBeqNatYSKf3qBK3l8nwdpjyY8igK0",
+      "source_archive_sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898",
+      "source_archive_bytes": 2094196,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [
+        "Fetched matching release from original upstream rather than manifest mirror; Zig package hash not recomputed; archive identity against manifest mirror not independently proven."
+      ],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "h2o",
+      "version_or_revision": "3bbfe369a5c31d38cc1717e5281ca6af89ecf787",
+      "declared_source_url": "https://github.com/pkova/h2o/archive/3bbfe369a5c31d38cc1717e5281ca6af89ecf787.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/pkova/h2o/tar.gz/3bbfe369a5c31d38cc1717e5281ca6af89ecf787",
+      "zig_hash": "N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076",
+      "source_archive_sha256": "87d8a3040c922f6736fa3ada578baf9848e6aa1bb47db473c07e3cda79525f96",
+      "source_archive_bytes": 16260839,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "libuv",
+      "version_or_revision": "1.50.0",
+      "declared_source_url": "https://dist.libuv.org/dist/v1.50.0/libuv-v1.50.0.tar.gz",
+      "retrieved_source_url": "https://dist.libuv.org/dist/v1.50.0/libuv-v1.50.0.tar.gz",
+      "zig_hash": "N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg",
+      "source_archive_sha256": "6dc2b39aa7fa66c04e2e015bf47738b84e1c6b86b8987d57dd432d149d77ee25",
+      "source_archive_bytes": 1340083,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "lmdb",
+      "version_or_revision": "40d3741b7d40ba4c75cb91dd9987ce692d376d71",
+      "declared_source_url": "https://github.com/LMDB/lmdb/archive/40d3741b7d40ba4c75cb91dd9987ce692d376d71.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/LMDB/lmdb/tar.gz/40d3741b7d40ba4c75cb91dd9987ce692d376d71",
+      "zig_hash": "N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4",
+      "source_archive_sha256": "b80ed032246adda023132bda5fca1f8629201bcc828355fb5007fcf59f598fb6",
+      "source_archive_bytes": 156960,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "macos_sdk",
+      "version_or_revision": "14.5",
+      "declared_source_url": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "retrieved_source_url": "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz",
+      "zig_hash": "N-V-__8AAKtK4FMzqcFsY_ZrpMg9bGH0h7BqZDXtVyAerMtM",
+      "source_archive_sha256": null,
+      "source_archive_bytes": null,
+      "amd64_linux_status": "excluded: macOS-only SDK",
+      "unresolved": [
+        "Excluded macOS-only SDK; archive not fetched (size boundary; not AMD64 Linux)."
+      ],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "murmur3",
+      "version_or_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+      "declared_source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/murmur3/vendor/murmur3.c",
+      "retrieved_source_url": null,
+      "zig_hash": null,
+      "source_archive_sha256": null,
+      "source_archive_bytes": null,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "nasm",
+      "version_or_revision": "2.16.1-4 (Vere manifest)",
+      "declared_source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/nasm/LICENSE",
+      "retrieved_source_url": null,
+      "zig_hash": null,
+      "source_archive_sha256": null,
+      "source_archive_bytes": null,
+      "amd64_linux_status": "excluded: build-time assembler in Windows branch of ext/openssl/build.zig",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "natpmp",
+      "version_or_revision": "20230423",
+      "declared_source_url": "http://deb.debian.org/debian/pool/main/libn/libnatpmp/libnatpmp_20230423.orig.tar.gz",
+      "retrieved_source_url": "https://miniupnp.tuxfamily.org/files/libnatpmp-20230423.tar.gz",
+      "zig_hash": "N-V-__8AAKudAQA_d3eW8d8dskxBlLzGBg0qe-4u6ohSfCM2",
+      "source_archive_sha256": "0684ed2c8406437e7519a1bd20ea83780db871b3a3a5d752311ba3e889dbfc70",
+      "source_archive_bytes": 26506,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [
+        "Fetched matching release from original upstream rather than manifest mirror; Zig package hash not recomputed; archive identity against manifest mirror not independently proven."
+      ],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "openssl",
+      "version_or_revision": "1.1.1w",
+      "declared_source_url": "https://github.com/openssl/openssl/releases/download/OpenSSL_1_1_1w/openssl-1.1.1w.tar.gz",
+      "retrieved_source_url": "https://github.com/openssl/openssl/releases/download/OpenSSL_1_1_1w/openssl-1.1.1w.tar.gz",
+      "zig_hash": "N-V-__8AANidegJCsKafw97uPGA7EQRvFWkwRuXPz1aFjgKL",
+      "source_archive_sha256": "cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8",
+      "source_archive_bytes": 9893384,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "pdjson",
+      "version_or_revision": "67108d883061043e55d0fb13961ac1b6fc8a485c",
+      "declared_source_url": "https://github.com/skeeto/pdjson/archive/67108d883061043e55d0fb13961ac1b6fc8a485c.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/skeeto/pdjson/tar.gz/67108d883061043e55d0fb13961ac1b6fc8a485c",
+      "zig_hash": "N-V-__8AADC9AACneJx7RTm9Hui7GCYJ2Qdv8Z_CUCbJphyi",
+      "source_archive_sha256": "928913d44d9021d69c0d23a8f59ed67028e5abf1ae7910f79c23a7af4e779b92",
+      "source_archive_bytes": 11577,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "secp256k1",
+      "version_or_revision": "0.5.1",
+      "declared_source_url": "https://github.com/bitcoin-core/secp256k1/archive/refs/tags/v0.5.1.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/bitcoin-core/secp256k1/tar.gz/refs/tags/v0.5.1",
+      "zig_hash": "N-V-__8AAJ4DSwC7aDpt90TmGPWKAI6q4-titwp4M0zsZ2vY",
+      "source_archive_sha256": "081f4730becba2715a6b0fd198fedd9e649a6caaa6a7d6d3cf0f9fa7483f2cf1",
+      "source_archive_bytes": 1962518,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "sigsegv",
+      "version_or_revision": "2.14",
+      "declared_source_url": "https://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/libsigsegv-2.14.tar.gz",
+      "retrieved_source_url": "https://ftp.gnu.org/gnu/libsigsegv/libsigsegv-2.14.tar.gz",
+      "zig_hash": "N-V-__8AAHQhHwCCMyKUtQhO0AMsY182In-wQIwXVhenOql5",
+      "source_archive_sha256": "cdac3941803364cf81a908499beb79c200ead60b6b5b40cad124fd1e06caa295",
+      "source_archive_bytes": 464658,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [
+        "Fetched matching release from original upstream rather than manifest mirror; Zig package hash not recomputed; archive identity against manifest mirror not independently proven."
+      ],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "softblas",
+      "version_or_revision": "cbffb33f19ea02f9ffbd184d445123c57929ec53",
+      "declared_source_url": "https://github.com/urbit/SoftBLAS/archive/cbffb33f19ea02f9ffbd184d445123c57929ec53.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/urbit/SoftBLAS/tar.gz/cbffb33f19ea02f9ffbd184d445123c57929ec53",
+      "zig_hash": "N-V-__8AAJD5MgBhfBHYae8jFlcaQw9R-TRw4tcUFB3rO9-q",
+      "source_archive_sha256": "1fc6c978708982d2f50405670b6fb6b1344936b22935d0037724c8de0fbfffbc",
+      "source_archive_bytes": 3089655,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "softfloat",
+      "version_or_revision": "5c06db33fc1e2130f67c045327b0ec949032df1d",
+      "declared_source_url": "https://github.com/ucb-bar/berkeley-softfloat-3/archive/5c06db33fc1e2130f67c045327b0ec949032df1d.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/ucb-bar/berkeley-softfloat-3/tar.gz/5c06db33fc1e2130f67c045327b0ec949032df1d",
+      "zig_hash": "N-V-__8AAJjNHACk0uvy2j8WATPrbK9KmbnnuYeYIN6PO9nl",
+      "source_archive_sha256": "15ad5841e88fe09422a8e31a0ef3fe126ecf678f52c9a3882f3373d47752aebe",
+      "source_archive_bytes": 148536,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "sse2neon",
+      "version_or_revision": "1.5.1",
+      "declared_source_url": "https://github.com/DLTcollab/sse2neon/archive/refs/tags/v1.5.1.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/DLTcollab/sse2neon/tar.gz/refs/tags/v1.5.1",
+      "zig_hash": "N-V-__8AAPihCgDO1A74r0pFZaoafeZ41DR435smSDwGLbLb",
+      "source_archive_sha256": "4001e2dfb14fcf3831211581ed83bcc83cf6a3a69f638dcbaa899044a351bb2a",
+      "source_archive_bytes": 101446,
+      "amd64_linux_status": "excluded: aarch64-only include paths in ext/h2o/build.zig",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "tracy",
+      "version_or_revision": "0.12.2",
+      "declared_source_url": "https://github.com/wolfpld/tracy/archive/v0.12.2.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/wolfpld/tracy/tar.gz/v0.12.2",
+      "zig_hash": "N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb",
+      "source_archive_sha256": "09617765ba5ff1aa6da128d9ba3c608166c5ef05ac28e2bb77f791269d444952",
+      "source_archive_bytes": 4781217,
+      "amd64_linux_status": "optional developer profiler; disabled by default; not asserted shipped",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "unwind",
+      "version_or_revision": "7cc4c20fbcf65a9c855fb9d950fad8d0e29b092e",
+      "declared_source_url": "https://github.com/libunwind/libunwind/archive/7cc4c20fbcf65a9c855fb9d950fad8d0e29b092e.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/libunwind/libunwind/tar.gz/7cc4c20fbcf65a9c855fb9d950fad8d0e29b092e",
+      "zig_hash": "N-V-__8AAA54RADHKA70ncWBovi6ApxYOAQQubuxcBr6y6Ey",
+      "source_archive_sha256": "ff58864101781cc0df0c51f77a9d13addb9df3c5a972197c98434c88d6b30d57",
+      "source_archive_bytes": 665634,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "urcrypt",
+      "version_or_revision": "6c93535d46adffcd1495f904bac91d43b2d6d555",
+      "declared_source_url": "https://github.com/urbit/urcrypt/archive/6c93535d46adffcd1495f904bac91d43b2d6d555.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/urbit/urcrypt/tar.gz/6c93535d46adffcd1495f904bac91d43b2d6d555",
+      "zig_hash": "N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb",
+      "source_archive_sha256": "2025aa33ac90018dd85f53d0488e3f685cb41b7349bd0e3dc72fd53e720c036f",
+      "source_archive_bytes": 1705754,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "vere",
+      "version_or_revision": "4.6",
+      "declared_source_url": "https://raw.githubusercontent.com/urbit/vere/8ddc4b786979574dbfcb655e3db1b634f658d0de/LICENSE.txt",
+      "retrieved_source_url": null,
+      "zig_hash": null,
+      "source_archive_sha256": null,
+      "source_archive_bytes": null,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "wasm3",
+      "version_or_revision": "be8cbeafa8b2301350484ecb494ed0288589d985",
+      "declared_source_url": "https://github.com/urbit/wasm3/archive/be8cbeafa8b2301350484ecb494ed0288589d985.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/urbit/wasm3/tar.gz/be8cbeafa8b2301350484ecb494ed0288589d985",
+      "zig_hash": "N-V-__8AAHEiSQD6ts4e3wCZ7CFp6FAQU4Dg5kBTwgSQpIDY",
+      "source_archive_sha256": "0c5c9da48dd72d1dd5e72231866f2fbb7f673d9d66fc7cc7df19b0776a61a30f",
+      "source_archive_bytes": 2602688,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "whereami",
+      "version_or_revision": "ba364cd54fd431c76c045393b6522b4bff547f50",
+      "declared_source_url": "https://github.com/gpakosz/whereami/archive/ba364cd54fd431c76c045393b6522b4bff547f50.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/gpakosz/whereami/tar.gz/ba364cd54fd431c76c045393b6522b4bff547f50",
+      "zig_hash": "N-V-__8AALQtAQBEQG8__NumxBzcv4ws_jGX2zVgxvG6p6gs",
+      "source_archive_sha256": "1d8744177f37e8386ec2f6c5992592399040cb93535ed4fd253e1976f889a744",
+      "source_archive_bytes": 15290,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "zlib",
+      "version_or_revision": "1.3.1",
+      "declared_source_url": "https://github.com/madler/zlib/archive/refs/tags/v1.3.1.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/madler/zlib/tar.gz/refs/tags/v1.3.1",
+      "zig_hash": "N-V-__8AAB0eQwD-0MdOEBmz7intriBReIsIDNlukNVoNu6o",
+      "source_archive_sha256": "17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c",
+      "source_archive_bytes": 1572744,
+      "amd64_linux_status": "declared-runtime-candidate; actual release linkage not verified",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    },
+    {
+      "component": "zlib-build-wrapper",
+      "version_or_revision": "61e7df7e996ec5a5f13a653db3c419adb340d6ef",
+      "declared_source_url": "https://github.com/allyourcodebase/zlib/archive/61e7df7e996ec5a5f13a653db3c419adb340d6ef.tar.gz",
+      "retrieved_source_url": "https://codeload.github.com/allyourcodebase/zlib/tar.gz/61e7df7e996ec5a5f13a653db3c419adb340d6ef",
+      "zig_hash": "zlib-1.3.1-ZZQ7lbYMAAB1hTSOKSXAKAgHsfDcyWNH_37ojw5WSpgR",
+      "source_archive_sha256": "1fe3349e342a8bb3bbcf7c82a1dd4abdad8ef27a7e61be3ffbc0be5aca43a657",
+      "source_archive_bytes": 1919,
+      "amd64_linux_status": "build-only Zig integration, not a linked zlib library",
+      "unresolved": [],
+      "source_archive_in_delivery": "not-included",
+      "archive_hash_status": "prior-collection-record-not-rehashed-unavailable-archive"
+    }
+  ],
+  "zig_package_hashes_recomputed": false,
+  "source_archives_included": false,
+  "mirror_identity_unresolved": [
+    "gmp",
+    "sigsegv",
+    "natpmp"
+  ],
+  "scope": "Literal source declaration lock. Existing notice source archives were not retained; no repeat archive downloads. Not complete recursive sources or verified final binary composition."
+}

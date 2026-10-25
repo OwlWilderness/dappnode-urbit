@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://raw.githubusercontent.com/madler/zlib/v1.3.2/LICENSE",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 2,
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.14.8/LICENSE",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 3,
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/LICENSE.txt",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 4,
+      "url": "https://raw.githubusercontent.com/nginx/nginx/release-1.30.6/LICENSE",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 5,
+      "url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/LICENSE",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 6,
+      "url": "https://pkgs.alpinelinux.org/packages?name=zlib&branch=edge&arch=x86_64",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 7,
+      "url": "https://pkgs.alpinelinux.org/packages?name=python3&branch=edge&arch=x86_64",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 8,
+      "url": "https://pkgs.alpinelinux.org/packages?name=openssl&branch=edge&arch=x86_64",
+      "title": "",
+      "accessed": "2026-10-24"
+    },
+    {
+      "id": 9,
+      "url": "https://pkgs.alpinelinux.org/packages?name=nginx&branch=edge&arch=x86_64",
+      "title": "",
+      "accessed": "2026-10-24"
+    }
+  ]
+}

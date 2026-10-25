@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "status": "RELEASE_BLOCKED_UNBUILT_PREPARED_MATERIALS_ONLY",
+  "release_blocked": true,
+  "final_notice_image_built": false,
+  "final_image_digest": null,
+  "written_offer_issued": false,
+  "complete_corresponding_source_delivery": false,
+  "legal_clearance": false,
+  "binary_membership_verified": false,
+  "paths": "repository-relative; source-tree-only unless explicitly installed by parent packaging and verified",
+  "selected_vere_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+  "selected_urcrypt_revision": "6c93535d46adffcd1495f904bac91d43b2d6d555",
+  "official_executable_reference": {
+    "path": "build/vere-release.json",
+    "source_tree_only": true,
+    "executable_sha256": "47ad302e8934271dfc00dcdab1d553c6d6460b105e3099ff47e0e4e4231bb26d",
+    "executable_unchanged": true,
+    "runtime_executed": false
+  },
+  "prepared_materials": [
+    {
+      "path": "THIRD_PARTY/vere/followup/materials/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de.tar.gz",
+      "bytes": 5217760,
+      "sha256": "2fb75bf76ebe8a5cb8b42ca948eb968958f7f2ad318f5868320b4f9845ba29c0"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/materials/uvm-wrapper-source-snapshot.tar.gz",
+      "bytes": 120503,
+      "sha256": "838266c5aea6cf96d13d52de148e868b619c8e6a0ae7a4004f094089910cbe6c"
+    }
+  ],
+  "input_locks": [
+    {
+      "path": "THIRD_PARTY/vere/followup/source-inputs.json",
+      "bytes": 32909,
+      "sha256": "239c1b39cf9ff4af5d4e1ce608bab735f6d5358bfbd73437be9656d4828e2b9b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/dependency-lock.json",
+      "bytes": 44165,
+      "sha256": "30ff0a95e278319029d4d2fd22ce8f0787191be852d957e2893d23252bbfb6df"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/wrapper-source-lock.json",
+      "bytes": 7330,
+      "sha256": "2e6bae3ebcd003c403a4b87be949226275e4ac122f637f0d31ad0d70269a6163"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/build-contract.json",
+      "bytes": 2918,
+      "sha256": "b5f395c0f23c56dbe9437303b8f3e3a972fc7e9d481277c3a657d9fd2a41b56f"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/archive-members.json",
+      "bytes": 250186,
+      "sha256": "804838bed4805d450d436f0db151f14bcfb68084e0c02a0841473e729270a443"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/applicability.json",
+      "bytes": 20444,
+      "sha256": "d153424ab11c36d512273992ec26ce8d039617f52349aebd98453d2f21db17b7"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/retrievals.json",
+      "bytes": 23164,
+      "sha256": "e69bd729771d56e1e35018dca1619b61d19da73be798028199df7dea826e7b12"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/blake3-comparison.json",
+      "bytes": 3599,
+      "sha256": "cc70d1e58b28ceb2bffe6c44ef97830108efd746cf7c7229a2d0817706281024"
+    }
+  ],
+  "notices": [
+    {
+      "path": "THIRD_PARTY/vere/followup/NOTICES.txt",
+      "bytes": 24821,
+      "sha256": "92a9d6d2337880725c1166106c839cfcc9e1fa66c1a45c74aaad64edef175398"
+    }
+  ],
+  "wrapper_snapshot_status": "HISTORICAL_PRE_INTEGRATION_REQUIRES_REFRESH_NOT_FINAL_LOCK",
+  "refresh_after_parent_integration": {
+    "required": true,
+    "paths": [
+      "build/Dockerfile",
+      ".dockerignore",
+      "build/notice-files.json",
+      "all exact final public build-context inputs"
+    ],
+    "final_dockerfile_or_context_hash_frozen": false,
+    "note": "No final Dockerfile/.dockerignore source lock accepted. Retained snapshot hashes are historical archive bytes only."
+  },
+  "platform_apk_layer": {
+    "status": "RETAINED_IMAGE_BASELINE_RECONCILED_FINAL_IMAGE_AND_COMPLETE_NOTICES_PENDING",
+    "inventory": "THIRD_PARTY/platform/image-baseline/installed-notices/inventory.json",
+    "source_references": "THIRD_PARTY/platform/image-baseline/source-delivery-references.json",
+    "installed_package_count": 36,
+    "source_origin_count": 23,
+    "five_package_followup": "THIRD_PARTY/platform/followup/inventory.json",
+    "packages_with_unresolved_package_wide_applicability": 5,
+    "complete": false
+  },
+  "intended_documentation_destination": "/usr/share/doc/uvm/THIRD_PARTY",
+  "installed_inclusion_verified": false,
+  "counts": {
+    "vere_archive_files": 1094,
+    "build_workflow_reference_files": 65,
+    "patch_replacement_files": 5,
+    "wrapper_snapshot_files": 39,
+    "declarations": 95,
+    "primary_component_records": 30,
+    "unique_declared_archive_urls": 26,
+    "applicability_records": 13,
+    "supplementary_notice_blocks": 23
+  },
+  "missing_obligations": [
+    {
+      "id": "distribution-basis",
+      "status": "unresolved",
+      "detail": "Existing libsigsegv/older-OpenSSL evidence question unchanged; missing evidence not proven noncompliance. No contact/advice authorized."
+    },
+    {
+      "id": "external-sources",
+      "status": "missing",
+      "detail": "Dependency and toolchain source archives not in delivery. Three mirror identities unresolved; Zig package hashes not recomputed."
+    },
+    {
+      "id": "gpl-lgpl-delivery-route",
+      "status": "not-selected-or-fulfilled",
+      "detail": "Reconcile applicable corresponding-source, combined-work/relink and any installation-information requirements against exact shipped components; no written offer issued."
+    },
+    {
+      "id": "final-artifact-binding",
+      "status": "unbuilt-and-refresh-required",
+      "detail": "Final image build, exact public-context/source recapture, manifest binding and delivery availability remain future gates."
+    },
+    {
+      "id": "platform-coverage",
+      "status": "baseline-complete-notices-and-final-image-incomplete",
+      "detail": "Retained-image inventory and recipe references are reconciled. Five-package follow-up adds netbase source notices and exact CA source notice/generation evidence, but package-wide applicability/attribution and complete patched source delivery remain open. This does not require more notice research before separately authorized local build/boot testing; publication remains blocked."
+    },
+    {
+      "id": "nested-completeness",
+      "status": "bounded-only",
+      "detail": "Selected-file notices improved, but full recursive vendored/per-file completeness and BLAKE3 modification provenance remain unresolved."
+    }
+  ],
+  "no_actions": [
+    "build",
+    "Docker/container operation",
+    "ship execution",
+    "descriptor generation",
+    "signing",
+    "publication",
+    "upstream contact",
+    "private-state access",
+    "cleanup",
+    "commit",
+    "push"
+  ]
+}

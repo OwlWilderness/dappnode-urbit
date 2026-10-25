@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "package": "ca-certificates-bundle",
+  "version": "20260909-r0",
+  "source_origin": "ca-certificates",
+  "alpine_aports_revision": "eb7078df3a16d666e8f7723f94bb92e00d4b9236",
+  "retained_recipe": "THIRD_PARTY/platform/image-baseline/recipes/ca-certificates-APKBUILD",
+  "retained_recipe_sha256": "0c14312c1d5c4a8b7ef74433be9db58517b17eb091bccdf2c8325bc4c9c26480",
+  "upstream_repository": "https://gitlab.alpinelinux.org/alpine/ca-certificates",
+  "version_tag": "20260909",
+  "tag_object_target": "b692f78f98ec478f01266e8962d197480bae6360",
+  "source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+  "tag_binding": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tag.json",
+  "tree": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-commit.json",
+  "archive": {
+    "url": "https://gitlab.alpinelinux.org/alpine/ca-certificates/-/archive/20260909/ca-certificates-20260909.tar.bz2",
+    "sha512": "d235529da679f14e2e8df4175bc8189507add1382fe0ef8493824b07a49763a2a3af8201f43d30a0260eb8357a10bb0d7054d9b012abf3b74ecf889551cf0dd7",
+    "historical_check_record": "THIRD_PARTY/platform/image-baseline/source-notices.json",
+    "fetched_again": false,
+    "archive_available_here": false,
+    "per_file_archive_byte_match_verified": false
+  },
+  "delivered_source_paths": [
+    "THIRD_PARTY/platform/followup/trust-bundle/source/README.md",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/VERSION",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/Makefile",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/certdata.txt",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/c_rehash.c",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/scripts/update-version.sh",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/mk-ca-bundle.pl",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/split-ca-bundle.sh",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca.c",
+    "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca-certificates.8"
+  ],
+  "license": "THIRD_PARTY/platform/followup/trust-bundle/licenses/MPL-2.0.txt",
+  "source_delivery_notice": "Pinned public Source Code Form certdata.txt is delivered at source/certdata.txt under its embedded MPL v2.0 notice; full MPL v2.0 at licenses/MPL-2.0.txt. Exact URLs/hashes are in inventory.json. No upstream code was modified. No claim that all source-delivery obligations are satisfied.",
+  "full_corresponding_source_delivered": false
+}

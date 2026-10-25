@@ -1,0 +1,19 @@
+{
+  "status": "PASS_source_artifact_integrity_only",
+  "retained_file_sha256_checks": 142,
+  "retained_file_size_checks": 142,
+  "pinned_vere_git_blob_checks": 64,
+  "component_records_checked": 63,
+  "all_unique_manifest_archive_urls_represented": 26,
+  "manifest_archive_url_coverage_complete": true,
+  "missing_license_paths": 0,
+  "private_host_path_matches": 0,
+  "downloaded_code_executed": false,
+  "binary_linkage_verified": false,
+  "licenses_legally_cleared": false,
+  "notes": [
+    "JSON/tree metadata formatting is distinguished from verbatim source files.",
+    "Automatic editor diagnostics on documentary C fragments are not build results and were not repaired.",
+    "License-text paths can include complete notice-bearing source/readme evidence; component license_summary and unresolved fields distinguish these."
+  ]
+}

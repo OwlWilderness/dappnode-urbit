@@ -1,0 +1,625 @@
+{
+  "config_parsed": false,
+  "container_executed": false,
+  "coverage_complete": false,
+  "image": {
+    "architecture": "amd64",
+    "image_id": "sha256:eacbb5f0b1b9e21df26e7d4b4d63d89b27985fecc4f3580f2dfac44c5243786a",
+    "layers": [
+      "sha256:74d97c428c51a828f9051a7a40a53ff1fc99e54fc30323ce36760701b0b7f711",
+      "sha256:ec4fa77e7065868a6709e69daa9dcb2864848872cd7ef8a277f4634bcc5c5a2c",
+      "sha256:0966ea2aee22b7a3694a6a887520f53a12e967c352088d86dd416bcf9a5d5e9a",
+      "sha256:9bc797d5467be49855c4b097d3139aef58f438ac6f22a74a36976ab681204a62",
+      "sha256:d47ea6947e8317e2d2e118fb46ad0f7ff8407089092b7c9c6ed49c5043bbefed",
+      "sha256:3b8e559b7b9f221a7a0722e1704ecdef71c5198d7b5ad2665ad5cfc6a798c36a",
+      "sha256:b497f28ccf06c8aeb123538d5238361b966a7855461ed08b4a8e52ae61f42c58",
+      "sha256:da8a2f6826d959a1b17046c8a5b9351d5543d9e003987111056aee9711aff34a",
+      "sha256:c43081012e5ecd5ce0aed65291bb1c3d528a3bc54d2b5c0aec83f214451c2d58",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+    ]
+  },
+  "layer_order": [
+    "53f429f4c30e4866c958265da59d0809e9e11e452fd9a33ae8dfdf6ad9c927e2/layer.tar",
+    "f3088dbf733fc657165d80553b6bd7b3f1e8e6bc5f826608d699ba28146fd2e0/layer.tar",
+    "7a1e4c256e8f99336a14d86342dea1fde54bc3b31a82a64547256254c6b14018/layer.tar",
+    "268023bad012951456578b1fae1bd9948d93e8286ea615102f5576b6af03cb25/layer.tar",
+    "390c894057e0b9a4640634d33c4ba6ab8e5a78e399bfa6b3569afdaaff176647/layer.tar",
+    "02fe6ca5e4a5ec766517f13ea1dd6070f52e393febfc6a8b1fcea327cc7f5726/layer.tar",
+    "9b38070c00ba2f68d12aba39011abf0ef3d15d7b46fa10a72fc1b391cff14fa3/layer.tar",
+    "696551caa946a4b656ad07117bf7c5b2b52e34ef768b3ada64522575bfac64c5/layer.tar",
+    "6043798ea98b723323326fbb51504eaffc9cbbaa795e59ad9427b5a4056d4a8f/layer.tar",
+    "1a8c2f19cd7328ed9aa6600e2f5a6883f370b4a9501993cd76b10bb7094d0eb8/layer.tar"
+  ],
+  "legal_clearance": false,
+  "missing_notice_paths": [],
+  "package_count": 36,
+  "packages": [
+    {
+      "architecture": "x86_64",
+      "checksum": "Q18Pz9wvTaBYr2RzvEXE6rYpFiJbI=",
+      "dependencies": [
+        "alpine-baselayout-data=3.7.2-r1",
+        "/bin/sh"
+      ],
+      "installed_file_count": 13,
+      "license": "GPL-2.0-only",
+      "name": "alpine-baselayout",
+      "notice_paths": [],
+      "origin": "alpine-baselayout",
+      "source_commit": "60a7585bbab2fa0f762504eb617dbca90216e31f",
+      "upstream_url": "https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/alpine-baselayout",
+      "version": "3.7.2-r1"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1xvm97RfYRLbxsLtXZtLDXA1chQg=",
+      "dependencies": [],
+      "installed_file_count": 15,
+      "license": "GPL-2.0-only",
+      "name": "alpine-baselayout-data",
+      "notice_paths": [],
+      "origin": "alpine-baselayout",
+      "source_commit": "60a7585bbab2fa0f762504eb617dbca90216e31f",
+      "upstream_url": "https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/alpine-baselayout",
+      "version": "3.7.2-r1"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q12Na4DlPAWad+SRXaeLqWTz/+okA=",
+      "dependencies": [],
+      "installed_file_count": 41,
+      "license": "MIT",
+      "name": "alpine-keys",
+      "notice_paths": [],
+      "origin": "alpine-keys",
+      "source_commit": "b9f23becced4d7b3ccc0fa0f28530243ccd314a0",
+      "upstream_url": "https://alpinelinux.org",
+      "version": "2.6-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1b9G+RpyiNenGLxtz+j5b/6/etrU=",
+      "dependencies": [
+        "alpine-keys"
+      ],
+      "installed_file_count": 5,
+      "license": "MIT",
+      "name": "alpine-release",
+      "notice_paths": [],
+      "origin": "alpine-base",
+      "source_commit": "d9d560d5de74ff9a7a73f3c903d6f126a0bf3142",
+      "upstream_url": "https://alpinelinux.org",
+      "version": "3.24.2-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1eGEwqPLTrGn8MWEYdXt+gVG4uMM=",
+      "dependencies": [
+        "musl>=1.2.3_git20230424",
+        "libcrypto3>=3.5",
+        "libapk=3.0.8-r0",
+        "ca-certificates-bundle",
+        "so:libapk.so.3.0.0",
+        "so:libc.musl-x86_64.so.1",
+        "so:libz.so.1"
+      ],
+      "installed_file_count": 1,
+      "license": "GPL-2.0-only",
+      "name": "apk-tools",
+      "notice_paths": [],
+      "origin": "apk-tools",
+      "source_commit": "4588b452722bd4800efdc6cce4f6e980e02a997f",
+      "upstream_url": "https://gitlab.alpinelinux.org/alpine/apk-tools",
+      "version": "3.0.8-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1tUBevAL33YvpW2JlxUskPVRWq48=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 7,
+      "license": "GPL-2.0-only",
+      "name": "busybox",
+      "notice_paths": [],
+      "origin": "busybox",
+      "source_commit": "c3ef5d10e6ef6528852c51f0564963e2f8c1be19",
+      "upstream_url": "https://busybox.net/",
+      "version": "1.37.0-r31"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1XL0UrMbxgExbrGx33CxJLwELD8c=",
+      "dependencies": [
+        "busybox=1.37.0-r31"
+      ],
+      "installed_file_count": 1,
+      "license": "GPL-2.0-only",
+      "name": "busybox-binsh",
+      "notice_paths": [],
+      "origin": "busybox",
+      "source_commit": "c3ef5d10e6ef6528852c51f0564963e2f8c1be19",
+      "upstream_url": "https://busybox.net/",
+      "version": "1.37.0-r31"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1eRI3zuh3mIiTo1S19snETzXU7bk=",
+      "dependencies": [],
+      "installed_file_count": 4,
+      "license": "MPL-2.0 AND MIT",
+      "name": "ca-certificates-bundle",
+      "notice_paths": [],
+      "origin": "ca-certificates",
+      "source_commit": "eb7078df3a16d666e8f7723f94bb92e00d4b9236",
+      "upstream_url": "https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/",
+      "version": "20260909-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1YZST2BJP5JqO4dj3oTcs9+OXczc=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 4,
+      "license": "GPL-3.0-or-later",
+      "name": "gdbm",
+      "notice_paths": [],
+      "origin": "gdbm",
+      "source_commit": "1ea03990396db618edfcc8a9a0bc6b72662bac8f",
+      "upstream_url": "https://www.gnu.org/software/gdbm/",
+      "version": "1.26-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1uTzpVzwdDbPup84yhBrQhXq8SlQ=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1",
+        "so:libcrypto.so.3",
+        "so:libssl.so.3",
+        "so:libz.so.1"
+      ],
+      "installed_file_count": 1,
+      "license": "GPL-2.0-only",
+      "name": "libapk",
+      "notice_paths": [],
+      "origin": "apk-tools",
+      "source_commit": "4588b452722bd4800efdc6cce4f6e980e02a997f",
+      "upstream_url": "https://gitlab.alpinelinux.org/alpine/apk-tools",
+      "version": "3.0.8-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1CFZrpcevl8JUdL6LJOi0jwEWtn0=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "bzip2-1.0.6",
+      "name": "libbz2",
+      "notice_paths": [],
+      "origin": "bzip2",
+      "source_commit": "33283848034c9885d984c8e8697c645c57324938",
+      "upstream_url": "https://sourceware.org/bzip2/",
+      "version": "1.0.8-r6"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1HA3ulzTPIvyXzdGBkTu9cQ5t+wg=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 10,
+      "license": "Apache-2.0",
+      "name": "libcrypto3",
+      "notice_paths": [],
+      "origin": "openssl",
+      "source_commit": "29b9ec24b1b5b39aeef51fa2a044210e2ec5258e",
+      "upstream_url": "https://www.openssl.org/",
+      "version": "3.5.9-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1tugvqnkTpj2ncbvdqmrTiEIEf3g=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "MIT",
+      "name": "libexpat",
+      "notice_paths": [],
+      "origin": "expat",
+      "source_commit": "c10df79ce35862cf273f98f6eb78d52e4f064ac7",
+      "upstream_url": "https://libexpat.github.io/",
+      "version": "2.9.0-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1L3smH3/OzE7r2LMw5/b7gHE7/jo=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "MIT",
+      "name": "libffi",
+      "notice_paths": [],
+      "origin": "libffi",
+      "source_commit": "2c2a7bb4a8b16066834e90402567b2c19403a790",
+      "upstream_url": "https://sourceware.org/libffi/",
+      "version": "3.5.2-r1"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1N5wVbFPgzBQOh8ecCj3SK27lFVI=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 1,
+      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+      "name": "libgcc",
+      "notice_paths": [],
+      "origin": "gcc",
+      "source_commit": "423a8ad043d07f2c7546c8ec3e2b0384cda360ae",
+      "upstream_url": "https://gcc.gnu.org",
+      "version": "15.2.0-r5"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1nzGObjJNaCcnSCkZTPasavut7RI=",
+      "dependencies": [
+        "ncurses-terminfo-base=6.6_p20260516-r0",
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "X11",
+      "name": "libncursesw",
+      "notice_paths": [],
+      "origin": "ncurses",
+      "source_commit": "2cee8a7328d061418336ad327b512d96bcd7bc5e",
+      "upstream_url": "https://invisible-island.net/ncurses/",
+      "version": "6.6_p20260516-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1FJvcQ0Iy7RH8W7l1ulGaBxVKb1Y=",
+      "dependencies": [
+        "ncurses-terminfo-base=6.6_p20260516-r0",
+        "so:libc.musl-x86_64.so.1",
+        "so:libncursesw.so.6"
+      ],
+      "installed_file_count": 2,
+      "license": "X11",
+      "name": "libpanelw",
+      "notice_paths": [],
+      "origin": "ncurses",
+      "source_commit": "2cee8a7328d061418336ad327b512d96bcd7bc5e",
+      "upstream_url": "https://invisible-island.net/ncurses/",
+      "version": "6.6_p20260516-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1IMTJDqnSCp3ToE3q3yxsT2QjNkM=",
+      "dependencies": [
+        "libcrypto3=3.5.9-r0",
+        "so:libc.musl-x86_64.so.1",
+        "so:libcrypto.so.3"
+      ],
+      "installed_file_count": 1,
+      "license": "Apache-2.0",
+      "name": "libssl3",
+      "notice_paths": [],
+      "origin": "openssl",
+      "source_commit": "29b9ec24b1b5b39aeef51fa2a044210e2ec5258e",
+      "upstream_url": "https://www.openssl.org/",
+      "version": "3.5.9-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1X3oq12RhKLoCzA1vuUZytoRWSNU=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1",
+        "so:libgcc_s.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+      "name": "libstdc++",
+      "notice_paths": [],
+      "origin": "gcc",
+      "source_commit": "423a8ad043d07f2c7546c8ec3e2b0384cda360ae",
+      "upstream_url": "https://gcc.gnu.org",
+      "version": "15.2.0-r5"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1DIHOsOi1lms8MPVXtY2cb+RvbvY=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1",
+        "so:libgcc_s.so.1",
+        "so:libstdc++.so.6"
+      ],
+      "installed_file_count": 4,
+      "license": "BSD-2-Clause",
+      "name": "mpdecimal",
+      "notice_paths": [],
+      "origin": "mpdecimal",
+      "source_commit": "c0519b85456e9b838e3142e1d233aab0b433b476",
+      "upstream_url": "https://www.bytereef.org/mpdecimal/index.html",
+      "version": "4.0.1-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1D35YJ+ThpzYxvtont4QxqLokDgU=",
+      "dependencies": [],
+      "installed_file_count": 2,
+      "license": "MIT",
+      "name": "musl",
+      "notice_paths": [],
+      "origin": "musl",
+      "source_commit": "f5640d3a10f664c9119720c60515265d3d6f6d01",
+      "upstream_url": "https://musl.libc.org/",
+      "version": "1.2.6-r2"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1da2jxI1j7F2HxC/fk0o/3REpjcU=",
+      "dependencies": [
+        "scanelf",
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 5,
+      "license": "MIT AND BSD-2-Clause AND GPL-2.0-or-later",
+      "name": "musl-utils",
+      "notice_paths": [],
+      "origin": "musl",
+      "source_commit": "f5640d3a10f664c9119720c60515265d3d6f6d01",
+      "upstream_url": "https://musl.libc.org/",
+      "version": "1.2.6-r2"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1nVUdgo6cjuUsWAHB1gRoKOvxV1I=",
+      "dependencies": [],
+      "installed_file_count": 41,
+      "license": "X11",
+      "name": "ncurses-terminfo-base",
+      "notice_paths": [],
+      "origin": "ncurses",
+      "source_commit": "2cee8a7328d061418336ad327b512d96bcd7bc5e",
+      "upstream_url": "https://invisible-island.net/ncurses/",
+      "version": "6.6_p20260516-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1jZNX/9SwPHZpnL9hEkE12+VZjOs=",
+      "dependencies": [
+        "/bin/sh",
+        "so:libc.musl-x86_64.so.1",
+        "so:libcrypto.so.3",
+        "so:libpcre2-8.so.0",
+        "so:libssl.so.3",
+        "so:libz.so.1"
+      ],
+      "installed_file_count": 14,
+      "license": "BSD-2-Clause",
+      "name": "nginx",
+      "notice_paths": [],
+      "origin": "nginx",
+      "source_commit": "afc9f8046186db82c3c1b41cc1b4f1125e150f39",
+      "upstream_url": "https://www.nginx.org/",
+      "version": "1.30.6-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q16pTwH+6xSahfRAL19xOiXpD3cBE=",
+      "dependencies": [
+        "libssl3=3.5.9-r0",
+        "libcrypto3=3.5.9-r0",
+        "so:libc.musl-x86_64.so.1",
+        "so:libcrypto.so.3",
+        "so:libssl.so.3"
+      ],
+      "installed_file_count": 1,
+      "license": "Apache-2.0",
+      "name": "openssl",
+      "notice_paths": [],
+      "origin": "openssl",
+      "source_commit": "29b9ec24b1b5b39aeef51fa2a044210e2ec5258e",
+      "upstream_url": "https://www.openssl.org/",
+      "version": "3.5.9-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q17JkrALr3G7od2eIXlhP5IzrzXI0=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 4,
+      "license": "BSD-3-Clause",
+      "name": "pcre2",
+      "notice_paths": [],
+      "origin": "pcre2",
+      "source_commit": "3d497cbb3217749c4fb85f90f3b6f7908b0c1f95",
+      "upstream_url": "https://pcre.org/",
+      "version": "10.49-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1wgaD0pVz4F1y7XtBGmZasGdmJu8=",
+      "dependencies": [],
+      "installed_file_count": 0,
+      "license": "PSF-2.0",
+      "name": "pyc",
+      "notice_paths": [],
+      "origin": "python3",
+      "source_commit": "bc27f38b89f034547fd7da4dba62eeb6a0daeb3b",
+      "upstream_url": "https://www.python.org/",
+      "version": "3.14.8-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1NN2I5sUMrXRCS/HMuJ8t3+9QOso=",
+      "dependencies": [
+        "libssl3>=3.3.0",
+        "libexpat>=2.8.0",
+        "so:libbz2.so.1",
+        "so:libc.musl-x86_64.so.1",
+        "so:libcrypto.so.3",
+        "so:libexpat.so.1",
+        "so:libffi.so.8",
+        "so:libgdbm_compat.so.4",
+        "so:liblzma.so.5",
+        "so:libmpdec.so.4",
+        "so:libncursesw.so.6",
+        "so:libpanelw.so.6",
+        "so:libreadline.so.8",
+        "so:libsqlite3.so.0",
+        "so:libssl.so.3",
+        "so:libz.so.1"
+      ],
+      "installed_file_count": 689,
+      "license": "PSF-2.0",
+      "name": "python3",
+      "notice_paths": [],
+      "origin": "python3",
+      "source_commit": "bc27f38b89f034547fd7da4dba62eeb6a0daeb3b",
+      "upstream_url": "https://www.python.org/",
+      "version": "3.14.8-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1MgO/ybewDyjFtXMxB4S6JNXetqg=",
+      "dependencies": [
+        "python3-pycache-pyc0=3.14.8-r0",
+        "pyc"
+      ],
+      "installed_file_count": 0,
+      "license": "PSF-2.0",
+      "name": "python3-pyc",
+      "notice_paths": [],
+      "origin": "python3",
+      "source_commit": "bc27f38b89f034547fd7da4dba62eeb6a0daeb3b",
+      "upstream_url": "https://www.python.org/",
+      "version": "3.14.8-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1MWKq8KirrFH8CR5AQjQy+sNiXXA=",
+      "dependencies": [],
+      "installed_file_count": 581,
+      "license": "PSF-2.0",
+      "name": "python3-pycache-pyc0",
+      "notice_paths": [],
+      "origin": "python3",
+      "source_commit": "bc27f38b89f034547fd7da4dba62eeb6a0daeb3b",
+      "upstream_url": "https://www.python.org/",
+      "version": "3.14.8-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1lFsW43i8AORNidTegSS7p2R/300=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1",
+        "so:libncursesw.so.6"
+      ],
+      "installed_file_count": 3,
+      "license": "GPL-3.0-or-later",
+      "name": "readline",
+      "notice_paths": [],
+      "origin": "readline",
+      "source_commit": "a854c03acdac188901fb012f7acbee70a36e8041",
+      "upstream_url": "https://tiswww.cwru.edu/php/chet/readline/rltop.html",
+      "version": "8.3.3-r1"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1AT+QPQuiGWc6673QT3S7XtgrAfA=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 1,
+      "license": "GPL-2.0-only",
+      "name": "scanelf",
+      "notice_paths": [],
+      "origin": "pax-utils",
+      "source_commit": "c61801eeacb3ffcd9c2025b09e402153bb93fb39",
+      "upstream_url": "https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities",
+      "version": "1.3.9-r1"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q192MM6zfCMrZgmGGuq2zbnNEg5vo=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "blessing",
+      "name": "sqlite-libs",
+      "notice_paths": [],
+      "origin": "sqlite",
+      "source_commit": "a9c3ba8b9129ec0f294d0a9bf538c2f1632bb016",
+      "upstream_url": "https://www.sqlite.org/",
+      "version": "3.53.4-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1wiD0pRJaMTr3M+mN75QTK7Hp1A0=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1",
+        "so:libcrypto.so.3",
+        "so:libssl.so.3"
+      ],
+      "installed_file_count": 1,
+      "license": "GPL-2.0-only",
+      "name": "ssl_client",
+      "notice_paths": [],
+      "origin": "busybox",
+      "source_commit": "c3ef5d10e6ef6528852c51f0564963e2f8c1be19",
+      "upstream_url": "https://busybox.net/",
+      "version": "1.37.0-r31"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1hQEGWxhighYwF0xmO0WXRGLCluE=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "GPL-2.0-or-later AND 0BSD AND Public-Domain AND LGPL-2.1-or-later",
+      "name": "xz-libs",
+      "notice_paths": [],
+      "origin": "xz",
+      "source_commit": "0c088d609f9fe69eedd6b4c7f4b99cdad847c20a",
+      "upstream_url": "https://tukaani.org/xz/",
+      "version": "5.8.4-r0"
+    },
+    {
+      "architecture": "x86_64",
+      "checksum": "Q1T1JcjMIE+EuLTKQNs744mVjwVsY=",
+      "dependencies": [
+        "so:libc.musl-x86_64.so.1"
+      ],
+      "installed_file_count": 2,
+      "license": "Zlib",
+      "name": "zlib",
+      "notice_paths": [],
+      "origin": "zlib",
+      "source_commit": "0afa2da0e8c8051c6f8f64a7a388e5a259904245",
+      "upstream_url": "https://zlib.net/",
+      "version": "1.3.2-r1"
+    }
+  ],
+  "schema_version": 1,
+  "selected_files": {
+    "lib/apk/db/installed": {
+      "file": "installed-apk-db.txt",
+      "gid": 0,
+      "kind": "regular",
+      "layer_index": 1,
+      "mode": 420,
+      "sha256": "48ce241ed8e8e7a108b11b1bda4b2806667f54700acb36b5299aadfd767a7b23",
+      "size": 103913,
+      "uid": 0
+    }
+  },
+  "stream_bytes": 84584960
+}

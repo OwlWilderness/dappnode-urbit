@@ -1,0 +1,18 @@
+{
+  "name": "uvm-development",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:release": "node scripts/prepare-release.mjs",
+    "validate": "node scripts/validate-package.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:volume": "python3 -m unittest discover -s tests -p test_volume_guard.py"
+  },
+  "devDependencies": {
+    "@dappnode/dappnodesdk": "0.3.55"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

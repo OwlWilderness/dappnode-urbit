@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "origin": "gcc",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/5115c7e447fc07457443df874bf57840e8316d5f/COPYING3",
+      "revision_pin": "5115c7e447fc07457443df874bf57840e8316d5f",
+      "file": "notices/gcc--COPYING3",
+      "status": "retrieved",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "byte_count": 35147
+    },
+    {
+      "origin": "gcc",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/5115c7e447fc07457443df874bf57840e8316d5f/COPYING.LIB",
+      "revision_pin": "5115c7e447fc07457443df874bf57840e8316d5f",
+      "file": "notices/gcc--COPYING.LIB",
+      "status": "retrieved",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "byte_count": 26527
+    },
+    {
+      "origin": "gcc",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/5115c7e447fc07457443df874bf57840e8316d5f/COPYING.RUNTIME",
+      "revision_pin": "5115c7e447fc07457443df874bf57840e8316d5f",
+      "file": "notices/gcc--COPYING.RUNTIME",
+      "status": "retrieved",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "byte_count": 3324
+    },
+    {
+      "origin": "gcc",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/5115c7e447fc07457443df874bf57840e8316d5f/libstdc++-v3/doc/html/manual/license.html",
+      "revision_pin": "5115c7e447fc07457443df874bf57840e8316d5f",
+      "file": "notices/gcc--libstdc++-v3__doc__html__manual__license.html",
+      "status": "retrieved",
+      "sha256": "6ef2606fad7fce5ba388fef9d8d137178d0135f3d2c538b664229b58eae5ce06",
+      "byte_count": 8434
+    },
+    {
+      "origin": "ncurses",
+      "url": "https://raw.githubusercontent.com/ThomasDickey/ncurses-snapshots/21be30e63c0c633dfded6a748ec5e7e491fe7e06/COPYING",
+      "revision_pin": "21be30e63c0c633dfded6a748ec5e7e491fe7e06",
+      "file": "notices/ncurses--COPYING",
+      "status": "retrieved",
+      "sha256": "a85ca5bef8ce71f013bc5f4306c681881b248450f3b63722589891f0b69ea52d",
+      "byte_count": 1447
+    },
+    {
+      "origin": "musl",
+      "url": "https://raw.githubusercontent.com/alpinelinux/aports/f5640d3a10f664c9119720c60515265d3d6f6d01/main/musl/getconf.c",
+      "revision_pin": "f5640d3a10f664c9119720c60515265d3d6f6d01",
+      "file": "notices/musl--alpine-getconf.c",
+      "status": "retrieved",
+      "sha256": "d87d0cbb3690ae2c5d8cc218349fd8278b93855dd625deaf7ae50e320aad247c",
+      "byte_count": 11614
+    },
+    {
+      "origin": "musl",
+      "url": "https://raw.githubusercontent.com/alpinelinux/aports/f5640d3a10f664c9119720c60515265d3d6f6d01/main/musl/getent.c",
+      "revision_pin": "f5640d3a10f664c9119720c60515265d3d6f6d01",
+      "file": "notices/musl--alpine-getent.c",
+      "status": "retrieved",
+      "sha256": "a6171c2db641cdd99c164169d3c5c6ca323617483cedec4cbbe3eb39c5834df0",
+      "byte_count": 11656
+    },
+    {
+      "origin": "musl",
+      "url": "https://raw.githubusercontent.com/alpinelinux/aports/f5640d3a10f664c9119720c60515265d3d6f6d01/main/musl/iconv.c",
+      "revision_pin": "f5640d3a10f664c9119720c60515265d3d6f6d01",
+      "file": "notices/musl--alpine-iconv.c",
+      "status": "retrieved",
+      "sha256": "f79a2930a2e5bb0624321589edf8b889d1e9b603e01e6b7ae214616605b3fdd7",
+      "byte_count": 2577
+    },
+    {
+      "origin": "musl",
+      "url": "https://raw.githubusercontent.com/alpinelinux/aports/f5640d3a10f664c9119720c60515265d3d6f6d01/main/musl/ldconfig",
+      "revision_pin": "f5640d3a10f664c9119720c60515265d3d6f6d01",
+      "file": "notices/musl--alpine-ldconfig",
+      "status": "retrieved",
+      "sha256": "7065021e04a5060957b5c6907af671a7028230d91927fb0c25892cadd9312b7c",
+      "byte_count": 393
+    },
+    {
+      "origin": "musl",
+      "url": "https://raw.githubusercontent.com/alpinelinux/aports/f5640d3a10f664c9119720c60515265d3d6f6d01/main/musl/__stack_chk_fail_local.c",
+      "revision_pin": "f5640d3a10f664c9119720c60515265d3d6f6d01",
+      "file": "notices/musl--alpine-__stack_chk_fail_local.c",
+      "status": "retrieved",
+      "sha256": "299a7d75a09de3e2e11e7fb4acc3182e4a14e868093d2f30938fce9bfcff13da",
+      "byte_count": 133
+    },
+    {
+      "origin": "busybox",
+      "url": "https://raw.githubusercontent.com/alpinelinux/aports/c3ef5d10e6ef6528852c51f0564963e2f8c1be19/main/busybox/ssl_client.c",
+      "revision_pin": "c3ef5d10e6ef6528852c51f0564963e2f8c1be19",
+      "file": "notices/busybox--alpine-ssl_client.c",
+      "status": "retrieved",
+      "sha256": "f36fb83637a12fe0706f828a3e9a4181ac6ed452b59d5d30fcf4dbe1884b8aed",
+      "byte_count": 3418
+    },
+    {
+      "origin": "ca-certificates",
+      "url": "https://gitlab.alpinelinux.org/alpine/ca-certificates/-/raw/20260909/README",
+      "revision_pin": "20260909 (version tag; not commit-pinned)",
+      "status": "unavailable",
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
+    }
+  ]
+}

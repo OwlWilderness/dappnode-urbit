@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PARENT_SOURCE_NOTICE_INTEGRITY_NOT_COMPLETE_IMAGE_COVERAGE",
+  "local_links_verified": 117,
+  "personal_path_check": "PASS",
+  "json_parse": "PASS",
+  "vere_files_sha256_verified": 142,
+  "platform_retrieval_hash_assertions": 22,
+  "platform_unique_retrieved_files_verified": 18,
+  "independent_remote_vere_git_blob_checks": 64,
+  "independent_remote_platform_license_checks": 5,
+  "component_records": 63,
+  "declared_archive_urls_including_followed_wrapper": 26,
+  "license_directory_files": 61,
+  "subtree_file_counts": {
+    "vere": 146,
+    "platform": 22
+  },
+  "original_packaging_and_descriptors_unchanged": true,
+  "full_image_coverage": false,
+  "binary_linkage_verified": false,
+  "distribution_basis_resolved": false,
+  "build_or_runtime_performed": false,
+  "verification_note": "26 declared archive URLs including followed zlib wrapper; top-level declarations alone contain 25. Other component URLs include direct in-tree source files.",
+  "readable_component_rows": 68
+}

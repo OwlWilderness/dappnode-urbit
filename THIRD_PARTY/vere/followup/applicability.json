@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_SOURCE_APPLICABILITY_NOT_BINARY_CLEARANCE",
+  "records": [
+    {
+      "component": "h2o/picotls/asn1-and-pembase64",
+      "terms_summary": "ISC-style literal grant",
+      "source_applicability": "explicitly-selected-translation-units",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          283,
+          301
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/asn1.c.txt",
+          "bytes": 11046,
+          "sha256": "d704e712966089258307f13bc8b43e5cc58069e4148e87e4045a63e9f0626210"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/pembase64.c.txt",
+          "bytes": 11937,
+          "sha256": "98399718814bd27f932a4e7ecaeeec016f5a5a9d64bda413ea463111db6db5d5"
+        }
+      ],
+      "finding": "The generic picotls MIT summary misses different per-file Christian Huitema permission/disclaimer. Preserve both exact blocks.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "h2o/picotls/other-selected",
+      "terms_summary": "MIT with distinct holders",
+      "source_applicability": "explicitly-selected-translation-units",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          283,
+          301
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/cifra.c.txt",
+          "bytes": 19108,
+          "sha256": "3a2b1f437c7d6f6577a5f79bc79d0f8c99022054f603898018c4cc1dbedc106f"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/minicrypto-pem.c.txt",
+          "bytes": 13630,
+          "sha256": "c3b7397aa09db044698ebf81913487b149a9f8bdb14e4c2ce6ac1d87e3907a45"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/uecc.c.txt",
+          "bytes": 6442,
+          "sha256": "33dcc52bad432ef07843a64f8068b55fe9b4ac57df295c8a85336d675f9b7f00"
+        }
+      ],
+      "finding": "MIT text retained for DeNA/Kazuho Oku and Christian Huitema files; not a uniform single-holder notice.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "h2o/cifra/TweetNaCl",
+      "terms_summary": "CC0 wrapper; included file states original code public domain",
+      "source_applicability": "selected-source-includes-nested-implementation",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          213,
+          240
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.c.txt",
+          "bytes": 930,
+          "sha256": "2d69f7b768e6f86c38b50cdeb58a6f52a9156650f2d65cce6e81a846ff6519e0"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c.txt",
+          "bytes": 4591,
+          "sha256": "6ddd5a293c54ffc5d53448b6cb534f36d2f8f71c463b01dedde9493fab724075"
+        },
+        {
+          "path": "THIRD_PARTY/vere/licenses/h2o/deps/picotls/deps/cifra/COPYING",
+          "bytes": 7048,
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        }
+      ],
+      "finding": "Non-Cortex preprocessor branch includes curve25519.tweetnacl.c, relevant to AMD64. No compilation/preprocessor execution performed.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "h2o/cifra/poly1305",
+      "terms_summary": "CC0-1.0 source dedication",
+      "source_applicability": "explicitly-selected-translation-unit",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          213,
+          240
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/poly1305.c.txt",
+          "bytes": 4901,
+          "sha256": "f3701c6cceaf626e22f16b8a9df23eafb512eafb6a53a7e1580cf4bd77019e39"
+        },
+        {
+          "path": "THIRD_PARTY/vere/licenses/h2o/deps/picotls/deps/cifra/COPYING",
+          "bytes": 7048,
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        }
+      ],
+      "finding": "Per-file CC0 dedication retained.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "h2o/micro-ecc",
+      "terms_summary": "BSD-2-Clause",
+      "source_applicability": "explicitly-selected-translation-unit",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          250,
+          275
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/micro-ecc/uECC.c.txt",
+          "bytes": 55371,
+          "sha256": "e63972fb13387e42cb9a350f2d3fedc2d00903feec37d6d6010a1402f97c207b"
+        },
+        {
+          "path": "THIRD_PARTY/vere/licenses/h2o/deps/picotls/deps/micro-ecc/LICENSE.txt",
+          "bytes": 1300,
+          "sha256": "ffd8b033d2df7568c25a98866bd92b1656f7da82d7f813c0b2eb85ec36611193"
+        }
+      ],
+      "finding": "Selected uECC.c declares Kenneth MacKay BSD 2-clause; full existing text retained.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "h2o/klib/khash",
+      "terms_summary": "MIT",
+      "source_applicability": "selected-source-includes-header",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          343,
+          364
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/cache.c.txt",
+          "bytes": 8183,
+          "sha256": "2b9d79bb8cd53068814aea10e32d9a9ffa6f74f4a30b79b0ff8282768de2655e"
+        },
+        {
+          "path": "THIRD_PARTY/vere/notices/h2o/deps/klib/khash.h",
+          "bytes": 21313,
+          "sha256": "7b8c363a9f6394decfcfbea4fbffa17dc0d5fcaab159d4459ed20fece012e89e"
+        }
+      ],
+      "finding": "Explicitly selected common/cache.c includes khash.h despite standalone klib link being commented out at adapter line 335.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "h2o/klib/additional-headers",
+      "terms_summary": "MIT",
+      "source_applicability": "header-candidates-only",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          343,
+          349
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kvec.h.txt",
+          "bytes": 2880,
+          "sha256": "5bce2705b84e7e25c3e3636d62b725407015b8a937a5d0db57b8ee120981daca"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kstring.h.txt",
+          "bytes": 6332,
+          "sha256": "0d02c7bf278381f57c9e5f2c420edd367bb4dd322ae4daf3d52c204d03656338"
+        }
+      ],
+      "finding": "Additional header notices preserved; actual include traversal for these two remains unproven.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "No claim that every collected header is used.",
+        "Reconcile transitive includes and binary membership."
+      ]
+    },
+    {
+      "component": "h2o/picohttpparser",
+      "terms_summary": "MIT alternative in retained per-file text",
+      "source_applicability": "patched-translation-unit-selected-and-link-declared",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          188,
+          201
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/notices/vere/ext/h2o/patches/h2o-2.2.6/deps/picohttpparser/picohttpparser.c",
+          "bytes": 25071,
+          "sha256": "14c34511a53046542f9bb2a3798c0d8e9e337851b79ee3b52772d09895829d87"
+        },
+        {
+          "path": "THIRD_PARTY/vere/notices/h2o/deps/picohttpparser/picohttpparser.h",
+          "bytes": 3502,
+          "sha256": "288fc72b2a4850b0a65e32ee6b01970af55947186b8c8e17e585024074cb4aef"
+        }
+      ],
+      "finding": "Patched replacement is selected rather than original C file; direct library link declared at line 338.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "urcrypt/scrypt/Percival-helpers",
+      "terms_summary": "BSD-2-Clause distinct per-file holder",
+      "source_applicability": "explicitly-selected-translation-units-and-header",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/urcrypt/build.zig",
+        "lines": [
+          491,
+          514
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-nosse.c.txt",
+          "bytes": 9048,
+          "sha256": "d6502178c3a6ed422e52b674c34f938a0dda90d6526312a0f1f1e1177879bc0f"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.c.txt",
+          "bytes": 11062,
+          "sha256": "7ee478e6a215c64713071269c241b8181e3b9ec6e82ea9c0dfda9afb96b5759d"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.h.txt",
+          "bytes": 2710,
+          "sha256": "1183dd745f2c840493681102e1447dfbac4b5f059de1dced710cddd024512b29"
+        }
+      ],
+      "finding": "Colin Percival full conditions/disclaimer retained; parent scrypt LICENSE alone loses this holder.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "urcrypt/argon2/BLAKE2",
+      "terms_summary": "CC0-1.0 OR Apache-2.0 literal file declaration",
+      "source_applicability": "explicitly-selected-amd64-sources-and-header",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/urcrypt/build.zig",
+        "lines": [
+          211,
+          238
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2b.c.txt",
+          "bytes": 12510,
+          "sha256": "52519ccbc1e48f489ff444091f630d05dadcc8f1ee61c5b7361e3a9618299c9a"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2.h.txt",
+          "bytes": 2865,
+          "sha256": "3c2de197dd23179f78c57deac7b73a6049778bf651c5db57e508b2cfce5e7559"
+        },
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/opt.c.txt",
+          "bytes": 10298,
+          "sha256": "a4f86fd457fb46300530aef80064c3e05b7ca18b67ba06b29c1d383d8e2534a7"
+        },
+        {
+          "path": "THIRD_PARTY/vere/licenses/urcrypt/argon2/LICENSE",
+          "bytes": 17879,
+          "sha256": "220f8736a89ff51c92ef3d497f413b48e6cf1df3d6278bc909c6308c78e1718e"
+        }
+      ],
+      "finding": "Common BLAKE2 and AMD64 optimized Argon2 files retain the dual declaration.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "urcrypt/ed25519/SHA512",
+      "terms_summary": "LibTomCrypt free-for-all-purposes literal grant; no SPDX assignment",
+      "source_applicability": "explicitly-selected-translation-unit",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/urcrypt/build.zig",
+        "lines": [
+          334,
+          347
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/notices/urcrypt/ed25519/src/sha512.c.txt",
+          "bytes": 11088,
+          "sha256": "b34128b950036777c299943d624bd830a234a65932c394fdf455e4948258fb6d"
+        },
+        {
+          "path": "THIRD_PARTY/vere/licenses/urcrypt/ed25519/license.txt",
+          "bytes": 874,
+          "sha256": "f68d76b9c1c2271422e55134ea94cf71f2ac3fc3ed6a7ec6b83a1a0538753214"
+        }
+      ],
+      "finding": "Source names Tom St Denis/LibTomCrypt. It does not literally say public domain; preserve wording, not a silently normalized license.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Reconcile exact final binary membership and include applicable full notices."
+      ]
+    },
+    {
+      "component": "urcrypt/BLAKE3",
+      "terms_summary": "Upstream 1.5.0 CC0 OR Apache reference; modification rights/attribution unresolved",
+      "source_applicability": "selected-amd64-set-compared",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/urcrypt/build.zig",
+        "lines": [
+          262,
+          310
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/followup/blake3-comparison.json",
+          "bytes": 3599,
+          "sha256": "cc70d1e58b28ceb2bffe6c44ef97830108efd746cf7c7229a2d0817706281024"
+        },
+        {
+          "path": "THIRD_PARTY/vere/licenses/urcrypt/blake3/LICENSE",
+          "bytes": 18691,
+          "sha256": "6a94bedb8b707ed97f6e310d0d015ab14e0683ffa0a612b02958581b9cc9fc0e"
+        }
+      ],
+      "finding": "Six of nine selected C/assembly/header files exactly match upstream Git blobs; two add raw initialization API, one differs in whitespace. Diffs retain exact changes.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Whole-directory equivalence not established.",
+        "Modification attribution and applicable notice handling remain unresolved.",
+        "Binary membership and official build provenance unverified."
+      ]
+    },
+    {
+      "component": "h2o/standalone-disabled-and-source-only",
+      "terms_summary": "Separate retained component terms",
+      "source_applicability": "not-asserted-shipped",
+      "adapter": {
+        "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+        "lines": [
+          330,
+          340
+        ]
+      },
+      "evidence": [
+        {
+          "path": "THIRD_PARTY/vere/evidence/vere/ext/h2o/build.zig",
+          "bytes": 12826,
+          "sha256": "942bad939c453827422ff413f20cc083f097f5f74927f20df3a1b6d6d6fe033d"
+        }
+      ],
+      "finding": "Standalone cloexec, klib, libyrmcds and ssl-conservatory links commented out. Brotli/mruby/neverbleed/yaml lack selection in reviewed h2o source list; do not infer binary exclusion from this bounded review.",
+      "binary_presence_verified": false,
+      "remaining": [
+        "Keep source-delivery notices if redistributing those sources.",
+        "No exhaustive dependency or binary exclusion claim."
+      ]
+    }
+  ],
+  "record_count": 13,
+  "supplementary_notice_blocks": 23,
+  "notice_sources": [
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kstring.h.txt",
+      "bytes": 6332,
+      "sha256": "0d02c7bf278381f57c9e5f2c420edd367bb4dd322ae4daf3d52c204d03656338"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kvec.h.txt",
+      "bytes": 2880,
+      "sha256": "5bce2705b84e7e25c3e3636d62b725407015b8a937a5d0db57b8ee120981daca"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.c.txt",
+      "bytes": 930,
+      "sha256": "2d69f7b768e6f86c38b50cdeb58a6f52a9156650f2d65cce6e81a846ff6519e0"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c.txt",
+      "bytes": 4591,
+      "sha256": "6ddd5a293c54ffc5d53448b6cb534f36d2f8f71c463b01dedde9493fab724075"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/poly1305.c.txt",
+      "bytes": 4901,
+      "sha256": "f3701c6cceaf626e22f16b8a9df23eafb512eafb6a53a7e1580cf4bd77019e39"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/micro-ecc/uECC.c.txt",
+      "bytes": 55371,
+      "sha256": "e63972fb13387e42cb9a350f2d3fedc2d00903feec37d6d6010a1402f97c207b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/asn1.c.txt",
+      "bytes": 11046,
+      "sha256": "d704e712966089258307f13bc8b43e5cc58069e4148e87e4045a63e9f0626210"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/cifra.c.txt",
+      "bytes": 19108,
+      "sha256": "3a2b1f437c7d6f6577a5f79bc79d0f8c99022054f603898018c4cc1dbedc106f"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/minicrypto-pem.c.txt",
+      "bytes": 13630,
+      "sha256": "c3b7397aa09db044698ebf81913487b149a9f8bdb14e4c2ce6ac1d87e3907a45"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/pembase64.c.txt",
+      "bytes": 11937,
+      "sha256": "98399718814bd27f932a4e7ecaeeec016f5a5a9d64bda413ea463111db6db5d5"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/uecc.c.txt",
+      "bytes": 6442,
+      "sha256": "33dcc52bad432ef07843a64f8068b55fe9b4ac57df295c8a85336d675f9b7f00"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/include/h2o/memory.h.txt",
+      "bytes": 14319,
+      "sha256": "db8a6ab6416bf549d592da6fbae616f975ce27b9dd3e4f369a8ad4ed15f93502"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/cache.c.txt",
+      "bytes": 8183,
+      "sha256": "2b9d79bb8cd53068814aea10e32d9a9ffa6f74f4a30b79b0ff8282768de2655e"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/string.c.txt",
+      "bytes": 17324,
+      "sha256": "b4cd72c20509368f80ef89b742892a692caf8a5e929fad9082592e6b9fea7f6d"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/casper.c.txt",
+      "bytes": 7456,
+      "sha256": "ace8b7ae9ba1bd6b46630d5356a390e0420226cd9af22be9b19b9df199637966"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/hpack.c.txt",
+      "bytes": 36826,
+      "sha256": "f7004cc2f2a7e91e0ee23f54535b3aa8efd6e8fafe196875f5b0f4a9c925ac7b"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2.h.txt",
+      "bytes": 2865,
+      "sha256": "3c2de197dd23179f78c57deac7b73a6049778bf651c5db57e508b2cfce5e7559"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2b.c.txt",
+      "bytes": 12510,
+      "sha256": "52519ccbc1e48f489ff444091f630d05dadcc8f1ee61c5b7361e3a9618299c9a"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/opt.c.txt",
+      "bytes": 10298,
+      "sha256": "a4f86fd457fb46300530aef80064c3e05b7ca18b67ba06b29c1d383d8e2534a7"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/ed25519/src/sha512.c.txt",
+      "bytes": 11088,
+      "sha256": "b34128b950036777c299943d624bd830a234a65932c394fdf455e4948258fb6d"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-nosse.c.txt",
+      "bytes": 9048,
+      "sha256": "d6502178c3a6ed422e52b674c34f938a0dda90d6526312a0f1f1e1177879bc0f"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.c.txt",
+      "bytes": 11062,
+      "sha256": "7ee478e6a215c64713071269c241b8181e3b9ec6e82ea9c0dfda9afb96b5759d"
+    },
+    {
+      "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.h.txt",
+      "bytes": 2710,
+      "sha256": "1183dd745f2c840493681102e1447dfbac4b5f059de1dced710cddd024512b29"
+    }
+  ],
+  "known_distribution_basis": "unchanged unresolved; no new exception search or legal determination"
+}

@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "retrieved_at_utc": "2026-10-24T23:10:51.781007+00:00",
+  "scope": "Direct declared OS/runtime packages and inherited README provenance only",
+  "coverage_complete": false,
+  "is_sbom": false,
+  "legal_clearance": false,
+  "local_declaration_evidence": [
+    {
+      "path": "build/Dockerfile",
+      "sha256": "d8561fe9bca2265c7f6a8cb1290e2395359a53bf163ee42561dea68f9bdc9d2c",
+      "byte_count": 2032
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "be17005284c79a1d7553c6c74ed99c836158649d9c667c58da4273909c22f863",
+      "byte_count": 1905
+    }
+  ],
+  "base_image": {
+    "declared_reference": "alpine@sha256:d56c381f961d307a21b3ca004cf1e3910f106644aefb1f43e654c8a56c4fd395",
+    "declaration_source": [
+      "build/Dockerfile:1",
+      "build/Dockerfile:7"
+    ],
+    "status": "declared_digest_only_not_image_inspected",
+    "installed_package_metadata_available": false,
+    "required_inventory": [
+      {
+        "name": "musl",
+        "version": null,
+        "license_status": "inventory_required_exact_shipped_version_and_notices_unknown"
+      },
+      {
+        "name": "BusyBox",
+        "version": null,
+        "license_status": "inventory_required_exact_shipped_version_and_notices_unknown"
+      }
+    ]
+  },
+  "direct_packages": [
+    {
+      "name": "zlib",
+      "declared_apk_pin": "1.3.2-r1",
+      "declaration_source": "build/Dockerfile:9",
+      "stages": [
+        "runtime"
+      ],
+      "upstream_version": "1.3.2",
+      "license_label": "Zlib",
+      "license_status": "exact_upstream_version_full_root_license_retrieved",
+      "license_file": "licenses/zlib-LICENSE.txt",
+      "license_sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+      "license_byte_count": 1002,
+      "upstream_tag": "v1.3.2",
+      "upstream_commit": "da607da739fa6047df13e66a2af6b8bec7c2a498",
+      "upstream_commit_license_url": "https://raw.githubusercontent.com/madler/zlib/da607da739fa6047df13e66a2af6b8bec7c2a498/LICENSE",
+      "tag_and_commit_license_identical": true,
+      "alpine_index_evidence": {
+        "source_url": "https://pkgs.alpinelinux.org/packages?name=zlib&branch=edge&arch=x86_64",
+        "file": "evidence/alpine-zlib.html",
+        "observed_version": "1.3.2-r1",
+        "exact_pin_observed": true,
+        "scope": "edge/main/x86_64 public listing only; not installed-image evidence"
+      },
+      "installed_apk_revision_verified": false,
+      "remaining_gaps": [
+        "No installed-package database or APK contents examined.",
+        "Alpine packaging patches, additional bundled notices and transitive dependencies not exhaustively inventoried."
+      ]
+    },
+    {
+      "name": "python3",
+      "declared_apk_pin": "3.14.8-r0",
+      "declaration_source": "build/Dockerfile:9",
+      "stages": [
+        "vere-release",
+        "runtime"
+      ],
+      "upstream_version": "3.14.8",
+      "license_label": "PSF-2.0 (plus historical agreements and included notices; see full LICENSE)",
+      "license_status": "exact_upstream_version_full_root_license_retrieved",
+      "license_file": "licenses/python3-LICENSE.txt",
+      "license_sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+      "license_byte_count": 13804,
+      "upstream_tag": "v3.14.8",
+      "upstream_commit": "8e6e75d9102e39bed2a2b279203a396741180f12",
+      "upstream_commit_license_url": "https://raw.githubusercontent.com/python/cpython/8e6e75d9102e39bed2a2b279203a396741180f12/LICENSE",
+      "tag_and_commit_license_identical": true,
+      "alpine_index_evidence": {
+        "source_url": "https://pkgs.alpinelinux.org/packages?name=python3&branch=edge&arch=x86_64",
+        "file": "evidence/alpine-python3.html",
+        "observed_version": "3.14.9-r2",
+        "exact_pin_observed": false,
+        "scope": "edge/main/x86_64 public listing only; not installed-image evidence"
+      },
+      "installed_apk_revision_verified": false,
+      "remaining_gaps": [
+        "No installed-package database or APK contents examined.",
+        "Alpine packaging patches, additional bundled notices and transitive dependencies not exhaustively inventoried."
+      ]
+    },
+    {
+      "name": "openssl",
+      "declared_apk_pin": "3.5.9-r0",
+      "declaration_source": "build/Dockerfile:9",
+      "stages": [
+        "runtime"
+      ],
+      "upstream_version": "3.5.9",
+      "license_label": "Apache-2.0",
+      "license_status": "exact_upstream_version_full_root_license_retrieved",
+      "license_file": "licenses/openssl-LICENSE.txt",
+      "license_sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "license_byte_count": 10175,
+      "upstream_tag": "openssl-3.5.9",
+      "upstream_commit": "45e844fa2a14ec92d146bd8f5778ac130b6625fb",
+      "upstream_commit_license_url": "https://raw.githubusercontent.com/openssl/openssl/45e844fa2a14ec92d146bd8f5778ac130b6625fb/LICENSE.txt",
+      "tag_and_commit_license_identical": true,
+      "alpine_index_evidence": {
+        "source_url": "https://pkgs.alpinelinux.org/packages?name=openssl&branch=edge&arch=x86_64",
+        "file": "evidence/alpine-openssl.html",
+        "observed_version": "3.5.9-r0",
+        "exact_pin_observed": true,
+        "scope": "edge/main/x86_64 public listing only; not installed-image evidence"
+      },
+      "installed_apk_revision_verified": false,
+      "remaining_gaps": [
+        "No installed-package database or APK contents examined.",
+        "Alpine packaging patches, additional bundled notices and transitive dependencies not exhaustively inventoried."
+      ]
+    },
+    {
+      "name": "nginx",
+      "declared_apk_pin": "1.30.6-r0",
+      "declaration_source": "build/Dockerfile:9",
+      "stages": [
+        "runtime"
+      ],
+      "upstream_version": "1.30.6",
+      "license_label": "BSD-2-Clause",
+      "license_status": "exact_upstream_version_full_root_license_retrieved",
+      "license_file": "licenses/nginx-LICENSE.txt",
+      "license_sha256": "08845fe39e06b51dad7685c28140ab49577a86e947523e16b536a46caf89ad5c",
+      "license_byte_count": 1319,
+      "upstream_tag": "release-1.30.6",
+      "upstream_commit": "fb0e979c6dd63c018958b41eeb844947c5c21264",
+      "upstream_commit_license_url": "https://raw.githubusercontent.com/nginx/nginx/fb0e979c6dd63c018958b41eeb844947c5c21264/LICENSE",
+      "tag_and_commit_license_identical": true,
+      "alpine_index_evidence": {
+        "source_url": "https://pkgs.alpinelinux.org/packages?name=nginx&branch=edge&arch=x86_64",
+        "file": "evidence/alpine-nginx.html",
+        "observed_version": "1.30.6-r0",
+        "exact_pin_observed": true,
+        "scope": "edge/main/x86_64 public listing only; not installed-image evidence"
+      },
+      "installed_apk_revision_verified": false,
+      "remaining_gaps": [
+        "No installed-package database or APK contents examined.",
+        "Alpine packaging patches, additional bundled notices and transitive dependencies not exhaustively inventoried."
+      ]
+    }
+  ],
+  "inherited_readme": {
+    "upstream": "jmnsf/urbit-docker",
+    "commit": "32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2021 João Ferreira",
+    "license_evidence": {
+      "url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/LICENSE",
+      "sha256": "001bd5e696f968e7c3195b33fb8c4d32b1a6a9a7d36b46054b10a400b868d352",
+      "byte_count": 1071,
+      "component": "jmnsf-readme",
+      "file": "licenses/jmnsf-readme-LICENSE.txt"
+    },
+    "readme_evidence": {
+      "url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/README.md",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/README.md",
+      "sha256": "ff12f411be134c1228411e00e158dc6f493d6224b8772609fc586c128df056a5",
+      "byte_count": 2151,
+      "component": "jmnsf-readme-source",
+      "file": "evidence/jmnsf-readme-source.md"
+    },
+    "scope": "Historical source and full license preserved; not a line-by-line mapping of every current README passage."
+  },
+  "unavailable_sources": [
+    {
+      "url": "https://pkgs.alpinelinux.org/packages?name=python3&branch=&arch=x86_64",
+      "error": "HTTP Error 404: Not Found",
+      "component": "alpine-python3-all"
+    }
+  ],
+  "coverage_gaps": [
+    "Exact python3=3.14.8-r0 Alpine package revision not corroborated by sampled edge index (3.14.9-r2 observed); upstream 3.14.8 root LICENSE was retrieved successfully.",
+    "Alpine digest not pulled, resolved or inspected; base package versions unknown.",
+    "musl, BusyBox, other base packages, transitive dependencies, optional modules and bundled subcomponent notices need installed-package and source inventory.",
+    "Top-level upstream license files do not prove exhaustive per-file or distribution-notice coverage.",
+    "No package signatures, release signatures or binary/source correspondence verified.",
+    "No corresponding-source distribution or written-offer obligations assessed."
+  ],
+  "excluded": [
+    "Selected Vere binary and linked dependencies: separate collection.",
+    "Development-only SDK 0.3.55 and node_modules: outside runtime COPY allowlist and this scope."
+  ],
+  "retrievals": [
+    {
+      "url": "https://raw.githubusercontent.com/madler/zlib/v1.3.2/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/madler/zlib/v1.3.2/LICENSE",
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+      "byte_count": 1002,
+      "component": "zlib",
+      "file": "licenses/zlib-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.14.8/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/python/cpython/v3.14.8/LICENSE",
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+      "byte_count": 13804,
+      "component": "python3",
+      "file": "licenses/python3-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/LICENSE.txt",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "byte_count": 10175,
+      "component": "openssl",
+      "file": "licenses/openssl-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nginx/nginx/release-1.30.6/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/nginx/nginx/release-1.30.6/LICENSE",
+      "sha256": "08845fe39e06b51dad7685c28140ab49577a86e947523e16b536a46caf89ad5c",
+      "byte_count": 1319,
+      "component": "nginx",
+      "file": "licenses/nginx-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/LICENSE",
+      "sha256": "001bd5e696f968e7c3195b33fb8c4d32b1a6a9a7d36b46054b10a400b868d352",
+      "byte_count": 1071,
+      "component": "jmnsf-readme",
+      "file": "licenses/jmnsf-readme-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/README.md",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/jmnsf/urbit-docker/32fc5f843adf5b9f67b7e5a71f2370bc0cb53c67/README.md",
+      "sha256": "ff12f411be134c1228411e00e158dc6f493d6224b8772609fc586c128df056a5",
+      "byte_count": 2151,
+      "component": "jmnsf-readme-source",
+      "file": "evidence/jmnsf-readme-source.md"
+    },
+    {
+      "url": "https://pkgs.alpinelinux.org/packages?name=zlib&branch=edge&arch=x86_64",
+      "http_status": 200,
+      "resolved_url": "https://pkgs.alpinelinux.org/packages?name=zlib&branch=edge&arch=x86_64",
+      "sha256": "74ed0ea56d17bd09d80be3d37467c8230b4f6ed96e23608eaaf7edd4f6373eb9",
+      "byte_count": 172094,
+      "component": "alpine-zlib",
+      "file": "evidence/alpine-zlib.html"
+    },
+    {
+      "url": "https://pkgs.alpinelinux.org/packages?name=python3&branch=edge&arch=x86_64",
+      "http_status": 200,
+      "resolved_url": "https://pkgs.alpinelinux.org/packages?name=python3&branch=edge&arch=x86_64",
+      "sha256": "50bb26a57941d8c292f9367c501fcc3a46705522f66ab567eb21a5da82b849ef",
+      "byte_count": 172124,
+      "component": "alpine-python3",
+      "file": "evidence/alpine-python3.html"
+    },
+    {
+      "url": "https://pkgs.alpinelinux.org/packages?name=openssl&branch=edge&arch=x86_64",
+      "http_status": 200,
+      "resolved_url": "https://pkgs.alpinelinux.org/packages?name=openssl&branch=edge&arch=x86_64",
+      "sha256": "cdc1a6c89ce44e1a97a9ff4d05bebe209a693511b999e13e7c78e2b89dc6b063",
+      "byte_count": 172143,
+      "component": "alpine-openssl",
+      "file": "evidence/alpine-openssl.html"
+    },
+    {
+      "url": "https://pkgs.alpinelinux.org/packages?name=nginx&branch=edge&arch=x86_64",
+      "http_status": 200,
+      "resolved_url": "https://pkgs.alpinelinux.org/packages?name=nginx&branch=edge&arch=x86_64",
+      "sha256": "43aa22ef6e41aace81676fa992fd3a22695766f8c6ba81a122505f96b01bd1cb",
+      "byte_count": 172138,
+      "component": "alpine-nginx",
+      "file": "evidence/alpine-nginx.html"
+    },
+    {
+      "url": "https://api.github.com/repos/madler/zlib/git/ref/tags/v1.3.2",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/madler/zlib/git/ref/tags/v1.3.2",
+      "sha256": "1f060666e370a18d7aa2ef0f8da8d4fd6609bf363acc1d0e7c92562116cdfd37",
+      "byte_count": 321,
+      "component": "zlib-ref",
+      "file": "evidence/zlib-ref.json"
+    },
+    {
+      "url": "https://api.github.com/repos/python/cpython/git/ref/tags/v3.14.8",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/python/cpython/git/ref/tags/v3.14.8",
+      "sha256": "0fa06c1670e075dbeff829a65317304afa6a877785e4468c433251159f9ce2f2",
+      "byte_count": 333,
+      "component": "python3-ref",
+      "file": "evidence/python3-ref.json"
+    },
+    {
+      "url": "https://api.github.com/repos/openssl/openssl/git/ref/tags/openssl-3.5.9",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/openssl/openssl/git/ref/tags/openssl-3.5.9",
+      "sha256": "97e6d08148c7bde4a8aa80b6f4dcb265672e0c79a7d019e5de8826cb0f660c3f",
+      "byte_count": 355,
+      "component": "openssl-ref",
+      "file": "evidence/openssl-ref.json"
+    },
+    {
+      "url": "https://api.github.com/repos/nginx/nginx/git/ref/tags/release-1.30.6",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/nginx/nginx/git/ref/tags/release-1.30.6",
+      "sha256": "389890d97c9bae5e52f59f5a5316a867992c8442e15445294359f7c8078f67cd",
+      "byte_count": 349,
+      "component": "nginx-ref",
+      "file": "evidence/nginx-ref.json"
+    },
+    {
+      "url": "https://api.github.com/repos/madler/zlib/git/tags/216c70c020aa53f0c40920d155f808b6b59c9acb",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/madler/zlib/git/tags/216c70c020aa53f0c40920d155f808b6b59c9acb",
+      "sha256": "7eebdcd983b779c22114350daefd49dea5da785a2bd19a26113e24e6fc60f928",
+      "byte_count": 1263,
+      "component": "zlib-tag",
+      "file": "evidence/zlib-tag.json"
+    },
+    {
+      "url": "https://api.github.com/repos/python/cpython/git/tags/992560c2cc62d47b308cec662feb485456847931",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/python/cpython/git/tags/992560c2cc62d47b308cec662feb485456847931",
+      "sha256": "04859358b15d4c1aed1f7a666482e65ba5ddb46020e7c56882c5fe97595e2a8b",
+      "byte_count": 683,
+      "component": "python3-tag",
+      "file": "evidence/python3-tag.json"
+    },
+    {
+      "url": "https://api.github.com/repos/openssl/openssl/git/tags/d0ca66a1abe52545f14eca635c648932fcde5615",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/openssl/openssl/git/tags/d0ca66a1abe52545f14eca635c648932fcde5615",
+      "sha256": "24c1c028d2d367a83285d82b434ff9665350ee31ee4c1a0ecc6c11b93c21fed5",
+      "byte_count": 2767,
+      "component": "openssl-tag",
+      "file": "evidence/openssl-tag.json"
+    },
+    {
+      "url": "https://api.github.com/repos/nginx/nginx/git/tags/4b7a1a2ed58d97e385cbf5c7bb0a7ece05fe16fd",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/repos/nginx/nginx/git/tags/4b7a1a2ed58d97e385cbf5c7bb0a7ece05fe16fd",
+      "sha256": "ac26a545410bc86afa8c6b920a58e762f4e2b45cc2e79221bad89829b8bb3807",
+      "byte_count": 666,
+      "component": "nginx-tag",
+      "file": "evidence/nginx-tag.json"
+    },
+    {
+      "url": "https://pkgs.alpinelinux.org/packages?name=python3&branch=&arch=x86_64",
+      "error": "HTTP Error 404: Not Found",
+      "component": "alpine-python3-all"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/madler/zlib/da607da739fa6047df13e66a2af6b8bec7c2a498/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/madler/zlib/da607da739fa6047df13e66a2af6b8bec7c2a498/LICENSE",
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+      "byte_count": 1002,
+      "component": "zlib-commit-license",
+      "matches_tag_license_bytes": true,
+      "file": "licenses/zlib-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/8e6e75d9102e39bed2a2b279203a396741180f12/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/python/cpython/8e6e75d9102e39bed2a2b279203a396741180f12/LICENSE",
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+      "byte_count": 13804,
+      "component": "python3-commit-license",
+      "matches_tag_license_bytes": true,
+      "file": "licenses/python3-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/45e844fa2a14ec92d146bd8f5778ac130b6625fb/LICENSE.txt",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/openssl/openssl/45e844fa2a14ec92d146bd8f5778ac130b6625fb/LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "byte_count": 10175,
+      "component": "openssl-commit-license",
+      "matches_tag_license_bytes": true,
+      "file": "licenses/openssl-LICENSE.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nginx/nginx/fb0e979c6dd63c018958b41eeb844947c5c21264/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/nginx/nginx/fb0e979c6dd63c018958b41eeb844947c5c21264/LICENSE",
+      "sha256": "08845fe39e06b51dad7685c28140ab49577a86e947523e16b536a46caf89ad5c",
+      "byte_count": 1319,
+      "component": "nginx-commit-license",
+      "matches_tag_license_bytes": true,
+      "file": "licenses/nginx-LICENSE.txt"
+    }
+  ],
+  "counts": {
+    "direct_package_pins": 4,
+    "exact_upstream_license_texts": 4,
+    "historical_readme_license_texts": 1,
+    "full_license_files": 5,
+    "direct_pins_seen_in_sampled_alpine_index": 3,
+    "named_base_inventory_gaps": 2,
+    "failed_source_requests": 1,
+    "source_requests": 23
+  }
+}

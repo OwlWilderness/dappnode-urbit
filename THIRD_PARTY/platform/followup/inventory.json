@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_FOLLOWUP_COMPLETE_PARTIAL_CLOSURES_PUBLIC_DISTRIBUTION_GAPS_REMAIN",
+  "baseline_image_id": "sha256:eacbb5f0b1b9e21df26e7d4b4d63d89b27985fecc4f3580f2dfac44c5243786a",
+  "scope": "Five selected APKs/four source origins only; existing baseline remains historical evidence",
+  "packages": [
+    {
+      "name": "alpine-baselayout",
+      "version": "3.7.2-r1",
+      "source_origin": "alpine-baselayout",
+      "source_revision": "60a7585bbab2fa0f762504eb617dbca90216e31f",
+      "installed_license_declaration": "GPL-2.0-only",
+      "recipe_path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-baselayout-APKBUILD",
+      "evidence_status": "SOURCE_RETAINED_LITERAL_DECLARATION_NOTICE_GAP",
+      "evidence_paths": [
+        "THIRD_PARTY/platform/image-baseline/installed-notices/inventory.json",
+        "THIRD_PARTY/platform/image-baseline/installed-apk-db.txt",
+        "THIRD_PARTY/platform/image-baseline/recipes/alpine-baselayout-APKBUILD",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-baselayout-directory.json",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-baselayout-root.json",
+        "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/repository-README.md",
+        "THIRD_PARTY/vere/licenses/gmp/COPYINGv2"
+      ],
+      "remaining_gaps": [
+        "GPL-2.0-only is the literal installed/recipe declaration. Full GPLv2 reused by reference; no separate Alpine per-file grant/attribution text found in the collected selected directory/root README. Netbase notice applies only to protocols/services, not the whole package.",
+        "Installed DB ownership/checksums are retained unsigned metadata, not APK signature verification or source-to-binary proof. Full corresponding-source, complete coverage and legal clearance are not established."
+      ],
+      "applicable_grant_established": false,
+      "worker_inventory": "THIRD_PARTY/platform/followup/aports/inventory.json"
+    },
+    {
+      "name": "alpine-baselayout-data",
+      "version": "3.7.2-r1",
+      "source_origin": "alpine-baselayout",
+      "source_revision": "60a7585bbab2fa0f762504eb617dbca90216e31f",
+      "installed_license_declaration": "GPL-2.0-only",
+      "recipe_path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-baselayout-APKBUILD",
+      "evidence_status": "PARTIAL_NETBASE_NOTICE_RESOLVED_ALPINE_ATTRIBUTION_GAP",
+      "evidence_paths": [
+        "THIRD_PARTY/platform/image-baseline/installed-notices/inventory.json",
+        "THIRD_PARTY/platform/image-baseline/installed-apk-db.txt",
+        "THIRD_PARTY/platform/image-baseline/recipes/alpine-baselayout-APKBUILD",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-baselayout-directory.json",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-baselayout-root.json",
+        "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/repository-README.md",
+        "THIRD_PARTY/platform/followup/aports/sources/netbase-6.4/debian/copyright",
+        "THIRD_PARTY/vere/licenses/gmp/COPYINGv2"
+      ],
+      "remaining_gaps": [
+        "GPL-2.0-only is the literal installed/recipe declaration. Full GPLv2 reused by reference; no separate Alpine per-file grant/attribution text found in the collected selected directory/root README. Netbase notice applies only to protocols/services, not the whole package.",
+        "Installed DB ownership/checksums are retained unsigned metadata, not APK signature verification or source-to-binary proof. Full corresponding-source, complete coverage and legal clearance are not established."
+      ],
+      "applicable_grant_established": false,
+      "worker_inventory": "THIRD_PARTY/platform/followup/aports/inventory.json"
+    },
+    {
+      "name": "alpine-keys",
+      "version": "2.6-r0",
+      "source_origin": "alpine-keys",
+      "source_revision": "b9f23becced4d7b3ccc0fa0f28530243ccd314a0",
+      "installed_license_declaration": "MIT",
+      "recipe_path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-keys-APKBUILD",
+      "evidence_status": "SOURCE_RETAINED_LITERAL_DECLARATION_NOTICE_GAP",
+      "evidence_paths": [
+        "THIRD_PARTY/platform/image-baseline/installed-notices/inventory.json",
+        "THIRD_PARTY/platform/image-baseline/installed-apk-db.txt",
+        "THIRD_PARTY/platform/image-baseline/recipes/alpine-keys-APKBUILD",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-keys-directory.json",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-keys-root.json",
+        "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/repository-README.md"
+      ],
+      "remaining_gaps": [
+        "MIT is the literal installed/recipe declaration; all 18 public key source files checksum-match, but selected directory/root README provides no full MIT grant/attribution. Public cryptographic trust data is not user credentials and no license exemption is inferred.",
+        "Installed DB ownership/checksums are retained unsigned metadata, not APK signature verification or source-to-binary proof. Full corresponding-source, complete coverage and legal clearance are not established."
+      ],
+      "applicable_grant_established": false,
+      "worker_inventory": "THIRD_PARTY/platform/followup/aports/inventory.json"
+    },
+    {
+      "name": "alpine-release",
+      "version": "3.24.2-r0",
+      "source_origin": "alpine-base",
+      "source_revision": "d9d560d5de74ff9a7a73f3c903d6f126a0bf3142",
+      "installed_license_declaration": "MIT",
+      "recipe_path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-base-APKBUILD",
+      "evidence_status": "SOURCE_RETAINED_LITERAL_DECLARATION_NOTICE_GAP",
+      "evidence_paths": [
+        "THIRD_PARTY/platform/image-baseline/installed-notices/inventory.json",
+        "THIRD_PARTY/platform/image-baseline/installed-apk-db.txt",
+        "THIRD_PARTY/platform/image-baseline/recipes/alpine-base-APKBUILD",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-base-directory.json",
+        "THIRD_PARTY/platform/followup/aports/metadata/alpine-base-root.json",
+        "THIRD_PARTY/platform/followup/aports/sources/alpine-base/repository-README.md"
+      ],
+      "remaining_gaps": [
+        "MIT is the literal installed/recipe declaration; no full MIT text or copyright holder notice occurs in the selected directory (APKBUILD only) or root README. Generated factual release data does not justify inventing a grant.",
+        "Installed DB ownership/checksums are retained unsigned metadata, not APK signature verification or source-to-binary proof. Full corresponding-source, complete coverage and legal clearance are not established."
+      ],
+      "applicable_grant_established": false,
+      "worker_inventory": "THIRD_PARTY/platform/followup/aports/inventory.json"
+    },
+    {
+      "name": "ca-certificates-bundle",
+      "version": "20260909-r0",
+      "source_origin": "ca-certificates",
+      "source_revision": "eb7078df3a16d666e8f7723f94bb92e00d4b9236",
+      "installed_license_declaration": "MPL-2.0 AND MIT",
+      "recipe_path": "THIRD_PARTY/platform/image-baseline/recipes/ca-certificates-APKBUILD",
+      "evidence_status": "PINNED_SOURCE_NOTICE_RECOVERED_GENERATED_BUNDLE_APPLICABILITY_REMAINS",
+      "evidence_paths": [
+        "THIRD_PARTY/platform/followup/trust-bundle/evidence/tag.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-tag.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/README.md",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/VERSION",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/Makefile",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/certdata.txt",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/c_rehash.c",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/scripts/update-version.sh",
+        "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-commit.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/mk-ca-bundle.pl",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/split-ca-bundle.sh",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca.c",
+        "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca-certificates.8",
+        "THIRD_PARTY/platform/followup/trust-bundle/licenses/MPL-2.0.txt",
+        "THIRD_PARTY/platform/followup/trust-bundle/source-delivery-references.json",
+        "THIRD_PARTY/platform/followup/trust-bundle/notice-bindings.json"
+      ],
+      "remaining_gaps": [
+        "Collected MPL-2.0 grant is established for the pinned certdata.txt Source Code Form; applicability and required notice/source delivery for the generated shipped certificate payload remain a scoped assessment, not legal clearance or a copyrightability conclusion.",
+        "The inherited installed/recipe MPL-2.0 AND MIT declaration is preserved. c_rehash.c expressly selects MIT but is not moved into this bundle subpackage; no separate MIT grant for certdata.txt was found. update-ca.c, split-ca-bundle.sh, Makefile and update-version.sh do not contain an express per-file license notice. Do not replace the mixed package declaration with MPL-only.",
+        "Pinned mk-ca-bundle.pl declares SPDX curl, not GPL; its referenced COPYING is absent from this tree. Full curl terms were not fetched because buildtool redistribution is outside this shipped-bundle notice resolution. The retained Alpine recipe GPL-script comment is not proof of a current GPL-licensed file.",
+        "Source-level packaging trace plus retained installed APK file list is not byte correspondence to the installed ca-certificates.crt. No image/trust-store/certificate payload readback or source regeneration was performed.",
+        "Only named relevant upstream files are delivered here, not a complete source tree, complete build environment or accepted corresponding-source fulfillment. Tree entries .gitignore, .gitlab-ci.yml and renovate.json are listed but not retrieved."
+      ],
+      "applicable_grant_established": false,
+      "upstream_source_revision": "5aaf4043e057e23cc8e0dd5cfbe4f9ceba41ca3b",
+      "worker_inventory": "THIRD_PARTY/platform/followup/trust-bundle/inventory.json"
+    }
+  ],
+  "files": [
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/README.md",
+      "sha256": "6eff4f0f9735204cd53a1180beb78ff7f1ad661e8781186f6d6fa7a55a5b2c36",
+      "bytes": 5731,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/inventory.json",
+      "sha256": "d9611f77427ac33c5fcb16e38e4696f4048b1c33352ed1199725d8edc7a54d5a",
+      "bytes": 97070,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/alpine-base-directory.json",
+      "sha256": "86109f682abc4fddc31da0a4c31b9fa972d4467da482d859e1ce3546f6f0c43c",
+      "bytes": 1012,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/alpine-base-root.json",
+      "sha256": "dfe5775fcfa5ea3b7d297e9c6f081f2fbb40cc51ccc962ae66bbe37094ca25c6",
+      "bytes": 13092,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/alpine-baselayout-directory.json",
+      "sha256": "4088f89a6889c1219c3b6f58c6de506a19e55f3195cbbf34ed131383f3c22f93",
+      "bytes": 18582,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/alpine-baselayout-root.json",
+      "sha256": "05d8ca70a187889c6d621e68b49f189c94ebb4324fc1cd41eb90f795521d715a",
+      "bytes": 13092,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/alpine-keys-directory.json",
+      "sha256": "2df7e263d4d1fdaa7e2876247a0b75cb538507d2870f6bcff306da96327e91e3",
+      "bytes": 24646,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/alpine-keys-root.json",
+      "sha256": "02aba4a29a11a8f934637b5d44720c413a1bbe476a6780a4baa6f8abadfb9c74",
+      "bytes": 13092,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/netbase-6.4-debian-tree.json",
+      "sha256": "f024749e4b3b4a2c4fb2287d0a79dabf427be00146fe7c1effc6df4545fdf32a",
+      "bytes": 1537,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/metadata/netbase-6.4-tag.json",
+      "sha256": "8489f18f36010ea82b67dbf8ea3b392d39393a437be415d4ace8d6ab6942bd49",
+      "bytes": 996,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/retrieval.json",
+      "sha256": "7ad4615cfcbee747e2a7210b7fde9684ac1f7702af0125404ddc38dd2fe782fb",
+      "bytes": 33431,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-base/repository-README.md",
+      "sha256": "ae4b731c5ec54ab44908c161fe2a54b7cd51b0273a447e7d961dbb7157818d5a",
+      "bytes": 3514,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/20locale.sh",
+      "sha256": "284a6ef56ab97a13a777c6b01ae14f2cc3d2b7a29c19e750e622e70cc3c73186",
+      "bytes": 97,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/aliases.conf",
+      "sha256": "3ebaba946f213670170c7d69949f690a3854553bd0b1560f1d980cba4c83a942",
+      "bytes": 1545,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.post-install",
+      "sha256": "dd30b63bfbe4f7d8085f57840e15b84015b3518d6f282a3e0924f73a61000016",
+      "bytes": 453,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.post-upgrade",
+      "sha256": "53f570f015ac2086597ab62accc6ad08600e2994577ac622263f17e9de39d2e2",
+      "bytes": 30,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.pre-install",
+      "sha256": "28ecff91a36f438ca26bc8cc08d857863378aa94eab399a1f413e52501b86f85",
+      "bytes": 56,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.pre-upgrade",
+      "sha256": "3f35fa5402d397389f366e8934ba0f800a017a149f4281dc8c22762419e47e10",
+      "bytes": 944,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/blacklist.conf",
+      "sha256": "0e9ab848289bfb20b9b066d05c8b1383a7c92b97ff8072a50806054b5d3fd739",
+      "bytes": 2247,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/color_prompt.sh.disabled",
+      "sha256": "ba24425c6864a5d17fa0fdaf914c4d21419e47c4d62080c33830af059fe46617",
+      "bytes": 447,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/crontab",
+      "sha256": "575d810a9fae5f2f0671c9b2c0ce973e46c7207fbe5cb8d1b0d1836a6a0470e3",
+      "bytes": 283,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/group",
+      "sha256": "6fb6ab5a5526e6f4896b70c7e3c350fd475158a1f0d7b5fc0f3f9bd57f1c3be8",
+      "bytes": 510,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/hier.7",
+      "sha256": "8a91913d8a05ad57316355ee74d966210a6eae7bd850d46dac53e799d3981cc2",
+      "bytes": 6855,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/i386.conf",
+      "sha256": "6c46c4cbfb8b7594f19eb94801a350fa2221ae9ac5239a8819d15555caa76ae8",
+      "bytes": 122,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/inittab",
+      "sha256": "7326d8ad56bf5fea63b1ca516a747ff6e6723e25ae84a93c31620b03de6c001d",
+      "bytes": 570,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/passwd",
+      "sha256": "31a94f06f17bc3b9085fccab1d0fa6ee9e79c4a1e4d91f617fa5de95863be015",
+      "bytes": 702,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/profile",
+      "sha256": "87e8643d3ce156de0c09370d4d39446f30bd00d264bea248abc191c4d7b9df3e",
+      "bytes": 547,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/repository-README.md",
+      "sha256": "ae4b731c5ec54ab44908c161fe2a54b7cd51b0273a447e7d961dbb7157818d5a",
+      "bytes": 3514,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/usr_merge_nag.sh",
+      "sha256": "ffab41e32add88a13483309172c22da013f50a82bc552b488765254a6e92115c",
+      "bytes": 677,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+      "sha256": "9c102bcc376af1498d549b77bdbfa815ae86faa1d2d82f040e616b18ef2df2d4",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub",
+      "sha256": "ebf31683b56410ecc4c00acd9f6e2839e237a3b62b5ae7ef686705c7ba0396a9",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub",
+      "sha256": "1bb2a846c0ea4ca9d0e7862f970863857fc33c32f5506098c636a62a726a847b",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub",
+      "sha256": "12f899e55a7691225603d6fb3324940fc51cd7f133e7ead788663c2b7eecb00c",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58199dcc.rsa.pub",
+      "sha256": "73867d92083f2f8ab899a26ccda7ef63dfaa0032a938620eda605558958a8041",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58cbb476.rsa.pub",
+      "sha256": "9a4cd858d9710963848e6d5f555325dc199d1c952b01cf6e64da2c15deedbd97",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58e4f17d.rsa.pub",
+      "sha256": "780b3ed41786772cbc7b68136546fa3f897f28a23b30c72dde6225319c44cfff",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5e69ca50.rsa.pub",
+      "sha256": "59c01c57b446633249f67c04b115dd6787f4378f183dff2bbf65406df93f176d",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-60ac2099.rsa.pub",
+      "sha256": "db0b49163f07ffba64a5ca198bcf1688610b0bd1f0d8d5afeaf78559d73f2278",
+      "bytes": 451,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+      "sha256": "207e4696d3c05f7cb05966aee557307151f1f00217af4143c1bcaf33b8df733f",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub",
+      "sha256": "128d34d4aec39b0daedea8163cd8dc24dff36fd3d848630ab97eeb1d3084bbb3",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616a9724.rsa.pub",
+      "sha256": "10877cce0a935e46ad88cb79e174a2491680508eccda08e92bf04fb9bf37fbc1",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616abc23.rsa.pub",
+      "sha256": "4a095a9daca86da496a3cd9adcd95ee2197fdbeb84638656d469f05a4d740751",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616ac3bc.rsa.pub",
+      "sha256": "0caf5662fde45616d88cfd7021b7bda269a2fcaf311e51c48945a967a609ec0b",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616adfeb.rsa.pub",
+      "sha256": "ebe717d228555aa58133c202314a451f81e71f174781fd7ff8d8970d6cfa60da",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub",
+      "sha256": "d11f6b21c61b4274e182eb888883a8ba8acdbf820dcc7a6d82a7d9fc2fd2836d",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616db30d.rsa.pub",
+      "sha256": "40a216cbd163f22e5f16a9e0929de7cde221b9cbae8e36aa368b1e128afe0a31",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-66ba20fe.rsa.pub",
+      "sha256": "7cf4cb8314e6ccc985b0d7f1aa0c6e0a81e3588f69a41f383af7a63d1ba61793",
+      "bytes": 800,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/repository-README.md",
+      "sha256": "ae4b731c5ec54ab44908c161fe2a54b7cd51b0273a447e7d961dbb7157818d5a",
+      "bytes": 3514,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/netbase-6.4/debian/copyright",
+      "sha256": "795b66147ea5ad692991caa7008ece551fb0fa88b9c53656223bd1518dc58ab2",
+      "bytes": 1234,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/netbase-6.4/etc/protocols",
+      "sha256": "4959498abbadaa1e50894a266f8d0d94500101cfe5b5f09dcad82e9d5bdfab46",
+      "bytes": 3144,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/aports/sources/netbase-6.4/etc/services",
+      "sha256": "f6183055fd949f9c53d49ee620f85d0150123ea691d25ed1bba0c641b4ee2f48",
+      "bytes": 12813,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/README.md",
+      "sha256": "202d07bf86ce5686919fb36072c3a0276efb8b93f93cb48fe63f8742e6cf530b",
+      "bytes": 5385,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tag.json",
+      "sha256": "30c9bbc34046353f9e48d30b250a77c69cd0a8444efc141df163d8d1efb5ac62",
+      "bytes": 935,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-commit.json",
+      "sha256": "7a28125cf4dfa7c7a14417aa7b0985a20194dd79ea7f9c6618b4760067860650",
+      "bytes": 1759,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/evidence/tree-tag.json",
+      "sha256": "7a28125cf4dfa7c7a14417aa7b0985a20194dd79ea7f9c6618b4760067860650",
+      "bytes": 1759,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/inventory.json",
+      "sha256": "d3b33457fd4e098241f0f20a791f0cba1e147b662fa944f1c3b09611b622a84a",
+      "bytes": 14234,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/licenses/MPL-2.0.txt",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/notice-bindings.json",
+      "sha256": "8ef755e23119e0319a8f8fc25116c6f6731e6db7e8e5810c2efcf15e1d948565",
+      "bytes": 3160,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source-delivery-references.json",
+      "sha256": "bf1158a4bc4a4cb6886f8e3bf856509c75c68fc670e7af212e1387b596a77510",
+      "bytes": 2489,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/Makefile",
+      "sha256": "4e317305a283703ccc79828ebf5728acb3ae1bf8fe3e857ab39496470acaa2db",
+      "bytes": 1583,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/README.md",
+      "sha256": "f035dad569493e311659b9b79be908ce75a5363a958e8ada9b3c37b58707b913",
+      "bytes": 548,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/VERSION",
+      "sha256": "a0c57a29bd21b44efec475c17b0ccfb6ee78e19a32b7193f9a11d187c0885ca3",
+      "bytes": 9,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/c_rehash.c",
+      "sha256": "a68fedc0edd976b9f35ecfdcb252d80dc12084b1bc4e945be7dc42c437d8b540",
+      "bytes": 9533,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/certdata.txt",
+      "sha256": "beb7e6dfe6499926e52c075c27bcfbe4c957f8609c575b3860273ae2806f63eb",
+      "bytes": 1375050,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/mk-ca-bundle.pl",
+      "sha256": "8e278f4982210b37e4f9a048bd6ed23df41e4a054085bd73f8242628f03d09ca",
+      "bytes": 24902,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/scripts/update-version.sh",
+      "sha256": "21b27bb720c823c459480dc246cf3ee54269551f9b8440af18caf81047120328",
+      "bytes": 865,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/split-ca-bundle.sh",
+      "sha256": "973dbde5636a8c7900704b536a526156ead98acf358f6e7b9869067c4fa8b41c",
+      "bytes": 288,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca-certificates.8",
+      "sha256": "b3091ed40fe42a59b9e31742f4b47d99db3260298ffeafe1b129fe17ef37359c",
+      "bytes": 2312,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca.c",
+      "sha256": "fff6ee69a2f5705e0ae5a0214f0e1fff029b14adef49359160cf9a5c867d5df4",
+      "bytes": 7736,
+      "kind": "new_public_source_notice_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/image-baseline/installed-apk-db.txt",
+      "sha256": "48ce241ed8e8e7a108b11b1bda4b2806667f54700acb36b5299aadfd767a7b23",
+      "bytes": 103913,
+      "kind": "reused_retained_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/image-baseline/installed-notices/inventory.json",
+      "sha256": "7656d9819a509fc98d35f401bfdcf9c6d62b38e1b5bb71d9c7fb757b67f7495c",
+      "bytes": 20620,
+      "kind": "reused_retained_evidence"
+    },
+    {
+      "path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-base-APKBUILD",
+      "sha256": "5f3e6446e3e80b20e0f9986760b9f151e47e723e57d32c108bce617846d05b52",
+      "bytes": 1507,
+      "kind": "reused_pinned_recipe"
+    },
+    {
+      "path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-baselayout-APKBUILD",
+      "sha256": "aef255516b71e39109860b92eb027a0986d90197427fb93ec91ebcd04bf59763",
+      "bytes": 8670,
+      "kind": "reused_pinned_recipe"
+    },
+    {
+      "path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-keys-APKBUILD",
+      "sha256": "cb352e13b9e481b424763bd36d3afdb81ac308e508abed15eb7175530050bd3f",
+      "bytes": 5259,
+      "kind": "reused_pinned_recipe"
+    },
+    {
+      "path": "THIRD_PARTY/platform/image-baseline/recipes/ca-certificates-APKBUILD",
+      "sha256": "0c14312c1d5c4a8b7ef74433be9db58517b17eb091bccdf2c8325bc4c9c26480",
+      "bytes": 2520,
+      "kind": "reused_pinned_recipe"
+    },
+    {
+      "path": "THIRD_PARTY/vere/licenses/gmp/COPYINGv2",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092,
+      "kind": "reused_retained_evidence"
+    }
+  ],
+  "complete_notice_coverage": false,
+  "complete_corresponding_source_delivery": false,
+  "legal_clearance": false,
+  "written_offer_issued": false,
+  "final_notice_image_built": false,
+  "final_image_verified": false,
+  "archive_downloads_repeated": false,
+  "narrow_closures": [
+    "Netbase6.4 protocols/services source notices and recipe checksums reconciled",
+    "Pinned certdata MPL2 source notice/full text and exact CA bundle source-generation trace recovered"
+  ],
+  "policy": "No further notice retrieval under this scope. Publication questions remain recorded; separately authorized local actual-image build/startup/fake-ship testing is the next engineering recommendation, not authority to run it."
+}
