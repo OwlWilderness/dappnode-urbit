@@ -2,13 +2,21 @@
 
 ## Status
 
-Research findings from the domain-hosting subagent, recorded October 25, 2026. No domain selected, availability checked, purchase made, or DNS/router/HTTPS configuration changed. No target contact was performed for this research. Public access remains unconfigured and unverified.
+The reference installation now has working public ship HTTPS and relying-app EAuth. The owner confirmed private Reveal/login, public ship login and relying-app EAuth. Public HTTP 200 with strict TLS and the persisted route's private CA, SNI and exactHost settings were independently verified. This is reference-installation acceptance, not a claim about arbitrary DNS/router configurations or Ames reachability. See [public access](public-access.md).
 
-The subagent retrieved public primary sources through fallback search/direct retrieval after its search/extraction tools failed. Its requested `web.run` verification was not completed. These findings are source-level research, not installed-version or target acceptance. Recheck the selected implementation and registrar quote before acting.
+Canonical source descriptors remain 0.1.3. Separately qualified private thin derivatives 0.1.4 (owner-code UI) and 0.1.5 (public backend), and a separate 0.1.0 connector, have been installed. Public source publication is not a binary/Dappstore release; runtime OpenSSL and licensing/distribution gates remain unresolved.
+
+The research sections below originated on October 25, 2026, before this setup was completed. That research used public primary sources through fallback retrieval; it did not contact the target or verify the installed HTTPS service. Treat its provider comparisons and direct-ingress options as background, not current quotes or the deployed design.
+
+## Tested ship-only route
+
+The optional `URBIT_PUBLIC_SHIP_ORIGIN` defaults to empty. An enabled example is `https://ship.example.com`, with a relying application at `https://app.example.com`. A named cloudflared connector routes to the dedicated 9444 HTTPS backend, which forwards to Eyre at `127.0.0.1:8081`. Private 8443 and private manager/Reveal access remain unchanged.
+
+The connector uses only the public CA certificate for backend trust, has no pier mounts or host ports, and keeps its owner-managed token private. Persisted backend private-CA trust, SNI and exactHost settings are part of the verified route; do not disable TLS verification or publish the entire private frontend. These results do not establish that router changes are needed, available or tested on another installation.
 
 ## Recommended direction
 
-Use one owner-controlled domain with separate subdomains for individual projects, for example `app.example.com`, `api.example.com` and `ship.example.com`. These are illustrative names, not selections or availability claims.
+Use one owner-controlled domain with separate subdomains for individual projects, for example `app.example.com` and `ship.example.com`. These are illustrative names, not selections or availability claims.
 
 Use a dedicated application reverse proxy to route those names to individual services. Keep Dappnode management, UVM enrollment/administration and access-code retrieval on their existing private routes. Do not share parent-domain authentication cookies between projects.
 
@@ -32,18 +40,22 @@ The research recommendation was Porkbun for authoritative-DNS-provider flexibili
 | Porkbun | Publishes registration and renewal prices separately; DNS API, DNSSEC and privacy for eligible TLDs; permits changing nameservers. |
 | Cloudflare Registrar | Advertises registry/ICANN cost without markup; DNS API, DNSSEC and redaction where permitted; requires Cloudflare authoritative DNS while registered there. |
 
-Do not select on first-year promotional price alone. Compare the chosen name's renewal price, premium status, fees and transfer conditions. No exact-name quote or availability result has been obtained. Registrar and DNS provider can be separate, subject to the registrar's restrictions.
+Do not select on first-year promotional price alone. Compare the chosen name's renewal price, premium status, fees and transfer conditions. This public document includes no exact-name quote or availability result. Registrar and DNS provider can be separate, subject to the registrar's restrictions.
 
-## Internet access and TLS
+## Internet access and TLS: background alternatives
 
-- Prefer evaluating direct ingress first if the owner has a reachable public address and router control. Check ISP filtering/restrictions, inbound forwarding and IPv4/IPv6 separately.
+- Direct ingress is an alternative, not the tested connector design. If evaluating it for another installation, check reachable public addressing, router control, ISP restrictions, inbound forwarding and IPv4/IPv6 separately.
 - A changing public address can be handled with dynamic DNS; it does not inherently require a tunnel.
-- Investigate CGNAT rather than assuming it. The shared-address range `100.64.0.0/10` is reserved for carrier-grade NAT; private/shared WAN addresses warrant topology/ISP investigation.
+- Investigate CGNAT rather than assuming it; private/shared WAN addresses warrant topology/ISP investigation. No personal network topology is recorded here.
 - An outbound tunnel is an alternative when inbound access is unavailable or deliberately avoided. It introduces a connector/provider dependency and does not itself authenticate application users.
 - HTTP-01 certificate validation needs inbound port 80. DNS-01 can validate domain control without a public web listener and supports wildcard certificates. Successful certificate issuance therefore does not prove public reachability.
 - Earlier local DNS/TLS checks of the existing Dappnode name do not establish off-network access. A public DNS answer also does not prove inbound connectivity.
 
-## Decisions and acceptance still needed
+## Decisions and acceptance for other installations
+
+The tested reference installation has completed its ship HTTPS/login/EAuth checks.
+For a different installation or additional application, qualify the following
+separately rather than treating that result as transferable:
 
 1. Owner-selected candidate names/TLDs, annual renewal budget and purchase approval.
 2. Initial projects and which should be public, authenticated or private.
@@ -53,7 +65,7 @@ Do not select on first-year promotional price alone. Compare the chosen name's r
 6. Owner-operated registration/account/payment flow; never request credentials or payment details in chat.
 7. Explicitly authorized DNS/ingress changes followed by external reachability, TLS and application-login checks.
 
-Public-domain work is separate from the in-progress owner access-code package update. It must not restart the ship or block private ship login.
+Public-domain work remains separate from private owner access-code retrieval. Both are working on the reference installation; future ingress changes must preserve private administration and must not implicitly restart the ship.
 
 ## Primary references reported by the research worker
 

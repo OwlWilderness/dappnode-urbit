@@ -8,20 +8,22 @@ image/descriptor bundle; there is no universal one-click installer in this repo.
 
 ## Feature availability
 
-| Capability | Private 0.1.3 baseline | Current source / limits |
+| Capability | Availability | Limits |
 | --- | --- | --- |
 | Owner-CA HTTPS and one-time owner enrollment | Available | Requires private DNS, public certificate exchange and browser trust |
 | Browser ZIP import of one stopped existing pier | Available | Imports into managed empty storage; does not start the ship |
 | Explicit Start / Stop | Available | RUNNING is process state, not proof of healthy boot or network reachability |
 | Ship web login with an owner-held Urbit access code | Available once the ship serves its login page | Separate from UVM login |
-| **Reveal access code** in UVM | **Not in the installed 0.1.3 baseline** | **SOURCE ONLY; runtime validation and controlled update are in progress, not deployment acceptance** |
+| **Reveal access code** in UVM | Installed and owner-confirmed in the qualified private 0.1.4 thin derivative | Not in historical 0.1.3; private manager reauthentication required |
 | Fresh planet/identity provisioning or boot-key upload | Not supported | No first-boot key form; obtain a stopped existing pier through a separately supported owner workflow |
 | Automatic start after import, package restart or update | Not supported | Explicit Start is required; uncertain prior runtime state can require recovery |
-| Public ship web access / VPN-free external login | Not configured | Separate ship-only ingress work; never expose UVM administration |
+| Public ship HTTPS / relying-app EAuth | Owner-confirmed on the reference installation with private 0.1.5 derivative and separate 0.1.0 connector | Optional ship-only ingress; never expose UVM administration; other targets need their own acceptance |
 | Signed public package / Dappstore distribution | Not delivered by this guide | Separate licensing, namespace, signing and publication gates |
 
 A version string alone does not identify which source changes are in an image.
 Use the accepted artifact's feature record before relying on a new button.
+Canonical source descriptors remain **0.1.3**; the installed private derivatives
+are separately qualified artifacts, not a binary/Dappstore release of this tree.
 
 ## 1. Check prerequisites
 
@@ -43,8 +45,8 @@ Use the accepted artifact's feature record before relying on a new button.
   control. Reuse an already verified backup when still appropriate; do not repeat
   backup preparation just to repeat setup. Recheck that every other instance is
   stopped immediately before import and Start.
-- An owner-held Urbit access code if you need immediate web login. If you do not
-  have it, the baseline can run the ship but cannot reveal the code in UVM; see
+- An owner-held Urbit access code or a qualified installed Reveal build for web
+  login. Historical 0.1.3 can run the ship but cannot reveal the code in UVM; see
   [login](#6-open-the-ship-and-sign-in).
 
 **One identity, one running instance.** A local runtime lock cannot prevent a
@@ -143,7 +145,7 @@ password**. Verify that the normal login works. Enrollment never starts a ship.
 | --- | --- |
 | Dappmanager login | Appliance administration; does not authenticate you to UVM |
 | Bootstrap enrollment authority | One-time permission to create the UVM owner login; only its digest belongs in configuration |
-| UVM manager / importer password | Repeated UVM sign-in and, in the future qualified Reveal build, reauthentication; not an Urbit password |
+| UVM manager / importer password | Repeated UVM sign-in and reauthentication for Reveal in qualified builds; not an Urbit password |
 | Urbit access code | Login to the ship's web interface; not a wallet key or UVM enrollment authority |
 | Ship boot/network keys and wallet secrets | Identity/provisioning authority; never enter them in UVM's wizard or importer |
 | Owner CA private key | Local certificate signing only; never upload to the package |
@@ -194,23 +196,35 @@ Open `https://ship.uvm.public.dappnode.private:8443` over the private connection
 Use your **Urbit access code**, not the manager password. Keep the code in your
 own password manager and enter it only at the intended ship origin.
 
-**Baseline 0.1.3 has no Reveal button.** If you lack the code, browser login remains
-blocked pending an owner-supported recovery path or a qualified manager update.
+**Historical baseline 0.1.3 has no Reveal button.** If that is your installed
+artifact and you lack the code, obtain an owner-supported recovery path or a
+separately qualified manager update.
 Do not reset the identity, import a key, inspect private logs or run a second copy
 of the pier to retrieve it.
 
-In current **source only**, the intended flow is: while RUNNING, re-enter the
-manager password and select **Reveal access code**; manually use the displayed
-value, then **Hide**. Display automatically clears after 30 seconds. These are
-instructions for the feature once its exact build is validated and installed,
-not a claim that the baseline has it. Runtime validation and controlled update
-are still in progress.
+The qualified private 0.1.4 owner-code derivative has been installed, and the
+owner confirmed Reveal and private ship login on the reference installation.
+On a qualified Reveal build, while RUNNING, re-enter the manager password and
+select **Reveal access code**; manually use the displayed value, then **Hide**.
+Display automatically clears after 30 seconds. Keep this operation on the
+private manager; do not share the displayed code or capture it in diagnostics.
 
-Private access does not configure public ship HTTPS, external application login
-or Internet reachability. Those require a separately reviewed **ship-only**
-route. Do not publish the manager origin, its `/api/*` routes or the entire 8443
-frontend. Domain ownership/public TLS decisions belong to that separate work,
-not private installation or enrollment.
+Private access alone does not configure public access. The reference installation
+now has separately qualified **ship-only** public HTTPS: private 0.1.5 adds the
+public backend, and a separate 0.1.0 named cloudflared connector supplies ingress.
+Public HTTP 200 with strict TLS and persisted private-CA/SNI/exactHost route
+settings were verified. The owner confirmed public ship login and relying-app
+EAuth, for example from `https://app.example.com` to `https://ship.example.com`.
+These example names do not identify the private installation.
+
+`URBIT_PUBLIC_SHIP_ORIGIN` is optional and empty by default. When explicitly
+configured, the dedicated 9444 HTTPS backend forwards only to Eyre at
+`127.0.0.1:8081`; private 8443 remains unchanged. The connector uses only the
+public CA certificate for backend trust, no pier mounts and no host ports; its
+owner-managed token stays private. Do not publish the manager origin, its
+`/api/*` routes or the entire 8443 frontend. See [public access](public-access.md)
+for the separate configuration and acceptance boundary. Reference-installation
+success does not prove other DNS/router setups or Ames reachability.
 
 ## 7. Stop, update and resume without a second instance
 
@@ -248,9 +262,9 @@ restart the supervisor, but does not authorize automatic Vere start.
 | `READY_LOCKED`, no running ship | Expected after import. Check managed runtime STOPPED, Start availability and the explicit stopped-instance confirmation. |
 | `BLOCKED_EMBEDDED_OPENSSL` persists after sign-in | A standalone locked importer is not the managed package. Confirm the accepted image/entrypoint; do not bypass the gate. |
 | `RUNNING` but ship page unavailable | Process state is not health. Check the exact private ship route and allow boot time; report only nonsecret status. Never start another copy. |
-| Missing Reveal button / no access code | Expected on baseline 0.1.3; use an owner-held code or wait for a qualified update. Source implementation alone does not deploy it. |
+| Missing Reveal button / no access code | Expected on historical 0.1.3; use an owner-held code or obtain a qualified update. Verify the installed artifact rather than assuming current source was deployed. |
 | `FAULT` or `RECOVERY_REQUIRED` | Preserve pier/control/upload state and stop routine retries. Request a reviewed recovery procedure; no journal deletion, forced adoption or second instance. |
-| External app cannot reach the ship | Private HTTPS does not provide public ingress or prove Ames reachability. Resolve networking separately without exposing UVM admin. |
+| External app cannot reach the ship | Verify the optional ship-only public route and EAuth separately using [public access](public-access.md); private HTTPS alone and reference-installation success do not qualify your route or Ames reachability. Never expose UVM admin. |
 
 When asking for help, share package/build identity, sanitized state labels and the
 failing step—not private logs, credentials, archive names, pier contents or
@@ -275,7 +289,8 @@ not a universal browser archive-install button or compatibility with every relea
 
 The package pins Vere 4.6; its embedded OpenSSL maintenance risk remains
 unresolved. A newer Nginx/Python TLS library does not repair the runtime's embedded
-library. Private installation does not remove this risk. Public distribution
+library. Private installation does not remove this risk. Public source publication
+is not binary/Dappstore release clearance. Public binary distribution
 still needs the maintained [provenance review](distribution-review.md),
 [third-party notices](../THIRD_PARTY/README.md), namespace/signature and publication
 gates. Historical evidence documents describe their own scopes, not current

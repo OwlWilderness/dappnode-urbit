@@ -31,8 +31,9 @@ keys, create identities or adopt arbitrary pier directories.
 | Ship | `https://ship.uvm.public.dappnode.private:8443` | The running ship's web interface |
 
 The Compose service is `ship`. Separate hostnames keep management and ship
-authentication cookies isolated. These are configured endpoints, not a claim
-that target DNS, browser trust or installation has passed acceptance.
+authentication cookies isolated. Private Reveal and ship login have been
+owner-confirmed on the reference installation; other installations must verify
+their own private routing, certificate trust and login.
 
 ## Feature availability
 
@@ -40,10 +41,10 @@ that target DNS, browser trust or installation has passed acceptance.
 | --- | --- |
 | Private HTTPS, enrollment, browser ZIP import, explicit Start/Stop | Private 0.1.3 baseline; verify configuration on each installation |
 | Ship web login | Requires a responsive running ship and the owner's Urbit access code |
-| **Reveal access code** in UVM | **SOURCE ONLY. Not in the installed 0.1.3 baseline; validation and controlled update are in progress, not deployment acceptance** |
+| **Reveal access code** in UVM | Installed in the separately qualified private 0.1.4 thin derivative; owner-confirmed Reveal and private login on the reference installation |
 | Fresh identity / boot-key provisioning | Not implemented; use a stopped existing pier |
 | Automatic ship start after import, restart or update | Not supported; Start is separate |
-| Public ship web access | Not configured; never expose UVM administration |
+| Public ship HTTPS and relying-app EAuth | Confirmed on the reference installation with private 0.1.5 public-backend derivative and separate 0.1.0 connector; optional, ship-only; UVM administration remains private |
 | Signed public release / Dappstore listing | Separate release gates; not supplied here |
 
 A version label alone does not identify which source changes are in an image.
@@ -63,8 +64,9 @@ Keep the accepted image/export until a replacement is qualified.
 5. **Start explicitly:** READY_LOCKED means imported, not running. Confirm every
    other instance is stopped and select **Start ship explicitly**. RUNNING is
    process state; verify the ship login page separately.
-6. **Log in to the ship:** use its Urbit access code, not the UVM password. If you
-   lack the code, baseline 0.1.3 cannot reveal it through UVM yet.
+6. **Log in to the ship:** use its Urbit access code, not the UVM password. On the
+   qualified Reveal build, reauthenticate in the private manager to reveal it.
+   The historical 0.1.3 baseline does not have that button.
 
 The [operator guide](docs/operator-guide.md) gives exact wizard fields, public
 certificate filenames, enrollment, archive requirements, interrupted-upload
@@ -76,9 +78,18 @@ arranged. Never share keys, codes, passwords or pier contents with an agent.
 Private installation, public ship web exposure and package publication are
 separate operations. The package name does not create public ship reachability.
 
-For an owned domain and multiple hosted projects, see the
-[domain and hosting findings](docs/domain-hosting-findings.md). This is research
-and pending setup guidance, not a configured public ingress.
+For optional public ship HTTPS and relying-app EAuth, see
+[public access](docs/public-access.md) and the
+[domain and hosting findings](docs/domain-hosting-findings.md). The tested route
+uses a named cloudflared connector and a dedicated ship-only HTTPS backend on
+9444, forwarding to Eyre at `127.0.0.1:8081`. Private 8443 is unchanged.
+`URBIT_PUBLIC_SHIP_ORIGIN` defaults to empty (disabled); an example enabled
+origin is `https://ship.example.com`. The connector has only the public CA
+certificate for backend trust, no pier mounts or host ports; its owner-managed
+token stays private. Connector source lives in the separate
+[dappnode-urbit-ship-tunnel repository](https://github.com/OwlWilderness/dappnode-urbit-ship-tunnel).
+This reference installation is not a general DNS/router
+compatibility claim.
 
 ## Storage and existing ships
 
@@ -117,9 +128,14 @@ use does not remove that risk.
 Use [release preparation](docs/release-preparation.md) for portable descriptor
 and source-check instructions, and the [distribution review](docs/distribution-review.md)
 for remaining public-release questions. This source tree does not include
-host-specific operational receipts or establish a clean image build, private
-candidate deployment, or target acceptance. Canonical descriptors remain at
-0.1.3; private 0.1.4 candidate work is not a release of this source tree.
+host-specific operational receipts or establish a clean image build.
+Canonical descriptors remain at **0.1.3**. Separately qualified private thin
+derivatives **0.1.4** (owner-code UI) and **0.1.5** (public backend), plus a
+separate **0.1.0** connector, have been installed on the reference installation.
+Public HTTP 200 with strict TLS and the persisted route's private CA, SNI and
+exactHost settings were verified; the owner confirmed public ship login and
+relying-app EAuth. These checks do not qualify other targets or constitute a
+binary/Dappstore release. Public source publication is separate from either.
 Installation, enrollment, import, Start and browser login are distinct checks.
 No automatic publication workflow is installed.
 

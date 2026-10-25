@@ -2,12 +2,34 @@
 
 This is portable source guidance, not an operational acceptance receipt.
 Canonical package descriptors remain at **0.1.3**, with image tag
-`ship.uvm.public.dappnode.eth:0.1.3`. Private 0.1.4 candidate work is separate;
-this checkout neither supplies nor verifies that candidate's deployment.
+`ship.uvm.public.dappnode.eth:0.1.3`. Separately qualified private thin derivatives
+**0.1.4** (owner-code UI) and **0.1.5** (public backend), plus a separate **0.1.0**
+named cloudflared connector, have been installed on the reference installation.
+The owner confirmed private Reveal/login, public ship login and relying-app
+EAuth. Public HTTP 200 with strict TLS and the persisted route's private CA,
+SNI and exactHost settings were verified. These scoped results do not qualify a
+clean build of this checkout, another target or a binary/Dappstore release.
 Source tests and descriptor preparation do not establish a clean image build,
 image binding, signature, publication or Dappnode acceptance. Retain existing
 accepted images, exports and receipts separately; these instructions do not
 authorize rebuilding, runtime attempts, target changes or publication.
+
+## Public-access artifact boundary
+
+Public source publication is separate from binary publication or a Dappstore
+release. Do not bump canonical descriptors to match private derivatives or
+retag the accepted baseline merely because their features are now in source.
+The descriptor preparer below still describes canonical **0.1.3**, not an
+export of the installed 0.1.4/0.1.5 derivatives or the separate connector.
+
+The optional `URBIT_PUBLIC_SHIP_ORIGIN` defaults to empty. The reference design
+uses an explicit origin such as `https://ship.example.com`, a dedicated 9444
+HTTPS backend forwarding to Eyre at `127.0.0.1:8081`, and unchanged private
+8443 administration. The named connector uses only the public CA certificate
+for backend trust, no pier mounts and no host ports; its owner-managed token is
+private. See [public access](public-access.md) for ship-only routing and EAuth
+acceptance. Do not include personal domains, target details, tokens, pier state
+or operational receipts in public artifacts.
 
 ## Prerequisites
 
@@ -110,6 +132,11 @@ do not settle the selected runtime's distribution basis. Namespace control,
 signing/trust policy, explicit publication approval and exact artifact/target
 qualification remain separate gates. Installation, TLS trust, owner enrollment,
 import, explicit Start and browser login must be checked separately.
+
+The pinned Vere runtime's embedded OpenSSL maintenance risk remains unresolved;
+newer frontend TLS libraries and successful public HTTPS do not repair it.
+Installed private derivatives and owner-confirmed EAuth do not clear this risk
+or the licensing/source-delivery gates for public binary distribution.
 
 The expected archive filename is
 `uvm.public.dappnode.eth_0.1.3_linux-amd64.txz`; a filename is not proof that an

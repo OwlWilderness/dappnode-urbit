@@ -199,20 +199,23 @@ def stop_children(children, timeout):
 
 
 def supervise(importer_command, nginx_command, environment, stop, *,
-              popen=subprocess.Popen, shutdown_timeout=150):
-    """Both services live or neither does. Importer exit0 permits enrollment restart."""
+              popen=subprocess.Popen, shutdown_timeout=150, public_nginx_command=None):
+    """All services live or none do. Importer exit0 permits enrollment restart."""
     children = []
+    commands = [importer_command, nginx_command]
+    if public_nginx_command is not None:
+        commands.append(public_nginx_command)
     try:
-        for command in (importer_command, nginx_command):
+        for command in commands:
             if stop.is_set():
                 return 0
             children.append(popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
                                   stderr=subprocess.DEVNULL, env=child_environment(environment),
                                   close_fds=True, start_new_session=True))
-        importer, nginx = children
+        importer, *frontends = children
         while not stop.is_set():
             # A frontend exit is always a fault, including exit0.
-            if nginx.poll() is not None:
+            if any(frontend.poll() is not None for frontend in frontends):
                 return 78
             result = importer.poll()
             if result is not None:
@@ -267,6 +270,8 @@ def make_parser(environment=None):
         'IMPORTER_ORIGIN', 'https://uvm.public.dappnode.private:8443'))
     parser.add_argument('--ship-origin', default=environment.get(
         'URBIT_SHIP_ORIGIN', 'https://ship.uvm.public.dappnode.private:8443'))
+    parser.add_argument('--public-ship-origin', default=environment.get('URBIT_PUBLIC_SHIP_ORIGIN', ''),
+                        help='Opt-in public HTTPS ship origin; dedicated private TLS backend on 9444')
     parser.add_argument('--owner-ca-sha256', default=environment.get('OWNER_CA_SHA256'))
     parser.add_argument('--bootstrap-authority-sha256', default=environment.get('IMPORTER_BOOTSTRAP_SHA256'))
     parser.add_argument('--nginx', help='Explicit Nginx executable (normally discovered on PATH)')
@@ -293,6 +298,17 @@ def run_service(args, stop, *, ensure_tls=None, environment=None, supervisor=sup
                 syntax_test=subprocess.run, temp_dir=None, poll_seconds=3):
     admin, ship = validate_routes(args.origin, args.ship_origin, args.bind, args.port,
                                   args.importer_port, args.ship_port)
+    if not isinstance(args.public_ship_origin, str):
+        raise ValueError('Invalid public ship origin.')
+    if args.public_ship_origin:
+        if args.public_ship_origin.endswith(':443'):
+            raise ValueError('Omit the explicit default HTTPS port from the public ship origin.')
+        public_port = 9443 if args.public_ship_origin.endswith(':9443') else 443
+        public = parse_origin(args.public_ship_origin, public_port)
+        if public.host in (admin.host, ship.host):
+            raise ValueError('The public ship hostname must be separate from private hostnames.')
+        if args.ship_port != 8081 or 9444 in (args.port, args.importer_port, args.ship_port):
+            raise ValueError('Dedicated backend 9444 and fixed ship port 8081 required.')
     if not re.fullmatch(r'[a-f0-9]{64}', args.owner_ca_sha256 or ''):
         raise ValueError('An independently configured owner CA digest is required.')
     if args.reserve_bytes < 0 or args.max_upload_bytes <= 0 or args.max_expanded_bytes <= 0:
@@ -334,14 +350,34 @@ def run_service(args, stop, *, ensure_tls=None, environment=None, supervisor=sup
             with os.fdopen(fd, 'w') as target:
                 target.write(config)
             command = [nginx, '-p', runtime_dir + '/', '-c', str(config_path), '-e', '/dev/null']
-            result = syntax_test(command + ['-t'], stdin=subprocess.DEVNULL,
-                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                                 timeout=30, env=environment, close_fds=True)
-            if result.returncode != 0:
-                raise ValueError('Frontend configuration refused.')
+            commands = [command]
+            if args.public_ship_origin:
+                from public_ingress import render_backend
+                public_dir = Path(runtime_dir) / 'public-ship'
+                public_dir.mkdir(mode=0o700)
+                public_config = render_backend(
+                    public_origin=args.public_ship_origin, tls_name=ship.host, bind=args.bind,
+                    port=9444, ship_port=8081, certificate=identity['certificate'],
+                    key=identity['key'], runtime_dir=str(public_dir))
+                public_path = public_dir / 'nginx.conf'
+                fd = os.open(public_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+                with os.fdopen(fd, 'w') as target:
+                    target.write(public_config)
+                commands.append([nginx, '-p', str(public_dir) + '/', '-c', str(public_path),
+                                 '-e', '/dev/null'])
+            # Neither frontend nor importer starts unless every config passes.
+            for frontend_command in commands:
+                result = syntax_test(frontend_command + ['-t'], stdin=subprocess.DEVNULL,
+                                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                                     timeout=30, env=environment, close_fds=True)
+                if result.returncode != 0:
+                    raise ValueError('Frontend configuration refused.')
             if stop.is_set():
                 return 0
             sys.stderr.write('READY; private frontend starting, no automatic ship start.\n')
+            if len(commands) == 2:
+                return supervisor(importer_command(args, identity), command, environment, stop,
+                                  public_nginx_command=commands[1])
             return supervisor(importer_command(args, identity), command, environment, stop)
 
 
