@@ -54,7 +54,7 @@ From the checkout root, with the prerequisites above configured:
 ```sh
 npm test
 python3 -B -m unittest discover -s tests -p 'test_*.py'
-python3 -B -m unittest discover -s tests/browser-importer -p 'test_*.py'
+python3 -B -m unittest discover -s tests/manager -p 'test_*.py'
 python3 -B scripts/verify-notice-packaging.py
 python3 -B THIRD_PARTY/vere/followup/verify.py
 python3 -B scripts/render-avatar.py --check

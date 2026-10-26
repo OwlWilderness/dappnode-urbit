@@ -3,7 +3,7 @@ from pathlib import Path
 import sys
 import unittest
 
-SOURCE = Path(__file__).resolve().parents[2] / 'tools' / 'browser-importer'
+SOURCE = Path(__file__).resolve().parents[2] / 'src' / 'manager'
 sys.path.insert(0, str(SOURCE))
 
 

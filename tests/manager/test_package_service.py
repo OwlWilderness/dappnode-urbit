@@ -12,7 +12,7 @@ import signal
 import select
 from unittest import mock
 
-SOURCE = Path(__file__).resolve().parents[2] / 'tools' / 'browser-importer'
+SOURCE = Path(__file__).resolve().parents[2] / 'src' / 'manager'
 sys.path.insert(0, str(SOURCE))
 
 
@@ -406,9 +406,9 @@ class PackageServiceTests(unittest.TestCase):
         dockerfile = (root / 'build/Dockerfile').read_text()
         allowlist = (root / '.dockerignore').read_text().splitlines()
         self.assertTrue(any(line.startswith('COPY ') and
-                            'tools/browser-importer/public_ingress.py' in line and
+                            'src/manager/public_ingress.py' in line and
                             line.endswith('/opt/importer/') for line in dockerfile.splitlines()))
-        self.assertIn('!tools/browser-importer/public_ingress.py', allowlist)
+        self.assertIn('!src/manager/public_ingress.py', allowlist)
         self.assertNotIn('EXPOSE 9444', dockerfile)
 
     def test_bad_nginx_config_never_launches_services(self):

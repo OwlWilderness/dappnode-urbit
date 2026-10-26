@@ -11,7 +11,7 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / 'tools/local-candidate/verify_image.py'
+SCRIPT = ROOT / 'tools/image-validation/verify_image.py'
 DB = b'P:musl\nV:1-r0\nA:x86_64\nL:MIT\no:musl\n\n'
 DOC = 'usr/share/doc/uvm/LICENSE.md'
 MANIFEST = 'usr/share/doc/uvm/notice-files.json'
@@ -58,7 +58,7 @@ def fixture(overrides=None, omit=()):
                               else 'elf' if p == 'bin/urbit' else 'code',
                               'source': 'LICENSE.md' if p == DOC else 'build/notice-files.json'
                               if p == MANIFEST else 'build/vere-release.json' if p == 'bin/urbit'
-                              else 'tools/browser-importer/runtime.py'}
+                              else 'src/manager/runtime.py'}
                           for p, value in data.items() if p != 'lib/apk/db/installed'}}
     entries = {}
     for path, content in data.items():
@@ -164,13 +164,13 @@ class CandidateVerifier(unittest.TestCase):
         m = load()
         contract = m.build_contract(ROOT)
         self.assertEqual(contract['notice_count'], 395)
-        self.assertEqual(contract['files']['opt/importer/runtime.py']['source'], 'tools/browser-importer/runtime.py')
+        self.assertEqual(contract['files']['opt/importer/runtime.py']['source'], 'src/manager/runtime.py')
         self.assertEqual(contract['files']['usr/local/bin/docker-entrypoint.sh']['source'], 'build/docker-entrypoint.sh')
         self.assertEqual(contract['files']['bin/urbit']['sha256'],
                          '47ad302e8934271dfc00dcdab1d553c6d6460b105e3099ff47e0e4e4231bb26d')
         self.assertEqual(contract['files']['bin/urbit']['size'], 24044936)
-        self.assertEqual(sum(v['role'] == 'code' for v in contract['files'].values()), 16)
-        self.assertEqual(len(contract['files']), 413)
+        self.assertEqual(sum(v['role'] == 'code' for v in contract['files'].values()), 17)
+        self.assertEqual(len(contract['files']), 414)
         self.assertEqual(contract['dockerfile_sha256'], sha((ROOT / 'build/Dockerfile').read_bytes()))
         self.assertEqual(m.load_parser().MAX_SELECTED, 32 * 1024**2)
 

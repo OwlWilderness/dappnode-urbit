@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { mountImporter } from '../tools/browser-importer/web/app.mjs';
+import { mountImporter } from '../src/manager/web/app.mjs';
 
 const CODE = 'sampel-sampel-sampel-sampel';
 const response = (body, status = 200) => ({ ok: status === 200, status, json: async () => body });
 function fixture({ revealResponse = async () => response({ code: CODE }), state = 'RUNNING' } = {}) {
   const nodes = new Map();
-  const html = fs.readFileSync(new URL('../tools/browser-importer/web/index.html', import.meta.url), 'utf8');
+  const html = fs.readFileSync(new URL('../src/manager/web/index.html', import.meta.url), 'utf8');
   for (const match of html.matchAll(/\bid="([^"]+)"/g)) nodes.set(match[1], {
     value: '', textContent: '', hidden: false, disabled: false, checked: false, files: [],
     listeners: {}, addEventListener(type, fn) { this.listeners[type] = fn; }

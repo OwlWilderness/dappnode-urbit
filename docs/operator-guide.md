@@ -74,7 +74,7 @@ bundle-delivery instructions from the maintainer before proceeding—do not uplo
 the image or pier through the general File Manager or disable release checks.
 
 Prepare enrollment using the repository's self-contained offline
-[`bootstrap-authority.html`](../tools/browser-importer/bootstrap-authority.html)
+[`bootstrap-authority.html`](../src/manager/bootstrap-authority.html)
 on your own computer. Keep the generated authority in your password manager;
 provide **only its digest** to the wizard. Configure these exact fields (or their
 corresponding package configuration values in the approved custom install):
@@ -167,7 +167,7 @@ If an import is already committed, skip upload and inspect its state. Otherwise:
    ZIP64 is supported. The importer rejects symlinks, special files, unsafe paths,
    ambiguous trees and unsupported ZIP metadata. On macOS, inline `._*` metadata
    is rejected; use an archive layout matching the
-   [extractor's documented macOS policy](../tools/browser-importer/archive.py).
+   [extractor's documented macOS policy](../src/manager/archive.py).
    Archive validation is not proof of identity, database health or bootability.
 3. In UVM's **Local ZIP transfer**, select **Pier ZIP**. Set **Maximum expanded
    size (GiB)** high enough for the complete expanded pier but within the 64 GiB
@@ -274,10 +274,10 @@ personal network details. No generic destructive recovery command is provided.
 
 The workflow follows the actual [wizard](../setup-wizard.yaml),
 [Compose service](../docker-compose.yml), [volume guard](../build/volume_guard.py),
-[HTTPS supervisor](../tools/browser-importer/package_service.py),
-[owner TLS validator](../tools/browser-importer/owner_tls.py),
-[importer UI](../tools/browser-importer/web/index.html) and
-[runtime controller](../tools/browser-importer/runtime.py).
+[HTTPS supervisor](../src/manager/package_service.py),
+[owner TLS validator](../src/manager/owner_tls.py),
+[importer UI](../src/manager/web/index.html) and
+[runtime controller](../src/manager/runtime.py).
 
 Dappmanager UI/installer instructions were checked against official source at
 commit `a21bab295d4c68c3b6115498b18a8efaf89d52a0`:
