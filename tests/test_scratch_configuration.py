@@ -5,7 +5,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-ROOT = Path(__file__).resolve().parent / 'browser-importer'
+ROOT = Path(__file__).resolve().parent / 'manager'
 
 
 class ScratchConfigurationTests(unittest.TestCase):

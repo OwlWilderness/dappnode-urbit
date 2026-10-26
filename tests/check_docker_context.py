@@ -21,9 +21,9 @@ def main():
     allowed = [line[1:] for line in ignore.splitlines()
                if line.startswith('!') and not line.endswith('/')]
     forbidden = ['build/unlisted.txt', 'build/nested/unlisted.txt',
-                 'tools/unlisted/nested.txt', 'tools/browser-importer/private.key',
-                 'tools/browser-importer/bootstrap-authority.html',
-                 'tools/browser-importer/web/unlisted.txt', '.env', 'unlisted.txt',
+                 'tools/unlisted/nested.txt', 'src/manager/private.key',
+                 'src/manager/bootstrap-authority.html',
+                 'src/manager/web/unlisted.txt', '.env', 'unlisted.txt',
                  'THIRD_PARTY/private.key', 'THIRD_PARTY/vere/notices/unlisted.txt',
                  'THIRD_PARTY/platform/image-baseline/unlisted.txt',
                  'LICENSES/unlisted.txt', 'docs/private.md']

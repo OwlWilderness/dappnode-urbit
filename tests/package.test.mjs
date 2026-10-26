@@ -38,7 +38,7 @@ test('UVM identity, wizard, links and launcher agree on distinct private origins
   }
   const result = spawnSync('python3', ['-B', '-c', `
 import json, sys
-sys.path.insert(0, 'tools/browser-importer')
+sys.path.insert(0, 'src/manager')
 from package_service import make_parser, validate_routes
 args = make_parser({}).parse_args([
     '--pier-root', '/unused/pier', '--uploads-root', '/unused/uploads',
@@ -88,10 +88,10 @@ test('Docker context is an explicit allowlist and every local COPY input exists'
   assert.equal(ignore[0], '**');
   const allowed = new Set(ignore.filter(line => line.startsWith('!') && !line.endsWith('/')).map(line => line.slice(1)));
   // check_docker_context.py additionally exercises Docker's actual matcher.
-  for (const directory of ['build', 'tools', 'tools/browser-importer', 'tools/browser-importer/web']) {
+  for (const directory of ['build', 'src', 'src/manager', 'src/manager/web']) {
     assert.equal(ignore[ignore.indexOf(`!${directory}/`) + 1], `${directory}/**`);
   }
-  assert.ok(!allowed.has('tools/browser-importer/bootstrap-authority.html'));
+  assert.ok(!allowed.has('src/manager/bootstrap-authority.html'));
   const dockerfile = readFileSync('build/Dockerfile', 'utf8');
   for (const line of dockerfile.split('\n').filter(line => line.startsWith('COPY ') && !line.includes('--from='))) {
     const inputs = line.split(/\s+/).slice(1, -1).filter(value => !value.startsWith('--'));

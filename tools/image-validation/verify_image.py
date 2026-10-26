@@ -156,7 +156,7 @@ def build_contract(source_root):
                 role = 'notice' if name in manifest['files'] else 'manifest' if name == 'build/notice-files.json' else 'code'
                 if target in files:
                     raise ValueError('ambiguous copy destination')
-                if role == 'code' and not (name.startswith('tools/browser-importer/') or
+                if role == 'code' and not (name.startswith('src/manager/') or
                         name in ('build/volume_guard.py', 'build/docker-entrypoint.sh')):
                     raise ValueError('nonpublic local COPY input')
                 data = notices.read_regular(source_root, name)
@@ -214,8 +214,8 @@ def validate_contract(contract):
             if path != 'bin/urbit' or source != 'build/vere-release.json' or expected['size'] > MAX_ELF:
                 raise ValueError('ELF outside allowlist')
         elif role == 'code':
-            destination = ('opt/importer/web/' if source.startswith('tools/browser-importer/web/') else
-                           'opt/importer/' if source.startswith('tools/browser-importer/') or source == 'build/volume_guard.py' else
+            destination = ('opt/importer/web/' if source.startswith('src/manager/web/') else
+                           'opt/importer/' if source.startswith('src/manager/') or source == 'build/volume_guard.py' else
                            'usr/local/bin/' if source == 'build/docker-entrypoint.sh' else None)
             if destination is None or path != destination + source.rsplit('/', 1)[-1]:
                 raise ValueError('code outside source mapping')

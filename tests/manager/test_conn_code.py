@@ -9,7 +9,7 @@ import time
 import unittest
 from unittest import mock
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'tools/browser-importer'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'src/manager'))
 import runtime
 
 

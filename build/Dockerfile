@@ -13,9 +13,9 @@ RUN addgroup -g 10000 urbit \
     && chown -R 10000:10000 /urbit \
     && chmod 0700 /urbit /urbit/pier /urbit/uploads /urbit/control
 COPY --from=vere-release /out/urbit /bin/urbit
-COPY --chown=0:0 tools/browser-importer/runtime.py tools/browser-importer/managed_service.py tools/browser-importer/importer.py tools/browser-importer/archive.py tools/browser-importer/enrollment.py tools/browser-importer/backend_tls.py tools/browser-importer/server.py /opt/importer/
-COPY --chown=0:0 tools/browser-importer/owner_tls.py tools/browser-importer/package_service.py tools/browser-importer/public_ingress.py /opt/importer/
-COPY --chown=0:0 tools/browser-importer/web/index.html tools/browser-importer/web/style.css tools/browser-importer/web/app.mjs tools/browser-importer/web/enroll.html tools/browser-importer/web/enroll.mjs /opt/importer/web/
+COPY --chown=0:0 src/manager/runtime.py src/manager/managed_service.py src/manager/importer.py src/manager/archive.py src/manager/enrollment.py src/manager/backend_tls.py src/manager/server.py /opt/importer/
+COPY --chown=0:0 src/manager/owner_tls.py src/manager/package_service.py src/manager/public_ingress.py /opt/importer/
+COPY --chown=0:0 src/manager/web/index.html src/manager/web/style.css src/manager/web/app.mjs src/manager/web/enroll.html src/manager/web/enroll.mjs /opt/importer/web/
 COPY --chown=0:0 build/volume_guard.py /opt/importer/volume_guard.py
 COPY --chown=0:0 build/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY --chown=0:0 THIRD_PARTY/ /usr/share/doc/uvm/THIRD_PARTY/

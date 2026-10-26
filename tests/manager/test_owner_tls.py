@@ -16,7 +16,7 @@ import time
 import base64
 
 BASE = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(BASE / 'tools/browser-importer'))
+sys.path.insert(0, str(BASE / 'src/manager'))
 SCRATCH = Path(os.environ.get('IMPORTER_TEST_SCRATCH') or tempfile.gettempdir()).resolve()
 NAMES = ('admin.example.test', 'ship.example.test')
 OPENSSL = next((p for p in ('/opt/homebrew/opt/openssl@3/bin/openssl', '/usr/local/opt/openssl@3/bin/openssl', shutil.which('openssl')) if p and Path(p).is_file()), None)
@@ -44,7 +44,7 @@ class OwnerTLS(unittest.TestCase):
         self.pin = hashlib.sha256(openssl('x509', '-in', self.ca, '-outform', 'DER')).hexdigest()
 
     def ensure(self, names=NAMES, pin=None):
-        self.assertTrue((BASE / 'tools/browser-importer/owner_tls.py').is_file(), 'Owner TLS implementation missing (scaffold RED)')
+        self.assertTrue((BASE / 'src/manager/owner_tls.py').is_file(), 'Owner TLS implementation missing (scaffold RED)')
         return importlib.import_module('owner_tls').ensure_owner_tls(self.control, names, pin or self.pin)
 
     def sign(self, request, names=NAMES, days='1', key=None, extra=''):
@@ -347,7 +347,7 @@ class OwnerTLS(unittest.TestCase):
         with lock_path.open('rb') as lock:
             fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
             script = 'import sys,json; sys.path.insert(0,sys.argv[1]); from owner_tls import ensure_owner_tls; print(json.dumps(ensure_owner_tls(sys.argv[2],json.loads(sys.argv[3]),sys.argv[4])))'
-            child = subprocess.Popen([sys.executable, '-c', script, str(BASE / 'tools/browser-importer'), str(self.control), json.dumps(NAMES), self.pin], env=ENV, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+            child = subprocess.Popen([sys.executable, '-c', script, str(BASE / 'src/manager'), str(self.control), json.dumps(NAMES), self.pin], env=ENV, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
             try:
                 time.sleep(0.15)
                 self.assertIsNone(child.poll())
