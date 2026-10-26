@@ -110,8 +110,12 @@ separate managed storage, not automatic legacy-volume adoption.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and
 [local release preparation](docs/release-preparation.md) for contributor and
-artifact-preparation workflows. Descriptor preparation is not an image build,
-publication, installed-image update or ship start.
+artifact-preparation workflows. The [workflow audit](docs/workflow-audit.md)
+links owner decision runbooks for certificates, private updates and optional
+public routing; the repository-local [agent skill](.agents/skills/uvm-workflow-audit/SKILL.md)
+references these guides without replacing the owner workflow. Descriptor
+preparation is not an image build, publication, installed-image update or ship
+start.
 
 ## Runtime and release limits
 
