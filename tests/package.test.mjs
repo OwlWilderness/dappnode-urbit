@@ -6,6 +6,25 @@ import { readPackage, validateSetupWizardSchema } from '../scripts/sdk.mjs';
 
 const [pkg] = readPackage();
 
+test('descriptive metadata never substitutes a new installed package identity', () => {
+  assert.equal(pkg.manifest.name, 'uvm.public.dappnode.eth');
+  assert.equal(pkg.manifest.shortDescription, 'UVM — Urbit Vere Manager');
+  assert.equal(pkg.manifest.mainService, 'ship');
+  assert.equal(pkg.compose.services.ship.image, `ship.${pkg.manifest.name}:${pkg.manifest.version}`);
+  assert.deepEqual(pkg.compose.services.ship.volumes, ['ship_data:/urbit']);
+  assert.equal(Object.hasOwn(pkg.manifest, 'displayName'), false);
+});
+
+test('getting-started text identifies UVM and keeps ship administration private', () => {
+  const guide = pkg.manifest.gettingStarted;
+  assert.match(guide, /Urbit Vere Manager/);
+  assert.match(guide, /one Urbit ship/);
+  assert.match(guide, /does not create or automatically start a ship/);
+  assert.match(guide, /private.*manager/i);
+  assert.match(guide, /docs\/operator-guide\.md/);
+  assert.doesNotMatch(guide, /password|access code|private key/i);
+});
+
 test('UVM retains the volume key without exposing host administration ports', () => {
   assert.equal(pkg.manifest.name, 'uvm.public.dappnode.eth');
   assert.equal(pkg.manifest.mainService, 'ship');

@@ -3,6 +3,7 @@
   "version": "0.1.3",
   "description": "UVM — Urbit Vere Manager. Development candidate for one Urbit ship with owner-CA private HTTPS, authenticated onboarding and explicit Start. Not yet qualified for Dappnode installation or legacy upgrades. Embedded Vere dependency risk remains disclosed; license, namespace registration and signed release delivery remain release gates.",
   "shortDescription": "UVM — Urbit Vere Manager",
+  "gettingStarted": "**UVM — Urbit Vere Manager** manages one Urbit ship on Dappnode. It keeps the ship's pier in persistent storage and provides a private manager for owner enrollment, stopped-pier import, and explicit Start/Stop. Installing UVM does not create or automatically start a ship.\n\nUse the private Admin link for management; the separate Landscape link opens the running ship. Follow the [owner operator guide](https://github.com/OwlWilderness/dappnode-urbit/blob/master/docs/operator-guide.md) for trusted HTTPS and existing-pier setup. Keep credentials and pier contents private. Public ship access needs a separately configured connector; UVM administration stays private.",
   "type": "service",
   "author": "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)",
   "contributors": [
