@@ -128,6 +128,8 @@ legacy volume-adoption workflow.
 The copied runtime is pinned to Vere 4.6. Its embedded OpenSSL maintenance risk
 remains unresolved; the frontend's newer TLS library does not repair it. Private
 use does not remove that risk.
+See the [OpenSSL b04 milestone](docs/openssl-b04-status.md) for the successful
+candidate build/report and remaining runtime, package and release gates.
 
 Use [release preparation](docs/release-preparation.md) for portable descriptor
 and source-check instructions, and the [distribution review](docs/distribution-review.md)
