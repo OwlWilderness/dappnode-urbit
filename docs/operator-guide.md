@@ -8,6 +8,12 @@ image/descriptor bundle; there is no universal one-click installer in this repo.
 
 ## Feature availability
 
+For the retained native-only legacy recovery derivative, use the separate
+[native recovery runbook](native-recovery.md). That installed path preserves
+TLS/login/status but rejects Admin Start/Stop/Recover POSTs; the ordinary UI
+controls described below are not available there. Issue #20 tracks their
+integration with the upgraded OpenSSL/Vere runtime.
+
 | Capability | Availability | Limits |
 | --- | --- | --- |
 | Owner-CA HTTPS and one-time owner enrollment | Available | Requires private DNS, public certificate exchange and browser trust |

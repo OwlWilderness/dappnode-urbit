@@ -1,0 +1,167 @@
+{
+  "scope": "Reference installed candidate closure and corrected exercised browser sources; hashes are provenance, not target authorization",
+  "files": [
+    {
+      "path": "tools/native-recovery/service/managed_service.py",
+      "reference_sha256": "443e1884d814a2bd770ac170fa4e23cc2abe2c7b285c0530df8688b5b098434b",
+      "public_sha256": "443e1884d814a2bd770ac170fa4e23cc2abe2c7b285c0530df8688b5b098434b",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/permanent_recovery.py",
+      "reference_sha256": "554929dd24f77e369352eed7fd1804537b4744adea06be3120630f06fd8b25df",
+      "public_sha256": "554929dd24f77e369352eed7fd1804537b4744adea06be3120630f06fd8b25df",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/server.py",
+      "reference_sha256": "0ec44f6df6fb0b4bbd1976a618ecd789362339efac3473091a37aa3de64f9c84",
+      "public_sha256": "0ec44f6df6fb0b4bbd1976a618ecd789362339efac3473091a37aa3de64f9c84",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/importer.py",
+      "reference_sha256": "bb87b669cdca73d90cfe531677e04fb21a1231e855b13e2bbc7d64e5eb5558bd",
+      "public_sha256": "bb87b669cdca73d90cfe531677e04fb21a1231e855b13e2bbc7d64e5eb5558bd",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/public_ingress.py",
+      "reference_sha256": "22de61e1ad2b7afb9f4719a4985733395a294fc5c8d68bf00bbc5b24baf2584b",
+      "public_sha256": "22de61e1ad2b7afb9f4719a4985733395a294fc5c8d68bf00bbc5b24baf2584b",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/native_file_channel.py",
+      "reference_sha256": "0b57aee0ee70eced2156a4fc9327bf42c00f1999e28549486058d327975f023e",
+      "public_sha256": "c9d22d881e0cd293210b43a97c53554860a2ed7db64f368b8e631e4442582c5c",
+      "change": "Replace owner ship name in exact Start confirmation; equality check retained"
+    },
+    {
+      "path": "tools/native-recovery/service/controller_server.py",
+      "reference_sha256": "8ed0c0641d33a26f0d153bc6213ea356ff45b3d6e9ffb177c2a533f5b16d1df6",
+      "public_sha256": "8ed0c0641d33a26f0d153bc6213ea356ff45b3d6e9ffb177c2a533f5b16d1df6",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/runtime.py",
+      "reference_sha256": "01e910b2eab56a2b2d2795b9a6872f70876bfc7f501482cf55daf5b2b60a6e93",
+      "public_sha256": "01e910b2eab56a2b2d2795b9a6872f70876bfc7f501482cf55daf5b2b60a6e93",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/owner_tls.py",
+      "reference_sha256": "abfd71949a423aca5b509b559a4014eb18b385ef4c4410ae71dc898b52da6ed0",
+      "public_sha256": "abfd71949a423aca5b509b559a4014eb18b385ef4c4410ae71dc898b52da6ed0",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/backend_tls.py",
+      "reference_sha256": "209e414939a4b81960a764b139e08844396f6421a7c22e4d7574fe3e0a57dad4",
+      "public_sha256": "209e414939a4b81960a764b139e08844396f6421a7c22e4d7574fe3e0a57dad4",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/archive.py",
+      "reference_sha256": "7d4ca9c3ad19564e1927bcbf0e28783c9d857a53b44bcf00e83575e60c164b57",
+      "public_sha256": "7d4ca9c3ad19564e1927bcbf0e28783c9d857a53b44bcf00e83575e60c164b57",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/enrollment.py",
+      "reference_sha256": "6b327741e5d2370d248a7e95179d9d3c51ee247507aa19499e36e0f5804f77d0",
+      "public_sha256": "6b327741e5d2370d248a7e95179d9d3c51ee247507aa19499e36e0f5804f77d0",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/legacy015_recovery.py",
+      "reference_sha256": "d5ddc660012f01beb05353ebcbb161356b1e8485c07d36493a30cd1b2ce5faa8",
+      "public_sha256": "d5ddc660012f01beb05353ebcbb161356b1e8485c07d36493a30cd1b2ce5faa8",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/package_service.py",
+      "reference_sha256": "ac2656813ebd079bd29b36a3af2dae55c270b1635850433fd22fc144e6441de9",
+      "public_sha256": "ac2656813ebd079bd29b36a3af2dae55c270b1635850433fd22fc144e6441de9",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/trusted_admin_journal.py",
+      "reference_sha256": "405f0a54c0b21ceb0bfc305151ce47ddaf7e631baefeb7fdc96c041cd8d10bed",
+      "public_sha256": "405f0a54c0b21ceb0bfc305151ce47ddaf7e631baefeb7fdc96c041cd8d10bed",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/web/index.html",
+      "reference_sha256": "355c2909b02d59b119a750c50a78abe21c289d059fb7304af8eca18fa21c89e1",
+      "public_sha256": "355c2909b02d59b119a750c50a78abe21c289d059fb7304af8eca18fa21c89e1",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/web/enroll.mjs",
+      "reference_sha256": "a841dcfe91e4ccf09f2a4a8b88aea319b78a10fd40c7e417d3ff3c57484b09fd",
+      "public_sha256": "a841dcfe91e4ccf09f2a4a8b88aea319b78a10fd40c7e417d3ff3c57484b09fd",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/web/enroll.html",
+      "reference_sha256": "8f82f2846caf4936011bffb0de8f3b1be417bcbc765c6a61e0d920f0f46b448b",
+      "public_sha256": "8f82f2846caf4936011bffb0de8f3b1be417bcbc765c6a61e0d920f0f46b448b",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/web/style.css",
+      "reference_sha256": "65a306c85d6179f685464cdbf1b9cff6d26212d51378f154b8e00be50b7d7c04",
+      "public_sha256": "65a306c85d6179f685464cdbf1b9cff6d26212d51378f154b8e00be50b7d7c04",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/service/web/app.mjs",
+      "reference_sha256": "65eee803dd6cc9a30d274adca51bcba63e3dc68de810f891843b9cc85f6d8f4c",
+      "public_sha256": "65eee803dd6cc9a30d274adca51bcba63e3dc68de810f891843b9cc85f6d8f4c",
+      "change": "Byte-exact deployed source"
+    },
+    {
+      "path": "tools/native-recovery/native-controller.js",
+      "reference_sha256": "c687c78a5845d89e3470dc6a2adacdc0f208e4b182528ffd702dfeae0812eced",
+      "public_sha256": "3fb3c64524f18f575a1d07fa79c94e57a36a1ff570825419ece8cdc199bf7107",
+      "change": "Require explicit strict 64-hex original container/runtime/job bindings; capture immutable copy; remove ship name from exact confirmation"
+    },
+    {
+      "path": "tools/native-recovery/receipt-invocation.js",
+      "reference_sha256": "3a3f3640f691f19ccb8201daccfd527a79d4daf78a5da13805935d3b34b126f7",
+      "public_sha256": "616600859499dda24866cb740e37fa876b1d7d6c1ef7977fdf27e671dcf6eb12",
+      "change": "Replace live artifact hash/size with mandatory independently reviewed validated arguments; receipt mismatch checks remain in controller"
+    },
+    {
+      "path": "tools/native-recovery/maintenance-wire.js",
+      "reference_sha256": "2eed618ae9334ab0cb05f0053be3131077eee710de110d8f71f9d09a0a30b1b7",
+      "public_sha256": "627df39973f631594a7e8539611d1f391ecf1c572b114fc2db42dfa9732b7c1d",
+      "change": "Require validated immutable original container ID argument instead of live hardcoded identity"
+    },
+    {
+      "path": "tests/native-recovery/test_resume.py",
+      "reference_sha256": "9a25227b49f857d78eb62dfc3001b89a216a6543ee2b8024fd096749f8b02e34",
+      "public_sha256": "de84646e33d3a6a6f675b3dff3ad55254722a0e04ee732e31662ff8d8e861fec",
+      "change": "Repository-relative imports and resolved platform temporary directory (avoids symlink ancestors); transition-only fixture permits retained"
+    },
+    {
+      "path": "tests/native-recovery/test_controller_resume.cjs",
+      "reference_sha256": "6a8194bdd46de7a2e229a0cfc13a2800dd3748757dc54108b1336afc271d1bef",
+      "public_sha256": "2e01fd599ad0b3036afb080c42ed4ec1f3630a17a3aadeddf682b5043b064d07",
+      "change": "Relative source paths and synthetic original ID/target inputs; no private artifacts"
+    },
+    {
+      "path": "tests/native-recovery/test_controller_receipts.cjs",
+      "reference_sha256": "76c14460a05b44063dc2324611cf12157c4d93da6cd34a71526da3c6f26d9007",
+      "public_sha256": "5342fa7e1dc3b1d327489806ec2dea8c6875ef282a44f64656aae2afc7d516e2",
+      "change": "Remove private receipts/compose/IDs/artifact; deterministic synthetic structured fixtures, explicit reviewed hash/size, relative source inputs"
+    },
+    {
+      "path": "tests/native-recovery/test_maintenance_wire.cjs",
+      "reference_sha256": "f9afe5f2d18b0222bf421e3420bfdfdf9ffb43099e2fc0f258dbf96fb40278d8",
+      "public_sha256": "29562eebe2f88abffda0c3faeffeea3720eca82907bf3140eba025caa95a2556",
+      "change": "Relative inputs, synthetic original ID, explicit original target argument; remove obsolete reference source hash"
+    }
+  ]
+}
