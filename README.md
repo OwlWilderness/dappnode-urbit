@@ -12,6 +12,11 @@ owner-controlled HTTPS and explicit ship Start/Stop controls.
 > image/descriptor bundle—not merely this checkout. This is not an approved
 > in-place upgrade of the historical Urbit package.
 
+> **Recovery-build limitation:** the private 0.1.6 native recovery build retains
+> TLS/login/status but disables the old admin lifecycle controls. The baseline
+> browser Start/Stop workflow below does **not** apply unchanged to that build.
+> See [Recovery status](#recovery-status) before operating a recovered installation.
+
 Package identity: `uvm.public.dappnode.eth`. UVM means **Urbit Vere Manager**
 here; it is not the separate Urbit Virtual Machine blockchain project.
 
@@ -45,12 +50,18 @@ their own private routing, certificate trust and login.
 | Fresh identity / boot-key provisioning | Not implemented; use a stopped existing pier |
 | Automatic ship start after import, restart or update | Not supported; Start is separate |
 | Public ship HTTPS and relying-app EAuth | Confirmed on the reference installation with private 0.1.5 public-backend derivative and separate 0.1.0 connector; optional, ship-only; UVM administration remains private |
+| Retained-pier legacy recovery | Exercised with private 0.1.6 through the guarded native Dappnode channel; repair and separate Start acknowledged, original import and journal evidence preserved |
+| Admin-page recovery and restored lifecycle controls | Not implemented in the native-only recovery build; tracked in [#20](https://github.com/OwlWilderness/dappnode-urbit/issues/20) together with upgraded OpenSSL/Vere integration |
 | Signed public release / Dappstore listing | Separate release gates; not supplied here |
 
 A version label alone does not identify which source changes are in an image.
 Keep the accepted image/export until a replacement is qualified.
 
 ## Get a ship running
+
+These steps describe the baseline owner UI, not the native-only 0.1.6 recovery
+build. For that build, follow the recovery scope and limitations below instead
+of attempting the disabled buttons or using package Restart as ship recovery.
 
 1. **Check prerequisites:** compatible AMD64 Dappnode, private browser access,
    capacity, an approved custom/dev bundle and a verified stopped existing pier.
@@ -106,6 +117,39 @@ Read [migration and data-preservation boundaries](docs/migration.md) before
 using existing storage. The supported owner path is stopped-archive import into
 separate managed storage, not automatic legacy-volume adoption.
 
+## Recovery status
+
+The legacy recovery milestone from [#19](https://github.com/OwlWilderness/dappnode-urbit/issues/19)
+is preserved in [the native recovery source](tools/native-recovery/README.md)
+and [portable recovery runbook](docs/native-recovery.md). The exercised repair
+retained the existing pier, committed import and original journal evidence,
+left the runtime stopped, and was followed by a separate owner-authorized Start.
+The Start acknowledgement and `RUNNING` journal are not proof of sustained Vere
+health, public HTTP readiness or complete reboot/restart acceptance.
+
+This is an **administrator-operated native recovery path**, not a finished
+self-service admin feature. It requires authenticated native maintenance,
+verified cessation and no concurrent lifecycle actor; it is not a universal
+host exclusion mechanism. Do not manually clear journals, reset storage,
+reimport the ship or bypass an uncertain operation. Starting the Dappnode
+package or its tunnel is distinct from starting Vere.
+
+The committed source includes portable target inputs, dependencies and focused
+offline tests. It is **not a reproducible production image**, a new release or a
+redeployment of the sanitized source. Run the source checks with:
+
+```sh
+python3 tools/native-recovery/run-focused.py
+```
+
+[#20](https://github.com/OwlWilderness/dappnode-urbit/issues/20) tracks private
+admin status, Start, graceful Stop and Recover controls, plus combined acceptance
+with the upgraded runtime from [#3](https://github.com/OwlWilderness/dappnode-urbit/issues/3).
+The OpenSSL/Vere upgrade is not included in this legacy recovery milestone;
+[#17](https://github.com/OwlWilderness/dappnode-urbit/issues/17)'s allocator
+hardening remains separate. Closing #19 records the owner-directed recovery
+milestone, not completion of every original acceptance criterion.
+
 ## Development
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and
@@ -136,9 +180,12 @@ host-specific operational receipts or establish a clean image build.
 Canonical descriptors remain at **0.1.3**. Separately qualified private thin
 derivatives **0.1.4** (owner-code UI) and **0.1.5** (public backend), plus a
 separate **0.1.0** connector, have been installed on the reference installation.
-Public HTTP 200 with strict TLS and the persisted route's private CA, SNI and
+The later private **0.1.6** native recovery derivative was installed for the
+retained-pier repair described above; canonical descriptors remain unchanged.
+For the earlier public-backend qualification, HTTP 200 with strict TLS and the persisted route's private CA, SNI and
 exactHost settings were verified; the owner confirmed public ship login and
-relying-app EAuth. These checks do not qualify other targets or constitute a
+relying-app EAuth. Those historical checks are not fresh 0.1.6 public-readiness
+evidence. They do not qualify other targets or constitute a
 binary/Dappstore release. Public source publication is separate from either.
 Installation, enrollment, import, Start and browser login are distinct checks.
 No automatic publication workflow is installed.
