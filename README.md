@@ -139,6 +139,22 @@ binary/Dappstore release. Public source publication is separate from either.
 Installation, enrollment, import, Start and browser login are distinct checks.
 No automatic publication workflow is installed.
 
+### Recorded reference and successor status — November 8, 2026
+
+The latest retained reference-installation handoff records private UVM **0.1.6**
+with upstream Vere **4.6**. The 0.1.4/0.1.5 results above are earlier milestones,
+not the latest installed-version summary. Canonical source descriptors in this
+checkout remain **0.1.3**; source, image and installed versions are separate.
+
+Recovery work under issue **#20** has separately committed source `6041ab1` and
+local **0.1.323** build/synthetic-upgrade acceptance, **not installation**. It
+requires separately gated owner recovery acceptance; Recover and Start remain
+distinct actions. It does not qualify the combined OpenSSL runtime under issue
+**#3**. That runtime's composed source review passed, but exact target-bound
+artifact/native acceptance is incomplete and runtime work remains **paused**.
+These are recorded handoff results, not fresh live checks or instructions to
+upgrade, recover or restart the reference ship.
+
 ## Attribution and licensing
 
 This fork modernizes androolloyd's original Urbit Dappnode package. It preserves
