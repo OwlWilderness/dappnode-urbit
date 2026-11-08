@@ -2,13 +2,17 @@
 
 API: ManagedImporter(pier, uploads, control, *, runtime_adapter=None, **limits),
 start(*, confirmed_stopped=False), stop(), status(), close(). The adapter seam is
-launch(ship_fd) -> a Popen-compatible child (poll/terminate/kill/wait(timeout)).
+launch(ship_fd) -> a Popen-compatible child (poll/terminate/wait(timeout)).
 The fd is borrowed for launch only; an adapter must preserve its own child handle.
 Any launch exception is uncertain, even if it probably failed before execution.
 
-RUNNING means a launch returned a child, not boot, identity, or health acceptance.
+RUNNING means the owned child was last observed live, not boot or health acceptance.
+Graceful Stop requires terminate plus an acknowledged zero exit within 120 seconds;
+there is no force-kill fallback. Child/parent exit alone is not host cessation proof.
+Unexpected exit preserves durable intent and fails closed; it never auto-starts.
 Production launch requires Linux procfs and the pinned official AMD64 binary;
-there is no executable-path/hash override, adoption, or automatic recovery API.
+there is no executable-path/hash override or adoption. Authenticated local recovery
+reconciles its launch-time subreaper scope or a verified PID1 management boot.
 Service-owned private storage and a trusted administrator are assumed: these locks
 coordinate cooperating writers, not hostile same-UID/root mutation. Quiesce HTTP
 requests before close; close joins the existing import worker without its mutex.
@@ -25,8 +29,13 @@ import socket
 import struct
 import time
 import re
+from contextlib import contextmanager
 
 from importer import Importer, ImportError, private_root
+from local_child import LinuxChildBoundary
+from local_recovery import RecoveryJournal
+from boot_boundary import ManagementBootBoundary
+from legacy_evidence import validate_native_history
 
 
 OFFICIAL_SHA256 = '47ad302e8934271dfc00dcdab1d553c6d6460b105e3099ff47e0e4e4231bb26d'
@@ -192,7 +201,12 @@ class OfficialRuntimeAdapter:
         finally:
             os.close(directory)
 
+    expected_sha256 = OFFICIAL_SHA256
+
     def launch(self, ship_fd):
+        return self._verified_launch(ship_fd)
+
+    def _verified_launch(self, ship_fd, *, creation=None):
         fd = None
         try:
             fd = os.open('/bin/urbit', os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
@@ -206,20 +220,29 @@ class OfficialRuntimeAdapter:
                 if not chunk:
                     break
                 digest.update(chunk)
-            if digest.hexdigest() != OFFICIAL_SHA256:
+            if digest.hexdigest() != self.expected_sha256:
                 raise ValueError()
             after = os.fstat(fd)
             if ((info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, info.st_ctime_ns) !=
                     (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns, after.st_ctime_ns)
                     or not sys.platform.startswith('linux')):
                 raise ValueError()
-            # Linux procfs executes the hashed inode and resolves the held ship inode.
-            # argv[0] stays exactly the fixed official executable; no creation flags.
-            return subprocess.Popen(['/bin/urbit', '-t', '-p', '34343', '--http-port', '8081',
-                                     '--http-ip', '127.0.0.1',
-                                     '--loom', '31', '--snap-time', '2', '--no-dock',
-                                     f'/proc/self/fd/{ship_fd}'],
-                                    executable=f'/proc/self/fd/{fd}', pass_fds=(fd, ship_fd),
+            # Execute the hashed inode. Secret bytes are never argv/environment.
+            args = ['/bin/urbit', '-t', '-p', '34343', '--http-port', '8081',
+                    '--http-ip', '127.0.0.1', '--loom', '31', '--snap-time', '2', '--no-dock']
+            inherited = (fd, ship_fd)
+            if creation is None:
+                args += [f'/proc/self/fd/{ship_fd}']
+            else:
+                identity, key_fd = creation
+                if (type(self) is not UpdatedRuntimeAdapter or
+                        not re.fullmatch(r'~[a-z]{6}-[a-z]{6}', identity) or type(key_fd) is not int):
+                    raise ValueError()
+                args += ['-w', identity[1:], '-k', f'/proc/self/fd/{key_fd}',
+                         '-x', '-c', f'/proc/self/fd/{ship_fd}/ship']
+                inherited += (key_fd,)
+            return subprocess.Popen(args,
+                                    executable=f'/proc/self/fd/{fd}', pass_fds=inherited,
                                     stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
                                     stderr=subprocess.DEVNULL, shell=False, close_fds=True,
                                     cwd='/')
@@ -230,22 +253,43 @@ class OfficialRuntimeAdapter:
                 os.close(fd)
 
 
+class UpdatedRuntimeAdapter(OfficialRuntimeAdapter):
+    """Explicit issue3 selection; never an environment/path/hash override."""
+    expected_sha256 = '58d07af97926e04bc17184bc18f53e5fb11d84fed63bd9daf2fe4ceb04c86698'
+
+    def create(self, pier_fd, identity, key_fd):
+        return self._verified_launch(pier_fd, creation=(identity, key_fd))
+
+
 class ManagedImporter(Importer):
     def __init__(self, pier, uploads, control, *, runtime_adapter=None, **limits):
         self.runtime_adapter = OfficialRuntimeAdapter() if runtime_adapter is None else runtime_adapter
         self.runtime = {'state': 'STOPPED'}
         self.child = None
+        self._stop_result = 'NOT_REQUESTED'
         self._closing = False
         self._closed = False
+        self._child_boundary = None
+        self._recovery_fault = False
+        self.recovery_journal = None
+        self._boot_boundary = None
+        try:
+            validate_native_history(pier, uploads, control)
+        except Exception:
+            raise ImportError('Native recovery history needs operator reconciliation; preserve all evidence.') from None
         super().__init__(pier, uploads, control, **limits)
         try:
+            self._boot_boundary = ManagementBootBoundary.receive()
             record = self._load_runtime()
             if record is not None:
                 self.runtime = record
                 if record['state'] != 'STOPPED':
                     # Preserve the original durable intent; reopen never rewrites it.
                     self.runtime = {'state': 'RECOVERY_REQUIRED'}
+            self.recovery_journal = RecoveryJournal(self.control_fd)
         except Exception:
+            if self._boot_boundary is not None:
+                self._boot_boundary.close()
             Importer.close(self)
             raise ImportError('Runtime journal needs operator recovery.') from None
 
@@ -270,6 +314,7 @@ class ManagedImporter(Importer):
         if (set(record) != {'state'} or record['state'] not in
                 ('STOPPED', 'STARTING', 'RUNNING', 'FAULT', 'RECOVERY_REQUIRED')):
             raise ValueError()
+        self._last_runtime_bytes = raw
         return record
 
     def _persist_runtime(self):
@@ -315,10 +360,33 @@ class ManagedImporter(Importer):
                 os.close(ship_fd)
             raise ImportError('Committed pier layout is unsafe; start was refused.') from None
 
+    def _observe_owned_child(self):
+        # Observation is not settlement or host-wide cessation proof. Keep the
+        # original durable launch intent and child handle for operator recovery.
+        if self.runtime['state'] == 'RUNNING':
+            try:
+                if self.child is None or self.child.poll() is not None:
+                    self.runtime = {'state': 'FAULT'}
+            except Exception:
+                self.runtime = {'state': 'FAULT'}
+
+    @contextmanager
+    def _launch_slot(self):
+        # A request made during recovery must not queue an automatic restart
+        # behind it. The owner must submit a separate Start after settlement.
+        if not self.mutex.acquire(blocking=False):
+            raise ImportError('Lifecycle operation is busy; submit a separate Start after settlement.')
+        try:
+            yield
+        finally:
+            self.mutex.release()
+
     def start(self, *, confirmed_stopped=False):
-        with self.mutex:
+        with self._launch_slot():
+            self._observe_owned_child()
             if (self._closed or self._closing or confirmed_stopped is not True or not self.job or
-                    self.job['state'] != 'READY_LOCKED' or self.runtime['state'] != 'STOPPED'):
+                    self.job['state'] != 'READY_LOCKED' or self.runtime['state'] != 'STOPPED' or
+                    self._recovery_fault or self.recovery_journal.pending()):
                 raise ImportError('Explicit stopped confirmation and an inactive ready import are required.')
             try:
                 record = self._load_runtime()
@@ -327,11 +395,22 @@ class ManagedImporter(Importer):
             except Exception:
                 self.runtime = {'state': 'RECOVERY_REQUIRED'}
                 raise ImportError('Runtime journal needs operator recovery.') from None
+            # Once this backend attempts any writer launch, startup-only
+            # authority is gone, even if launch or acknowledgement later fails.
+            if self._boot_boundary is not None:
+                self._boot_boundary.close()
+                self._boot_boundary = None
             ship_fd = self._safe_ship()
             try:
                 self.runtime = {'state': 'STARTING'}
+                self._stop_result = 'NOT_REQUESTED'
                 self._persist_runtime()
+                boundary = LinuxChildBoundary.prepare()
                 self.child = self.runtime_adapter.launch(ship_fd)
+                self._child_boundary = None
+                if boundary is not None and isinstance(self.child, subprocess.Popen):
+                    boundary.bind(self.child)
+                    self._child_boundary = boundary
                 self.runtime = {'state': 'RUNNING'}
                 self._persist_runtime()
             except Exception:
@@ -368,27 +447,32 @@ class ManagedImporter(Importer):
         with self.mutex:
             if self._closed:
                 raise ImportError('Runtime coordinator is closed.')
+            self._observe_owned_child()
             if self.runtime['state'] == 'STOPPED':
                 return self.status()
-            if self.child is None:
+            if self.runtime['state'] != 'RUNNING' or self.child is None:
                 raise ImportError('Runtime ownership is uncertain; operator recovery is required.')
             try:
-                if self.child.poll() is None:
+                self._stop_result = 'UNKNOWN'
+                if self.child.poll() is not None:
+                    raise ValueError()
+                if self._child_boundary is not None:
+                    code = self._child_boundary.settle()['exit_code']
+                else:
                     self.child.terminate()
-                try:
-                    self.child.wait(timeout=120)
-                except (TimeoutError, subprocess.TimeoutExpired):
-                    self.child.kill()
-                    self.child.wait(timeout=5)
+                    code = self.child.wait(timeout=120)
+                if type(code) is not int or code != 0:
+                    self._stop_result = 'FORCED' if code == -9 else 'FAILED'
+                    raise ValueError()
                 self.runtime = {'state': 'STOPPED'}
                 self._persist_runtime()
                 self.child = None
+                self._stop_result = 'GRACEFUL'
             except Exception:
                 self.runtime = {'state': 'FAULT'}
-                try:
-                    self._persist_runtime()
-                except Exception:
-                    pass
+                # Keep durable launch/stop evidence unchanged on uncertainty;
+                # an active journal also fences a fresh coordinator. Never
+                # rewrite or retry an ambiguously acknowledged journal write.
                 raise ImportError('Runtime stop is uncertain; storage remains locked.') from None
             return self.status()
 
@@ -397,6 +481,7 @@ class ManagedImporter(Importer):
         with self.mutex:
             if self._closed:
                 return
+            self._observe_owned_child()
             if self.runtime['state'] in ('FAULT', 'RECOVERY_REQUIRED', 'STARTING') and self.child is None:
                 raise ImportError('Runtime ownership is uncertain; storage remains locked.')
             self._closing = True
@@ -408,14 +493,110 @@ class ManagedImporter(Importer):
                 raise
         Importer.close(self)
         with self.mutex:
+            if self.recovery_journal is not None:
+                self.recovery_journal.close()
+            if self._boot_boundary is not None:
+                self._boot_boundary.close()
+                self._boot_boundary = None
             self._closed = True
 
     def status(self):
         with self.mutex:
+            self._observe_owned_child()
             result = super().status()
             result['security_gate'] = 'OWNER_SELECTED_OFFICIAL_RISK'
             result['runtime'] = dict(self.runtime)
+            # Ephemeral outcome only; runtime.json retains its original schema.
+            result['runtime_stop_result'] = self._stop_result
+            latest = self.recovery_journal.latest()
+            result['local_recovery'] = self._recovery_summary(latest)
+            result['local_recovery_available'] = bool(
+                not self._closed and not self._closing and not self._recovery_fault and
+                not self.recovery_journal.pending() and self.job and self.job['state'] == 'READY_LOCKED' and (
+                    (self._child_boundary is not None and self.child is self._child_boundary.child and
+                     self.runtime['state'] in ('RUNNING', 'FAULT')) or
+                    (self._boot_boundary is not None and not self._boot_boundary.used and self.child is None and
+                     self.runtime['state'] == 'RECOVERY_REQUIRED')))
+            result['local_recovery_guidance'] = (
+                'Restart the package into management mode first; never clear lifecycle journals manually.'
+                if self.runtime['state'] == 'RECOVERY_REQUIRED' and not result['local_recovery_available'] else None)
             result['start_available'] = bool(not self._closed and not self._closing and
                                              self.job and self.job['state'] == 'READY_LOCKED'
-                                             and self.runtime['state'] == 'STOPPED')
+                                             and self.runtime['state'] == 'STOPPED'
+                                             and not self._recovery_fault and not self.recovery_journal.pending())
             return result
+
+    @staticmethod
+    def _recovery_summary(record):
+        if record is None:
+            return None
+        return {key: record[key] for key in ('operation_id', 'sequence', 'outcome')}
+
+    def recover(self, *, operation_id):
+        """Recover this backend's Linux-owned lifecycle, never Urbit data or native receipts."""
+        if not isinstance(operation_id, str) or not re.fullmatch('[a-f0-9]{32}', operation_id):
+            raise ImportError('Invalid local recovery operation identifier.')
+        with self.mutex:
+            journal = self.recovery_journal
+            if operation_id in journal.records:
+                # Acknowledgement loss never repeats mutation, including PENDING.
+                retained = journal.read(operation_id)
+                return {'runtime': dict(self.runtime), 'local_recovery': self._recovery_summary(retained)}
+            boot_recovery = (self._boot_boundary is not None and not self._boot_boundary.used and
+                             self.child is None and self.runtime['state'] == 'RECOVERY_REQUIRED')
+            owned_recovery = (self._child_boundary is not None and
+                              self.child is self._child_boundary.child and self.runtime['state'] in ('RUNNING', 'FAULT'))
+            if (self._closed or self._closing or self._recovery_fault or journal.pending() or
+                    not self.job or self.job['state'] != 'READY_LOCKED' or
+                    not (boot_recovery or owned_recovery)):
+                raise ImportError('Recovery requires an owned child or verified PID1 management boot. Restart the package into management mode first; unknown ownership stays fenced.')
+            ship_fd = self._safe_ship()
+            os.close(ship_fd)
+            try:
+                prior = self._load_runtime()
+                if prior is None or prior['state'] not in ('RUNNING', 'STARTING', 'FAULT', 'RECOVERY_REQUIRED'):
+                    raise ValueError()
+                journal.validate()
+            except Exception:
+                self._recovery_fault = True
+                raise ImportError('Lifecycle or evidence storage changed; no recovery signal was sent.') from None
+            record = {'operation_id': operation_id, 'sequence': len(journal.records) + 1,
+                      'outcome': 'PENDING', 'evidence': {'prior_runtime': prior}}
+            if boot_recovery:
+                record['evidence']['original_runtime'] = {
+                    'utf8': self._last_runtime_bytes.decode('utf-8'),
+                    'sha256': hashlib.sha256(self._last_runtime_bytes).hexdigest()}
+            try:
+                journal.save(record)
+            except Exception:
+                self._recovery_fault = True
+                raise ImportError('Recovery intent is uncertain; no recovery signal was sent.') from None
+            try:
+                evidence = self._boot_boundary.settle() if boot_recovery else self._child_boundary.settle()
+            except Exception:
+                record = {**record, 'outcome': 'REFUSED',
+                          'evidence': {**record['evidence'], 'error': 'CESSATION_NOT_ESTABLISHED'}}
+                try:
+                    journal.save(record)
+                except Exception:
+                    self._recovery_fault = True
+                self.runtime = {'state': 'FAULT'}
+                raise ImportError('Recovery refused or stop uncertain; descendant/concurrent ownership must be resolved. No force-kill was sent.') from None
+            try:
+                self.runtime = {'state': 'STOPPED'}
+                self._persist_runtime()
+                record = {**record, 'outcome': 'COMPLETE',
+                          'evidence': {**record['evidence'], **evidence, 'result_runtime': 'STOPPED'}}
+                journal.save(record)
+                self.child = None
+                self._child_boundary = None
+                if self._boot_boundary is not None:
+                    self._boot_boundary.close()
+                    self._boot_boundary = None
+                self._stop_result = ('NOT_REQUESTED' if boot_recovery else
+                                     'GRACEFUL' if evidence['signal'] == 'SIGTERM' and evidence['exit_code'] == 0 else 'EXITED')
+            except Exception:
+                self._recovery_fault = True
+                self.runtime = {'state': 'FAULT'}
+                raise ImportError('Recovery persistence is uncertain; Start remains fenced.') from None
+            return {'runtime': dict(self.runtime), 'local_recovery': self._recovery_summary(record)}

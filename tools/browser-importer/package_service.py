@@ -201,17 +201,27 @@ def stop_children(children, timeout):
 def supervise(importer_command, nginx_command, environment, stop, *,
               popen=subprocess.Popen, shutdown_timeout=150, public_nginx_command=None):
     """All services live or none do. Importer exit0 permits enrollment restart."""
+    from boot_boundary import BootSupervisor, ENV
     children = []
+    boot = BootSupervisor.admit()
     commands = [importer_command, nginx_command]
     if public_nginx_command is not None:
         commands.append(public_nginx_command)
     try:
-        for command in commands:
+        for index, command in enumerate(commands):
             if stop.is_set():
                 return 0
+            env = child_environment(environment)
+            env.pop(ENV, None)
+            options = {}
+            if index == 0 and boot is not None:
+                env[ENV] = str(boot.client.fileno())
+                options['pass_fds'] = (boot.client.fileno(),)
             children.append(popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
-                                  stderr=subprocess.DEVNULL, env=child_environment(environment),
-                                  close_fds=True, start_new_session=True))
+                                  stderr=subprocess.DEVNULL, env=env,
+                                  close_fds=True, start_new_session=True, **options))
+            if index == 0 and boot is not None:
+                boot.client.close()  # Only the one admitted backend holds this endpoint.
         importer, *frontends = children
         while not stop.is_set():
             # A frontend exit is always a fault, including exit0.
@@ -220,9 +230,13 @@ def supervise(importer_command, nginx_command, environment, stop, *,
             result = importer.poll()
             if result is not None:
                 return 0 if result == 0 else 78
+            if boot is not None:
+                boot.poll(importer, frontends)
             stop.wait(.1)
         return 0
     finally:
+        if boot is not None:
+            boot.close()
         stop_children(children, shutdown_timeout)
 
 

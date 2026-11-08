@@ -164,6 +164,25 @@ class Handler(BaseHTTPRequestHandler):
                 return self.reply(403, {'error': 'CSRF token rejected.'})
             if self.path == '/api/access-code' and self.command == 'POST':
                 return self.reveal_access_code(session)
+            if self.path == '/api/provision' and self.command == 'POST':
+                if (self.headers.get_all('Content-Type', []) != ['application/octet-stream'] or
+                        self.headers.get_all('X-CSRF-Token', []) != [session['csrf']] or
+                        self.headers.get_all('X-Confirm-Unused', []) != ['true'] or
+                        len(self.headers.get_all('X-Planet-Identity', [])) != 1):
+                    raise ValueError('Invalid provisioning framing')
+                provision = getattr(self.server.engine, 'provision', None)
+                if provision is None:
+                    raise ImportError('Fresh planet provisioning is unavailable in this package.')
+                key = self.body(65536)
+                try:
+                    result = provision(identity=self.headers['X-Planet-Identity'], key=key, confirmed_unused=True)
+                except Exception:
+                    # Neither custom adapters nor storage errors can reflect key
+                    # bytes, filenames or raw child diagnostics to HTTP/logs.
+                    return self.reply(409, {'error': 'Fresh creation refused or uncertain; refresh status. Never replay or reset.'})
+                finally:
+                    key = None
+                return self.reply(202, result)
             if self.path == '/api/jobs' and self.command == 'POST':
                 if self.headers.get('Content-Type') != 'application/json':
                     raise ValueError('JSON required')
@@ -201,6 +220,20 @@ class Handler(BaseHTTPRequestHandler):
                         params['confirmed_stopped'] is not True):
                     raise ValueError('Explicit stopped confirmation required')
                 return self.reply(200, self.server.engine.start(confirmed_stopped=True))
+            if self.path == '/api/recover' and self.command == 'POST':
+                if (self.headers.get_all('Content-Type', []) != ['application/json'] or
+                        self.headers.get_all('X-CSRF-Token', []) != [session['csrf']]):
+                    raise ValueError('Invalid recovery framing')
+                pairs = json.loads(self.body(1024), object_pairs_hook=list)
+                if (not isinstance(pairs, list) or len(pairs) != 1 or
+                        not isinstance(pairs[0], tuple) or len(pairs[0]) != 2 or
+                        pairs[0][0] != 'operation_id' or not isinstance(pairs[0][1], str) or
+                        not re.fullmatch('[a-f0-9]{32}', pairs[0][1])):
+                    raise ValueError('Only a bounded operation identifier is accepted')
+                recover = getattr(self.server.engine, 'recover', None)
+                if recover is None:
+                    raise ImportError('Local recovery is unavailable for this engine.')
+                return self.reply(200, recover(operation_id=pairs[0][1]))
             if self.path == '/api/stop' and self.command == 'POST':
                 if self.headers.get('Content-Type') != 'application/json' or json.loads(self.body()) != {}:
                     raise ValueError('Empty JSON object required')

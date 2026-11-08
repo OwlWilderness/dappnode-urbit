@@ -20,6 +20,10 @@ tools/browser-importer/**
 !tools/browser-importer/owner_tls.py
 !tools/browser-importer/package_service.py
 !tools/browser-importer/public_ingress.py
+!tools/browser-importer/local_child.py
+!tools/browser-importer/local_recovery.py
+!tools/browser-importer/boot_boundary.py
+!tools/browser-importer/legacy_evidence.py
 !tools/browser-importer/web/
 tools/browser-importer/web/**
 !tools/browser-importer/web/index.html

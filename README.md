@@ -212,3 +212,14 @@ inclusion alone is not complete binary distribution clearance.
 The [distribution provenance review](docs/distribution-review.md) records the
 inherited declaration and a separate unresolved license-mixing question in the
 pinned Vere dependencies. A new UVM license alone would not resolve that question.
+
+## Experimental planet source and optional connector
+
+The separately selected [planet candidate](docs/issue3-planet-candidate.md) adds
+one-shot unused-planet initialization and retains the recovery lifecycle. The
+canonical package descriptors and official runtime selection above are unchanged.
+This is experimental source, not upgrade or binary distribution clearance.
+
+The [read-only stdio connector template](tools/uvm-readonly-connector/README.md)
+is optional, disabled, and has no installed CA binding. It is not registered or
+activated by this checkout, and cannot resolve a denied private-network route.

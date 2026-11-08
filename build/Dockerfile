@@ -15,6 +15,7 @@ RUN addgroup -g 10000 urbit \
 COPY --from=vere-release /out/urbit /bin/urbit
 COPY --chown=0:0 tools/browser-importer/runtime.py tools/browser-importer/managed_service.py tools/browser-importer/importer.py tools/browser-importer/archive.py tools/browser-importer/enrollment.py tools/browser-importer/backend_tls.py tools/browser-importer/server.py /opt/importer/
 COPY --chown=0:0 tools/browser-importer/owner_tls.py tools/browser-importer/package_service.py tools/browser-importer/public_ingress.py /opt/importer/
+COPY --chown=0:0 tools/browser-importer/local_child.py tools/browser-importer/local_recovery.py tools/browser-importer/boot_boundary.py tools/browser-importer/legacy_evidence.py /opt/importer/
 COPY --chown=0:0 tools/browser-importer/web/index.html tools/browser-importer/web/style.css tools/browser-importer/web/app.mjs tools/browser-importer/web/enroll.html tools/browser-importer/web/enroll.mjs /opt/importer/web/
 COPY --chown=0:0 build/volume_guard.py /opt/importer/volume_guard.py
 COPY --chown=0:0 build/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
