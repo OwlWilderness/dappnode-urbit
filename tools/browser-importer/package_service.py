@@ -164,32 +164,42 @@ def child_environment(environment=None):
 
 
 def stop_children(children, timeout):
-    """Stop owned sessions, including workers whose master has already exited."""
-    for child in reversed(children):
+    """Importer owns king-only graceful TERM; frontends own separate sessions.
+
+    The first child is always the importer. Never TERM its entire group: that
+    bypasses king/lord shutdown and directly interrupts serfs. A common graceful
+    deadline bounds all services; subsequent group KILL is failure containment,
+    not proof allowing a clean runtime journal.
+    """
+    deadline = time.monotonic() + timeout
+    for index in reversed(range(len(children))):
+        child = children[index]
         try:
-            os.killpg(child.pid, signal.SIGTERM)
+            if index == 0:
+                child.terminate()
+            else:
+                os.killpg(child.pid, signal.SIGTERM)
         except ProcessLookupError:
             pass
-    deadline = time.monotonic() + timeout
     for child in reversed(children):
         try:
             child.wait(timeout=max(0, deadline - time.monotonic()))
         except subprocess.TimeoutExpired:
-            # Each child was started in its own session; never signal our group.
-            try:
-                os.killpg(child.pid, signal.SIGKILL)
-            except ProcessLookupError:
-                pass
-            child.wait(timeout=5)
+            pass
+    # A dead master can leave an ignoring worker. Escalation remains separate
+    # from graceful shutdown and cannot certify escaped runtime descendants.
     for child in reversed(children):
-        # A dead master can leave an ignoring worker in its owned process group.
         try:
             os.killpg(child.pid, signal.SIGKILL)
         except ProcessLookupError:
             pass
+    kill_deadline = time.monotonic() + 5
+    for child in reversed(children):
+        child.wait(timeout=max(0, kill_deadline - time.monotonic()))
+    reap_deadline = time.monotonic() + 1
+    for child in reversed(children):
         # As container PID1 we may adopt orphan workers. Never reap other groups.
-        deadline = time.monotonic() + 1
-        while time.monotonic() < deadline:
+        while time.monotonic() < reap_deadline:
             try:
                 pid, _ = os.waitpid(-child.pid, os.WNOHANG)
             except ChildProcessError:

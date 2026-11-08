@@ -162,6 +162,21 @@ class PackageServiceTests(unittest.TestCase):
                     if any(c.poll() is None for c in children):
                         service.stop_children(children, .2)
 
+    def test_initial_shutdown_signals_importer_pid_not_runtime_group(self):
+        service = self.module()
+        importer, frontend = mock.Mock(pid=41001), mock.Mock(pid=41002)
+        events = []
+        importer.terminate.side_effect = lambda: events.append(('pid', importer.pid))
+        frontend.wait.side_effect = lambda **kw: events.append(('wait', frontend.pid))
+        importer.wait.side_effect = lambda **kw: events.append(('wait', importer.pid))
+        with mock.patch.object(service.os, 'killpg', side_effect=lambda pid, sig: events.append((sig, pid))), \
+                mock.patch.object(service.os, 'waitpid', side_effect=ChildProcessError):
+            service.stop_children([importer, frontend], .1)
+        self.assertIn(('pid', importer.pid), events)
+        self.assertNotIn((signal.SIGTERM, importer.pid), events)
+        self.assertIn((signal.SIGTERM, frontend.pid), events)
+        self.assertLess(events.index(('pid', importer.pid)), events.index(('wait', importer.pid)))
+
     def test_signal_stop_and_forced_fallback_are_bounded(self):
         service = self.module()
         stop = threading.Event()
