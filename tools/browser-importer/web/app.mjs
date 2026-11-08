@@ -66,6 +66,7 @@ export function mountImporter(doc, { fetchImpl = globalThis.fetch, schedule = gl
     const state = job?.state || status?.state;
     if (authenticated && state === 'READY_LOCKED') el('message').textContent = 'Import committed. Runtime remains locked by BLOCKED_EMBEDDED_OPENSSL; Start is unavailable.';
     if (authenticated && state === 'READY_LOCKED' && managed()) el('message').textContent = 'Import committed. Explicit Start is required; process launch does not prove a healthy boot.';
+    if (authenticated && managed() && status.runtime.state === 'RECOVERY_REQUIRED') el('message').textContent = `${state === 'READY_LOCKED' ? 'Import committed. ' : ''}Runtime recovery required. Start is blocked pending reviewed outside-scope operator recovery. Preserve runtime journals, import data and ownership evidence; this importer offers no recovery action.`;
     if (authenticated && state === 'RECOVERY_REQUIRED') el('message').textContent = 'Recovery required. Upload, cancellation and Start are blocked; operator recovery is needed.';
     if (authenticated && state === 'FAILED') el('message').textContent = 'Import failed. Review server status; cancel the incomplete job before trying again.';
     el('transfer').disabled = !authenticated || busy || !acceptsUpload();
