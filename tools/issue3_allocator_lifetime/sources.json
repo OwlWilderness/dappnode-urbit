@@ -1,0 +1,21 @@
+{
+  "status": "ISOLATED_BLOCKED_NOT_PRODUCTION",
+  "archive": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz",
+  "archive_sha256": "8ed4fc8a6b4c1acba3e4e89860a4059e490feb3efaf2a818805770f24f65654f",
+  "root": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de",
+  "public_members": {
+    "pkg/noun/manage.c": {"bytes": 62664, "sha256": "2b06d6a006595ea7440690b325e8c994505a6040a97087e877a19c5e0c46d321"},
+    "pkg/noun/allocate.c": {"bytes": 42036, "sha256": "be6089c91a3d566c2dd8f0b3dd102d0861fef49268b79a5bbe4e3aa2993f7336"},
+    "pkg/vere/main.c": {"bytes": 85598, "sha256": "206929fef62b6f7246b7313675b6120ab876bc7ae8c4399342e1f0eceaf48549"},
+    "pkg/vere/king.c": {"bytes": 38214, "sha256": "24da653bcc3a6cf516d49dc81e7f4b085f35ef6b7b2b8663b53160b88c3b76cd"},
+    "pkg/vere/mars.c": {"bytes": 45877, "sha256": "5f374efc76efacdeac2657b7a29faca7b2945fdc3af78e4f4224dbbbbdacfc85"}
+  },
+  "composition": "After current candidate.patch_allocator (never apply that patch twice); manage.c accepted archive already has its default-heap guard. After other current hardening overlays as well; they do not change manage.c. Refuse upstream manage.c and the separately staged A14-terminal manage.c.",
+  "changed_source_preimages": {"pkg/noun/manage.c": "2b06d6a006595ea7440690b325e8c994505a6040a97087e877a19c5e0c46d321"},
+  "changed_source_sha256": {"pkg/noun/manage.c": "6126a00974035b0495cd5440a532dda49df85d156ec021bf558c672ecd1f9d93"},
+  "blockers": [
+    "Original callbacks do not retain child-road allocations across ordinary road rewind.",
+    "King/utility curl, CA and TLS consumer teardown and thread quiescence are not established by a central u3m_stop prefix.",
+    "Mock storage invalidation is not evidence that real u3e_stop unmaps or discards live OpenSSL bytes."
+  ]
+}
