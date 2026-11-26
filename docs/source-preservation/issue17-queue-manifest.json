@@ -1,0 +1,626 @@
+{
+  "base": "7bb526ef1c7d74733af09ddc073ac852dcf609c3 plus cherry-picked issue-17 source commit d5a4b95082e42d8da55f7aed4db3edf716e74ba7",
+  "byte_count": 812541,
+  "entries": [
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/.dockerignore",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "fc20d12aa09218422b7226d803e427b248e7922f57976388cdbaadebe7eb3520",
+      "size": 2052,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/Dockerfile",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "0cc67708bc6a8075509df02795559886a1d8574149bdae5cdb8067147f4db29a",
+      "size": 2308,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/candidate.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "8d8a501290ade36f6aa3987958b9392df498478203e9d49d5d67f61c33ecf61d",
+      "size": 54075,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/owned-recipe.json",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "be42b67418b33e5b4e4ba5acd9941187ff0e9ec5a5924d53cca5f17e525b32ef",
+      "size": 8027,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/owned_support.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "7bfa3a4694b7b54ff1da1a0fa200ffa409a1ae7ae9a44018b3798cf93d74e48a",
+      "size": 8600,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/refresh.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "9252f14b0d0904a226ef4f58778da9f3da7314021d369e8344fbed0104dec936",
+      "size": 9613,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_arena_measurement/aggregate.py",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_arena_measurement/aggregate.py",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "b73c4dc6540eea61d5c1278b69f0bf9079b085c6fe9b14b8f3826cf3e5532713",
+      "size": 10014,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_arena_measurement/collector.c",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_arena_measurement/collector.c",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "8255a996f0c322ae4d5da61d0f7833b5590412f59554bfc8ac6daa709f86ec14",
+      "size": 3589,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_arena_measurement/collector.h",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_arena_measurement/collector.h",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "4cf582da2157f7dde53eccf26cb4ee5cca679693a484af37a68daf3f23b07a10",
+      "size": 1716,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_arena_measurement/overlay.py",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_arena_measurement/overlay.py",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "f7b3e4531d3232bfea6f76d3939758ec755fed6cdaf84eff5aaae3c22874fae8",
+      "size": 4259,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_integration/openssl_owned_start.c",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_integration/openssl_owned_start.c",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "fbc50e469a7964d4ca3df482a70a83a86f902c20ec2659198de2dfc855ff2977",
+      "size": 1920,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_integration/openssl_owned_start.h",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_integration/openssl_owned_start.h",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "317766aeba915ccaff61dfeb4a0e046d1a563062fdf992e64872c64f4d857359",
+      "size": 296,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_integration/overlay.py",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_integration/overlay.py",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "f7ba91e8c90bbb5edb306acbaa02484c9ac06b4d3992d3db59dfa040f6142425",
+      "size": 9093,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/allocate.c.pinned",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/allocate.c.pinned",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "be6089c91a3d566c2dd8f0b3dd102d0861fef49268b79a5bbe4e3aa2993f7336",
+      "size": 42036,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/allocate.h.pinned",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/allocate.h.pinned",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "9ab32069f45512eb754a3a26f22472b09230bf0dcedd87f88654ac860300794a",
+      "size": 25235,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/openssl_owned_arena.c",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/openssl_owned_arena.c",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "bbd2e8857e4d8121c3e5ef0905d889d405686dbbb6403fd094fdbd8d802879b8",
+      "size": 9200,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/openssl_owned_arena.h",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/openssl_owned_arena.h",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "69b5d4f30118847276e839ba5e01908985e8482ec11bd98671750a6cc2712cee",
+      "size": 1796,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/overlay.py",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/overlay.py",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "249d6ebfcdb35e29103966f2ec0feb472af18b04d468c09d266594bfdd52e62d",
+      "size": 3804,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/palloc.c.pinned",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/palloc.c.pinned",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "7e6ac278d3082052d049f21b2a4b23ebb9c749ecfeaa4a33c9d7680dfac00d57",
+      "size": 64838,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/palloc_engine.inc",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/palloc_engine.inc",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "6feb49a707ce12c7a46b86d6c875b15b7e62c79680ca5fabcdd305e318f03d93",
+      "size": 17060,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_owned_arena/sources.json",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_owned_arena/sources.json",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "29303ed7d49800ad2bcb7fc2b074d6e7c388fd6ae67bd04302eb107adde0720e",
+      "size": 3118,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/completion.h",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/completion.h",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "132cfb7709d2b3009d3131b3b6f0a32228aadf5fde444429857a8f143f6748e2",
+      "size": 2256,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/integration.patch",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/integration.patch",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "44f559f57a08eaf2249131e5a1b0c39735586f457fd04ce6f6dc065c45a9df6a",
+      "size": 29818,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/mars_probe.c",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/mars_probe.c",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "44911919cbc3378fd9dcf75e1f6d2fda0ac64fd6b0f4ac2774ea406082d84c67",
+      "size": 2897,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/openssl_shutdown.h",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/openssl_shutdown.h",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "1ed2766b928187b41ef6c5469af148a3b42a1e1c10d8040d0ad96882b035d0f5",
+      "size": 568,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/overlay.py",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/overlay.py",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "1ad4713179911b11eed97d0d0f3d08904e7020452778ba3c95f29f54a99d148d",
+      "size": 21142,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/runtime.inc",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/runtime.inc",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "317281c80cda1ecff119a71e15a0bd3d609e401298d4289d33a791b6862f9753",
+      "size": 5534,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/runtime_probe.c",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/runtime_probe.c",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "aedd4822464ed9ab49c1e6f1f8c681d9c8a6304d0e34c8c7b93d582019d7c666",
+      "size": 3451,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "tools/issue3_openssl_shutdown/sources.json",
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/tools/issue3_openssl_shutdown/sources.json",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "e35c5e3947908ba4a7e781f6da6447aefdb8d33df9dd40932b8de223f1bff05f",
+      "size": 5096,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-owned/verify_binary.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "f3b0d2821253697acf88299f5f04fa75b4da857a592e6b9a8403c426126b6175",
+      "size": 9470,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-allocation-parity-audit.md",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "b2722cbf772903211cfe3d80be1334e0880e3f0dd15bfb1cd1deab775da9c469",
+      "size": 23194,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-arena-measurement-protocol.md",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "c870b4598fa28227996a11bc7ff1073fd42f07c2daedcad204bbb81e1f4d85eb",
+      "size": 11637,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/openssl_interruption_boundary_probe.c",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "4926a5e77280d6f59293cfc43b4fd253deccddc016907163ab785aab1ffe73a0",
+      "size": 4289,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_allocation_hardening.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "8c013d508eddf7047b8fa353bf4ffefcb56f3069e75e7ce5205a05b7c5436ed3",
+      "size": 11636,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_amd64_allocator.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "d47a17fc6e388a9aa61fd1c481526bdf58673df24f0467605c7e01588f44be18",
+      "size": 3800,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_arena_sizing.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "d1a2eb98ba00049bb787dedf5168c9fbab8ba6a04fee9a54d6fb526dafc8a246",
+      "size": 6092,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_ca_allocation.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "f96ca1b5e93ba7adc4cc2147d3baede5f1679ca286f9dd154b4b09641f9d35b9",
+      "size": 11124,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_cttp_shutdown.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "2313cc12c9967382d43706002266fd3f83e282a18dac735abdcad158b1e43a76",
+      "size": 23772,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_h2o_allocation.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "ca4db92407b234699d90f2bdda62212391502092f4379a4f9ae0b0cfdce645e3",
+      "size": 17584,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_owned_report.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "0f9498e5a278b37dee6e42b2fbca99c67cdc4aa2d860e2bb03255085ba17ca13",
+      "size": 11921,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_sha_allocation.py",
+      "reason": "focused_allocator_lifetime_test",
+      "sha256": "ff5d1b0e6c7e7064356ef628fc24311fb64348c41e07735e72faa41618257431",
+      "size": 14107,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_ipc_review/framing.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "2541f170646c531ab96dcb6942388cb46aea2c9fddf8a710107c6be73ceede87",
+      "size": 2826,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_ipc_review/persistence.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "993b86e08420cc3c819f50fda06cda914380ad96ed0c3c29dbd1670ddbcffe89",
+      "size": 4536,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_ipc_review/review.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "28183fc6fece95a59c5ce993ee4687e843b04512e34d4363d65da0361443f2ed",
+      "size": 6504,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_ipc_review/signals.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "b683f53a46c914d2c255fd9f1074bda9aabbc3ae29baf0d3ec5c224b836a6939",
+      "size": 953,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_ipc_review/sources.json",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "f91c3a8d88ac5a317ca5ff873586fd5cc3cee2300e4f3c2ee95acbfe3a436034",
+      "size": 5764,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_ipc_review/supervision.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "d9eab33506bde7bc2458ea45264872e211e2ffdec708eee9405e3ad4e2de2a11",
+      "size": 1421,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_terminal/host_probe.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "c36c5d3e5941b7dd845a7855ad02d10084099df91708400022836a6a308fc1b9",
+      "size": 3253,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_terminal/noun_probe.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "5faa499cc7f9557e847a63cc51f6c1499a6f3adfa440a1dc16fd5e324815a260",
+      "size": 5469,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_a14_terminal/stage.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "3c11959c963950ccd0fb11365f67b6f55439aa278e8f4c4ac80863e6e2127570",
+      "size": 6227,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_arena_measurement/aggregate.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "b73c4dc6540eea61d5c1278b69f0bf9079b085c6fe9b14b8f3826cf3e5532713",
+      "size": 10014,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_arena_measurement/collector.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "8255a996f0c322ae4d5da61d0f7833b5590412f59554bfc8ac6daa709f86ec14",
+      "size": 3589,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_arena_measurement/collector.h",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "4cf582da2157f7dde53eccf26cb4ee5cca679693a484af37a68daf3f23b07a10",
+      "size": 1716,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_arena_measurement/overlay.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "f7b3e4531d3232bfea6f76d3939758ec755fed6cdaf84eff5aaae3c22874fae8",
+      "size": 4259,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_arena_sizing/admission.py",
+      "reason": "focused_arena_sizing_source",
+      "sha256": "76588baa2803134b1a5e7d50b9205293b20d56e0cfba5c7f15d53b77c99b367b",
+      "size": 4815,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_integration/openssl_owned_start.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "fbc50e469a7964d4ca3df482a70a83a86f902c20ec2659198de2dfc855ff2977",
+      "size": 1920,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_integration/openssl_owned_start.h",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "317766aeba915ccaff61dfeb4a0e046d1a563062fdf992e64872c64f4d857359",
+      "size": 296,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_integration/overlay.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "f7ba91e8c90bbb5edb306acbaa02484c9ac06b4d3992d3db59dfa040f6142425",
+      "size": 9093,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/allocate.c.pinned",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "be6089c91a3d566c2dd8f0b3dd102d0861fef49268b79a5bbe4e3aa2993f7336",
+      "size": 42036,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/allocate.h.pinned",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "9ab32069f45512eb754a3a26f22472b09230bf0dcedd87f88654ac860300794a",
+      "size": 25235,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/openssl_owned_arena.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "bbd2e8857e4d8121c3e5ef0905d889d405686dbbb6403fd094fdbd8d802879b8",
+      "size": 9200,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/openssl_owned_arena.h",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "69b5d4f30118847276e839ba5e01908985e8482ec11bd98671750a6cc2712cee",
+      "size": 1796,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/overlay.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "249d6ebfcdb35e29103966f2ec0feb472af18b04d468c09d266594bfdd52e62d",
+      "size": 3804,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/palloc.c.pinned",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "7e6ac278d3082052d049f21b2a4b23ebb9c749ecfeaa4a33c9d7680dfac00d57",
+      "size": 64838,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/palloc_engine.inc",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "6feb49a707ce12c7a46b86d6c875b15b7e62c79680ca5fabcdd305e318f03d93",
+      "size": 17060,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_owned_arena/sources.json",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "29303ed7d49800ad2bcb7fc2b074d6e7c388fd6ae67bd04302eb107adde0720e",
+      "size": 3118,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/completion.h",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "132cfb7709d2b3009d3131b3b6f0a32228aadf5fde444429857a8f143f6748e2",
+      "size": 2256,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/integration.patch",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "44f559f57a08eaf2249131e5a1b0c39735586f457fd04ce6f6dc065c45a9df6a",
+      "size": 29818,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/mars_probe.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "44911919cbc3378fd9dcf75e1f6d2fda0ac64fd6b0f4ac2774ea406082d84c67",
+      "size": 2897,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/openssl_shutdown.h",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "1ed2766b928187b41ef6c5469af148a3b42a1e1c10d8040d0ad96882b035d0f5",
+      "size": 568,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/overlay.py",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "1ad4713179911b11eed97d0d0f3d08904e7020452778ba3c95f29f54a99d148d",
+      "size": 21142,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/runtime.inc",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "317281c80cda1ecff119a71e15a0bd3d609e401298d4289d33a791b6862f9753",
+      "size": 5534,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/runtime_probe.c",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "aedd4822464ed9ab49c1e6f1f8c681d9c8a6304d0e34c8c7b93d582019d7c666",
+      "size": 3451,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_openssl_shutdown/sources.json",
+      "reason": "coherent_allocator_lifetime_source_family",
+      "sha256": "e35c5e3947908ba4a7e781f6da6447aefdb8d33df9dd40932b8de223f1bff05f",
+      "size": 5096,
+      "type": "file"
+    }
+  ],
+  "issue": 17,
+  "path_count": 74,
+  "schema": 1,
+  "source_manifest_note": "local migration manifest; path intentionally omitted from public branch",
+  "source_manifest_sha256": "2a6b02058a33b49b45d1b08075275923fea2eeaa0e26ebd76df10da9fd2a9dd2"
+}

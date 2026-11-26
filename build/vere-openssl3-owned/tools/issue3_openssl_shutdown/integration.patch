@@ -1,0 +1,1217 @@
+--- a/pkg/vere/main.c
++++ b/pkg/vere/main.c
+@@ -737,6 +737,8 @@
+ /* _cert_store: decoded CA certificates
+  */
+ static STACK_OF(X509_INFO)* _cert_store;
++#include "openssl_owned_arena.h"
++#include "openssl_shutdown.inc"
+ 
+ /* _setup_cert_store(): decodes embedded CA certificates
+  */
+@@ -1058,6 +1060,8 @@
+ static void
+ _cw_init_io(uv_loop_t* lup_u)
+ {
++  _ssl_worker_io = 1;
++
+   //  mars is spawned with [FD 0] = events and [FD 1] = effects
+   //  we dup [FD 0 & 1] so we don't accidentally use them for something else
+   //  we replace [FD 0] (stdin) with a fd pointing to /dev/null
+@@ -1150,6 +1154,7 @@
+ 
+   u3_Host.eve_d = u3A->eve_d;
+ 
++  u3_ssl_shutdown_loom();
+   return log_u;
+ }
+ 
+@@ -1330,6 +1335,7 @@
+ 
+     u3C.wag_w |= u3o_hashless;
+     u3m_boot_lite((size_t)1 << u3_Host.ops_u.lom_y);
++    u3_ssl_shutdown_loom();
+     sil_u = u3s_cue_xeno_init_with(ur_fib27, ur_fib28);
+     if ( u3_none == (pil = u3s_cue_xeno_with(sil_u, len_d, byt_y)) ) {
+       fprintf(stderr, "lite: unable to cue ivory pill\r\n");
+@@ -1438,6 +1444,11 @@
+     u3z(gat);
+     free(evl_c);
+   }
++  _ssl_output = &std_u;
++  u3_ssl_shutdown_request(0);
++  u3_ssl_shutdown_run(uv_default_loop());
++  /* Never return borrowed stack storage to a second runner. */
++  if ( !_ssl_loop_closed ) abort();
+ }
+ 
+ /* _cw_info(): print pier info
+@@ -1544,7 +1555,8 @@
+   u3_lmdb_stat(log_u->mdb_u, stdout);
+   u3_disk_exit(log_u);
+ 
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_grab(): gc pier.
+@@ -1639,9 +1651,11 @@
+   }
+ 
+   u3m_boot(u3_Host.dir_c, (size_t)1 << u3_Host.ops_u.lom_y);  //  NB: readonly
++  u3_ssl_shutdown_loom();
+   u3C.wag_w |= u3o_hashless;
+   u3z(u3_mars_grab(c3y));
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_cram(): jam persistent state (rock), and exit.
+@@ -1748,7 +1762,8 @@
+     exit(1);
+   }
+ 
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_queu(): cue rock, save, and exit.
+@@ -1868,7 +1883,8 @@
+     u3_disk_exit(log_u);
+ 
+     fprintf(stderr, "urbit: queu: rock loaded at event %" PRIu64 "\r\n", eve_d);
+-    u3m_stop();
++    u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+   }
+ }
+ 
+@@ -1978,7 +1994,8 @@
+ 
+   u3m_save();
+   u3_disk_exit(log_u);
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_melt(): canonicalize persistent nouns.
+@@ -2070,7 +2087,8 @@
+ 
+   u3m_save();
+   u3_disk_exit(log_u);
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_next(): request upgrade
+@@ -2243,7 +2261,8 @@
+ 
+   u3m_save();
+   u3_disk_exit(log_u);
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_play_slog(): print during replay.
+@@ -2405,7 +2424,8 @@
+     u3_disk_exit(mar_u.log_u);
+   }
+ 
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_prep(): prepare for upgrade
+@@ -2567,7 +2587,8 @@
+   u3_disk_chop(log_u, u3_Host.eve_d);
+ 
+   u3_disk_exit(log_u);
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_roll(): rollover to new epoch
+@@ -2633,7 +2654,8 @@
+   u3_disk_roll(log_u, u3_Host.eve_d);
+ 
+   u3_disk_exit(log_u);
+-  u3m_stop();
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
+ }
+ 
+ /* _cw_vere(): download vere
+@@ -2716,6 +2738,7 @@
+     exit(1);
+   }
+ 
++  _ssl_curl_ready = 1;
+   _setup_cert_store();
+   u3K.ssl_curl_f = _setup_ssl_curl;
+   u3K.ssl_x509_f = _setup_ssl_x509;
+@@ -2729,7 +2752,7 @@
+ 
+       case -1: {
+         fprintf(stderr, "you're already running it!\n");
+-        exit(0);
++        return;
+       } break;
+ 
+       case 0: {
+@@ -2824,6 +2847,7 @@
+   //  XX load log and check if snapshot is stale?
+   //
+   c3_d  eve_d = u3m_boot(u3_Host.dir_c, (size_t)1 << u3_Host.ops_u.lom_y);
++  u3_ssl_shutdown_loom();
+   u3_noun sam = u3nc(u3nc(u3_nul, u3_nul),
+                      u3nc(c3n, u3nq(c3__once, 'j', c3__vile, u3_nul)));
+   u3_noun res = u3v_soft_peek(0, sam);
+@@ -2950,6 +2974,7 @@
+   u3_mars mar_u = { .dir_c = dir_c };
+   {
+     u3_mars_make(&mar_u);
++    u3_ssl_shutdown_loom();
+ 
+     //  set up logging
+     //
+@@ -2969,10 +2994,11 @@
+ 
+   //  start reading
+   //
+-  u3_newt_read(&inn_u);
+-  // does not return because _mars_flush does not return
+-  //
+-  uv_run(lup_u, UV_RUN_DEFAULT);
++  if ( !u3_ssl_shutdown_pending() ) u3_newt_read(&inn_u);
++  //  Finalize only after the outer callback stack unwinds.
++  u3_ssl_shutdown_run(lup_u);
++  /* Embedded worker handles still belong to this frame. */
++  if ( !_ssl_loop_closed ) abort();
+ }
+ 
+ /* _cw_work(): resume and run; replay and start event processing
+@@ -3094,6 +3120,7 @@
+     //  replay if necessary
+     //
+     u3_mars_play(&mar_u, eve_d, 0); // XX sap_d from args?
++    u3_ssl_shutdown_loom();
+     u3_mars_work(&mar_u);
+ 
+     //  set up stdio read/write callbacks
+@@ -3107,9 +3134,11 @@
+ 
+   //  start reading
+   //
+-  u3_newt_read(&inn_u);
+-  // does not return becase _mars_flush does not return
+-  uv_run(lup_u, UV_RUN_DEFAULT);
++  if ( !u3_ssl_shutdown_pending() ) u3_newt_read(&inn_u);
++  //  Finalize only after the outer callback stack unwinds.
++  u3_ssl_shutdown_run(lup_u);
++  /* Embedded worker handles still belong to this frame. */
++  if ( !_ssl_loop_closed ) abort();
+ }
+ 
+ 
+@@ -3217,7 +3246,9 @@
+ 
+     //  ran subcommand
+     case 1: {
+-      return 0;
++      if ( !u3_ssl_shutdown_pending() ) u3_ssl_shutdown_request(0);
++      u3_ssl_shutdown_run(uv_default_loop());
++      return u3_ssl_shutdown_finish();
+     }
+ 
+     //  found subcommand, continue
+@@ -3388,6 +3419,7 @@
+     //  before any OpenSSL allocations
+     //
+     u3m_boot_lite((size_t)1 << u3_Host.ops_u.lut_y);
++    u3_ssl_shutdown_loom();
+ 
+     //  Initialize OpenSSL for client and server
+     //
+@@ -3403,28 +3435,15 @@
+       exit(1);
+     }
+ 
++    _ssl_curl_ready = 1;
+     _setup_cert_store();
+     u3K.ssl_curl_f = _setup_ssl_curl;
+     u3K.ssl_x509_f = _setup_ssl_x509;
+ 
+     u3_king_commence();
+ 
+-    //  uninitialize curl
+-    //
+-    curl_global_cleanup();
+-
+-    //  uninitialize OpenSSL
+-    //
+-    //    see https://wiki.openssl.org/index.php/Library_Initialization
+-    //
+-    {
+-      ENGINE_cleanup();
+-      CONF_modules_unload(1);
+-      EVP_cleanup();
+-      CRYPTO_cleanup_all_ex_data();
+-      SSL_COMP_free_compression_methods();
+-      ERR_free_strings();
+-    }
++    return u3_ssl_shutdown_finish();
++
+   }
+ 
+   return 0;
+--- a/pkg/vere/king.c
++++ b/pkg/vere/king.c
+@@ -1097,7 +1097,7 @@
+   _king_loop_init();
+   // does not return becase u3_king_done does not return
+   //
+-  uv_run(u3L, UV_RUN_DEFAULT);
++  u3_ssl_shutdown_run(u3L);
+ }
+ 
+ /* u3_king_stub(): get the One Pier for unreconstructed code.
+@@ -1121,8 +1121,9 @@
+   u3_pier* pir_u = u3K.pir_u;
+ 
+   while ( pir_u ) {
++    u3_pier* nex_u = pir_u->nex_u;
+     pir_f(pir_u);
+-    pir_u = pir_u->nex_u;
++    pir_u = nex_u;
+   }
+ }
+ 
+@@ -1672,26 +1673,29 @@
+ 
+ /* _king_done_cb():
+ */
++static int _king_finishing;
+ static void
+ _king_done_cb(uv_handle_t* han_u)
+ {
+-  if( UV_EBUSY == uv_loop_close(u3L) ) {
+-    //  XX uncomment to debug
+-    //
+-    // fprintf(stderr, "\r\nking: open libuv handles\r\n");
+-    // uv_print_all_handles(u3L, stderr);
+-    // fprintf(stderr, "\r\nking: force shutdown\r\n");
+-
+-    uv_stop(u3L);
+-  }
+-}
+-
+-/* u3_king_done(): all piers closed. s/b callback. Does not return
++  /* A close callback is not a safe event-runner/loop-close boundary. */
++  (void)han_u;
++}
++
++/* u3_king_done(): all piers closed. s/b callback. Returns after queuing shutdown
+ */
+ void
+ u3_king_done(void)
+ {
+   uv_handle_t* han_u = (uv_handle_t*)&u3K.tim_u;
++
++  if ( u3K.pir_u ) {
++    return;
++  }
++  if ( _king_finishing ) {
++    u3_ssl_shutdown_request(u3_Host.xit_i);
++    return;
++  }
++  _king_finishing = 1;
+ 
+   if ( u3_Host.xit_i ) {
+     if ( c3y == u3_Host.nex_o ) {
+@@ -1751,8 +1755,7 @@
+ 
+   //  XX remove move
+   //
+-  u3m_stop();
+-  exit(u3_Host.xit_i);
++  u3_ssl_shutdown_request(u3_Host.xit_i);
+ }
+ 
+ /* u3_king_exit(): shutdown gracefully
+@@ -1771,6 +1774,8 @@
+   u3_Host.xit_i = 1;
+   _king_forall_unlink(u3_pier_bail);
+   u3_king_done();
++  /* Immediate bail callers must never resume into disposed state. */
++  exit(u3_Host.xit_i);
+ }
+ 
+ /* u3_king_grab(): gc the daemon
+--- a/pkg/vere/vere.h
++++ b/pkg/vere/vere.h
+@@ -1479,4 +1479,6 @@
+         c3_w
+         u3_meld_all(FILE*, c3_o, c3_o);
+ 
++#include "openssl_shutdown.h"
++
+ #endif /* ifndef U3_VERE_H */
+--- a/pkg/vere/io/cttp.c
++++ b/pkg/vere/io/cttp.c
+@@ -500,6 +500,7 @@
+   if ( ctp_u->ext_w && !ctp_u->clo_w && !ctp_u->ceq_u ) {
+     SSL_CTX_free(ctp_u->tls_u);
+     c3_free(ctp_u);
++    u3_ssl_shutdown_release();
+   }
+ }
+ 
+@@ -1214,5 +1215,6 @@
+     u3z(now);
+   }
+ 
++  u3_ssl_shutdown_hold();
+   return car_u;
+ }
+--- a/pkg/vere/io/http.c
++++ b/pkg/vere/io/http.c
+@@ -548,6 +548,7 @@
+ static void
+ _http_req_kill(u3_hreq* req_u)
+ {
++  if ( u3_ssl_shutdown_pending() ) return;
+   u3_httd* htd_u = req_u->hon_u->htp_u->htd_u;
+   u3_noun wir    = _http_req_to_duct(req_u);
+   u3_noun cad    = u3nc(u3i_string("cancel-request"), u3_nul);
+@@ -1627,6 +1628,11 @@
+ static c3_i
+ _http_seq_accept(h2o_handler_t* han_u, h2o_req_t* rec_u)
+ {
++  if ( u3_ssl_shutdown_pending() ) {
++    h2o_send_error_generic(rec_u, 503, "shutting down", "shutting down", 0);
++    return 0;
++  }
++
+   u3_hcon* hon_u = _http_rec_sock(rec_u);
+   c3_o     aut_o = _http_req_is_auth(&hon_u->htp_u->htd_u->fig_u, rec_u);
+ 
+@@ -1664,6 +1670,11 @@
+ static c3_i
+ _http_sat_accept(h2o_handler_t* han_u, h2o_req_t* rec_u)
+ {
++  if ( u3_ssl_shutdown_pending() ) {
++    h2o_send_error_generic(rec_u, 503, "shutting down", "shutting down", 0);
++    return 0;
++  }
++
+   c3_o bus_o;
+   {
+     u3_hcon* hon_u = _http_rec_sock(rec_u);
+@@ -1692,6 +1703,11 @@
+ static c3_i
+ _http_rec_accept(h2o_handler_t* han_u, h2o_req_t* rec_u)
+ {
++  if ( u3_ssl_shutdown_pending() ) {
++    h2o_send_error_generic(rec_u, 503, "shutting down", "shutting down", 0);
++    return 0;
++  }
++
+   u3_weak req = _http_rec_to_httq(rec_u);
+ 
+   if ( u3_none == req ) {
+@@ -1813,7 +1829,8 @@
+   }
+ #endif
+ 
+-  if ( (0 == htp_u->hon_u) && (0 != h2o_u->ctx_u.shutdown_requested) ) {
++  if ( (c3n == htp_u->liv) && (0 == htp_u->hon_u)
++       && (0 != h2o_u->ctx_u.shutdown_requested) ) {
+ #if 0
+     u3l_log("http conn free %d free server %d", hon_u->coq_l, htp_u->sev_l);
+ #endif
+@@ -1988,6 +2005,7 @@
+ 
+   _http_serv_unlink(htp_u);
+   c3_free(htp_u);
++  u3_ssl_shutdown_release();
+ }
+ 
+ /* http_serv_free_cb(): timer callback for freeing http server.
+@@ -2106,6 +2124,7 @@
+   htp_u->nex_u = 0;
+ 
+   _http_serv_link(htd_u, htp_u);
++  u3_ssl_shutdown_hold();
+ 
+   return htp_u;
+ }
+@@ -3097,46 +3116,51 @@
+   return all_u;
+ }
+ 
+-/* _http_io_exit(): shut down http.
+-*/
+-static void
+-_http_io_exit(u3_auto* car_u)
+-{
+-  u3_httd* htd_u = (u3_httd*)car_u;
+-
++static void
++_http_exit_free(void* ptr_v)
++{
++  u3_httd* htd_u = ptr_v;
+   u3h_free(htd_u->sax_p);
+   u3h_free(htd_u->nax_p);
+-
+-  if ( NULL != htd_u->stk_u ) {
+-    munmap(htd_u->stk_u, u3a_page);
+-  }
++  if ( NULL != htd_u->stk_u ) munmap(htd_u->stk_u, u3a_page);
++  _http_auth_free(htd_u);
++  c3_free(htd_u);
++}
++
++/* _http_io_exit(): shut down http.
++*/
++static void
++_http_io_exit(u3_auto* car_u)
++{
++  u3_httd* htd_u = (u3_httd*)car_u;
+ 
+   //  dispose of configuration to avoid restarts
+   //
+   _http_form_free(htd_u);
+-  _http_auth_free(htd_u);
+ 
+   //  close all servers
+   //
+-  //  XX broken
+-  //
+-  // for ( u3_http* htp_u = htd_u->htp_u; htp_u; htp_u = htp_u->nex_u ) {
+-  //   _http_serv_close(htp_u);
+-  // }
++  for ( u3_http* htp_u = htd_u->htp_u; htp_u; htp_u = htp_u->nex_u ) {
++    if ( !uv_is_closing((uv_handle_t*)&htp_u->wax_u) ) {
++      _http_serv_close(htp_u);
++    }
++  }
+ 
+   {
+     u3_atom lin = u3i_string("data:urbit shutting down\n\n");
+     u3_noun dat = u3nt(u3_nul, u3r_met(3, lin), lin);
+     u3_hreq* seq_u = htd_u->fig_u.seq_u;
+     while ( 0 != seq_u ) {
++      u3_hreq* nex_u = seq_u->nex_u;
+       _http_continue_respond(seq_u, u3k(dat), c3y);
+-      seq_u = seq_u->nex_u;
++      seq_u = nex_u;
+     }
+     u3z(dat);
+   }
+ 
+ 
+   _http_release_ports_file(u3_Host.dir_c);
++  u3_ssl_shutdown_retire(htd_u, _http_exit_free);
+ }
+ 
+ /* _http_io_info(): produce status info.
+--- a/pkg/vere/mars.c
++++ b/pkg/vere/mars.c
+@@ -832,11 +832,20 @@
+   }
+ }
+ 
++static void _mars_sign_close(void);
++
++static void
++_mars_disk_close(void* ptr_v)
++{
++  u3_disk_exit(ptr_v);
++}
++
+ /* _mars_flush(): send pending gifts.
+ */
+ static void
+ _mars_flush(u3_mars* mar_u)
+ {
++  if ( u3_ssl_shutdown_pending() ) return;
+ top:
+   {
+     u3_gift* gif_u = mar_u->gif_u.ext_u;
+@@ -872,15 +881,18 @@
+     }
+     else if ( u3_mars_exit_e == mar_u->sat_e ) {
+       u3m_save();
+-      u3_disk_exit(mar_u->log_u);
++      u3_ssl_shutdown_retire(mar_u->log_u, _mars_disk_close);
+       u3s_cue_xeno_done(mar_u->sil_u);
+       u3t_trace_close();
+       _mars_damp_file();
+ 
+       //  XX dispose [mar_u], exit cb ?
+       //
+-      u3m_stop();
+-      exit(0);
++      uv_timer_stop(&mar_u->sav_u.tim_u);
++      uv_close((uv_handle_t*)&mar_u->sav_u.tim_u, 0);
++      _mars_sign_close();
++      u3_ssl_shutdown_worker();
++      return;
+     }
+   }
+ }
+@@ -1496,7 +1508,10 @@
+   //
+   if ( mar_u->log_u->dun_d > mar_u->dun_d ) {
+     u3_disk_exit(mar_u->log_u);
+-    exit(0);
++    /* The already-ahead path precedes save-timer init. */
++    _mars_sign_close();
++    u3_ssl_shutdown_worker();
++    return;
+   }
+ 
+   //  send ready status message
+@@ -1983,7 +1998,7 @@
+   //  XX move to caller? close uv handles?
+   //
+   u3_disk_exit(log_u);
+-  exit(0);
++  u3_ssl_shutdown_worker();
+ 
+   return c3y;
+ }
+--- a/pkg/vere/pier.c
++++ b/pkg/vere/pier.c
+@@ -1183,7 +1183,7 @@
+ _pier_work_close_cb(uv_handle_t* idl_u)
+ {
+   u3_work* wok_u = idl_u->data;
+-  c3_free(wok_u);
++  u3_ssl_shutdown_retire(wok_u, free);
+ }
+ 
+ /* _pier_work_close(): close drivers/handles in the u3_psat_work state.
+@@ -1198,11 +1198,20 @@
+   wok_u->cek_u.data = wok_u;
+ }
+ 
+-/* _pier_bail_impl(): immediately shutdown.
++static void
++_pier_shutdown_free(void* ptr_v)
++{
++  u3_pier* pir_u = ptr_v;
++  c3_free(pir_u->pax_c);
++  c3_free(pir_u);
++}
++
++/* _pier_bail_impl(): immediately stop admission and queue shutdown.
+ */
+ static void
+ _pier_bail_impl(u3_pier* pir_u)
+ {
++  u3_ssl_shutdown_request(u3_Host.xit_i);
+   pir_u->sat_e = u3_psat_done;
+ 
+   //  halt serf
+@@ -1223,8 +1232,7 @@
+   //
+   u3K.pir_u = 0;
+ 
+-  c3_free(pir_u->pax_c);
+-  c3_free(pir_u);
++  u3_ssl_shutdown_retire(pir_u, _pier_shutdown_free);
+ 
+   u3_king_done();
+ }
+@@ -1236,6 +1244,8 @@
+ {
+   u3_Host.xit_i = 1;
+   _pier_bail_impl(pir_u);
++  /* Preserve fatal callers: no loop reentry or backing release. */
++  exit(1);
+ }
+ 
+ /* u3_pier_exit(): graceful shutdown.
+--- a/pkg/vere/lord.c
++++ b/pkg/vere/lord.c
+@@ -46,7 +46,15 @@
+ --
+ */
+ 
+-/* _lord_stop_cb(): finally all done.
++static void
++_lord_stop_free(void* ptr_v)
++{
++  u3_lord* god_u = ptr_v;
++  u3s_cue_xeno_done(god_u->sil_u);
++  c3_free(god_u);
++}
++
++/* _lord_stop_cb(): process notification, owner retired until loop close.
+ */
+ static void
+ _lord_stop_cb(void*       ptr_v,
+@@ -58,8 +66,7 @@
+   void (*exit_f)(void*) = god_u->cb_u.exit_f;
+   void* exit_v = god_u->cb_u.ptr_v;
+ 
+-  u3s_cue_xeno_done(god_u->sil_u);
+-  c3_free(god_u);
++  u3_ssl_shutdown_retire(god_u, _lord_stop_free);
+ 
+   if ( exit_f ) {
+     exit_f(exit_v);
+@@ -123,6 +130,7 @@
+   u3_newt_mojo_stop(&god_u->inn_u, _lord_bail_noop);
+ 
+   uv_read_stop((uv_stream_t*)&(god_u->err_u));
++  uv_close((uv_handle_t*)&god_u->err_u, 0);
+ 
+   uv_close((uv_handle_t*)&god_u->cub_u, 0);
+ 
+@@ -1135,6 +1143,14 @@
+   void (*done_f)(void*, c3_o);
+ } _lord_boot;
+ 
++static void
++_lord_boot_free(void* ptr_v)
++{
++  _lord_boot* bot_u = ptr_v;
++  u3s_cue_xeno_done(bot_u->sil_u);
++  c3_free(bot_u);
++}
++
+ /* _lord_on_serf_boot_exit_cb(): finish handling subprocess exit.
+ */
+ static void
+@@ -1148,8 +1164,7 @@
+ 
+   ptr_v = bot_u->ptr_v;
+ 
+-  u3s_cue_xeno_done(bot_u->sil_u);
+-  c3_free(bot_u);
++  u3_ssl_shutdown_retire(bot_u, _lord_boot_free);
+ 
+   if ( done_f ) {
+     done_f(ptr_v, ret_o);
+--- a/pkg/vere/newt.c
++++ b/pkg/vere/newt.c
+@@ -246,13 +246,22 @@
+   }
+ }
+ 
+-/* _moat_stop_cb(): finalize stop/close input stream..
++typedef struct _newt_stop_pair {
++  u3_moat* moat;
++  unsigned remaining;
++} _newt_stop_pair;
++
++/* _moat_stop_cb(): finalize both embedded input handles.
+ */
+ static void
+ _moat_stop_cb(uv_handle_t* han_u)
+ {
+-  u3_moat* mot_u = han_u->data;
+-  mot_u->bal_f(mot_u->ptr_v, -1, "");
++  _newt_stop_pair* pair = han_u->data;
++  if ( !--pair->remaining ) {
++    u3_moat* mot_u = pair->moat;
++    c3_free(pair);
++    mot_u->bal_f(mot_u->ptr_v, -1, "");
++  }
+ }
+ 
+ /* u3_newt_moat_stop(); newt stop/close input stream.
+@@ -260,14 +269,18 @@
+ void
+ u3_newt_moat_stop(u3_moat* mot_u, u3_moor_bail bal_f)
+ {
+-  mot_u->pyp_u.data = mot_u;
++  _newt_stop_pair* pair = c3_malloc(sizeof(*pair));
++  pair->moat = mot_u;
++  pair->remaining = 2;
++  mot_u->pyp_u.data = pair;
++  mot_u->tim_u.data = pair;
+ 
+   if ( bal_f ) {
+     mot_u->bal_f = bal_f;
+   }
+ 
+   uv_close((uv_handle_t*)&mot_u->pyp_u, _moat_stop_cb);
+-  uv_close((uv_handle_t*)&mot_u->tim_u, 0);
++  uv_close((uv_handle_t*)&mot_u->tim_u, _moat_stop_cb);
+ 
+   //  dispose in-process message
+   //
+--- a/pkg/vere/io/ames.c
++++ b/pkg/vere/io/ames.c
+@@ -2405,6 +2405,13 @@
+   u3_ames*         sam_u = res_u->sam_u;
+   c3_y             imp_y = res_u->imp_y;
+ 
++  if ( u3_ssl_shutdown_pending() ) {
++    sam_u->zar_u.pen_s--;
++    uv_freeaddrinfo(aif_u);
++    c3_free(res_u);
++    return;
++  }
++
+   while ( rai_u && (AF_INET != rai_u->ai_family) ) {
+     rai_u = rai_u->ai_next;
+   }
+@@ -2699,9 +2706,9 @@
+ /* _ames_exit_cb(): dispose resources aftr close.
+ */
+ static void
+-_ames_exit_cb(uv_handle_t* had_u)
+-{
+-  u3_ames* sam_u = had_u->data;
++_ames_exit_free(void* ptr_v)
++{
++  u3_ames* sam_u = ptr_v;
+ 
+   u3_panc* pan_u = sam_u->pan_u;
+   while (0 != pan_u) {
+@@ -2718,6 +2725,12 @@
+   c3_free(sam_u);
+ }
+ 
++static void
++_ames_exit_cb(uv_handle_t* had_u)
++{
++  u3_ssl_shutdown_retire(had_u->data, _ames_exit_free);
++}
++
+ /* _ames_io_exit(): terminate ames I/O.
+ */
+ static void
+@@ -2725,6 +2738,7 @@
+ {
+   u3_ames* sam_u = (u3_ames*)car_u;
+   uv_close(&sam_u->had_u, _ames_exit_cb);
++  uv_close((uv_handle_t*)&sam_u->zar_u.tim_u, 0);
+   uv_close((uv_handle_t*)&sam_u->sun_u.tim_u, 0);
+   uv_close((uv_handle_t*)&sam_u->nat_u.tim_u, 0);
+ 
+--- a/pkg/vere/io/mesa.c
++++ b/pkg/vere/io/mesa.c
+@@ -1083,6 +1083,10 @@
+ static void
+ _mesa_packet_timeout(uv_timer_t* tim_u) {
+   u3_pend_req* req_u = (u3_pend_req*)tim_u->data;
++  if ( u3_ssl_shutdown_pending() ) {
++    uv_close((uv_handle_t*)&req_u->tim_u, _mesa_del_request_cb);
++    return;
++  }
+   _try_resend(req_u, req_u->nex_d);
+   _update_resend_timer(req_u);
+ }
+@@ -1346,6 +1350,10 @@
+ _mesa_resend_timer_cb(uv_timer_t* tim_u)
+ {
+   u3_mesa_resend_data* res_u = tim_u->data;
++  if ( u3_ssl_shutdown_pending() ) {
++    _mesa_free_resend_data(res_u);
++    return;
++  }
+   u3_mesa_request_data* dat_u = &res_u->dat_u;
+   res_u->ret_y--;
+ 
+@@ -1562,9 +1570,15 @@
+ }
+ 
+ static void
++_mesa_exit_free(void* ptr_v)
++{
++  u3_mesa* sam_u = ptr_v;
++  arena_free(&sam_u->par_u);
++}
++
++static void
+ _mesa_exit_cb(uv_handle_t* han_u) {
+-  u3_mesa* sam_u = (u3_mesa*)han_u->data;
+-  arena_free(&sam_u->par_u);
++  u3_ssl_shutdown_retire(han_u->data, _mesa_exit_free);
+ }
+ 
+ static void
+@@ -1574,6 +1588,18 @@
+   uv_timer_stop(&sam_u->tim_u);
+   sam_u->tim_u.data = sam_u;
+   uv_udp_recv_stop(&u3_Host.wax_u);
++  /* Close initialized request timers, including inactive ones. CTAG_WAIT's
++   * independent resend timer reaches its normal close in the pending guard. */
++  for ( req_map_itr itr_u = vt_first(&sam_u->req_u);
++        !vt_is_end(itr_u); itr_u = vt_next(itr_u) ) {
++    u3_pend_req* req_u = itr_u.data->val;
++    if ( req_u && ((u3_pend_req*)CTAG_WAIT != req_u)
++         && !uv_is_closing((uv_handle_t*)&req_u->tim_u) ) {
++      uv_timer_stop(&req_u->tim_u);
++      req_u->tim_u.data = req_u;
++      uv_close((uv_handle_t*)&req_u->tim_u, _mesa_del_request_cb);
++    }
++  }
+   uv_close((uv_handle_t*)&sam_u->tim_u, _mesa_exit_cb);
+   uv_close((uv_handle_t*)&u3_Host.wax_u, 0);
+ }
+--- a/pkg/vere/openssl_shutdown.inc
++++ b/pkg/vere/openssl_shutdown.inc
+@@ -0,0 +1,225 @@
++/* Included by main.c after _cert_store; globals are process-local and the
++ * daemon fork precedes OpenSSL/arena startup. Worker processes enter via exec.
++ * All these functions run on the owning event-loop thread. */
++#include "completion.h"
++
++static u3_ssl_completion _ssl_completion;
++static int _ssl_loop_closed, _ssl_loom, _ssl_curl_ready, _ssl_worker_io;
++static u3_mojo* _ssl_output;
++static uv_shutdown_t _ssl_output_shutdown;
++
++typedef struct _ssl_retired {
++  void* value;
++  void (*dispose)(void*);
++  struct _ssl_retired* next;
++} _ssl_retired;
++static _ssl_retired* _ssl_retired_head;
++
++static uintptr_t
++_ssl_owner(void)
++{
++  return (uintptr_t)uv_os_getpid();
++}
++
++void
++u3_ssl_shutdown_hold(void)
++{
++  if ( !u3_ssl_completion_hold(&_ssl_completion, _ssl_owner()) ) abort();
++}
++
++void
++u3_ssl_shutdown_release(void)
++{
++  if ( !u3_ssl_completion_release(&_ssl_completion, _ssl_owner()) ) abort();
++}
++
++void
++u3_ssl_shutdown_retire(void* value, void (*dispose)(void*))
++{
++  _ssl_retired* item;
++  if ( _ssl_completion.phase > 1 ) abort();
++  item = malloc(sizeof(*item));
++  if ( !item ) abort();
++  item->value = value;
++  item->dispose = dispose;
++  item->next = _ssl_retired_head;
++  _ssl_retired_head = item;
++}
++
++void
++u3_ssl_shutdown_loom(void)
++{
++  _ssl_loom = 1;
++}
++
++void
++u3_ssl_shutdown_request(int status)
++{
++  if ( !u3_ssl_completion_request(&_ssl_completion, _ssl_owner(), status) ) {
++    abort();
++  }
++}
++
++int
++u3_ssl_shutdown_pending(void)
++{
++  return _ssl_completion.phase != 0;
++}
++
++void
++u3_ssl_shutdown_worker(void)
++{
++  if ( u3_ssl_shutdown_pending() ) return;
++  u3_ssl_shutdown_loom();
++  u3_ssl_shutdown_request(0);
++  /* Stop admission, but do not dispose the currently-dispatched newt message.
++   * _newt_meat_poke still owns it until this callback unwinds. */
++  uv_read_stop((uv_stream_t*)&inn_u.pyp_u);
++  uv_timer_stop(&inn_u.tim_u);
++  uv_stop(u3_Host.lup_u);
++}
++
++static void
++_ssl_io_closed(void* value, ssize_t status, const c3_c* message)
++{
++  (void)value; (void)status; (void)message;
++}
++
++static void
++_ssl_output_done(uv_shutdown_t* req, int status)
++{
++  (void)req;
++  if ( status ) _ssl_completion.status = 1;
++  u3_mojo* output = _ssl_output;
++  _ssl_output = 0;
++  if ( output ) u3_newt_mojo_stop(output, _ssl_io_closed);
++}
++
++static void
++_ssl_ref_handle(uv_handle_t* handle, void* ignored)
++{
++  (void)ignored;
++  if ( !uv_is_closing(handle) ) uv_ref(handle);
++}
++
++void
++u3_ssl_shutdown_run(uv_loop_t* loop)
++{
++  int status;
++  if ( _ssl_loop_closed ) return;
++  if ( !u3_ssl_shutdown_pending() ) uv_run(loop, UV_RUN_DEFAULT);
++  if ( !u3_ssl_shutdown_pending() ) return;
++
++  /* The application callback has returned; newt's active message is no longer
++   * borrowed. Keep worker/eval stack storage live through all completions. */
++  if ( 1 == _ssl_worker_io ) {
++    _ssl_worker_io = 2;
++    u3_newt_moat_stop(&inn_u, _ssl_io_closed);
++    _ssl_output = &out_u;
++  }
++  if ( _ssl_output ) {
++    u3_mojo* output = _ssl_output;
++    if ( !uv_is_closing((uv_handle_t*)&output->pyp_u) ) {
++      /* uv_shutdown completes only after pending writes. Do not cancel gifts. */
++      status = uv_shutdown(&_ssl_output_shutdown,
++                           (uv_stream_t*)&output->pyp_u, _ssl_output_done);
++      if ( status ) {
++        _ssl_completion.status = 1;
++        u3_newt_mojo_stop(output, _ssl_io_closed);
++        _ssl_output = 0;
++      }
++    }
++  }
++
++  while ( (status = uv_loop_close(loop)) == UV_EBUSY ) {
++    /* Unref is not destruction. Preserve every driver's normal close callback,
++     * and drive its pending work from here, never recursively from a callback. */
++    uv_walk(loop, _ssl_ref_handle, 0);
++    if ( !uv_loop_alive(loop) ) return; /* inactive orphan: no false certificate */
++    uv_run(loop, UV_RUN_DEFAULT);
++  }
++  if ( !status ) {
++    _ssl_loop_closed = 1;
++    _ssl_output = 0;
++  }
++}
++
++/* The H2O overlay exposes this destructor for its process-wide BIO_METHOD.
++ * It is called only after all H2O socket close callbacks and TLS frees. */
++extern void u3_h2o_openssl_shutdown(void);
++
++static void
++_ssl_consumers_cleanup(void* ignored)
++{
++  (void)ignored;
++  while ( _ssl_retired_head ) {
++    _ssl_retired* item = _ssl_retired_head;
++    _ssl_retired_head = item->next;
++    item->dispose(item->value);
++    free(item);
++  }
++  if ( _ssl_curl_ready ) {
++    _ssl_curl_ready = 0;
++    curl_global_cleanup();
++  }
++  u3_h2o_openssl_shutdown();
++  if ( _cert_store ) {
++    sk_X509_INFO_pop_free(_cert_store, X509_INFO_free);
++    _cert_store = 0;
++  }
++  u3K.ssl_curl_f = 0;
++  u3K.ssl_x509_f = 0;
++}
++
++static void
++_ssl_openssl_cleanup(void* ignored)
++{
++  (void)ignored;
++  OPENSSL_cleanup();
++}
++
++static size_t
++_ssl_live_blocks(void* ignored)
++{
++  (void)ignored;
++#ifndef U3_URTH_MASS
++  if ( _ssl_loom ) return u3_openssl_arena_live_blocks();
++#endif
++  return 0;
++}
++
++static int
++_ssl_arena_destroy(void* ignored)
++{
++  (void)ignored;
++#ifndef U3_URTH_MASS
++  if ( _ssl_loom ) return u3_openssl_arena_destroy();
++#endif
++  return 1;
++}
++
++static void
++_ssl_backing_stop(void* ignored)
++{
++  (void)ignored;
++  if ( _ssl_loom ) {
++    _ssl_loom = 0;
++    u3m_stop();
++  }
++}
++
++int
++u3_ssl_shutdown_finish(void)
++{
++  const u3_ssl_completion_ops ops = {
++    _ssl_consumers_cleanup, _ssl_openssl_cleanup, _ssl_live_blocks,
++    _ssl_arena_destroy, _ssl_backing_stop, 0
++  };
++  if ( 1 != u3_ssl_completion_finish(&_ssl_completion, _ssl_owner(),
++                                    _ssl_loop_closed, &ops) ) {
++    /* Do not destroy storage underneath an uncompleted user or leaked block.
++     * Caller retains its existing process-fatal failure disposition. */
++    return 1;
++  }
++  return _ssl_completion.status;
++}
+--- a/pkg/vere/openssl_shutdown.h
++++ b/pkg/vere/openssl_shutdown.h
+@@ -0,0 +1,14 @@
++/* Included at the end of vere.h, after uv_loop_t is declared. */
++#ifndef U3_OPENSSL_SHUTDOWN_H
++#define U3_OPENSSL_SHUTDOWN_H
++void u3_ssl_shutdown_hold(void);
++void u3_ssl_shutdown_release(void);
++void u3_ssl_shutdown_retire(void* value, void (*dispose)(void*));
++void u3_ssl_shutdown_loom(void);
++void u3_ssl_shutdown_request(int status);
++int u3_ssl_shutdown_pending(void);
++void u3_ssl_shutdown_worker(void);
++/* This runner is a top-level entry only; never call from a loop callback. */
++void u3_ssl_shutdown_run(uv_loop_t* loop);
++int u3_ssl_shutdown_finish(void);
++#endif
+--- a/pkg/vere/completion.h
++++ b/pkg/vere/completion.h
+@@ -0,0 +1,79 @@
++/* Owning-loop-thread lifecycle. No locks, event dispatch or allocator policy.
++ * owner is the process identity supplied by the embedding translation unit.
++ * finish is invoked ONLY after the outer event runner has returned and its
++ * loop-close completion certificate was obtained, never inside a callback. */
++#ifndef U3_SSL_COMPLETION_H
++#define U3_SSL_COMPLETION_H
++#include <stddef.h>
++#include <stdint.h>
++
++typedef struct {
++  unsigned phase; /* 0 admitting, 1 requested, 2 finalizing, 3 done, 4 failed */
++  size_t users;
++  uintptr_t owner;
++  int status;
++} u3_ssl_completion;
++
++typedef struct {
++  void (*consumers)(void *);
++  void (*openssl)(void *);
++  size_t (*live_blocks)(void *);
++  int (*destroy)(void *);
++  void (*backing)(void *);
++  void *context;
++} u3_ssl_completion_ops;
++
++static inline int
++u3_ssl_completion_owner(u3_ssl_completion *s, uintptr_t owner)
++{
++  if (!owner) return 0;
++  if (!s->owner) s->owner=owner;
++  return s->owner==owner;
++}
++
++static inline int
++u3_ssl_completion_hold(u3_ssl_completion *s, uintptr_t owner)
++{
++  if (!u3_ssl_completion_owner(s,owner) || s->phase || s->users==SIZE_MAX) return 0;
++  ++s->users;
++  return 1;
++}
++
++static inline int
++u3_ssl_completion_release(u3_ssl_completion *s, uintptr_t owner)
++{
++  if (!u3_ssl_completion_owner(s,owner) || !s->users || s->phase>1) return 0;
++  --s->users;
++  return 1;
++}
++
++static inline int
++u3_ssl_completion_request(u3_ssl_completion *s, uintptr_t owner, int status)
++{
++  if (!u3_ssl_completion_owner(s,owner) || s->phase>1) return 0;
++  if (status && !s->status) s->status=status;
++  s->phase=1;
++  return 1;
++}
++
++/* 0 waiting, 1 complete, -1 invariant/refused backing release. */
++static inline int
++u3_ssl_completion_finish(u3_ssl_completion *s, uintptr_t owner,
++                         int loop_closed, const u3_ssl_completion_ops *ops)
++{
++  if (!u3_ssl_completion_owner(s,owner)) return -1;
++  if (s->phase==3) return 1;
++  if (s->phase==4) return -1;
++  if (s->phase!=1 || !loop_closed || s->users) return 0;
++  s->phase=2; /* latch before any external callback */
++  ops->consumers(ops->context);
++  ops->openssl(ops->context);
++  if (ops->live_blocks(ops->context) || !ops->destroy(ops->context)) {
++    s->phase=4;
++    return -1;
++  }
++  ops->backing(ops->context);
++  s->phase=3;
++  return 1;
++}
++#endif
+--- a/h2o-socket.c
++++ b/h2o-socket.c
+@@ -212,10 +212,20 @@
+     }
+ }
+ 
++static BIO_METHOD *bio_methods = NULL;
++static pthread_mutex_t init_lock = PTHREAD_MUTEX_INITIALIZER;
++
++/* The embedding process invokes this only after every TLS socket is gone. */
++void u3_h2o_openssl_shutdown(void)
++{
++    pthread_mutex_lock(&init_lock);
++    BIO_meth_free(bio_methods);
++    bio_methods = NULL;
++    pthread_mutex_unlock(&init_lock);
++}
++
+ static void setup_bio(h2o_socket_t *sock)
+ {
+-    static BIO_METHOD *bio_methods = NULL;
+-    static pthread_mutex_t init_lock = PTHREAD_MUTEX_INITIALIZER;
+     BIO_METHOD *methods;
+ 
+     /* Every reader acquires the publication lock, including warm callers. */

@@ -1,0 +1,50 @@
+{
+  "archive_sha256": "8ed4fc8a6b4c1acba3e4e89860a4059e490feb3efaf2a818805770f24f65654f",
+  "root": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/",
+  "public_members": {
+    "pkg/noun/palloc.c": {
+      "bytes": 64838,
+      "sha256": "7e6ac278d3082052d049f21b2a4b23ebb9c749ecfeaa4a33c9d7680dfac00d57"
+    },
+    "pkg/noun/allocate.h": {
+      "bytes": 25235,
+      "sha256": "9ab32069f45512eb754a3a26f22472b09230bf0dcedd87f88654ac860300794a"
+    },
+    "pkg/noun/allocate.c": {
+      "bytes": 42036,
+      "sha256": "be6089c91a3d566c2dd8f0b3dd102d0861fef49268b79a5bbe4e3aa2993f7336"
+    }
+  },
+  "status": "ISOLATED_COMPILED_HOST_IMPLEMENTATION_NOT_PRODUCTION_SELECTED",
+  "archive": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz",
+  "engine": "palloc_engine.inc text-included by openssl_owned_arena.c; actual pinned allocation/free/realloc bodies adapted by overlay.py",
+  "adaptations": [
+    "arena-local BASE/HEAP, word/post translation and cursor; no global road access",
+    "fixed directory, permanent page-zero anchor and bounded descriptor pool inside explicit total mmap byte bound",
+    "checked _extend_heap returns zero before mutation on exhaustion; road bail and dynamic directory extension omitted",
+    "NULL propagation through allocation/realloc and staged chunk-page rollback on metadata failure",
+    "free-list descriptors come from bounded pool recognized by _ifree",
+    "home-style free chunk ordering independent of road identity",
+    "POSIX mutex, aligned user-block header, explicit mmap/munmap process ownership",
+    "mutex-coherent page charge and transient peak at engine page transitions, including fixed prefix and anchor; public failure counter; snapshot API without logging"
+  ],
+  "function_preimages": {
+    "_init_once": "91a8b7f0fe382720d208256c6828c4292e714c21f1d3a79478d28466a54d145d",
+    "_abs_dif": "7eea37b184f129c62b920f5db0e2b9fe6e6c51f7796a1ac9cbd94153a3f075da",
+    "_alloc_pages": "bdca5f235dbe162b3769e9ee7eb12a29be1ad6f328a19993ab7bae77c3895849",
+    "_make_chunks": "90afd2b717c0a900a901d6b853422202d98a0a06f7e63a4ac71cff01884613e2",
+    "_alloc_words": "e182634c38cc34f60bc178f0c720260d1386c4bf9edb00d0f330bd2639848844",
+    "_imalloc": "175770d16de061f7bf251de137603555bf6e6c3042b710fad4a15ea557a5abe8",
+    "_pages_size": "e96ab914e7ad539e89a80327275f3a8a825b2a99b246dee73a79d923e51bee84",
+    "_free_pages": "9ddf344f36591956b988cec4b892d535faf6d8eaf515a3ad15eb7a2e87873969",
+    "_free_words": "e4d02addd4d7c63c72f84c211e9479e6b5b00c904d535cd8f8850ffc34a6ddfe",
+    "_ifree": "3fd0f9159b4d4638a5a7c6707d517ca651328c48327ad45b206ed34ccd4954e7",
+    "_irealloc": "382bf2f51d0b2cd319dbc668850ef1645da0fa09b240a87366360d1c4c88868d"
+  },
+  "delivery_sha256": {
+    "openssl_owned_arena.c": "bbd2e8857e4d8121c3e5ef0905d889d405686dbbb6403fd094fdbd8d802879b8",
+    "openssl_owned_arena.h": "69b5d4f30118847276e839ba5e01908985e8482ec11bd98671750a6cc2712cee",
+    "overlay.py": "249d6ebfcdb35e29103966f2ec0feb472af18b04d468c09d266594bfdd52e62d",
+    "palloc_engine.inc": "6feb49a707ce12c7a46b86d6c875b15b7e62c79680ca5fabcdd305e318f03d93"
+  }
+}

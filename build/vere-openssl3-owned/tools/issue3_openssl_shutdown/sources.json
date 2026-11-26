@@ -1,0 +1,108 @@
+{
+  "archive_sha256": "8ed4fc8a6b4c1acba3e4e89860a4059e490feb3efaf2a818805770f24f65654f",
+  "public_members": {
+    "pkg/vere/main.c": {
+      "bytes": 85598,
+      "sha256": "206929fef62b6f7246b7313675b6120ab876bc7ae8c4399342e1f0eceaf48549"
+    },
+    "pkg/vere/king.c": {
+      "bytes": 38214,
+      "sha256": "24da653bcc3a6cf516d49dc81e7f4b085f35ef6b7b2b8663b53160b88c3b76cd"
+    },
+    "pkg/vere/mars.c": {
+      "bytes": 45877,
+      "sha256": "5f374efc76efacdeac2657b7a29faca7b2945fdc3af78e4f4224dbbbbdacfc85"
+    },
+    "pkg/vere/pier.c": {
+      "bytes": 33331,
+      "sha256": "e47f21d8dd97636c73ec093ab7ff4a23f3745b3b1d5880c87123fba822a8d78b"
+    },
+    "pkg/vere/disk.c": {
+      "bytes": 52515,
+      "sha256": "0974f4b013383845835e3d4a8f16b9b067364cf1a52a12f779528d8974115424"
+    },
+    "pkg/vere/auto.c": {
+      "bytes": 9575,
+      "sha256": "0c1bf070e6e15b61ee6dd58e1a665d617b5b40ecf46843bf34c724023cfa546c"
+    },
+    "pkg/vere/vere.h": {
+      "bytes": 48422,
+      "sha256": "20b6fe3b20f7100ec22ac47e1ecac20df4dc8a66475573cc0290e126e90f5c06"
+    },
+    "pkg/vere/io/cttp.c": {
+      "bytes": 27203,
+      "sha256": "257caa336c71e963be0b029796ef62c9e154806927d95a1f221b7dc5341e34b4"
+    },
+    "pkg/vere/io/http.c": {
+      "bytes": 81266,
+      "sha256": "7f80902b1ce7ec0adf717d6dd5b58a5b4f4a6b0d9d6bb16719271e7ed3a721cf"
+    },
+    "pkg/noun/manage.c": {
+      "bytes": 62664,
+      "sha256": "2b06d6a006595ea7440690b325e8c994505a6040a97087e877a19c5e0c46d321"
+    },
+    "pkg/noun/manage.h": {
+      "bytes": 8249,
+      "sha256": "bc791e426360079df69c14e34516eb510b3522745f54ebde451547d57b87bd8a"
+    },
+    "pkg/vere/newt.c": {
+      "bytes": 9147,
+      "sha256": "f18f203e823ad64433e2fb57a5959189c6cdec624a2a1d448738ee8354e0a833"
+    },
+    "pkg/vere/lord.c": {
+      "bytes": 30238,
+      "sha256": "18c5406ec31c1f214e8da5a3b0bfee47243a1d198e0d3a9dde78cee9a37aea3f"
+    },
+    "pkg/vere/platform/linux/daemon.c": {
+      "bytes": 2585,
+      "sha256": "77b59f61cc738fc77953dccafbc7b0c24a2c9e1b92501f1b4885c14ad3f72619"
+    },
+    "pkg/vere/platform/darwin/daemon.c": {
+      "bytes": 2585,
+      "sha256": "77b59f61cc738fc77953dccafbc7b0c24a2c9e1b92501f1b4885c14ad3f72619"
+    },
+    "pkg/vere/io/ames.c": {
+      "bytes": 75346,
+      "sha256": "78ecf4ca5e05beed59ffdec99e533f078df6d98d4de7b7643c5f228ba0df6a71"
+    },
+    "pkg/vere/io/mesa.c": {
+      "bytes": 72161,
+      "sha256": "b5e8315f26c14e6d6f8db85a2dbd04e73336028600657e914cfb4bf92cdee04f"
+    }
+  },
+  "hardened_preimages": {
+    "pkg/vere/main.c": "011926db2069a1bb2135ad6c5f0e5f12e98760e515eef6ed7cde5d21469fa1a7",
+    "pkg/vere/king.c": "6de736fbbf1a751bed4c53b1be7cbec8d409722c978ac70e95d311d95aee606d",
+    "pkg/vere/vere.h": "8a3c84f5f61721ca702d8948d0467850c3a288510ba47b53d3d3c9a894613d33",
+    "pkg/vere/io/cttp.c": "1670a8227f0b971eee5db4f06a0face9195d03d80af508eebdd295f42be105e2",
+    "pkg/vere/io/http.c": "b4ddbb4fbbd4954b4cca10ea6e93ec3dc06657a6f46247ccdbc182b66f2cb307",
+    "pkg/vere/mars.c": "5f374efc76efacdeac2657b7a29faca7b2945fdc3af78e4f4224dbbbbdacfc85",
+    "pkg/vere/pier.c": "e47f21d8dd97636c73ec093ab7ff4a23f3745b3b1d5880c87123fba822a8d78b",
+    "pkg/vere/lord.c": "18c5406ec31c1f214e8da5a3b0bfee47243a1d198e0d3a9dde78cee9a37aea3f",
+    "pkg/vere/newt.c": "f18f203e823ad64433e2fb57a5959189c6cdec624a2a1d448738ee8354e0a833",
+    "pkg/vere/io/ames.c": "78ecf4ca5e05beed59ffdec99e533f078df6d98d4de7b7643c5f228ba0df6a71",
+    "pkg/vere/io/mesa.c": "b5e8315f26c14e6d6f8db85a2dbd04e73336028600657e914cfb4bf92cdee04f"
+  },
+  "changed_source_sha256": {
+    "pkg/vere/main.c": "53ce2074b0b20a758c7e1e2cbc227bd1910fc2df902102eb309d0617669c9c2f",
+    "pkg/vere/king.c": "5c78d1a9b1f0424be54efaa89b61b3fc1f6b9965500c8ec67c5b6a962c079950",
+    "pkg/vere/vere.h": "b2139a610047f8938e6d1c937d084f10633a5e77447bf6cfbc4d0d2d5e5ad9f2",
+    "pkg/vere/io/cttp.c": "82603f8163a97903e45d57e92c321408d2dfb15146cc8fd402f7db913767b170",
+    "pkg/vere/io/http.c": "128452df5883be12bf436ab6a7b7e955b72ed874bf835c216c5f2a51a631ab63",
+    "pkg/vere/mars.c": "2730196f9a0e23720ca8772120982dca4e8f6c059ed498e25333b96be525c08c",
+    "pkg/vere/pier.c": "b65d55356a3a109038b5440e08bd019afac94491a1bd4d18d4f1b7f4b71fa835",
+    "pkg/vere/lord.c": "23cbd2b640761d4a339abc656c6f0b3f728443c55758b413e228ed5262996b0b",
+    "pkg/vere/newt.c": "528f812ac5cbeca144cdaa3c1adce52696a8691b7582816414e94e7f8bc2ad7c",
+    "pkg/vere/io/ames.c": "f63478ec32d5a8684d233451228f3f45a0b9f0e28f9ecaf3c770d0faefc7f0cc",
+    "pkg/vere/io/mesa.c": "4194600f3a0fb0f9b4d12698f03e56d2458437fec683c61ee796aa9f0eb5dcae"
+  },
+  "h2o": {
+    "preimage": "d61916d7de924e2337b6a73dbcd044b525bf503b11affc53fd6f6c0ca90c37b2",
+    "postimage": "8da204c89abe0b2570524a483919400ecbf07569e1f1e6e304e4e53626ef53db"
+  },
+  "payload_sha256": {
+    "pkg/vere/openssl_shutdown.inc": "317281c80cda1ecff119a71e15a0bd3d609e401298d4289d33a791b6862f9753",
+    "pkg/vere/openssl_shutdown.h": "1ed2766b928187b41ef6c5469af148a3b42a1e1c10d8040d0ad96882b035d0f5",
+    "pkg/vere/completion.h": "132cfb7709d2b3009d3131b3b6f0a32228aadf5fde444429857a8f143f6748e2"
+  }
+}

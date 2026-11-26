@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "archive": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz",
+  "archive_sha256": "8ed4fc8a6b4c1acba3e4e89860a4059e490feb3efaf2a818805770f24f65654f",
+  "members": {
+    "build.zig.zon": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/build.zig.zon",
+      "bytes": 1819,
+      "sha256": "e471f021d34da0915edf5bfd2de6b0707845bd614aba515efbcdb8e16821b68c"
+    },
+    "ext/libuv/build.zig.zon": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/libuv/build.zig.zon",
+      "bytes": 335,
+      "sha256": "bc42d7aea7bf6593932348dbd1cfcb0b51a6bbea62f941f6e70955d6ea98bbb4"
+    },
+    "ext/lmdb/build.zig": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/lmdb/build.zig",
+      "bytes": 1114,
+      "sha256": "a7bbdf70a79437cca07efe5ab2a1aa1df1c586eeb8bd57c66aaef9e5d34340b6"
+    },
+    "ext/lmdb/build.zig.zon": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/lmdb/build.zig.zon",
+      "bytes": 361,
+      "sha256": "5db2f751b131fb26ee40390166683eee43bb35b7f34ec51fbd22db9e7d6f06e6"
+    },
+    "p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/src/unix/process.c": {
+      "member": "p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/src/unix/process.c",
+      "bytes": 31044,
+      "sha256": "1f1a1cebd4b902bfef47d91ffda32729e8f85376ec8fbdaf1d88cf56fcaaffdf"
+    },
+    "p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/lmdb.h": {
+      "member": "p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/lmdb.h",
+      "bytes": 75906,
+      "sha256": "8f0cf0a6266bad26eb45ce658eaf025cfe10941c05a6a2a249c2699c594c89b0"
+    },
+    "p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/mdb.c": {
+      "member": "p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/mdb.c",
+      "bytes": 326878,
+      "sha256": "909367e7c4409f9c16546ff9ec4b32a5686acbb664f3a737ace1fe84519f52cf"
+    },
+    "pkg/noun/events.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/noun/events.c",
+      "bytes": 39618,
+      "sha256": "b800b97d5b10e5254321be45d15c5a8bf9e3db62c58bfcca3aeeb0482c24af4a"
+    },
+    "pkg/noun/manage.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/noun/manage.c",
+      "bytes": 62664,
+      "sha256": "2b06d6a006595ea7440690b325e8c994505a6040a97087e877a19c5e0c46d321"
+    },
+    "pkg/noun/palloc.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/noun/palloc.c",
+      "bytes": 64838,
+      "sha256": "7e6ac278d3082052d049f21b2a4b23ebb9c749ecfeaa4a33c9d7680dfac00d57"
+    },
+    "pkg/noun/platform/darwin/rsignal.h": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/noun/platform/darwin/rsignal.h",
+      "bytes": 458,
+      "sha256": "8d31630ed4f42d101ac4a609732f05cb736f051883ad3965e8d263bd164fdae0"
+    },
+    "pkg/noun/platform/linux/rsignal.h": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/noun/platform/linux/rsignal.h",
+      "bytes": 455,
+      "sha256": "7c47997aa580e3538ba21d6b5ab1aa1115c3fa36909dc6caaba6a32b264ac9d6"
+    },
+    "pkg/vere/auto.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/auto.c",
+      "bytes": 9575,
+      "sha256": "0c1bf070e6e15b61ee6dd58e1a665d617b5b40ecf46843bf34c724023cfa546c"
+    },
+    "pkg/vere/db/lmdb.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/db/lmdb.c",
+      "bytes": 15671,
+      "sha256": "06cdeae9e97d651137aaeb10e847183902079909b308c253446c74616672a098"
+    },
+    "pkg/vere/db/lmdb.h": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/db/lmdb.h",
+      "bytes": 2651,
+      "sha256": "d68cb1a55e78dff2404811978ae801c4993745fd3db646efb10961ae11ef0926"
+    },
+    "pkg/vere/disk.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/disk.c",
+      "bytes": 52515,
+      "sha256": "0974f4b013383845835e3d4a8f16b9b067364cf1a52a12f779528d8974115424"
+    },
+    "pkg/vere/king.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/king.c",
+      "bytes": 38214,
+      "sha256": "24da653bcc3a6cf516d49dc81e7f4b085f35ef6b7b2b8663b53160b88c3b76cd"
+    },
+    "pkg/vere/lord.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/lord.c",
+      "bytes": 30238,
+      "sha256": "18c5406ec31c1f214e8da5a3b0bfee47243a1d198e0d3a9dde78cee9a37aea3f"
+    },
+    "pkg/vere/main.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/main.c",
+      "bytes": 85598,
+      "sha256": "206929fef62b6f7246b7313675b6120ab876bc7ae8c4399342e1f0eceaf48549"
+    },
+    "pkg/vere/mars.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/mars.c",
+      "bytes": 45877,
+      "sha256": "5f374efc76efacdeac2657b7a29faca7b2945fdc3af78e4f4224dbbbbdacfc85"
+    },
+    "pkg/vere/mars.h": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/mars.h",
+      "bytes": 3241,
+      "sha256": "13ee43cee81e4dce6da8df9364249eb9f55816bce276df0c180f64b1f5ca786b"
+    },
+    "pkg/vere/newt.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/newt.c",
+      "bytes": 9147,
+      "sha256": "f18f203e823ad64433e2fb57a5959189c6cdec624a2a1d448738ee8354e0a833"
+    },
+    "pkg/vere/pier.c": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/pier.c",
+      "bytes": 33331,
+      "sha256": "e47f21d8dd97636c73ec093ab7ff4a23f3745b3b1d5880c87123fba822a8d78b"
+    },
+    "pkg/vere/vere.h": {
+      "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/vere/vere.h",
+      "bytes": 48422,
+      "sha256": "20b6fe3b20f7100ec22ac47e1ecac20df4dc8a66475573cc0290e126e90f5c06"
+    }
+  }
+}
