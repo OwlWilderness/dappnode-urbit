@@ -11,6 +11,9 @@ tools/**
 !tools/browser-importer/
 tools/browser-importer/**
 !tools/browser-importer/runtime.py
+!tools/browser-importer/maintenance.py
+!tools/browser-importer/maintenance_provider.py
+!tools/browser-importer/bounded_child.py
 !tools/browser-importer/managed_service.py
 !tools/browser-importer/importer.py
 !tools/browser-importer/archive.py

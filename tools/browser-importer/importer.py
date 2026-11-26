@@ -46,7 +46,7 @@ def remove_stage(parent_fd, name):
     os.fsync(parent_fd)
 
 
-def private_root(path):
+def private_root(path, *, create=True):
     """Walk from / with held descriptors; never follow a root/ancestor link."""
     fd = os.open('/', os.O_RDONLY | os.O_DIRECTORY)
     try:
@@ -57,6 +57,8 @@ def private_root(path):
             try:
                 child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=fd)
             except FileNotFoundError:
+                if not create:
+                    raise
                 os.mkdir(part, mode=0o700, dir_fd=fd)
                 child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=fd)
             os.close(fd)
@@ -76,7 +78,9 @@ class ImportError(Exception):
 
 class Importer:
     def __init__(self, pier, uploads, control, *, reserve_bytes=1024**3,
-                 max_upload_bytes=8 * 1024**3, max_expanded_bytes=64 * 1024**3):
+                 max_upload_bytes=8 * 1024**3, max_expanded_bytes=64 * 1024**3,
+                 create_roots=True):
+        self.create_roots = create_roots
         self.pier = Path(pier)
         self.uploads = Path(uploads)
         self.control = Path(control)
@@ -143,7 +147,7 @@ class Importer:
             raise ImportError('Storage is unsafe, busy or has an invalid journal.') from None
 
     def _open_root(self, path):
-        fd = private_root(path)
+        fd = private_root(path, create=self.create_roots)
         self.fds.append(fd)
         return fd
 
@@ -358,6 +362,7 @@ class Importer:
                 os.fsync(self.upload_fd)
                 self.job['state'] = 'READY_LOCKED'
                 self._persist()
+                self._on_ready()
                 return dict(self.job)
         except Exception:
             with self.mutex:
@@ -368,6 +373,9 @@ class Importer:
         finally:
             if stage_fd is not None:
                 os.close(stage_fd)
+
+    def _on_ready(self):
+        """Lifecycle subclass finalization, inside commit mutex before admission."""
 
     def status(self):
         with self.mutex:

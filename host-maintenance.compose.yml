@@ -1,0 +1,13 @@
+# Opt-in host-managed overlay, NOT a registration/start hook.
+# Only use after trusted host preparation of private UID10000 storage.
+# The host must create without start, enroll, and run through the provider.
+# Stock Dappmanager installation does not apply this overlay automatically.
+version: "3.5"
+services:
+  ship:
+    volumes:
+      - type: volume
+        source: ship_data
+        target: /urbit
+        volume:
+          nocopy: true

@@ -1,0 +1,474 @@
+diff --git a/packages/daemons/src/diskUsage/index.ts b/packages/daemons/src/diskUsage/index.ts
+index e518d94..9ae7799 100644
+--- a/packages/daemons/src/diskUsage/index.ts
++++ b/packages/daemons/src/diskUsage/index.ts
+@@ -1,4 +1,5 @@
+ import * as db from "@dappnode/db";
++import { dockerContainerStop } from "@dappnode/dockerapi";
+ import { shell, runAtMostEvery, prettyDnpName } from "@dappnode/utils";
+ import { params } from "@dappnode/params";
+ import { eventBus } from "@dappnode/eventbus";
+@@ -62,30 +63,31 @@ async function monitorDiskUsage(): Promise<void> {
+         // Log that the threshold has been triggered
+         logs.warn(`Disk usage threshold "${threshold.id}" has been triggered`);
+ 
+-        /**
+-         * Stop the DNPs using a docker filter.
+-         * Since calling docker stop without containers will throw an error,
+-         * a try catch will safe guard for that possibility
+-         * `docker stop $(docker ps --filter "name=DAppNodePackage" -q)`
+-         * - if there are containers
+-         *   names: 'DAppNodePackage-hello3\nDAppNodePackage-hello2\nDAppNodePackage-hello'
+-         * - if there are NOT containers
+-         *   names: ''
+-         */
+-        let names;
+-        const cmd = `docker stop $(docker ps ${threshold.filterCommand} --format "{{.Names}}")`;
++        // Keep Docker selection read-only. Every stop goes through the Docker API
++        // identity guard, including package labels and volume aliases. A refused
++        // protected scope must not prevent an ordinary package from stopping.
++        const stoppedContainerNames: string[] = [];
+         try {
+-          names = await shell(cmd);
+-        } catch (e) {
+-          if (e.message.includes("requires at least 1 argument")) {
+-            logs.warn(`No containers stopped by the "${cmd}" command`);
+-          } else {
+-            logs.error("Error stopping containers on disk usage daemon", e);
++          const selected = await shell(`docker ps ${threshold.filterCommand} --format "{{.ID}} {{.Names}}"`);
++          for (const line of selected.split(/\r?\n/g)) {
++            if (!line.trim()) continue;
++            const match = /^([^\s]+) (\S+)$/.exec(line.trim());
++            if (!match) {
++              logs.error("Invalid docker ps entry on disk usage daemon", Error("invalid container entry"));
++              continue;
++            }
++            const [, id, name] = match;
++            try {
++              await dockerContainerStop(id);
++              stoppedContainerNames.push(name);
++            } catch (e) {
++              logs.error(`Container ${name} was not stopped by disk usage daemon`, e);
++            }
+           }
++        } catch (e) {
++          logs.error("Error selecting containers on disk usage daemon", e);
+         }
+-
+-        // Format the names output to display the exact list of stopped containers
+-        const stoppedContainerNames = names && typeof names === "string" ? names.split(/\r?\n/g) : [];
++        // Notify only names whose guarded stop actually succeeded.
+         const stoppedDnpNames = stoppedContainerNames.map((name) =>
+           name.replace(/(DAppNodePackage-)|(DAppNodeCore-)/g, "")
+         );
+diff --git a/packages/dappmanager/src/calls/backupRestore.ts b/packages/dappmanager/src/calls/backupRestore.ts
+index bf914ed..9bf163d 100644
+--- a/packages/dappmanager/src/calls/backupRestore.ts
++++ b/packages/dappmanager/src/calls/backupRestore.ts
+@@ -3,7 +3,7 @@ import fs from "fs";
+ import * as db from "@dappnode/db";
+ import { params } from "@dappnode/params";
+ import { logs } from "@dappnode/logger";
+-import { listPackage } from "@dappnode/dockerapi";
++import { listPackage, dockerContainerInspect, assertUnmanaged, assertUnmanagedContainer } from "@dappnode/dockerapi";
+ import { packageRestart } from "./packageRestart.js";
+ import { shell } from "@dappnode/utils";
+ import { validateBackupArray } from "../utils/index.js";
+@@ -28,10 +28,17 @@ export async function backupRestore({
+   if (!backup) throw Error("Argument backup must be defined");
+   if (!backup.length) throw Error("No backup items specified");
+ 
++  assertUnmanaged(dnpName);
+   validateBackupArray(backup);
+ 
+-  // Get container name
++  // Resolve and inspect EVERY destination before extraction, staging or shell.
++  // Raw docker exec/cp below do not pass through the guarded copy helpers.
+   const dnp = await listPackage({ dnpName });
++  assertUnmanaged(dnp.dnpName);
++  for (const container of dnp.containers) {
++    assertUnmanaged(container.containerName);
++    await assertUnmanagedContainer({ inspect: () => dockerContainerInspect(container.containerName) });
++  }
+ 
+   // Intermediate step, the file is in local file system
+   const backupDir = path.join(tempTransferDir, `${dnp.dnpName}_backup`);
+diff --git a/packages/dockerApi/src/api/container.ts b/packages/dockerApi/src/api/container.ts
+index 2e409e0..4d2fbf0 100644
+--- a/packages/dockerApi/src/api/container.ts
++++ b/packages/dockerApi/src/api/container.ts
+@@ -1,4 +1,5 @@
+ import Docker from "dockerode";
++import { assertUnmanagedContainer } from "../uvmLifecycle.mjs";
+ import { docker } from "./docker.js";
+ 
+ /**
+@@ -10,6 +11,7 @@ export async function dockerContainerInspect(containerNameOrId: string): Promise
+ }
+ 
+ export async function dockerContainerStart(containerNameOrId: string): Promise<Docker.ContainerInspectInfo> {
++  await assertUnmanagedContainer(docker.getContainer(containerNameOrId));
+   return await docker.getContainer(containerNameOrId).start();
+ }
+ 
+@@ -17,10 +19,12 @@ export async function dockerContainerStop(
+   containerNameOrId: string,
+   options?: DockerStopOptions
+ ): Promise<Docker.ContainerInspectInfo> {
++  await assertUnmanagedContainer(docker.getContainer(containerNameOrId));
+   return await docker.getContainer(containerNameOrId).stop({ t: options?.timeout });
+ }
+ 
+ export async function dockerContainerKill(containerNameOrId: string): Promise<Docker.ContainerInspectInfo> {
++  await assertUnmanagedContainer(docker.getContainer(containerNameOrId));
+   return await docker.getContainer(containerNameOrId).kill();
+ }
+ 
+@@ -28,6 +32,7 @@ export async function dockerContainerRestart(
+   containerNameOrId: string,
+   options?: DockerStopOptions
+ ): Promise<Docker.ContainerInspectInfo> {
++  await assertUnmanagedContainer(docker.getContainer(containerNameOrId));
+   return await docker.getContainer(containerNameOrId).restart({ t: options?.timeout });
+ }
+ 
+@@ -35,6 +40,7 @@ export async function dockerContainerRemove(
+   containerNameOrId: string,
+   options?: DockerRemoveOptions
+ ): Promise<Docker.ContainerInspectInfo> {
++  await assertUnmanagedContainer(docker.getContainer(containerNameOrId));
+   return await docker.getContainer(containerNameOrId).remove({ force: true, v: options?.volumes });
+ }
+ 
+diff --git a/packages/dockerApi/src/api/copyFileTo.ts b/packages/dockerApi/src/api/copyFileTo.ts
+index 150843b..9c47bbe 100644
+--- a/packages/dockerApi/src/api/copyFileTo.ts
++++ b/packages/dockerApi/src/api/copyFileTo.ts
+@@ -1,4 +1,6 @@
+ import path from "path";
++import { assertUnmanagedContainer, uploadUvmCertificate } from "../uvmLifecycle.mjs";
++import { docker } from "./docker.js";
+ // Utils
+ import fs from "fs";
+ import dataUriToBuffer from "data-uri-to-buffer";
+@@ -35,6 +37,8 @@ export async function copyFileToDockerContainer({
+   filename: string;
+   toPath: string;
+ }): Promise<void> {
++  if (await uploadUvmCertificate(docker.getContainer(containerName), {toPath, filename, dataUri})) return;
++  await assertUnmanagedContainer(docker.getContainer(containerName));
+   // Validate arguments
+   if (!containerName) throw Error("Argument containerName must be defined");
+   if (!dataUri) throw Error("Argument dataUri must be defined");
+diff --git a/packages/dockerApi/src/api/putArchive.ts b/packages/dockerApi/src/api/putArchive.ts
+index 8489138..0b63b66 100644
+--- a/packages/dockerApi/src/api/putArchive.ts
++++ b/packages/dockerApi/src/api/putArchive.ts
+@@ -1,4 +1,5 @@
+ import { docker } from "./docker.js";
++import { assertUnmanagedContainer } from "../uvmLifecycle.mjs";
+ import tar from "tar-stream";
+ 
+ /**
+@@ -20,6 +21,7 @@ export async function dockerPutArchive(
+   options?: DockerPutArchiveOptions
+ ): Promise<void> {
+   const container = docker.getContainer(containerNameOrId);
++  await assertUnmanagedContainer(container);
+   await container.putArchive(file, {
+     path: rootTarPath,
+     noOverwriteDirNonDir: options?.noOverwriteDirNonDir
+diff --git a/packages/dockerApi/src/api/volume.ts b/packages/dockerApi/src/api/volume.ts
+index 694af30..0e1df04 100644
+--- a/packages/dockerApi/src/api/volume.ts
++++ b/packages/dockerApi/src/api/volume.ts
+@@ -1,4 +1,5 @@
+ import Docker from "dockerode";
++import { assertUnmanagedVolume } from "../uvmLifecycle.mjs";
+ import { docker } from "./docker.js";
+ 
+ export async function dockerVolumeInspect(volumeName: string): Promise<Docker.VolumeInspectInfo> {
+@@ -11,5 +12,6 @@ export async function dockerVolumeInspect(volumeName: string): Promise<Docker.Vo
+  */
+ export async function dockerVolumeRemove(volumeName: string): Promise<void> {
+   const volume = docker.getVolume(volumeName);
++  await assertUnmanagedVolume(volume);
+   await volume.remove({ force: true });
+ }
+diff --git a/packages/dockerApi/src/compose/cli.ts b/packages/dockerApi/src/compose/cli.ts
+index 2b719d5..8d372fc 100644
+--- a/packages/dockerApi/src/compose/cli.ts
++++ b/packages/dockerApi/src/compose/cli.ts
+@@ -1,4 +1,5 @@
+ import dargs from "dargs";
++import { assertUnmanagedCompose } from "../uvmLifecycle.mjs";
+ import { shell } from "@dappnode/utils";
+ 
+ type Kwargs = { [flag: string]: string | number | boolean | undefined };
+@@ -14,6 +15,7 @@ async function execDockerCompose(
+   kwargs?: Kwargs,
+   serviceNames?: string[]
+ ): Promise<string> {
++  if (subcommand !== "config") assertUnmanagedCompose(dcPath);
+   // Usage: subcommand [options] [--scale SERVICE=NUM...] [SERVICE...]
+   return shell([
+     "docker compose",
+diff --git a/packages/dockerApi/src/index.ts b/packages/dockerApi/src/index.ts
+index 9c1b854..7288331 100644
+--- a/packages/dockerApi/src/index.ts
++++ b/packages/dockerApi/src/index.ts
+@@ -1,3 +1,4 @@
++export * from "./uvmLifecycle.mjs";
+ export * from "./getDockerImageManifest.js";
+ export * from "./compose/index.js";
+ export * from "./dockerComposeUp.js";
+diff --git a/packages/dockerApi/src/removeNamedVolume.ts b/packages/dockerApi/src/removeNamedVolume.ts
+index ca0ac4f..a6b1d1f 100644
+--- a/packages/dockerApi/src/removeNamedVolume.ts
++++ b/packages/dockerApi/src/removeNamedVolume.ts
+@@ -1,5 +1,6 @@
+ import { dockerVolumeRemove, dockerVolumeInspect } from "./api/index.js";
+ import { shellHost } from "@dappnode/utils";
++import { assertUnmanaged } from "./uvmLifecycle.mjs";
+ import { params } from "@dappnode/params";
+ import { logs } from "@dappnode/logger";
+ 
+@@ -14,6 +15,7 @@ import { logs } from "@dappnode/logger";
+  *   "Scope": "local" }
+  */
+ export async function removeNamedVolume(volName: string): Promise<void> {
++  assertUnmanaged(volName);
+   const volInfo = await dockerVolumeInspect(volName);
+   if (volInfo.Options && volInfo.Options.device && volInfo.Driver === "local" && volInfo.Options.o === "bind") {
+     const devicePath = volInfo.Options.device;
+diff --git a/packages/installer/src/calls/packageInstall.ts b/packages/installer/src/calls/packageInstall.ts
+index f7e37aa..f0f14a2 100644
+--- a/packages/installer/src/calls/packageInstall.ts
++++ b/packages/installer/src/calls/packageInstall.ts
+@@ -1,5 +1,6 @@
+ import { getInstallerPackagesData } from "../installer/getInstallerPackageData.js";
+ import createVolumeDevicePaths from "../installer/createVolumeDevicePaths.js";
++import { assertManagerUpdateAllowed } from "@dappnode/dockerapi";
+ // Utils
+ import {
+   downloadAvatars,
+@@ -54,6 +55,7 @@ export async function packageInstall(
+     log(id, "Resolving dependencies...");
+     if (params.ALWAYS_DAPPGETBASIC) options.BYPASS_RESOLVER = true;
+     const { state, currentVersions, releases } = await dappnodeInstaller.getReleasesResolved(req, options);
++    assertManagerUpdateAllowed(...releases.map(release => release.dnpName));
+     logs.info("Resolved request", req, state);
+ 
+     // Throw any errors found in the release
+diff --git a/packages/installer/src/calls/packageRemove.ts b/packages/installer/src/calls/packageRemove.ts
+index 26aa025..f15ed19 100644
+--- a/packages/installer/src/calls/packageRemove.ts
++++ b/packages/installer/src/calls/packageRemove.ts
+@@ -1,4 +1,5 @@
+ import fs from "fs";
++import { assertUnmanaged } from "@dappnode/dockerapi";
+ import { eventBus } from "@dappnode/eventbus";
+ import { params } from "@dappnode/params";
+ import { getRepoDirPath, getDockerComposePath, getAvatarPath, shell } from "@dappnode/utils";
+@@ -26,6 +27,7 @@ export async function packageRemove({
+   dnpName: string;
+   deleteVolumes?: boolean;
+ }): Promise<void> {
++  assertUnmanaged(dnpName);
+   if (!dnpName) throw Error("kwarg dnpName must be defined");
+ 
+   const dnp = await listPackage({ dnpName });
+diff --git a/packages/installer/src/calls/packageSetEnvironment.ts b/packages/installer/src/calls/packageSetEnvironment.ts
+index 1317908..1ca09c4 100644
+--- a/packages/installer/src/calls/packageSetEnvironment.ts
++++ b/packages/installer/src/calls/packageSetEnvironment.ts
+@@ -1,4 +1,5 @@
+ import { eventBus } from "@dappnode/eventbus";
++import { assertUnmanaged } from "@dappnode/dockerapi";
+ import { ComposeFileEditor } from "@dappnode/dockercompose";
+ import { getContainersStatus, dockerComposeUpPackage, listPackage } from "@dappnode/dockerapi";
+ import { packageInstalledHasPid, getDockerComposePath } from "@dappnode/utils";
+@@ -16,6 +17,7 @@ export async function packageSetEnvironment({
+   dnpName: string;
+   environmentByService: { [serviceName: string]: PackageEnvs };
+ }): Promise<void> {
++  assertUnmanaged(dnpName);
+   if (!dnpName) throw Error("kwarg dnpName must be defined");
+   if (!environmentByService) throw Error("kwarg environment must be defined");
+ 
+diff --git a/packages/installer/src/installer/restartPatch.ts b/packages/installer/src/installer/restartPatch.ts
+index 291605a..f36a866 100644
+--- a/packages/installer/src/installer/restartPatch.ts
++++ b/packages/installer/src/installer/restartPatch.ts
+@@ -1,4 +1,5 @@
+ import fs from "fs";
++import { assertManagerUpdateAllowed } from "@dappnode/dockerapi";
+ import path from "path";
+ import { getBackupPath, getDockerComposePath, validatePath } from "@dappnode/utils";
+ import * as db from "@dappnode/db";
+@@ -45,6 +46,7 @@ export async function restartDappmanagerPatch({
+   restartLaunchCommand?: string;
+   packagesData?: InstallPackageData[];
+ }): Promise<void> {
++  assertManagerUpdateAllowed(dappmanagerName);
+   const composeRestartPath = getDockerComposePath(restartId, true);
+   if (!composeBackupPath) composeBackupPath = getBackupPath(composePath);
+ 
+diff --git a/packages/installer/src/installer/rollbackPackages.ts b/packages/installer/src/installer/rollbackPackages.ts
+index decb481..10a433b 100644
+--- a/packages/installer/src/installer/rollbackPackages.ts
++++ b/packages/installer/src/installer/rollbackPackages.ts
+@@ -1,4 +1,5 @@
+ import fs from "fs";
++import { UVM_PACKAGE } from "@dappnode/dockerapi";
+ import { params } from "@dappnode/params";
+ import { Log } from "@dappnode/logger";
+ import { InstallPackageDataPaths } from "@dappnode/types";
+@@ -14,6 +15,8 @@ import { restartDappmanagerPatch } from "./restartPatch.js";
+  * @param log
+  */
+ export async function rollbackPackages(packagesData: InstallPackageDataPaths[], log: Log): Promise<void> {
++  // An uncertain host transaction must never restore old descriptors or writers.
++  packagesData = packagesData.filter((pkg) => pkg.dnpName !== UVM_PACKAGE);
+   // Restore all backup composes. Do it first to make sure the next version compose is not
+   // used unintentionally if the installed package is restored
+   for (const pkg of packagesData)
+diff --git a/packages/installer/src/installer/runPackages.ts b/packages/installer/src/installer/runPackages.ts
+index d93f905..aea2a96 100644
+--- a/packages/installer/src/installer/runPackages.ts
++++ b/packages/installer/src/installer/runPackages.ts
+@@ -1,4 +1,5 @@
+ import path from "path";
++import { UVM_PACKAGE, activateUvm } from "@dappnode/dockerapi";
+ import { params } from "@dappnode/params";
+ import { restartDappmanagerPatch } from "./restartPatch.js";
+ import { Log } from "@dappnode/logger";
+@@ -17,6 +18,13 @@ const externalNetworkName = params.DOCKER_EXTERNAL_NETWORK_NAME;
+  */
+ export async function runPackages(packagesData: InstallPackageData[], log: Log): Promise<void> {
+   for (const pkg of packagesData) {
++    if (pkg.dnpName === UVM_PACKAGE) {
++      if (pkg.fileUploads && Object.keys(pkg.fileUploads).length)
++        throw Error("UVM_HOST_LIFECYCLE_REQUIRED: installer file uploads are not admitted");
++      await activateUvm(pkg.compose);
++      log(pkg.dnpName, "Host-admitted package ACTIVE; ship Start remains explicit");
++      continue;
++    }
+     // patch to prevent installer from crashing
+     if (pkg.dnpName == params.dappmanagerDnpName) {
+       log(pkg.dnpName, "Restarting Dappnode... ");
+diff --git a/packages/dockerApi/src/uvmLifecycle.mjs b/packages/dockerApi/src/uvmLifecycle.mjs
+new file mode 100644
+index 0000000..603ddaf
+--- /dev/null
++++ b/packages/dockerApi/src/uvmLifecycle.mjs
+@@ -0,0 +1,109 @@
++// Opt-in issue19 adapter. Deliberately fail-closed even if the host broker is absent.
++import fs from 'node:fs';
++import net from 'node:net';
++
++export const UVM_PACKAGE = 'uvm.public.dappnode.eth';
++const SOCKET = '/run/uvm-maintenance/dappmanager.sock';
++
++// This build has no stock self-replacement authorization, including dev/bypass.
++export function assertManagerUpdateAllowed(...identifiers) {
++  if (identifiers.some(value => String(value).toLowerCase().replace(/[^a-z0-9]/g, '')
++      .includes('dappmanagerdnpdappnodeeth')))
++    throw new Error('UVM_MANAGER_SELF_UPDATE_FROZEN: qualify a patched successor under host control');
++}
++
++export async function uploadUvmCertificate(container, {toPath, filename, dataUri}, request = requestUvm) {
++  const info = await container.inspect();
++  let protectedScope = false;
++  try {
++    assertUnmanaged(info.Name, info.Config?.Labels?.['dappnode.dnp.dnpName'],
++      ...(info.Mounts || []).map(mount => mount.Name || mount.Source));
++  } catch (error) {
++    if (!String(error.message).includes('UVM_HOST_LIFECYCLE_REQUIRED')) throw error;
++    protectedScope = true;
++  }
++  if (!protectedScope) return false;
++  const directory = '/urbit/control/owner-tls-public/';
++  const target = toPath === directory || toPath === directory.slice(0,-1)
++    ? directory + filename : toPath;
++  const leaf = ['root-ca.pem','server.pem'].find(name => target === directory + name);
++  const match = typeof dataUri === 'string' && dataUri.length <= 88000 &&
++    /^data:[a-zA-Z0-9.+/-]*;base64,([A-Za-z0-9+/]*={0,2})$/.exec(dataUri);
++  if (!leaf || !match || !/^[a-f0-9]{64}$/.test(info.Id || ''))
++    throw new Error('UVM_PUBLIC_CERTIFICATE_REQUIRED');
++  const raw = Buffer.from(match[1], 'base64');
++  if (!raw.length || raw.length > 65536 || raw.toString('base64') !== match[1])
++    throw new Error('UVM_PUBLIC_CERTIFICATE_REQUIRED');
++  await request({package: UVM_PACKAGE, operation:'certificate', container:info.Id,
++    filename:leaf, content:match[1]});
++  return true;
++}
++
++export function assertUnmanaged(...identifiers) {
++  assertManagerUpdateAllowed(...identifiers);
++  if (identifiers.some(value => String(value).toLowerCase().replace(/[^a-z0-9]/g, '')
++      .includes('uvmpublicdappnodeeth'))) {
++    throw new Error('UVM_HOST_LIFECYCLE_REQUIRED: preserve storage; no stock fallback or rollback');
++  }
++}
++
++export function assertUnmanagedCompose(composePath) {
++  assertUnmanaged(composePath, fs.readFileSync(composePath, 'utf8'));
++}
++
++export async function assertUnmanagedContainer(container) {
++  const info = await container.inspect();
++  assertUnmanaged(info.Name, info.Config?.Labels?.['dappnode.dnp.dnpName'],
++    ...(info.Mounts || []).map(mount => mount.Name || mount.Source));
++}
++
++export async function assertUnmanagedVolume(volume) {
++  const info = await volume.inspect();
++  assertUnmanaged(info.Name, ...Object.values(info.Labels || {}));
++}
++
++export function activateUvm(compose) {
++  return requestUvm({package: UVM_PACKAGE, operation: 'activate', compose});
++}
++
++export function recoverUvm(compose) {
++  return requestUvm({package: UVM_PACKAGE, operation: 'recover', compose});
++}
++
++// Transport injection is only a test seam. Production always uses the fixed
++// root-only host socket; callers cannot supply a path, command or authority.
++export function requestUvm(request, connect = () => net.createConnection(SOCKET)) {
++  return new Promise((resolve, reject) => {
++    const socket = connect();
++    let response = '';
++    const fail = () => {
++      socket.destroy();
++      reject(new Error('UVM_HOST_LIFECYCLE_UNCERTAIN: preserve state; no stock fallback or rollback'));
++    };
++    socket.setTimeout(610000, fail);
++    socket.on('error', fail);
++    socket.on('connect', () => socket.write(JSON.stringify(request) + '\n'));
++    socket.on('data', data => {
++      response += data.toString('utf8');
++      if (Buffer.byteLength(response) > 1024) return fail();
++      if (!response.endsWith('\n')) return;
++      try {
++        const result = JSON.parse(response);
++        const valid = request.operation === 'certificate'
++          ? result.state === 'CERTIFICATE_STORED' && result.container === request.container &&
++            result.filename === request.filename && Object.keys(result).length === 4
++          : request.operation === 'recover'
++          ? result.state === 'RECOVERED_STOPPED' && Object.keys(result).length === 2
++          : request.operation === 'activate' && result.state === 'ACTIVE' &&
++            typeof result.container === 'string' && /^[a-f0-9]{64}$/.test(result.container) &&
++            Object.keys(result).length === 3;
++        if (result.ok !== true || !valid) return fail();
++        socket.end();
++        resolve(result);
++      } catch { fail(); }
++    });
++    socket.on('end', () => {
++      if (!response.endsWith('\n')) fail();
++    });
++  });
++}

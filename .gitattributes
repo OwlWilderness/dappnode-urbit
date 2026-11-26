@@ -1,0 +1,2 @@
+# Unified-diff context lines use a leading space by format.
+tools/host-integration/*.patch -whitespace

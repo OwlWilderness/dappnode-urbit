@@ -249,6 +249,86 @@ success does not prove other DNS/router setups or Ames reachability.
 A package restart is not a ship resume command. The Compose restart policy can
 restart the supervisor, but does not authorize automatic Vere start.
 
+### Managed runtime lifecycle and stopped-only recovery (issue #19)
+
+This describes the integrated source behavior, **not an installed-target recovery
+procedure or a 0.1.5 diagnosis**. Host tests do not qualify this exact source
+freeze's Linux kernel behavior or actual Vere/package shutdown. An image upgrade
+alone cannot recover an existing uncertain or legacy pier. Historical disposable
+results for another source freeze do not qualify a new image.
+
+**New clean lifecycle:** the managed-service entrypoint prepares and verifies
+Linux `PR_SET_CHILD_SUBREAPER` before HTTP/import threads, after synchronous TLS
+helpers have finished. It requires no existing children, default SIGCHLD handling
+and one coordinator. A process-wide Python audit guard permits only the official
+adapter's single Popen launch; direct fork, other Popen, posix_spawn, shell/system
+launches and a second coordinator are refused. Archive extraction and request
+handling do not launch processes. This is a trusted-service-code ownership
+contract, not a sandbox against native ctypes calls or hostile administrators.
+New code must not add unrelated children or independent child reapers to this
+process. The separate package supervisor owns Nginx and TLS helper launches.
+
+Stop sends TERM to the owned king PID only, waits/reaps that direct child (120s
+grace, then bounded king KILL/wait), and reaps adopted descendants for up to 5s.
+The production adapter reports whole-scope settlement only on **ECHILD**, under
+the verified living subreaper and exclusive-spawn contract. Leader exit, PID
+absence, process-group scans, changed sessions and closed descriptors are not
+settlement proof. A living adopted descendant keeps FAULT/locks/intent and
+refuses Start. If the still-owned scope later truly settles, Stop can be retried;
+a clean lifecycle is not permanently blocked merely because one drain timed out.
+No broad reaping of unrelated service children is permitted: setup checks and
+the spawn guard are prerequisites to the ECHILD algorithm.
+
+Package shutdown first signals the importer **PID**, not its runtime group, so
+the importer can perform king-only graceful shutdown. Frontend groups are stopped
+separately. All children share a 150s graceful deadline; subsequent group KILL and
+bounded cleanup are escalation, **not** proof of safe runtime settlement. Close
+monotonically shuts admission before draining requests/import workers. A forced
+package/container termination may leave unresolved durable intent.
+
+**Pier-bound ownership:** new version-3 intent is paired in
+`control/runtime.json` and `pier/.runtime-owner.json`, with generation and the
+pier/control/ship inode identities. The pier record is fsynced first, then the
+control record, before spawn or acknowledging STOPPED. A crash between records
+leaves a refused mismatch. The locked **pier-root FD**, not merely the different
+ship FD, is inherited by Vere. Inheritance improves cooperating-writer exclusion
+but descendants may close it: persistent pier-bound intent independently blocks
+alternate control roots, including one lacking a runtime journal after manager
+loss. Missing/foreign/mismatched records do not grant Start. Unknown or unsafe
+records refuse startup; missing retained storage is not recreated by inspection.
+
+A clean new import initializes paired STOPPED ownership while holding continuous
+exclusion since an empty target, before admitting Start. Thus an imported but
+never-started pier can reopen cleanly. Following positive owned-scope settlement,
+paired STOPPED permits normal reopen and explicit Start, never automatic boot or
+live adoption. Import/upload RECOVERY_REQUIRED is independent and never cleared.
+
+**No automatic crash/reboot recovery:** boot IDs and inode numbers cannot prove
+same-host provenance, non-replay, or the absence of all writers. Changed boot ID
+never clears active/fault intent. State-only legacy journals, version-2 journals
+(including STOPPED), and pre-existing committed piers lacking pier-bound ownership
+remain RECOVERY_REQUIRED. An alternate empty control directory is not a migration
+procedure. Stable private local storage, cooperating writers, durable fsync and
+no simultaneous rollback/replay of both ownership records are required. Shared
+storage, live checkpoint restore, cross-host migration and hostile same-UID/root
+mutation are unsupported; this is not an anti-rollback ledger.
+
+**Outside-scope migration API:** the separately exported root-host
+[`maintenance_provider.py` companion](host-maintenance.md) can positively disable
+restart, stop/destroy an exact registered Docker scope and migrate intact import
+metadata to paired STOPPED while retaining original evidence. It supports the
+current local named-volume and `unless-stopped` descriptor, not only bind/no-restart
+fixtures. It requires virgin-inception host registration and one enforced canonical
+authority across every writer/update. The default Compose descriptor does not
+install or invoke that host integration: a create-before-first-start hook and
+serialized replacement must be supplied and qualified by the host orchestrator.
+Already-unregistered installed provenance remains unprovable; this API cannot
+retroactively enroll it. Preserve journals, pier data, enrollment, TLS and volume
+identity. Do not delete/rewrite journals, check a “proof” box, reimport, reset,
+reboot or deploy to bypass the gate. Engine-free tests and Linux-only skips are
+not final CLI/artifact/Dappnode qualification. See the companion contract for the
+runnable interface, supported interruption recovery, limitations and rollback gate.
+
 ## Troubleshooting
 
 | Symptom | Safe next action |

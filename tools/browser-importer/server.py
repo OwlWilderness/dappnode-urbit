@@ -16,6 +16,7 @@ from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
+from typing import Callable
 
 sys.path.insert(0, str(Path(__file__).parent))
 from importer import Importer, ImportError, private_root
@@ -56,6 +57,18 @@ class PrivateServer(ThreadingHTTPServer):
     def handle_error(self, request, client_address):
         # Do not print exception details, paths, request headers or payloads.
         sys.stderr.write('Import HTTP request failed.\n')
+
+
+def request_shutdown(server):
+    """Signal handler entry: latch admission before draining, never interrupt drain."""
+    if getattr(server, '_shutdown_requested', False):
+        return
+    server._shutdown_requested = True
+    engine = getattr(server, 'engine', None)
+    if engine is not None and hasattr(engine, 'begin_close'):
+        engine.begin_close()
+    # BaseServer.shutdown must run outside the serve_forever thread.
+    threading.Thread(target=server.shutdown, name='private-import-shutdown').start()
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -423,7 +436,7 @@ def load_credential(path):
     return json.loads(data)
 
 
-def main(*, engine_class=Importer):
+def main(*, engine_class: Callable[..., Importer] = Importer):
     managed = engine_class is not Importer
     parser = argparse.ArgumentParser(description=('Private importer with explicit official-runtime Start; no automatic boot.'
                                                   if managed else 'Private stopped-pier ZIP importer. Ship start is always unavailable.'))
@@ -490,15 +503,19 @@ def main(*, engine_class=Importer):
                                  origin=args.origin, tls_context=context)
 
             def stop(_signum, _frame):
-                raise KeyboardInterrupt
+                request_shutdown(server)
 
             signal.signal(signal.SIGTERM, stop)
+            signal.signal(signal.SIGINT, stop)
             sys.stderr.write('Private importer listening; no ship was automatically started.\n')
             try:
                 server.serve_forever()
             except KeyboardInterrupt:
                 pass
             finally:
+                begin_close = getattr(engine, 'begin_close', None)
+                if begin_close is not None:
+                    begin_close()
                 server.server_close()
     except (OSError, ValueError, TypeError, KeyError, ImportError):
         sys.stderr.write('Private importer refused startup or storage/lifecycle configuration; review locked state before recovery.\n')
