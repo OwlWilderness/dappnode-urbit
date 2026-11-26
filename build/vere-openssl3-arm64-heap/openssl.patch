@@ -1,0 +1,81 @@
+--- a/crypto/init.c
++++ b/crypto/init.c
+@@ -1,3 +1,4 @@
++#include "uvm_issue3_diag.h"
+ /*
+  * Copyright 2016-2026 The OpenSSL Project Authors. All Rights Reserved.
+  *
+@@ -373,6 +374,7 @@
+ 
+ void OPENSSL_cleanup(void)
+ {
++  uvm_i3_emit(UVM_I3_OPENSSL_CLEANUP_ENTER);
+     OPENSSL_INIT_STOP *currhandler, *lasthandler;
+ 
+     /*
+@@ -381,12 +383,16 @@
+      */
+ 
+     /* If we've not been inited then no need to deinit */
+-    if (!base_inited)
++    if (!base_inited) {
++        uvm_i3_emit(UVM_I3_OPENSSL_CLEANUP_SKIP);
+         return;
++    }
+ 
+     /* Might be explicitly called and also by atexit */
+-    if (stopped)
++    if (stopped) {
++        uvm_i3_emit(UVM_I3_OPENSSL_CLEANUP_SKIP);
+         return;
++    }
+     stopped = 1;
+ 
+     /*
+@@ -394,6 +400,7 @@
+      * the very last thread in some situations, so call it directly.
+      */
+     OPENSSL_thread_stop();
++    uvm_i3_emit(UVM_I3_OPENSSL_THREAD_STOP_RETURN);
+ 
+     currhandler = stop_handlers;
+     while (currhandler != NULL) {
+@@ -403,6 +410,7 @@
+         OPENSSL_free(lasthandler);
+     }
+     stop_handlers = NULL;
++    uvm_i3_emit(UVM_I3_OPENSSL_STOP_HANDLERS_RETURN);
+ 
+     CRYPTO_THREAD_lock_free(optsdone_lock);
+     optsdone_lock = NULL;
+@@ -459,6 +467,7 @@
+ 
+     OSSL_TRACE(INIT, "OPENSSL_cleanup: ossl_lib_ctx_default_deinit()\n");
+     ossl_lib_ctx_default_deinit();
++    uvm_i3_emit(UVM_I3_OPENSSL_DEFAULT_CTX_RETURN);
+ 
+     ossl_cleanup_thread();
+ 
+@@ -486,6 +495,7 @@
+     ossl_trace_cleanup();
+ 
+     base_inited = 0;
++    uvm_i3_emit(UVM_I3_OPENSSL_CLEANUP_RETURN);
+ }
+ 
+ /*
+--- a/crypto/cryptlib.c
++++ b/crypto/cryptlib.c
+@@ -1,3 +1,4 @@
++#include "uvm_issue3_diag.h"
+ /*
+  * Copyright 1998-2023 The OpenSSL Project Authors. All Rights Reserved.
+  * Copyright (c) 2002, Oracle and/or its affiliates. All rights reserved
+@@ -252,6 +253,7 @@
+ 
+ void OPENSSL_die(const char *message, const char *file, int line)
+ {
++  uvm_i3_emit(UVM_I3_OPENSSL_DIE);
+     OPENSSL_showfatal("%s:%d: OpenSSL internal error: %s\n",
+         file, line, message);
+ #if !defined(_WIN32) || defined(OPENSSL_SYS_UEFI)

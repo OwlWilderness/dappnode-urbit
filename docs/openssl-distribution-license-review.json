@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-28",
+  "status": "REVIEW_AND_DRAFT_PREPARATION_COMPLETE_DISTRIBUTION_NOT_CLEARED",
+  "legal_certification": false,
+  "owner_enacted_license_elections": false,
+  "production_license_changes": false,
+  "workspace_branch": "fix/3-maintained-openssl",
+  "head_at_review": "1e64ae302011990fe10af30a940c64a3b0a24024",
+  "release_goal": "DappStore PUBLIC tab discovery and normal installation; separately authorized release gates",
+  "accepted_artifact": {
+    "directory": "build_issue3_amd64_curl_build_02/artifact",
+    "architecture": "linux/amd64",
+    "urbit_sha256": "58d07af97926e04bc17184bc18f53e5fb11d84fed63bd9daf2fe4ceb04c86698",
+    "source_archive_sha256": "8ed4fc8a6b4c1acba3e4e89860a4059e490feb3efaf2a818805770f24f65654f",
+    "image": "sha256:333864be7b25a51c4daf25156ced45424c1dfbfd27273e1aa2b320d95a356f8b",
+    "recipe_sha256": "d41db22cdbe63d524b517fdf1039a3d9a8c464b430863a31a449b5903e5b6256",
+    "inputs_sha256": "01c83a954542c6b7470f6e91fc6cf24069582563cc1d282d5046be4e98d81006",
+    "executable_and_source_hashes_independently_checked": true,
+    "image_reinspected": false,
+    "runtime_reexecuted": false,
+    "technical_evidence": "docs/openssl-amd64-curl-result.md"
+  },
+  "future_hardened_candidate": {
+    "status": "SOURCE_ONLY_NOT_BOUND_TO_ACCEPTED_BINARY",
+    "evidence": "docs/openssl-allocation-hardening-result.md",
+    "reported_host_tests": 59,
+    "new_binary_source_image_binding_required": true,
+    "hardening_acceptance_claimed": false
+  },
+  "original_blocker": {
+    "components": [
+      "libsigsegv 2.14 GPL-2.0-or-later",
+      "OpenSSL 1.1.1w older OpenSSL/SSLeay terms"
+    ],
+    "old_official_urbit_sha256": "47ad302e8934271dfc00dcdab1d553c6d6460b105e3099ff47e0e4e4231bb26d",
+    "old_artifact_exception_established": false,
+    "old_artifact_cleared": false
+  },
+  "changed_basis": {
+    "status": "CONDITIONAL_GENERAL_COMPATIBILITY_ROUTE_SUPPORTED",
+    "description": "Exact accepted replacement uses Apache-2.0 OpenSSL 3.5.9; GPLv3 choice is available under libsigsegv or-later permission. Not a GPLv2 route and not full-distribution clearance.",
+    "source_ids": [
+      1,
+      2,
+      4,
+      11
+    ]
+  },
+  "components": [
+    {
+      "name": "Vere",
+      "version": "4.6",
+      "revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+      "observed_license": "MIT",
+      "proposed_choice": "Preserve MIT source grant/attribution; combined executable under GPLv3 conditions",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "name": "libsigsegv",
+      "version": "2.14",
+      "observed_license": "GPL-2.0-or-later",
+      "proposed_choice": "GPL version 3 under existing later-version permission; retain upstream grant",
+      "source_ids": [
+        4
+      ]
+    },
+    {
+      "name": "OpenSSL",
+      "version": "3.5.9",
+      "observed_license": "Apache-2.0",
+      "proposed_choice": "Apache-2.0 preserved within GPLv3-compatible combined distribution",
+      "source_ids": [
+        2,
+        11
+      ]
+    },
+    {
+      "name": "curl",
+      "version": "8.23.0",
+      "observed_license": "curl",
+      "proposed_choice": "Preserve exact curl permission and attribution notice",
+      "source_ids": [
+        3,
+        13
+      ]
+    },
+    {
+      "name": "GMP",
+      "version": "6.3.0",
+      "observed_license": "LGPL-3.0-or-later OR GPL-2.0-or-later",
+      "proposed_choice": "GPL version 3 under GPL alternative; preserve original dual grant",
+      "source_ids": [
+        5,
+        9
+      ]
+    },
+    {
+      "name": "Avahi",
+      "version": "0.8",
+      "observed_license": "LGPL-2.1-or-later (main selected source headers; per-file terms apply)",
+      "proposed_choice": "LGPL version 3 via later-version permission; section 4(d)(0) source/relink route",
+      "source_ids": [
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "name": "Avahi GLib-derived avahi-common/utf8.c",
+      "version": "file in Avahi 0.8",
+      "observed_license": "Literal GNU Lesser General Public License version 2 or any later version",
+      "proposed_choice": "Preserve literal notice and Tom Tromey/Red Hat attribution; propose later-version LGPLv3 with wording/applicability review",
+      "source_ids": [
+        6
+      ]
+    },
+    {
+      "name": "D-Bus library",
+      "version": "1.14.8",
+      "observed_license": "AFL-2.1 OR GPL-2.0-or-later; standalone tools may be GPL-only",
+      "proposed_choice": "GPL version 3 under GPL alternative for this combined route",
+      "source_ids": [
+        7
+      ],
+      "generated_header_discrepancy": "Frozen adapter emits DBUS_VERSION 1.14.10 despite source 1.14.8; not normalized"
+    }
+  ],
+  "libsigsegv_exception_review": {
+    "runtime_exception_established": false,
+    "build_tool_exceptions_apply_to_runtime": false,
+    "runtime_files": [
+      "dispatcher.c",
+      "handler.c",
+      "handler-unix.c",
+      "leave.c",
+      "leave-nop.c",
+      "stackvma.c",
+      "stackvma-none.c",
+      "version.c",
+      "fault-linux-i386.h",
+      "fault.h",
+      "fault-none.h",
+      "signals.h",
+      "sigsegv.h.in"
+    ],
+    "scoped_build_permission_files": [
+      "build-aux/config.guess",
+      "build-aux/config.sub",
+      "build-aux/compile",
+      "build-aux/missing",
+      "build-aux/ltmain.sh",
+      "m4/bold.m4"
+    ],
+    "scope": "Selected Linux implementation/header and build-permission review; not all private grants or all architectures",
+    "source_ids": [
+      4
+    ]
+  },
+  "source_delivery": {
+    "route": "Separate equivalent-access source companion under GPLv3 6(d), plus 6(e) peer information where applicable",
+    "written_offer_issued": false,
+    "published": false,
+    "complete_corresponding_source_certified": false,
+    "package_cache_trees_present": 24,
+    "missing_manifest_cache_urls_scope": "Only macOS SDK declarations among parsed archived Vere URL/hash pairs",
+    "static_lgpl_proposal": "LGPLv3 4(d)(0): Minimal Corresponding Source plus Corresponding Application Code, source and/or object form permitting modified-library relinking",
+    "objects_automatically_required": false,
+    "build_relink_test_executed": false,
+    "installation_information": "Conditional on actual GPLv3 section 6 User Product/transfer facts and LGPLv3 4(e); not established here",
+    "source_ids": [
+      8,
+      9,
+      10
+    ]
+  },
+  "unresolved": [
+    {
+      "id": "U1",
+      "question": "Accepted pre-hardening or newly qualified hardened release artifact?",
+      "closure": "Exact new binding if successor selected"
+    },
+    {
+      "id": "U2",
+      "question": "Complete usable source and recipe/relink material for actual artifact?",
+      "closure": "Companion assembly and independently checked necessary inputs/instructions; no private/transient dependencies"
+    },
+    {
+      "id": "U3",
+      "question": "Exact final APK source/patch/notice inventory including updated Python?",
+      "closure": "Reconcile final image inventory rather than old baseline"
+    },
+    {
+      "id": "U4",
+      "question": "Nested modified BLAKE3 and Alpine/CA notice applicability dispositions?",
+      "closure": "Document supported per-file/package disposition retaining applicable attributions"
+    },
+    {
+      "id": "U5",
+      "question": "Literal Avahi UTF-8 notice wording and later-version treatment?",
+      "closure": "Preserve exact notice and document supported election, no guessed normalization"
+    },
+    {
+      "id": "U6",
+      "question": "Actual transaction triggers additional installation information?",
+      "closure": "Assess actual distribution facts and recipient modification/install path"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.openssl.org/source/license.html",
+      "title": "",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "the Apache License v2 applies.",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Recovered prior successful primary HTML retrieval; not newly fetched",
+      "retrieved_body_sha256": "d5836e59d4cba11f823498970c242418f2ae10c149f209786433ccbcc39152b6"
+    },
+    {
+      "id": 2,
+      "url": "https://www.apache.org/licenses/GPL-compatibility.html",
+      "title": "",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Apache 2 software can therefore be included in GPLv3 projects",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Recovered prior successful primary HTML retrieval; not newly fetched",
+      "retrieved_body_sha256": "04c1e1f657ff6a1302a420279fd9745cde460ab8da0508a59a100839bd4354b5"
+    },
+    {
+      "id": 3,
+      "url": "https://curl.se/docs/copyright.html",
+      "title": "",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "COPYRIGHT AND PERMISSION NOTICE",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Recovered prior successful primary HTML retrieval; not newly fetched",
+      "retrieved_body_sha256": "8c404d1465ad207f867a7d2590dcd5e2b5ebdc47505c0d44ff874c236785b0a5"
+    },
+    {
+      "id": 4,
+      "url": "https://ftp.gnu.org/gnu/libsigsegv/libsigsegv-2.14.tar.gz",
+      "title": "libsigsegv 2.14 runtime grant and build-tool permissions",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "either version 2 of the License",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/sigsegv-runtime-header.txt"
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz",
+      "title": "GMP 6.3.0 alternative grants",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "or both in parallel, as here.",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/gmp-README.txt"
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz",
+      "title": "Avahi 0.8 source grant",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "either version 2.1 of the",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/avahi-source-header.txt"
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.8.tar.xz",
+      "title": "D-Bus 1.14.8 alternative grants",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Some of the standalone binaries are",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/dbus-COPYING.txt"
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "title": "GPLv3 exact license text retained in GMP",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "offer equivalent access to the",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/GPL-3.0.txt"
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.gnu.org/licenses/lgpl-3.0.html",
+      "title": "LGPLv3 exact license text retained in GMP",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "object code and/or source code",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/LGPL-3.0.txt"
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+      "title": "LGPLv2.1 exact license text retained in Avahi",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Once this change is made in a given copy, it is irreversible",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/LGPL-2.1.txt"
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz",
+      "title": "OpenSSL 3.5.9 exact license",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "You must give any other recipients",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/OpenSSL-3.5.9-LICENSE.txt"
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://codeload.github.com/urbit/vere/tar.gz/8ddc4b786979574dbfcb655e3db1b634f658d0de",
+      "title": "Pinned Vere MIT license",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Copyright (c) 2015 Urbit",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/Vere-MIT.txt"
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://curl.se/download/curl-8.23.0.tar.gz",
+      "title": "curl 8.23.0 permission notice",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Copyright (c) 1996 - 2026",
+          "added": "2026-10-28"
+        }
+      ],
+      "retrieval": "Primary-source member read from independently hash-verified accepted source archive; URL identifies source origin/canonical license, not a new download",
+      "local_texts": [
+        "texts/curl-8.23.0-COPYING.txt"
+      ]
+    }
+  ],
+  "retrieval_limits": [
+    "Direct GNU website retrieval timed out; canonical GPL/LGPL URLs were not freshly fetched successfully",
+    "Configured native extraction backend was search-only/unavailable; fallback primary search results not used as full license text",
+    "Exact GPL/LGPL and component texts reused from bound primary release source"
+  ],
+  "local_evidence_files": [
+    "docs/openssl-amd64-curl-result.md",
+    "docs/openssl-tls-artifact-recovery.json",
+    "docs/openssl-allocation-hardening-result.md",
+    "docs/public-release-preparation.md",
+    "docs/license-preparation/evidence-receipts.json",
+    "docs/license-preparation/selected-source-notices.json",
+    "docs/license-preparation/source-cache-inventory.json"
+  ],
+  "draft_deliverables": [
+    "docs/openssl-distribution-license-review.md",
+    "docs/openssl-distribution-license-review.json",
+    "docs/license-preparation/README.md",
+    "docs/license-preparation/draft-recipient-notices.md",
+    "docs/license-preparation/source-delivery-checklist.md",
+    "docs/license-preparation/citation-ledger.json",
+    "docs/license-preparation/evidence-receipts.json",
+    "docs/license-preparation/selected-source-notices.json",
+    "docs/license-preparation/source-cache-inventory.json",
+    "docs/license-preparation/verification.json"
+  ],
+  "boundaries": {
+    "builds": false,
+    "runtime": false,
+    "private_logs_state_keys": false,
+    "docker_operations": false,
+    "cleanup": false,
+    "external_contact": false,
+    "publication": false,
+    "transactions": false,
+    "commit": false,
+    "push": false
+  }
+}

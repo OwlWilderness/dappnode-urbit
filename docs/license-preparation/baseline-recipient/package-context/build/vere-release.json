@@ -1,0 +1,8 @@
+{
+  "candidate": "vere-4.6-uvm-openssl-3.5.9-curl-8.23.0",
+  "architecture": "linux/amd64",
+  "executable_bytes": 42399776,
+  "executable_sha256": "58d07af97926e04bc17184bc18f53e5fb11d84fed63bd9daf2fe4ceb04c86698",
+  "official_release": false,
+  "distribution_cleared": false
+}

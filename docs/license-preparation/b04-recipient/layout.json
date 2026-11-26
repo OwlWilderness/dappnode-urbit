@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "attempt": "issue3-owned-20261030-b04",
+  "status": "RECIPIENT_LAYOUT_NOT_BUILD_RELINK_VERIFIED",
+  "binding_manifest": "docs/license-preparation/b04-source-notices-binding.json",
+  "binding_sha256": "715108b2cecbce58dd4c88a53659862f850b65c2ff4246915ba42beb9617d487",
+  "mapping": {
+    "source_archive": "source-materials.tar.gz",
+    "frozen_recipe_files": "recipe/{exact frozen_recipe_files key, including baseline/ and tools/}",
+    "artifact_files": "support/{exact artifact_files key}",
+    "evidence_files": "{exact evidence_files repository-relative key}",
+    "required_repo_notices": "{exact required_repo_notices repository-relative key}",
+    "successor_tools": "tools/issue3_fresh_attempt/",
+    "guide": "docs/license-preparation/b04-recipient/BUILD-RELINK.md",
+    "receipt": "companion.json"
+  },
+  "reviewed_evidence": {
+    "docs/license-preparation/b04-source-notices-binding.md": {
+      "bytes": 11402,
+      "sha256": "6465f77bcee1f5eca9a9a184ecea4302779ff89a8ac04c69d9da56b67ed128e4"
+    },
+    "docs/openssl-b04-preparation-integration.md": {
+      "bytes": 12443,
+      "sha256": "2df780ba0461b0e1000cd80beae12f12cb0761b4d28deab75d1ac00668fca029"
+    },
+    "docs/openssl-b04-dependency-contract.md": {
+      "bytes": 10774,
+      "sha256": "6eee7f1b33d84873a315c4f17dc7d31369324b570ba1f2102c79a455cd09ed3b"
+    }
+  },
+  "recipient_working_paths": {
+    "pristine_materials": "work/retained/materials/",
+    "historical_patched_source": "work/retained/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/",
+    "historical_configured_openssl": "work/retained/openssl-3.5.9/",
+    "historical_package_sources": "work/retained/p/",
+    "fresh_attempt": "work/rebuild/",
+    "local_dependency_context": "work/local-deps/",
+    "fresh_global_package_cache": "work/rebuild/zig-cache/",
+    "fresh_local_cache": "work/rebuild/zig-local-cache/",
+    "output": "work/rebuild/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/zig-out/x86_64-linux-musl/urbit"
+  },
+  "effective_build": {
+    "dockerfile": "support/effective.Dockerfile",
+    "original_recipe_dockerfile": "recipe/Dockerfile",
+    "context": "recipe/",
+    "named_context": "issue3deps=work/local-deps/",
+    "local_driver_inputs": ["local_build.py", "local_dependencies.py", "progress_observer.py", "effective.Dockerfile"],
+    "required_extra_local_inputs": ["softblas.tar.gz", "pdjson.tar.gz", "backtrace.tar.gz"],
+    "local_binding": "support/local-build-binding.json",
+    "target": "x86_64-linux-musl",
+    "zig_version": "0.15.2",
+    "arena_bytes_historical_trial_only": 134217728,
+    "source_date_epoch": "1782999240",
+    "vere_argv": ["build", "-Dtarget=x86_64-linux-musl", "-Drelease=true", "-Dpace=once", "-j2", "--summary", "all", "--verbose-link"],
+    "preparation_order": [
+      "verify frozen recipe and pristine input archives; extract pristine inputs in fresh attempt",
+      "H2O publication overlay", "SHA overlay", "allocation hardening", "curl overlay",
+      "top-level build and report patch", "CA overlay", "curl buffer patch", "baseline allocator patch",
+      "OpenSSL adapter placeholder and version manifest; unchanged-content URL mirror replacements",
+      "owned integration: arena generation, shutdown completion, startup and noun graph; freeze final overlay",
+      "verify three naked dependency archives; Zig fetch into SAME fresh zig-cache used by compile",
+      "OpenSSL Configure and make build_libs OR explicitly authenticated original cache reuse",
+      "copy generated include tree; list and validate each crypto/ssl archive object; extract objects into prebuilt/{crypto,ssl}",
+      "regenerate OpenSSL object adapter; Zig build and final-source/library/source retention"
+    ]
+  },
+  "limitations": {
+    "large_companion_assembled": false,
+    "recipient_rebuild_relink_tested": false,
+    "modified_library_relink_tested": false,
+    "authenticated_final_link_inputs": false,
+    "authenticated_compile_headers": false,
+    "distribution_cleared": false,
+    "library_binding_changed": false,
+    "runtime_package_scope_known": false
+  }
+}

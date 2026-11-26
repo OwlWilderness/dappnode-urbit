@@ -1,0 +1,44 @@
+--- a/src/exit/exit.c
++++ b/src/exit/exit.c
+@@ -1,3 +1,4 @@
++#include "uvm_issue3_diag.h"
+ #include <stdlib.h>
+ #include <stdint.h>
+ #include "libc.h"
+@@ -26,8 +27,21 @@
+ 
+ _Noreturn void exit(int code)
+ {
++  if ( code == 0 ) {
++    uvm_i3_emit(UVM_I3_LIBC_EXIT_ZERO);
++  }
++  else {
++    uvm_i3_emit(UVM_I3_LIBC_EXIT_NONZERO);
++  }
++  uvm_i3_emit(UVM_I3_ATEXIT_ENTER);
+ 	__funcs_on_exit();
++  uvm_i3_emit(UVM_I3_ATEXIT_RETURN);
++  uvm_i3_emit(UVM_I3_FINI_ENTER);
+ 	__libc_exit_fini();
++  uvm_i3_emit(UVM_I3_FINI_RETURN);
++  uvm_i3_emit(UVM_I3_STDIO_ENTER);
+ 	__stdio_exit();
++  uvm_i3_emit(UVM_I3_STDIO_RETURN);
++  uvm_i3_emit(UVM_I3_LIBC_FINAL_EXIT);
+ 	_Exit(code);
+ }
+--- a/src/exit/abort.c
++++ b/src/exit/abort.c
+@@ -1,3 +1,4 @@
++#include "uvm_issue3_diag.h"
+ #include <stdlib.h>
+ #include <signal.h>
+ #include "syscall.h"
+@@ -8,6 +9,7 @@
+ 
+ _Noreturn void abort(void)
+ {
++  uvm_i3_emit(UVM_I3_LIBC_ABORT);
+ 	raise(SIGABRT);
+ 
+ 	/* If there was a SIGABRT handler installed and it returned, or if

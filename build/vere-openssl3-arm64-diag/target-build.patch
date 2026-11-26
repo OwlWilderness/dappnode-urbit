@@ -1,0 +1,18 @@
+--- a/build.zig
++++ b/build.zig
+@@ -507,10 +507,14 @@
+     // Build Artifact
+     //
+ 
++    // Diagnostic-only private copy; never set the graph-wide Zig lib directory.
++    if (t.cpu.arch != .aarch64 or t.os.tag != .linux or t.abi != .musl)
++        return error.InvalidDiagnosticTarget;
++
+     const urbit = b.addExecutable(.{ .name = cfg.binary_name, .root_module = b.createModule(.{
+         .target = target,
+         .optimize = optimize,
+-    }) });
++    }), .zig_lib_dir = b.path("issue3-zig-lib") });
+ 
+     if (t.os.tag == .windows) {
+         urbit.stack_size = 67108864;

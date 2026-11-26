@@ -1,0 +1,444 @@
+--- a/pkg/vere/main.c
++++ b/pkg/vere/main.c
+@@ -8,6 +8,7 @@
+ #include "ur/ur.h"
+ #include "rsignal.h"
+ #include "vere.h"
++#include "uvm_issue3_diag.h"
+ 
+ #ifndef U3_OS_windows
+ #include "sigsegv.h"
+@@ -29,6 +30,9 @@
+ #include "version.h"
+ #include "whereami.h"
+ #include "mars.h"
++
++_Atomic unsigned int uvm_i3_sequence;
++_Atomic unsigned int uvm_i3_role;
+ 
+ static u3_moat      inn_u;             //  input stream
+ static u3_mojo      out_u;             //  output stream
+@@ -980,6 +984,7 @@
+ static void
+ _stop_on_boot_completed_cb()
+ {
++  uvm_i3_emit(UVM_I3_ALL_LIVE_CALLBACK);
+   u3_king_exit();
+ }
+ 
+@@ -988,6 +993,7 @@
+ static void
+ _cw_io_fail(void* ptr_v, ssize_t err_i, const c3_c* err_c)
+ {
++  uvm_i3_emit(UVM_I3_CHILD_IPC_FAIL);
+   if ( UV_EOF == err_i ) {
+     fprintf(stderr, "mars: urth unexpectedly shut down\r\n");
+   }
+@@ -1003,6 +1009,7 @@
+ static void
+ _cw_king_fail(void* ptr_v, ssize_t err_i, const c3_c* err_c)
+ {
++  uvm_i3_emit(UVM_I3_LOCAL_EVAL_FAIL);
+   fprintf(stderr, "king: eval error: %s\r\n", err_c);
+   exit(1);
+ }
+@@ -2849,6 +2856,8 @@
+ static void
+ _cw_boot(c3_i argc, c3_c* argv[])
+ {
++  atomic_store(&uvm_i3_role, 2);
++  uvm_i3_emit(UVM_I3_BOOT_ENTRY);
+   c3_c* dir_c = 0;
+ 
+   //  extract option map and load runtime config
+@@ -2933,6 +2942,7 @@
+   u3_mars mar_u = { .dir_c = dir_c };
+   {
+     u3_mars_make(&mar_u);
++    uvm_i3_emit(UVM_I3_BOOT_MAKE_RETURN);
+ 
+     //  set up logging
+     //
+@@ -2963,6 +2973,8 @@
+ static void
+ _cw_work(c3_i argc, c3_c* argv[])
+ {
++  atomic_store(&uvm_i3_role, 3);
++  uvm_i3_emit(UVM_I3_WORK_ENTRY);
+   uv_loop_t* lup_u = u3_Host.lup_u = uv_default_loop();
+   c3_c*      dir_c = 0;
+   c3_d       eve_d = 0;
+@@ -3078,6 +3090,7 @@
+     //
+     u3_mars_play(&mar_u, eve_d, 0); // XX sap_d from args?
+     u3_mars_work(&mar_u);
++    uvm_i3_emit(UVM_I3_WORK_QUEUE_RETURN);
+ 
+     //  set up stdio read/write callbacks
+     //
+@@ -3171,6 +3184,8 @@
+ main(c3_i   argc,
+      c3_c** argv)
+ {
++  uvm_i3_channel_check();
++  uvm_i3_emit(UVM_I3_PROCESS_ENTRY);
+   if ( argc <= 0 ) {
+     fprintf(stderr, "nice try, fbi\r\n");
+     exit(1);
+@@ -3192,6 +3207,8 @@
+     //  no matching subcommand, parse arguments
+     //
+     case 0: {
++      atomic_store(&uvm_i3_role, 1);
++      uvm_i3_emit(UVM_I3_PARENT_ENTRY);
+       if ( c3n == _main_getopt(argc, argv) ) {
+         u3_ve_usage(argc, argv);
+         return 1;
+--- a/pkg/vere/mars.c
++++ b/pkg/vere/mars.c
+@@ -8,6 +8,7 @@
+ #include "pace.h"
+ #include "types.h"
+ #include "vere.h"
++#include "uvm_issue3_diag.h"
+ #include "ivory.h"
+ #include "ur/ur.h"
+ #include "db/lmdb.h"
+@@ -1120,6 +1121,7 @@
+   //  XX read_list reads *up-to* eve_d, should be exact
+   //
+   if ( u3_none == (eve = u3_disk_read_list(log_u, 1, eve_d, &mug_l)) ) {
++    uvm_i3_emit(UVM_I3_BOOT_READ_FAIL);
+     fprintf(stderr, "boot: read failed\r\n");
+     u3m_love(u3_nul);
+     return c3n;
+@@ -1173,6 +1175,7 @@
+   //  XX check mug if available
+   //
+   if ( c3n == u3v_boot(eve) ) {
++    uvm_i3_emit(UVM_I3_VM_BOOT_FAIL);
+     return c3n;
+   }
+ 
+@@ -1889,6 +1892,7 @@
+   u3_Host.ops_u.nuu = c3y;
+ 
+   if ( c3n == u3_disk_make(mar_u->dir_c) ) {
++    uvm_i3_emit(UVM_I3_DISK_MAKE_FAIL);
+     fprintf(stderr, "boot: disk make fail\r\n");
+     exit(1);
+   }
+@@ -1896,6 +1900,7 @@
+   //  NB: initializes loom
+   //
+   if ( !(mar_u->log_u = u3_disk_load(mar_u->dir_c, u3_dlod_boot)) ) {
++    uvm_i3_emit(UVM_I3_DISK_LOAD_FAIL);
+     fprintf(stderr, "boot: disk init fail\r\n");
+     exit(1);
+   }
+@@ -1943,6 +1948,7 @@
+     if (  (u3_none == jar)
+        || (c3n == u3r_p(jar, c3__boot, &com)) )
+     {
++      uvm_i3_emit(UVM_I3_BOOT_PARSE_FAIL);
+       fprintf(stderr, "boot: parse fail\r\n");
+       exit(1);
+     }
+@@ -1953,36 +1959,46 @@
+   }
+ 
+   if ( c3n == _mars_boot_make(&inp_u, com, &ova, &cax, &met_u) ) {
++    uvm_i3_emit(UVM_I3_BOOT_PREPARE_FAIL);
+     fprintf(stderr, "boot: preparation failed\r\n");
+     exit(1);  //  XX cleanup
+   }
+ 
+   if ( c3n == u3_disk_save_meta_meta(log_u->com_u->pax_c, &met_u) ) {
++    uvm_i3_emit(UVM_I3_META_META_FAIL);
+     fprintf(stderr, "boot: failed to save top-level metadata\r\n");
+     exit(1);  //  XX cleanup
+   }
+ 
+   if ( c3n == u3_disk_save_meta(log_u->mdb_u, &met_u) ) {
++    uvm_i3_emit(UVM_I3_META_FAIL);
+     exit(1);  //  XX cleanup
+   }
+ 
+   u3_disk_plan_list(log_u, ova);
+ 
+   if ( c3n == u3_disk_sync(log_u) ) {
++    uvm_i3_emit(UVM_I3_DISK_SYNC_FAIL);
+     exit(1);  //  XX cleanup
+   }
+ 
+   _mars_step_trace(mar_u->dir_c);
+ 
+   if ( c3n == _mars_do_boot(log_u, log_u->dun_d, cax) ) {
++    uvm_i3_emit(UVM_I3_DO_BOOT_FAIL);
+     exit(1);  //  XX cleanup
+   }
+ 
++  uvm_i3_emit(UVM_I3_BOOT_SAVE_ENTER);
+   u3m_save();
++  uvm_i3_emit(UVM_I3_BOOT_SAVE_RETURN);
+ 
+   //  XX move to caller? close uv handles?
+   //
++  uvm_i3_emit(UVM_I3_BOOT_CLOSE_ENTER);
+   u3_disk_exit(log_u);
++  uvm_i3_emit(UVM_I3_BOOT_CLOSE_RETURN);
++  uvm_i3_emit(UVM_I3_BOOT_EXIT_ZERO_CALL);
+   exit(0);
+ 
+   return c3y;
+--- a/pkg/vere/lord.c
++++ b/pkg/vere/lord.c
+@@ -1,6 +1,7 @@
+ /// @file
+ 
+ #include "vere.h"
++#include "uvm_issue3_diag.h"
+ 
+ #include "noun.h"
+ #include "ur/ur.h"
+@@ -136,6 +137,7 @@
+ static void
+ _lord_bail(u3_lord* god_u)
+ {
++  uvm_i3_emit(UVM_I3_LORD_BAIL);
+   void (*bail_f)(void*) = god_u->cb_u.bail_f;
+   void* bail_v = god_u->cb_u.ptr_v;
+ 
+@@ -272,6 +274,7 @@
+     //
+     god_u->eve_d = eve_d;
+ 
++    uvm_i3_emit(UVM_I3_RIPE_ACCEPT);
+     god_u->liv_o = c3y;
+     god_u->cb_u.live_f(god_u->cb_u.ptr_v, who, fak);
+   }
+@@ -893,6 +896,33 @@
+ {
+ 
+   u3_lord* god_u = (void*)req_u;
++  if ( sig_i == SIGABRT ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_SIGABRT);
++  }
++  else if ( sig_i == SIGSEGV ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_SIGSEGV);
++  }
++  else if ( sig_i == SIGBUS ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_SIGBUS);
++  }
++  else if ( sig_i == SIGILL ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_SIGILL);
++  }
++  else if ( sig_i == SIGKILL ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_SIGKILL);
++  }
++  else if ( sig_i != 0 ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_OTHER_SIGNAL);
++  }
++  else if ( sas_i == 125 ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_DIAGNOSTIC_RESERVED_EXIT);
++  }
++  else if ( sas_i != 0 ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_NONZERO);
++  }
++  else if ( 1 ) {
++    uvm_i3_emit(UVM_I3_WORK_CHILD_ZERO);
++  }
+ 
+   if (  !god_u->ext_u
+      || !(u3_writ_exit == god_u->ext_u->typ_e) )
+@@ -916,9 +946,11 @@
+   u3_lord* god_u = ptr_v;
+ 
+   if ( UV_EOF == err_i ) {
++    uvm_i3_emit(UVM_I3_WORK_IPC_EOF);
+     u3l_log("pier: serf unexpectedly shut down\r\n");
+   }
+   else {
++    uvm_i3_emit(UVM_I3_WORK_IPC_ERROR);
+     u3l_log("pier: serf error: %s", err_c);
+   }
+ 
+@@ -1077,7 +1109,9 @@
+     god_u->cod_u[2].data.stream = (uv_stream_t *)&god_u->err_u;
+ 
+     god_u->ops_u.stdio = god_u->cod_u;
+-    god_u->ops_u.stdio_count = 3;
++    god_u->cod_u[3].flags = UV_INHERIT_FD;
++    god_u->cod_u[3].data.fd = 3;
++    god_u->ops_u.stdio_count = 4;
+ 
+     // if any fds are inherited, libuv ignores UV_PROCESS_WINDOWS_HIDE*
+     god_u->ops_u.flags = UV_PROCESS_WINDOWS_HIDE;
+@@ -1085,7 +1119,9 @@
+     god_u->ops_u.file = arg_c[0];
+     god_u->ops_u.args = arg_c;
+ 
++    uvm_i3_emit(UVM_I3_WORK_SPAWN_CALL);
+     if ( (err_i = uv_spawn(u3L, &god_u->cub_u, &god_u->ops_u)) ) {
++      uvm_i3_emit(UVM_I3_WORK_SPAWN_FAIL);
+       fprintf(stderr, "spawn: %s: %s\r\n", arg_c[0], uv_strerror(err_i));
+ 
+       return 0;
+@@ -1122,7 +1158,7 @@
+ typedef struct _lord_boot {
+   uv_process_t         cub_u;           //  process handle
+   uv_process_options_t ops_u;           //  process configuration
+-  uv_stdio_container_t cod_u[3];        //  process options
++  uv_stdio_container_t cod_u[4];        //  process options
+   u3_cue_xeno*         sil_u;           //  cue handle
+   u3_mojo              inn_u;           //  client's stdin
+   u3_moat              out_u;           //  client's stdout
+@@ -1165,6 +1201,34 @@
+ {
+   _lord_boot* bot_u = cub_u->data;
+ 
++  if ( sig_i == SIGABRT ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_SIGABRT);
++  }
++  else if ( sig_i == SIGSEGV ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_SIGSEGV);
++  }
++  else if ( sig_i == SIGBUS ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_SIGBUS);
++  }
++  else if ( sig_i == SIGILL ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_SIGILL);
++  }
++  else if ( sig_i == SIGKILL ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_SIGKILL);
++  }
++  else if ( sig_i != 0 ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_OTHER_SIGNAL);
++  }
++  else if ( sas_i == 125 ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_DIAGNOSTIC_RESERVED_EXIT);
++  }
++  else if ( sas_i != 0 ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_NONZERO);
++  }
++  else if ( 1 ) {
++    uvm_i3_emit(UVM_I3_BOOT_CHILD_ZERO);
++  }
++
+   bot_u->ret_o = ( !sas_i && !sig_i ) ? c3y : c3n;
+ 
+   u3_newt_moat_stop(&bot_u->out_u, _lord_on_serf_boot_exit_cb);
+@@ -1187,6 +1251,7 @@
+   // ignore EOF, dispatch on process exit
+   //
+   if ( UV_EOF != err_i ) {
++    uvm_i3_emit(UVM_I3_BOOT_IPC_ERROR);
+     u3l_log("boot: error: %s\r\n", err_c);
+   }
+ }
+@@ -1331,13 +1396,17 @@
+     bot_u->cod_u[2].data.fd = 2;
+ 
+     bot_u->ops_u.stdio = bot_u->cod_u;
+-    bot_u->ops_u.stdio_count = 3;
++    bot_u->cod_u[3].flags = UV_INHERIT_FD;
++    bot_u->cod_u[3].data.fd = 3;
++    bot_u->ops_u.stdio_count = 4;
+ 
+     bot_u->ops_u.exit_cb = _lord_on_serf_boot_exit;
+     bot_u->ops_u.file = arg_c[0];
+     bot_u->ops_u.args = arg_c;
+ 
++    uvm_i3_emit(UVM_I3_BOOT_SPAWN_CALL);
+     if ( (err_i = uv_spawn(u3L, &bot_u->cub_u, &bot_u->ops_u)) ) {
++      uvm_i3_emit(UVM_I3_BOOT_SPAWN_FAIL);
+       fprintf(stderr, "spawn: %s: %s\r\n", arg_c[0], uv_strerror(err_i));
+       //  XX return error code, or defer and invoke cb
+       //
+--- a/pkg/vere/king.c
++++ b/pkg/vere/king.c
+@@ -3,6 +3,7 @@
+ /// The main loop of the daemon process.
+ 
+ #include "vere.h"
++#include "uvm_issue3_diag.h"
+ 
+ #include "curl/curl.h"
+ #include "ivory.h"
+@@ -174,6 +175,7 @@
+   //  XX exit code
+   //
+   if ( c3n == ret_o ) {
++    uvm_i3_emit(UVM_I3_KING_BOOT_REJECT);
+     u3l_log("king: boot failed\r\n");
+     u3_king_bail();
+     return;
+@@ -185,6 +187,7 @@
+     u3_king_dock(U3_VERE_PACE);
+   }
+ 
++  uvm_i3_emit(UVM_I3_KING_BOOT_ACCEPT);
+   u3K.pir_u = u3_pier_stay(sag_w, u3i_string(u3_Host.dir_c), rift);
+ }
+ 
+@@ -1745,6 +1748,7 @@
+   //  XX remove move
+   //
+   u3m_stop();
++  uvm_i3_emit(UVM_I3_KING_EXIT_CALL);
+   exit(u3_Host.xit_i);
+ }
+ 
+@@ -1761,6 +1765,7 @@
+ void
+ u3_king_bail(void)
+ {
++  uvm_i3_emit(UVM_I3_KING_BAIL);
+   u3_Host.xit_i = 1;
+   _king_forall_unlink(u3_pier_bail);
+   u3_king_done();
+--- a/pkg/vere/pier.c
++++ b/pkg/vere/pier.c
+@@ -5,6 +5,7 @@
+ #include "noun.h"
+ #include "pace.h"
+ #include "vere.h"
++#include "uvm_issue3_diag.h"
+ #include "version.h"
+ #include "curl/curl.h"
+ 
+@@ -659,6 +660,7 @@
+ static void
+ _pier_wyrd_good(u3_pier* pir_u, u3_ovum* egg_u)
+ {
++  uvm_i3_emit(UVM_I3_WYRD_GOOD);
+   //  restore event callbacks
+   //
+   {
+@@ -685,6 +687,7 @@
+ static void
+ _pier_wyrd_fail(u3_pier* pir_u, u3_ovum* egg_u, u3_noun lud)
+ {
++  uvm_i3_emit(UVM_I3_WYRD_FAIL);
+   //  XX version negotiation failed, print upgrade message
+   //
+   u3l_log("pier: version negotation failed\n");
+@@ -1234,6 +1237,7 @@
+ void
+ u3_pier_bail(u3_pier* pir_u)
+ {
++  uvm_i3_emit(UVM_I3_PIER_BAIL);
+   u3_Host.xit_i = 1;
+   _pier_bail_impl(pir_u);
+ }
+--- a/pkg/vere/vere.h
++++ b/pkg/vere/vere.h
+@@ -503,7 +503,7 @@
+         typedef struct _u3_lord {
+           uv_process_t         cub_u;           //  process handle
+           uv_process_options_t ops_u;           //  process configuration
+-          uv_stdio_container_t cod_u[3];        //  process options
++          uv_stdio_container_t cod_u[4];        //  process options
+           u3_cue_xeno*         sil_u;           //  cue handle
+           time_t               wen_t;           //  process creation time
+           u3_mojo              inn_u;           //  client's stdin

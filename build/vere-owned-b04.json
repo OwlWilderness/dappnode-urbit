@@ -1,0 +1,18 @@
+{
+  "schema": "issue3-owned-b04-package-lock-v1",
+  "architecture": "linux/amd64",
+  "attempt_id": "issue3-owned-20261030-b04",
+  "context_executable": "build/owned-b04/urbit",
+  "executable_bytes": 42467624,
+  "executable_sha256": "f2eba68682650ab6d9712017781612f4dbc3c01411c1ba5c7c4ecbb0f186b6b5",
+  "executable_mode": "0555",
+  "report_receipt": "docs/openssl-candidate-evidence/owned-b04-report-20261030.json",
+  "report_receipt_bytes": 19480,
+  "report_receipt_sha256": "6c8650dec16390f800ace04414c750e213055fd81950addb2465ee07e8a94d4d",
+  "report_schema": "issue3-owned-report-v1",
+  "official_release": false,
+  "crypto_tls_qualified": false,
+  "lifecycle_qualified": false,
+  "package_qualified": false,
+  "distribution_cleared": false
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "candidate": "vere-4.6-uvm-openssl-3.5.9",
+  "target": "x86_64-linux-musl",
+  "vere_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+  "openssl_version": "3.5.9",
+  "curl_version": "8.23.0",
+  "curl_overlays": {
+    "ext/curl/build.zig": {"file": "curl-build.zig", "sha256": "2e422b3cd0669ef3d3d028b9b104f842dbbd4061bd78593b39775fefa805c092"},
+    "ext/curl/build.zig.zon": {"file": "curl-build.zig.zon", "sha256": "5a2e9e951b89a95794550cdf5d12cb6a8a7e349f1ce76092dea4fbdd2e1a8b78"}
+  },
+  "zig_version": "0.15.2",
+  "inputs": {
+    "vere": {
+      "url": "https://codeload.github.com/urbit/vere/tar.gz/8ddc4b786979574dbfcb655e3db1b634f658d0de",
+      "bytes": 5421036,
+      "sha256": "d432b0c019a328bfcb905b252d1801926379f5d82baf2bcdf0c95a10174250d3",
+      "root": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de"
+    },
+    "openssl": {
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz",
+      "bytes": 53279637,
+      "sha256": "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a",
+      "root": "openssl-3.5.9"
+    },
+    "zig": {
+      "url": "https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz",
+      "bytes": 53733924,
+      "sha256": "02aa270f183da276e5b5920b1dac44a63f1a49e55050ebde3aecc9eb82f93239",
+      "root": "zig-x86_64-linux-0.15.2"
+    }
+  },
+  "source_preimages": {
+    "pkg/vere/king.c": "49d175e108cfd77e531d3346b9449680cab7e3ba4a8885c66d806af5ed969801",
+    "ext/curl/build.zig": "4dd65bc503cd544d5e084e653fa33cdc5df7aca90e4e241f5d822466708d88a3",
+    "ext/curl/build.zig.zon": "d52647076f731bab3d2e9235b796cddb23cae4d80c7ea9dec56d87171c76ab0b",
+    "pkg/noun/manage.c": "25eaa5384e190067d19a4a731d120efb8174367bb02296e4b2b2d8b53f90fa68",
+    "build.zig": "d9d728703b3f61dc9352e5e9c856221d9e9272105434e6df2bb9c02e84ea4c34",
+    "ext/openssl/build.zig": "2bfcdfc57877a763e854848f89fe2caa594cf1608f693f24f96de87079d4f0a8",
+    "ext/openssl/build.zig.zon": "8b27bcbb962fe501c0f06cadb66c74bdd3a6260bd40858843ae59e41a36e3c98"
+  }
+}

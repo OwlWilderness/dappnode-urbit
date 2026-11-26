@@ -1,0 +1,47 @@
+--- a/pkg/vere/lord.c
++++ b/pkg/vere/lord.c
+@@ -1119,6 +1119,8 @@
+     god_u->ops_u.file = arg_c[0];
+     god_u->ops_u.args = arg_c;
+ 
++    static unsigned int issue3_work_spawned;
++    if ( issue3_work_spawned++ ) { uvm_i3_invalid(); }
+     uvm_i3_emit(UVM_I3_WORK_SPAWN_CALL);
+     if ( (err_i = uv_spawn(u3L, &god_u->cub_u, &god_u->ops_u)) ) {
+       uvm_i3_emit(UVM_I3_WORK_SPAWN_FAIL);
+@@ -1126,6 +1128,8 @@
+ 
+       return 0;
+     }
++
++    uvm_i3_register_child(UVM_I3_WORK_REGISTER, god_u->cub_u.pid);
+ 
+     uv_read_start((uv_stream_t *)&god_u->err_u, _lord_serf_err_alloc, _lord_on_serf_err_cb);
+   }
+@@ -1404,6 +1408,8 @@
+     bot_u->ops_u.file = arg_c[0];
+     bot_u->ops_u.args = arg_c;
+ 
++    static unsigned int issue3_boot_spawned;
++    if ( issue3_boot_spawned++ ) { uvm_i3_invalid(); }
+     uvm_i3_emit(UVM_I3_BOOT_SPAWN_CALL);
+     if ( (err_i = uv_spawn(u3L, &bot_u->cub_u, &bot_u->ops_u)) ) {
+       uvm_i3_emit(UVM_I3_BOOT_SPAWN_FAIL);
+@@ -1412,6 +1418,7 @@
+       //
+       return;
+     }
++    uvm_i3_register_child(UVM_I3_BOOT_REGISTER, bot_u->cub_u.pid);
+   }
+ 
+   bot_u->cub_u.data = bot_u;
+--- a/pkg/vere/main.c
++++ b/pkg/vere/main.c
+@@ -3235,6 +3235,7 @@
+   }
+ 
+   if ( c3y == u3_Host.ops_u.dem ) {
++    uvm_i3_invalid(); /* No daemon fork in this one-generation diagnostic. */
+     //  In daemon mode, run the urbit as a background process, but don't
+     //  exit from the parent process until the ship is finished booting.
+     //

@@ -1,0 +1,32 @@
+{
+  "candidate": "vere-4.6-uvm-openssl-3.5.9",
+  "executable_sha256": "58d07af97926e04bc17184bc18f53e5fb11d84fed63bd9daf2fe4ceb04c86698",
+  "executable_bytes": 42399776,
+  "architecture": "linux/amd64",
+  "source_changes": {
+    "build.zig": "572b37fa007fb97fc349f6ef7375bfee77af45dbf09e7bbe9f183270e25e3213",
+    "pkg/vere/main.c": "206929fef62b6f7246b7313675b6120ab876bc7ae8c4399342e1f0eceaf48549",
+    "pkg/vere/king.c": "24da653bcc3a6cf516d49dc81e7f4b085f35ef6b7b2b8663b53160b88c3b76cd",
+    "pkg/noun/manage.c": "2b06d6a006595ea7440690b325e8c994505a6040a97087e877a19c5e0c46d321",
+    "ext/openssl/build.zig": "3a39e14749086773b5be84684f3415de162fedb1e9c7e884211884f72b67037b",
+    "ext/curl/build.zig": "2e422b3cd0669ef3d3d028b9b104f842dbbd4061bd78593b39775fefa805c092",
+    "ext/curl/build.zig.zon": "5a2e9e951b89a95794550cdf5d12cb6a8a7e349f1ce76092dea4fbdd2e1a8b78",
+    "ext/openssl/build.zig.zon": "905fdbe63c8f0d6b8e360212fbeda59157365cd60c524de9ed719bfd29ddfb9b",
+    "ext/gmp/build.zig.zon": "30ba51d0fec2b637ed2fe7d838d8eea22402510c5571120357eaf8ef5a0674cf",
+    "ext/sigsegv/build.zig.zon": "97c7b0c98419d87a57d0bdfba3a6e5b350e437e20b316451436ac09096bbee5b",
+    "ext/natpmp/build.zig.zon": "c7148374b01881715c16fa848a51e67113f079aeb7958953fb9a50ab855c94fb"
+  },
+  "inputs_sha256": "01c83a954542c6b7470f6e91fc6cf24069582563cc1d282d5046be4e98d81006",
+  "recipe_sha256": "d41db22cdbe63d524b517fdf1039a3d9a8c464b430863a31a449b5903e5b6256",
+  "dockerfile_sha256": "f62ee8f5fe238942a03b0a2d89671b91c2c67793028e1bc9a2c4cb416ed70e23",
+  "builder_apks_sha256": "5ca83b21c531948a4469afa9a0312a5115d181709c33b3279dcd9f864daba3bd",
+  "builder_apk_db_sha256": "5fce25705af80735a3190699fe6dca25ec649cf04c1d56597989d1de3345bc13",
+  "openssl_cache_sha256": "f12932bcf9105e5954fbc435828ca0df8f26bbb89d340ae3b6c373c930f8a9fa",
+  "static_version_marker": true,
+  "dependency_runtime_report": false,
+  "vere_executed": false,
+  "image_bound": false,
+  "lifecycle_passed": false,
+  "reproducibility_verified": false,
+  "distribution_cleared": false
+}

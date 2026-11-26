@@ -1,0 +1,20 @@
+{
+  "source_preimages": {
+    "ext/curl/build.zig": "4dd65bc503cd544d5e084e653fa33cdc5df7aca90e4e241f5d822466708d88a3",
+    "ext/curl/build.zig.zon": "d52647076f731bab3d2e9235b796cddb23cae4d80c7ea9dec56d87171c76ab0b"
+  },
+  "source_changes": {
+    "ext/curl/build.zig": "2e422b3cd0669ef3d3d028b9b104f842dbbd4061bd78593b39775fefa805c092",
+    "ext/curl/build.zig.zon": "5a2e9e951b89a95794550cdf5d12cb6a8a7e349f1ce76092dea4fbdd2e1a8b78"
+  },
+  "overlays": {
+    "ext/curl/build.zig": {
+      "file": "curl-build.zig",
+      "sha256": "2e422b3cd0669ef3d3d028b9b104f842dbbd4061bd78593b39775fefa805c092"
+    },
+    "ext/curl/build.zig.zon": {
+      "file": "curl-build.zig.zon",
+      "sha256": "5a2e9e951b89a95794550cdf5d12cb6a8a7e349f1ce76092dea4fbdd2e1a8b78"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.openssl.org/source/license.html",
+      "title": "",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "the Apache License v2 applies.",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.apache.org/licenses/GPL-compatibility.html",
+      "title": "",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Apache 2 software can therefore be included in GPLv3 projects",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://curl.se/docs/copyright.html",
+      "title": "",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "COPYRIGHT AND PERMISSION NOTICE",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://ftp.gnu.org/gnu/libsigsegv/libsigsegv-2.14.tar.gz",
+      "title": "libsigsegv 2.14 runtime grant and build-tool permissions",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "either version 2 of the License",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz",
+      "title": "GMP 6.3.0 alternative grants",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "or both in parallel, as here.",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz",
+      "title": "Avahi 0.8 source grant",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "either version 2.1 of the",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.8.tar.xz",
+      "title": "D-Bus 1.14.8 alternative grants",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Some of the standalone binaries are",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "title": "GPLv3 exact license text retained in GMP",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "offer equivalent access to the",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.gnu.org/licenses/lgpl-3.0.html",
+      "title": "LGPLv3 exact license text retained in GMP",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "object code and/or source code",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+      "title": "LGPLv2.1 exact license text retained in Avahi",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Once this change is made in a given copy, it is irreversible",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz",
+      "title": "OpenSSL 3.5.9 exact license",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "You must give any other recipients",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://codeload.github.com/urbit/vere/tar.gz/8ddc4b786979574dbfcb655e3db1b634f658d0de",
+      "title": "Pinned Vere MIT license",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Copyright (c) 2015 Urbit",
+          "added": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://curl.se/download/curl-8.23.0.tar.gz",
+      "title": "curl 8.23.0 permission notice",
+      "accessed": "2026-10-28",
+      "quotes": [
+        {
+          "text": "Copyright (c) 1996 - 2026",
+          "added": "2026-10-28"
+        }
+      ]
+    }
+  ]
+}

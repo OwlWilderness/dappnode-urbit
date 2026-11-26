@@ -1,0 +1,2933 @@
+{
+  "completeness": {
+    "corresponding_source_sufficiency_accepted": false,
+    "final_successor_image_source_bound": false,
+    "legal_clearance": false,
+    "missing_requirements": [
+      {
+        "checklist": [
+          "S05"
+        ],
+        "id": "M01",
+        "kind": "engineering_validation",
+        "requirement": "Exercise the delivered source-route build and one modified-Avahi rebuild/relink on separately authorized Linux AMD64; no recipient rebuild/relink has been executed."
+      },
+      {
+        "checklist": [
+          "S10"
+        ],
+        "id": "M02",
+        "kind": "source_inputs",
+        "requirement": "Supply exact final-image/base/APK sources and required patches/support; image-source-requirements.json identifies each installed origin and mismatched old recipes. Historical source URLs are not delivered archives."
+      },
+      {
+        "checklist": [
+          "S04"
+        ],
+        "id": "M03",
+        "kind": "final_source_binding",
+        "requirement": "Bind newly composed final manager/private-delivery/package source and descriptors to final artifact. Historical package-context is supplied exactly; it is not a snapshot of Wave1 successor changes."
+      },
+      {
+        "checklist": [
+          "S06",
+          "S09"
+        ],
+        "id": "M04",
+        "kind": "specific_terms",
+        "requirement": "Confirm selected component alternatives without altering original grants; retain BLAKE3 modified-file terms/applicability residual and literal Avahi UTF8 header. Existing bounded nested-notice evidence is supplied, not legal clearance."
+      },
+      {
+        "checklist": [
+          "S08"
+        ],
+        "id": "M05",
+        "kind": "modification_notices",
+        "requirement": "Establish actual modification dates and required prominent per-file change notices for baseline changes; modifications.json hashes each actual changed member and explicitly does not invent dates."
+      },
+      {
+        "checklist": [
+          "S11"
+        ],
+        "id": "M06",
+        "kind": "recipient_installation_facts",
+        "requirement": "Determine actual transfer/installation-information applicability and supply modified-package install/signature/trust procedure when required; do not include owner secrets."
+      },
+      {
+        "checklist": [
+          "S12",
+          "S13"
+        ],
+        "id": "M07",
+        "kind": "availability_and_release",
+        "requirement": "Choose version, binary/source recipient locations and transport; publish equivalent source directions adjacent to binary, independently retrieve/hash exact companion and perform separately authorized release/native acceptance."
+      },
+      {
+        "checklist": [
+          "S02",
+          "S03",
+          "S05"
+        ],
+        "id": "M08",
+        "kind": "build_environment",
+        "requirement": "Supply exact builder base/APKs/tool sources as applicable and qualify no-network build environment/cache completeness. Original source/materials and toolchain archive are retained; historical Dockerfile still installs/fetches over network."
+      },
+      {
+        "checklist": [
+          "S10"
+        ],
+        "id": "M09",
+        "kind": "selected_image_notices",
+        "requirement": "Resolve exact applicable Alpine root/per-file attribution and CA trust-bundle terms using supplied followup evidence; literal installed licence labels are not new grants. Earlier Python3.14.8 sources do not bind selected3.14.10-r1."
+      }
+    ],
+    "modified_library_relink_verified": false,
+    "publication_verified": false,
+    "recipient_rebuild_verified": false,
+    "retained_material_assembly_complete": true
+  },
+  "entries": [
+    {
+      "bytes": 8301,
+      "recipient_path": "BUILD-RELINK.md",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "f62fb8b9fd33c1ab0530ec663954ef08f0d1cd5ee0ce63e0e532154c16bdb518",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/BUILD-RELINK.md"
+      }
+    },
+    {
+      "bytes": 3189,
+      "recipient_path": "MISSING-INPUTS.md",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "64c0eb9cde259f73e050de3414c85cdda76649a3fb40f81fdfde4b898aa66cda",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/MISSING-INPUTS.md"
+      }
+    },
+    {
+      "bytes": 3782,
+      "recipient_path": "NOTICES.md",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "dc212f0a48fec8cb93b2cac448d6b5c89b912fdbacccbd5371c6942986c30b4b",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/NOTICES.md"
+      }
+    },
+    {
+      "bytes": 4693,
+      "recipient_path": "SOURCE-LOCATIONS.md",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "3a010d17111ab9a5a5827e0b37301104227d694e41041d5df97dbec9a3895032",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/SOURCE-LOCATIONS.md"
+      }
+    },
+    {
+      "bytes": 6001071,
+      "recipient_path": "archive-inventory.json",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "f2bb3b4fc1084a01005fc058199356e1c2e56ef7ba78fee18377819169a29822",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/archive-inventory.json"
+      }
+    },
+    {
+      "bytes": 8208,
+      "recipient_path": "assemble.py",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "1a4b46508879b9044b9b003803f2fff2cac3edaf93947443f1c0d25fe12c4386",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/assemble.py"
+      }
+    },
+    {
+      "bytes": 84775,
+      "recipient_path": "bindings/historical-package-binding.json",
+      "role": "original_saved_binding_not_current_engine_observation",
+      "sha256": "83d6017cc945da1aa98335436d4d7742675d1fdbd4c6d9739ac7571e3594d418",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/binding.json"
+      }
+    },
+    {
+      "bytes": 271297,
+      "recipient_path": "bindings/saved-image-inventory.json",
+      "role": "original_saved_binding_not_current_engine_observation",
+      "sha256": "157df89a927ecdaa6478a2a697b5a6d9dc017514a73ee525c135a06d4b051743",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_build_01/image-verification/inventory.json"
+      }
+    },
+    {
+      "bytes": 103925,
+      "recipient_path": "bindings/saved-installed-apk-db.txt",
+      "role": "original_saved_binding_not_current_engine_observation",
+      "sha256": "68bb66604f3fa2854abe7cb80213b33bdf9f95b3c8a620ef6f996be7ca4b70f8",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_build_01/image-verification/installed-apk-db.txt"
+      }
+    },
+    {
+      "bytes": 5802,
+      "recipient_path": "bindings/selection.json",
+      "role": "original_saved_binding_not_current_engine_observation",
+      "sha256": "600e7d07bbc824d5eec4dfa8e282d657aa85b3141525b4fded9fe3c64df86831",
+      "source": {
+        "kind": "repository_file",
+        "path": "build/working-ship.json"
+      }
+    },
+    {
+      "bytes": 99841,
+      "recipient_path": "image-source-requirements.json",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "3489b92747239450c6a1d1c7e14d4b8e533ee59d703b2bd0b010936450f8d440",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/image-source-requirements.json"
+      }
+    },
+    {
+      "bytes": 3025,
+      "recipient_path": "missing-requirements.json",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "c6f2b1d22514fe7bafd8e521416ebf436ba8ef719e3fce24256ecfbc175da628",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/missing-requirements.json"
+      }
+    },
+    {
+      "bytes": 5432,
+      "recipient_path": "modifications.json",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "c184c0151abea2432961679c73eba2a57f4105e8218b32b95b14001d4c8fdfc5",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/modifications.json"
+      }
+    },
+    {
+      "bytes": 10175,
+      "recipient_path": "notices/archive/openssl-3.5.9/LICENSE.txt",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "source": {
+        "kind": "archive_member",
+        "member": "openssl-3.5.9/LICENSE.txt",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 18412,
+      "recipient_path": "notices/archive/openssl-3.5.9/external/perl/Text-Template-1.56/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "9837f05336ef3cbacb6a96e1672a0426d81ad01191f214b8d48e22ca62338181",
+      "source": {
+        "kind": "archive_member",
+        "member": "openssl-3.5.9/external/perl/Text-Template-1.56/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1145,
+      "recipient_path": "notices/archive/openssl-3.5.9/util/perl/OpenSSL/copyright.pm",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "04213b69dbebc8ba0dd8a6216af1d9422f9b63619c1cf2f1d8aa107b83bbb608",
+      "source": {
+        "kind": "archive_member",
+        "member": "openssl-3.5.9/util/perl/OpenSSL/copyright.pm",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1063,
+      "recipient_path": "notices/archive/p/N-V-__8AAA54RADHKA70ncWBovi6ApxYOAQQubuxcBr6y6Ey/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "6a0dbbdaec2b3136b7bf045586f4212bdf74e7af688bf9dfe9154607cf5ec156",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAA54RADHKA70ncWBovi6ApxYOAQQubuxcBr6y6Ey/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1023,
+      "recipient_path": "notices/archive/p/N-V-__8AAA54RADHKA70ncWBovi6ApxYOAQQubuxcBr6y6Ey/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAA54RADHKA70ncWBovi6ApxYOAQQubuxcBr6y6Ey/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1002,
+      "recipient_path": "notices/archive/p/N-V-__8AAB0eQwD-0MdOEBmz7intriBReIsIDNlukNVoNu6o/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAB0eQwD-0MdOEBmz7intriBReIsIDNlukNVoNu6o/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1359,
+      "recipient_path": "notices/archive/p/N-V-__8AAB0eQwD-0MdOEBmz7intriBReIsIDNlukNVoNu6o/contrib/dotzlib/LICENSE_1_0.txt",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAB0eQwD-0MdOEBmz7intriBReIsIDNlukNVoNu6o/contrib/dotzlib/LICENSE_1_0.txt",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1144,
+      "recipient_path": "notices/archive/p/N-V-__8AABFoMgCxh01WjWFoh4nrLx8v4e0G9muwSAAA32Rc/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "122f2c27000472a201d337b9b31f7eb2b52d091b02857061a8880371612d9534",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AABFoMgCxh01WjWFoh4nrLx8v4e0G9muwSAAA32Rc/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1211,
+      "recipient_path": "notices/archive/p/N-V-__8AADC9AACneJx7RTm9Hui7GCYJ2Qdv8Z_CUCbJphyi/UNLICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AADC9AACneJx7RTm9Hui7GCYJ2Qdv8Z_CUCbJphyi/UNLICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 11358,
+      "recipient_path": "notices/archive/p/N-V-__8AADRgAQComAaFJaS9o75BOcaFVew6nO8D7ZTGMRXd/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AADRgAQComAaFJaS9o75BOcaFVew6nO8D7ZTGMRXd/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1478,
+      "recipient_path": "notices/archive/p/N-V-__8AADzSKgBaRtVnvQd2FZXVZ4ehq7SHwyHiBL8xSONl/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "ef8a9b3247488f8901ca60de9b17b745d7bd67e5ec1e622f80d62364572200d8",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AADzSKgBaRtVnvQd2FZXVZ4ehq7SHwyHiBL8xSONl/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 35147,
+      "recipient_path": "notices/archive/p/N-V-__8AAE5fAwHUYgLBeqNatYSKf3qBK3l8nwdpjyY8igK0/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAE5fAwHUYgLBeqNatYSKf3qBK3l8nwdpjyY8igK0/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 7639,
+      "recipient_path": "notices/archive/p/N-V-__8AAE5fAwHUYgLBeqNatYSKf3qBK3l8nwdpjyY8igK0/COPYING.LESSERv3",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAE5fAwHUYgLBeqNatYSKf3qBK3l8nwdpjyY8igK0/COPYING.LESSERv3",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 29175,
+      "recipient_path": "notices/archive/p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "e61807cd1c32ff4e7bd5b4b61dd21997c6dc5642cf19316124fe38d50e1f9fa3",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1326,
+      "recipient_path": "notices/archive/p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/cmake/modules/COPYING-CMAKE-SCRIPTS",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "c666ec2313dba24523ccad88f4c04ea4b24fad6545263a35b1d4ab2b08efe50a",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/cmake/modules/COPYING-CMAKE-SCRIPTS",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1062,
+      "recipient_path": "notices/archive/p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "2df7eebedfd2f5ff4007f9d70862b7545a3da1ba37d8b4b85759c4c8e9024468",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 17879,
+      "recipient_path": "notices/archive/p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/argon2/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "220f8736a89ff51c92ef3d497f413b48e6cf1df3d6278bc909c6308c78e1718e",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/argon2/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 874,
+      "recipient_path": "notices/archive/p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/ed25519/license.txt",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "f68d76b9c1c2271422e55134ea94cf71f2ac3fc3ed6a7ec6b83a1a0538753214",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/ed25519/license.txt",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1479,
+      "recipient_path": "notices/archive/p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/ge-additions/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/ge-additions/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1285,
+      "recipient_path": "notices/archive/p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/scrypt/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "aacbfd9e19e5b38ea09616cebf0751ef0cc7b6a19ea0fd78f4b0598b2c503394",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAEPPSQAFB28-gqWMJB7_zp5ZIS8wIN4boyLzAWRb/scrypt/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1079,
+      "recipient_path": "notices/archive/p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "16de0c32b265cb7d46a6d3bd614f259dd4d693a5e26b3407b04aae8d73041f0c",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 18652,
+      "recipient_path": "notices/archive/p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/LICENSE-docs",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "cce5d01fa4a83b794271bd2c28cffdf99afd43c803e6ddefddae39b591ea7448",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/LICENSE-docs",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1603,
+      "recipient_path": "notices/archive/p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/LICENSE-extra",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "262c44bd2cdba037e6d2a82fba15f5800d292bc993a6f5d6b6ea487744d02836",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAH34QwB6wi5eQK_lFbfDGSN3hRE8l-6Ep198ZsGg/LICENSE-extra",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1092,
+      "recipient_path": "notices/archive/p/N-V-__8AAHEiSQD6ts4e3wCZ7CFp6FAQU4Dg5kBTwgSQpIDY/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "c67aa5c0d77ea831c9a9a025fcbdb69d8241da5d7c673243ae34b1a660afcda2",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAHEiSQD6ts4e3wCZ7CFp6FAQU4Dg5kBTwgSQpIDY/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 18154,
+      "recipient_path": "notices/archive/p/N-V-__8AAHQhHwCCMyKUtQhO0AMsY182In-wQIwXVhenOql5/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "8f2983e9a940367f48999881c14775db725ee643bce1e2f1ba195eb629a33cde",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAHQhHwCCMyKUtQhO0AMsY182In-wQIwXVhenOql5/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1058,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "b45f7144e4aa85d6157799934e9b425295b376431f74b8fab00adf0967053a7b",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1084,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/brotli/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "6e86408ccace4d14d2a9116cb81fe9fbab65f51fb01e123596e1ff5f010abe0c",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/brotli/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1419,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/libyrmcds/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "d5a6d7903cbed2d051aa5887bffbc8b3cd8a0c9f45078725fa248e9a0596f564",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/libyrmcds/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1063,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/mruby-input-stream/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "490c42bf2f7a37a4f8dd7195a315cd26cb8591df7ea9a75bb54028acbe4e48db",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/mruby-input-stream/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1094,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/neverbleed/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "5d9c50d175db903e7b777ca8a72f8f03cb9345e1ea6b0d466d83728a2a92d357",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/neverbleed/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 7048,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/picotls/deps/cifra/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/picotls/deps/cifra/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1300,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/picotls/deps/micro-ecc/LICENSE.txt",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "ffd8b033d2df7568c25a98866bd92b1656f7da82d7f813c0b2eb85ec36611193",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/picotls/deps/micro-ecc/LICENSE.txt",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1071,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/ssl-conservatory/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "a37a73b738a5bb346d2e68446a382fee381709d98c6d75b3bd251c431cabdcd0",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/ssl-conservatory/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1058,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/yaml/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "d0d8b09800a45cd982e9568fc7669d9c1a4c330e275a821bbe24d54366d16fe9",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ2XqALM9jST2Gu4TIdjPNY2QB8rnmKeepeqr076/deps/yaml/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1057,
+      "recipient_path": "notices/archive/p/N-V-__8AAJ4DSwC7aDpt90TmGPWKAI6q4-titwp4M0zsZ2vY/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "a735999c7e5649df6fcda6fb06ab97435851c392b1b93494ae8725f37441632f",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJ4DSwC7aDpt90TmGPWKAI6q4-titwp4M0zsZ2vY/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1073,
+      "recipient_path": "notices/archive/p/N-V-__8AAJD5MgBhfBHYae8jFlcaQw9R-TRw4tcUFB3rO9-q/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "5a49d934cffec8f8ba4d11be4fa09209ab7f53891728b318c0ec82b98d7cdfdf",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJD5MgBhfBHYae8jFlcaQw9R-TRw4tcUFB3rO9-q/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1738,
+      "recipient_path": "notices/archive/p/N-V-__8AAJjNHACk0uvy2j8WATPrbK9KmbnnuYeYIN6PO9nl/COPYING.txt",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "145ea96b4a4a04a1a7738d2a2bf9e830f861971e69606187b018d9e8fc0b95c7",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJjNHACk0uvy2j8WATPrbK9KmbnnuYeYIN6PO9nl/COPYING.txt",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 715,
+      "recipient_path": "notices/archive/p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/COPYRIGHT",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "3c87f63656b6a12fda225b6f798c547fe89e3404f499e890b445761eb310fd4f",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/COPYRIGHT",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 2214,
+      "recipient_path": "notices/archive/p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "310fe25c858a9515fc8c8d7d1f24a67c9496f84a91e0a0e41ea9975b1371e569",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAJnhCAB47uREmMoPc3nE2qhAxU_JOiwXhg4qIWa4/libraries/liblmdb/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1527,
+      "recipient_path": "notices/archive/p/N-V-__8AAKudAQA_d3eW8d8dskxBlLzGBg0qe-4u6ohSfCM2/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "7184f1e2114b518440962e7de67f0b9d5faa3789ba1f1a7ff33159bd26834b06",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAKudAQA_d3eW8d8dskxBlLzGBg0qe-4u6ohSfCM2/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1049,
+      "recipient_path": "notices/archive/p/N-V-__8AALQtAQBEQG8__NumxBzcv4ws_jGX2zVgxvG6p6gs/LICENSE.MIT",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "3633afb48d2f5fb9a1942eead37adbe0ab6c70a79468c1b69e5a1e771ec4b119",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AALQtAQBEQG8__NumxBzcv4ws_jGX2zVgxvG6p6gs/LICENSE.MIT",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 986,
+      "recipient_path": "notices/archive/p/N-V-__8AALQtAQBEQG8__NumxBzcv4ws_jGX2zVgxvG6p6gs/LICENSE.WTFPLv2",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "8b3d9ef07a62cfaa0194bdd64fa1bb61bbc18e4a156a83f8a52d937bd945239b",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AALQtAQBEQG8__NumxBzcv4ws_jGX2zVgxvG6p6gs/LICENSE.WTFPLv2",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1088,
+      "recipient_path": "notices/archive/p/N-V-__8AAMjlVwH79yAHsK65VUcPuhOO6BWgpLDvvnlWPLly/COPYING",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAMjlVwH79yAHsK65VUcPuhOO6BWgpLDvvnlWPLly/COPYING",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1618,
+      "recipient_path": "notices/archive/p/N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "16f7df4828bd89c880c17dd2f45e834b754b6d5e8c9a9ee886af1be4b89475ca",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1210,
+      "recipient_path": "notices/archive/p/N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb/examples/ToyPathTracer/license.md",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb/examples/ToyPathTracer/license.md",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1478,
+      "recipient_path": "notices/archive/p/N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb/public/libbacktrace/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "ef8a9b3247488f8901ca60de9b17b745d7bd67e5ec1e622f80d62364572200d8",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AANptPwE8EYOS5w6KRzVyfllpOBthYRcuuQvYhhxb/public/libbacktrace/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 26527,
+      "recipient_path": "notices/archive/p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1036,
+      "recipient_path": "notices/archive/p/N-V-__8AAPihCgDO1A74r0pFZaoafeZ41DR435smSDwGLbLb/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/N-V-__8AAPihCgDO1A74r0pFZaoafeZ41DR435smSDwGLbLb/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1076,
+      "recipient_path": "notices/archive/p/zlib-1.3.1-ZZQ7lbYMAAB1hTSOKSXAKAgHsfDcyWNH_37ojw5WSpgR/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "264604529b4e07bebf8afe3758d425208920086797466da558d5589b4a2678cc",
+      "source": {
+        "kind": "archive_member",
+        "member": "p/zlib-1.3.1-ZZQ7lbYMAAB1hTSOKSXAKAgHsfDcyWNH_37ojw5WSpgR/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1071,
+      "recipient_path": "notices/archive/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/LICENSE.txt",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "source": {
+        "kind": "archive_member",
+        "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/LICENSE.txt",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1521,
+      "recipient_path": "notices/archive/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/nasm/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "1563996c52e220e15ef2418e67d39488255aa8c28c89e617074d3afe3ee329e0",
+      "source": {
+        "kind": "archive_member",
+        "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/ext/nasm/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 1050,
+      "recipient_path": "notices/archive/vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/ent/LICENSE",
+      "role": "verbatim_source_notice_optional_branches_included_not_binary_membership",
+      "sha256": "10d52dc9713dabef946bc440687890d189f8c083b3f8d8e74131f6cdc6532006",
+      "source": {
+        "kind": "archive_member",
+        "member": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de/pkg/ent/LICENSE",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 24821,
+      "recipient_path": "notices/supplementary/NOTICES.txt",
+      "role": "bounded_existing_nested_notice_evidence_not_clearance",
+      "sha256": "92a9d6d2337880725c1166106c839cfcc9e1fa66c1a45c74aaad64edef175398",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/NOTICES.txt"
+      }
+    },
+    {
+      "bytes": 20444,
+      "recipient_path": "notices/supplementary/applicability.json",
+      "role": "bounded_existing_nested_notice_evidence_not_clearance",
+      "sha256": "d153424ab11c36d512273992ec26ce8d039617f52349aebd98453d2f21db17b7",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/applicability.json"
+      }
+    },
+    {
+      "bytes": 3599,
+      "recipient_path": "notices/supplementary/blake3-comparison.json",
+      "role": "bounded_existing_nested_notice_evidence_not_clearance",
+      "sha256": "cc70d1e58b28ceb2bffe6c44ef97830108efd746cf7c7229a2d0817706281024",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/blake3-comparison.json"
+      }
+    },
+    {
+      "bytes": 565,
+      "recipient_path": "notices/supplementary/comparison/blake3.c.diff",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "08b3dee620ea01c101d7b8af1b4ef5ceb73f64b1185ff2ffc39bf564e20bba9c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/comparison/blake3.c.diff"
+      }
+    },
+    {
+      "bytes": 534,
+      "recipient_path": "notices/supplementary/comparison/blake3.h.diff",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "8ee61e6364c4da9cf7db4b346bee034ca2e68708077b7afb9814bd02cca73c82",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/comparison/blake3.h.diff"
+      }
+    },
+    {
+      "bytes": 1052,
+      "recipient_path": "notices/supplementary/comparison/blake3_impl.h.diff",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "5a642d4244c1fb3e56d3ea014541b590af341ce8ee657a68f6321570f9861bb8",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/comparison/blake3_impl.h.diff"
+      }
+    },
+    {
+      "bytes": 27558,
+      "recipient_path": "notices/supplementary/comparison/upstream-blake3/blake3.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "3eba7449dc6737e2bc8c6ee467390619515d6b8fdb2c772c78051852c3b24bc1",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3.c.txt"
+      }
+    },
+    {
+      "bytes": 2707,
+      "recipient_path": "notices/supplementary/comparison/upstream-blake3/blake3.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "14db1dd1a80a9856b241ccd1e96715efaf4fc0bcfca4bc1ec660747f9edaaa23",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3.h.txt"
+      }
+    },
+    {
+      "bytes": 10313,
+      "recipient_path": "notices/supplementary/comparison/upstream-blake3/blake3_impl.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "8f2de31b1498a6a572db2328d8d7e7a8dd904459c74a1c68b7fae34405c518ec",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/comparison/upstream-blake3/blake3_impl.h.txt"
+      }
+    },
+    {
+      "bytes": 6332,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/klib/kstring.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "0d02c7bf278381f57c9e5f2c420edd367bb4dd322ae4daf3d52c204d03656338",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kstring.h.txt"
+      }
+    },
+    {
+      "bytes": 2880,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/klib/kvec.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "5bce2705b84e7e25c3e3636d62b725407015b8a937a5d0db57b8ee120981daca",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/klib/kvec.h.txt"
+      }
+    },
+    {
+      "bytes": 930,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/deps/cifra/src/curve25519.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "2d69f7b768e6f86c38b50cdeb58a6f52a9156650f2d65cce6e81a846ff6519e0",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.c.txt"
+      }
+    },
+    {
+      "bytes": 4591,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "6ddd5a293c54ffc5d53448b6cb534f36d2f8f71c463b01dedde9493fab724075",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/curve25519.tweetnacl.c.txt"
+      }
+    },
+    {
+      "bytes": 1500,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/deps/cifra/src/ext/handy.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "4fcfcb98ec70e0ff5025a4b0ae17c61f87fff31bc2ea84c1dcdc88bbd3069ae7",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/ext/handy.h.txt"
+      }
+    },
+    {
+      "bytes": 4901,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/deps/cifra/src/poly1305.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "f3701c6cceaf626e22f16b8a9df23eafb512eafb6a53a7e1580cf4bd77019e39",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/cifra/src/poly1305.c.txt"
+      }
+    },
+    {
+      "bytes": 55371,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/deps/micro-ecc/uECC.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "e63972fb13387e42cb9a350f2d3fedc2d00903feec37d6d6010a1402f97c207b",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/deps/micro-ecc/uECC.c.txt"
+      }
+    },
+    {
+      "bytes": 11046,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/lib/asn1.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "d704e712966089258307f13bc8b43e5cc58069e4148e87e4045a63e9f0626210",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/asn1.c.txt"
+      }
+    },
+    {
+      "bytes": 19108,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/lib/cifra.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "3a2b1f437c7d6f6577a5f79bc79d0f8c99022054f603898018c4cc1dbedc106f",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/cifra.c.txt"
+      }
+    },
+    {
+      "bytes": 13630,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/lib/minicrypto-pem.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "c3b7397aa09db044698ebf81913487b149a9f8bdb14e4c2ce6ac1d87e3907a45",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/minicrypto-pem.c.txt"
+      }
+    },
+    {
+      "bytes": 11937,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/lib/pembase64.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "98399718814bd27f932a4e7ecaeeec016f5a5a9d64bda413ea463111db6db5d5",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/pembase64.c.txt"
+      }
+    },
+    {
+      "bytes": 6442,
+      "recipient_path": "notices/supplementary/notices/h2o/deps/picotls/lib/uecc.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "33dcc52bad432ef07843a64f8068b55fe9b4ac57df295c8a85336d675f9b7f00",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/deps/picotls/lib/uecc.c.txt"
+      }
+    },
+    {
+      "bytes": 14319,
+      "recipient_path": "notices/supplementary/notices/h2o/include/h2o/memory.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "db8a6ab6416bf549d592da6fbae616f975ce27b9dd3e4f369a8ad4ed15f93502",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/include/h2o/memory.h.txt"
+      }
+    },
+    {
+      "bytes": 8183,
+      "recipient_path": "notices/supplementary/notices/h2o/lib/common/cache.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "2b9d79bb8cd53068814aea10e32d9a9ffa6f74f4a30b79b0ff8282768de2655e",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/cache.c.txt"
+      }
+    },
+    {
+      "bytes": 17324,
+      "recipient_path": "notices/supplementary/notices/h2o/lib/common/string.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "b4cd72c20509368f80ef89b742892a692caf8a5e929fad9082592e6b9fea7f6d",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/common/string.c.txt"
+      }
+    },
+    {
+      "bytes": 7456,
+      "recipient_path": "notices/supplementary/notices/h2o/lib/http2/casper.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "ace8b7ae9ba1bd6b46630d5356a390e0420226cd9af22be9b19b9df199637966",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/casper.c.txt"
+      }
+    },
+    {
+      "bytes": 36826,
+      "recipient_path": "notices/supplementary/notices/h2o/lib/http2/hpack.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "f7004cc2f2a7e91e0ee23f54535b3aa8efd6e8fafe196875f5b0f4a9c925ac7b",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/h2o/lib/http2/hpack.c.txt"
+      }
+    },
+    {
+      "bytes": 2865,
+      "recipient_path": "notices/supplementary/notices/urcrypt/argon2/src/blake2/blake2.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "3c2de197dd23179f78c57deac7b73a6049778bf651c5db57e508b2cfce5e7559",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2.h.txt"
+      }
+    },
+    {
+      "bytes": 12510,
+      "recipient_path": "notices/supplementary/notices/urcrypt/argon2/src/blake2/blake2b.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "52519ccbc1e48f489ff444091f630d05dadcc8f1ee61c5b7361e3a9618299c9a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/blake2/blake2b.c.txt"
+      }
+    },
+    {
+      "bytes": 10298,
+      "recipient_path": "notices/supplementary/notices/urcrypt/argon2/src/opt.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "a4f86fd457fb46300530aef80064c3e05b7ca18b67ba06b29c1d383d8e2534a7",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/argon2/src/opt.c.txt"
+      }
+    },
+    {
+      "bytes": 27765,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "55b23867aa8526c8b243758c4524dd899da502484f3bdeaf6a56df91e021b083",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3.c.txt"
+      }
+    },
+    {
+      "bytes": 66050,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3_avx2_x86-64_unix.S.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "a2d95519fd9845cf80252110e21a93124e81c03da836eaac0bca0537be4f8324",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_avx2_x86-64_unix.S.txt"
+      }
+    },
+    {
+      "bytes": 89364,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3_avx512_x86-64_unix.S.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "ecf923dc9ccac941b751e7190c9f10b97535d1e8d6e0bb0888a979f5bc0a5fde",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_avx512_x86-64_unix.S.txt"
+      }
+    },
+    {
+      "bytes": 8362,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3_dispatch.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "d545f50842ede67a093a382d2c7c7c57fb8107d86af954f7cd2f60a22325d1e1",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_dispatch.c.txt"
+      }
+    },
+    {
+      "bytes": 10309,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3_impl.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "80524859fb92c5604785878e883f3bcbdbf7425417f0efa4bd12c506047a6f46",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_impl.h.txt"
+      }
+    },
+    {
+      "bytes": 5889,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3_portable.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "2bc25b0dad67b4329d0b49cfa075ab2b0d04e424addbddc4e9c389c52a192524",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_portable.c.txt"
+      }
+    },
+    {
+      "bytes": 68858,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3_sse2_x86-64_unix.S.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "94baa998f4114bf57b99e1791a21e9f0bcdc4bd5803864eb30a2477440b7380c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_sse2_x86-64_unix.S.txt"
+      }
+    },
+    {
+      "bytes": 61143,
+      "recipient_path": "notices/supplementary/notices/urcrypt/blake3/blake3_sse41_x86-64_unix.S.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "135048e4a81a6f9e86960b115141874a55954dbfd2cd1e8e9818837b46b498ad",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/blake3/blake3_sse41_x86-64_unix.S.txt"
+      }
+    },
+    {
+      "bytes": 11088,
+      "recipient_path": "notices/supplementary/notices/urcrypt/ed25519/src/sha512.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "b34128b950036777c299943d624bd830a234a65932c394fdf455e4948258fb6d",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/ed25519/src/sha512.c.txt"
+      }
+    },
+    {
+      "bytes": 1967,
+      "recipient_path": "notices/supplementary/notices/urcrypt/scrypt/crypto_scrypt-check.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "115ae6745c0bca6b3f568a01d3a4347db2661b71c8c0c40755674708b6aad12c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-check.c.txt"
+      }
+    },
+    {
+      "bytes": 945,
+      "recipient_path": "notices/supplementary/notices/urcrypt/scrypt/crypto_scrypt-hash.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "2c529a5d9eb047ecdcf55e80d971b1e991b9cf427f349aea4acbf45f923f2679",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-hash.c.txt"
+      }
+    },
+    {
+      "bytes": 9048,
+      "recipient_path": "notices/supplementary/notices/urcrypt/scrypt/crypto_scrypt-nosse.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "d6502178c3a6ed422e52b674c34f938a0dda90d6526312a0f1f1e1177879bc0f",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/crypto_scrypt-nosse.c.txt"
+      }
+    },
+    {
+      "bytes": 11062,
+      "recipient_path": "notices/supplementary/notices/urcrypt/scrypt/sha256.c.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "7ee478e6a215c64713071269c241b8181e3b9ec6e82ea9c0dfda9afb96b5759d",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.c.txt"
+      }
+    },
+    {
+      "bytes": 2710,
+      "recipient_path": "notices/supplementary/notices/urcrypt/scrypt/sha256.h.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "1183dd745f2c840493681102e1447dfbac4b5f059de1dced710cddd024512b29",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/vere/followup/notices/urcrypt/scrypt/sha256.h.txt"
+      }
+    },
+    {
+      "bytes": 18154,
+      "recipient_path": "notices/texts/GPL-2.0.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "8f2983e9a940367f48999881c14775db725ee643bce1e2f1ba195eb629a33cde",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/GPL-2.0.txt"
+      }
+    },
+    {
+      "bytes": 35150,
+      "recipient_path": "notices/texts/GPL-3.0.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "e6037104443f9a7829b2aa7c5370d0789a7bda3ca65a0b904cdc0c2e285d9195",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/GPL-3.0.txt"
+      }
+    },
+    {
+      "bytes": 26527,
+      "recipient_path": "notices/texts/LGPL-2.1.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/LGPL-2.1.txt"
+      }
+    },
+    {
+      "bytes": 7639,
+      "recipient_path": "notices/texts/LGPL-3.0.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/LGPL-3.0.txt"
+      }
+    },
+    {
+      "bytes": 10175,
+      "recipient_path": "notices/texts/OpenSSL-3.5.9-LICENSE.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/OpenSSL-3.5.9-LICENSE.txt"
+      }
+    },
+    {
+      "bytes": 1071,
+      "recipient_path": "notices/texts/Vere-MIT.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/Vere-MIT.txt"
+      }
+    },
+    {
+      "bytes": 741,
+      "recipient_path": "notices/texts/avahi-source-header.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "a15a5d1a6e09185c5cc0d4cb73dd9d6717a9f6ef2ad228d9f47cc8964c2f93e3",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/avahi-source-header.txt"
+      }
+    },
+    {
+      "bytes": 962,
+      "recipient_path": "notices/texts/avahi-utf8-header.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "dd7b81540df5905090594029a5d45c3209f8368f9fe591ece86db67961b4b157",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/avahi-utf8-header.txt"
+      }
+    },
+    {
+      "bytes": 1088,
+      "recipient_path": "notices/texts/curl-8.23.0-COPYING.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/curl-8.23.0-COPYING.txt"
+      }
+    },
+    {
+      "bytes": 29175,
+      "recipient_path": "notices/texts/dbus-COPYING.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "e61807cd1c32ff4e7bd5b4b61dd21997c6dc5642cf19316124fe38d50e1f9fa3",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/dbus-COPYING.txt"
+      }
+    },
+    {
+      "bytes": 4051,
+      "recipient_path": "notices/texts/gmp-README.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "5e9f9325fd702bc4bcda27d7a78fea88a2a09fa39b4b15ac7b9b205e0863dc7e",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/gmp-README.txt"
+      }
+    },
+    {
+      "bytes": 1071,
+      "recipient_path": "notices/texts/historical-readme-MIT.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "001bd5e696f968e7c3195b33fb8c4d32b1a6a9a7d36b46054b10a400b868d352",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/historical-readme-MIT.txt"
+      }
+    },
+    {
+      "bytes": 6354,
+      "recipient_path": "notices/texts/sigsegv-README.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "438cd8a66b88bfd7ab82c0a87dabbd64d3eade36e848188f26121250cec7a076",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/sigsegv-README.txt"
+      }
+    },
+    {
+      "bytes": 797,
+      "recipient_path": "notices/texts/sigsegv-runtime-header.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "a59cedc6343cd4a4ad326c50c9cbf5a76123f8b19002167511e4a0063efae914",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/sigsegv-runtime-header.txt"
+      }
+    },
+    {
+      "bytes": 1062,
+      "recipient_path": "notices/texts/urcrypt-MIT.txt",
+      "role": "retained_verbatim_notice_or_nested_source_attribution",
+      "sha256": "2df7eebedfd2f5ff4007f9d70862b7545a3da1ba37d8b4b85759c4c8e9024468",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/texts/urcrypt-MIT.txt"
+      }
+    },
+    {
+      "bytes": 42582,
+      "recipient_path": "package-context/.dockerignore",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "b4038fa2bcfff1f288fde519a9c566ea73a28e5356484e7dc59fdd4361635828",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/.dockerignore"
+      }
+    },
+    {
+      "bytes": 1905,
+      "recipient_path": "package-context/LICENSE.md",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "be17005284c79a1d7553c6c74ed99c836158649d9c667c58da4273909c22f863",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/LICENSE.md"
+      }
+    },
+    {
+      "bytes": 34674,
+      "recipient_path": "package-context/LICENSES/GPL-3.0-only.txt",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/LICENSES/GPL-3.0-only.txt"
+      }
+    },
+    {
+      "bytes": 2572,
+      "recipient_path": "package-context/build/Dockerfile",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "b44662fba4fb19ad02b276bc00b55082df434c7ee575a0fb05e7cff0f9fc74b7",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/build/Dockerfile"
+      }
+    },
+    {
+      "bytes": 145,
+      "recipient_path": "package-context/build/docker-entrypoint.sh",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "2c7b57372c20ee050e5afc3030998bd2be9d509a29899331b19d145d3eebd854",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/build/docker-entrypoint.sh"
+      }
+    },
+    {
+      "bytes": 53695,
+      "recipient_path": "package-context/build/notice-files.json",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "72f94a0c531699ce01600f865c3a1c61cba5770cb397f8e0d9593268fedf647c",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/build/notice-files.json"
+      }
+    },
+    {
+      "bytes": 278,
+      "recipient_path": "package-context/build/vere-release.json",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "b632a8b5925b3f19cc73f2db8d3e639dccb7f74928343c64c01b79779633b2d2",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/build/vere-release.json"
+      }
+    },
+    {
+      "bytes": 1444,
+      "recipient_path": "package-context/build/volume_guard.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "8a43c7746b78e59ca8e920283c1e0c069cac1319e61d261867c46673ea630055",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/build/volume_guard.py"
+      }
+    },
+    {
+      "bytes": 2167,
+      "recipient_path": "package-context/docs/artwork.md",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "1a20dc7936f3bcb53a77b602deb7df26af4a6df5655c70e85240887cbfbd0d30",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/docs/artwork.md"
+      }
+    },
+    {
+      "bytes": 16558,
+      "recipient_path": "package-context/tools/browser-importer/archive.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "7d4ca9c3ad19564e1927bcbf0e28783c9d857a53b44bcf00e83575e60c164b57",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/archive.py"
+      }
+    },
+    {
+      "bytes": 6157,
+      "recipient_path": "package-context/tools/browser-importer/backend_tls.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "209e414939a4b81960a764b139e08844396f6421a7c22e4d7574fe3e0a57dad4",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/backend_tls.py"
+      }
+    },
+    {
+      "bytes": 5734,
+      "recipient_path": "package-context/tools/browser-importer/enrollment.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "6b327741e5d2370d248a7e95179d9d3c51ee247507aa19499e36e0f5804f77d0",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/enrollment.py"
+      }
+    },
+    {
+      "bytes": 18706,
+      "recipient_path": "package-context/tools/browser-importer/importer.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "bb87b669cdca73d90cfe531677e04fb21a1231e855b13e2bbc7d64e5eb5558bd",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/importer.py"
+      }
+    },
+    {
+      "bytes": 443,
+      "recipient_path": "package-context/tools/browser-importer/managed_service.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "3c9d43df418209c8bbe6435bc875866c65fcf1831ed868da6643c428e42d8098",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/managed_service.py"
+      }
+    },
+    {
+      "bytes": 14268,
+      "recipient_path": "package-context/tools/browser-importer/owner_tls.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "abfd71949a423aca5b509b559a4014eb18b385ef4c4410ae71dc898b52da6ed0",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/owner_tls.py"
+      }
+    },
+    {
+      "bytes": 18468,
+      "recipient_path": "package-context/tools/browser-importer/package_service.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "ac2656813ebd079bd29b36a3af2dae55c270b1635850433fd22fc144e6441de9",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/package_service.py"
+      }
+    },
+    {
+      "bytes": 7063,
+      "recipient_path": "package-context/tools/browser-importer/public_ingress.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "22de61e1ad2b7afb9f4719a4985733395a294fc5c8d68bf00bbc5b24baf2584b",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/public_ingress.py"
+      }
+    },
+    {
+      "bytes": 17617,
+      "recipient_path": "package-context/tools/browser-importer/runtime.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "cfaadc5ce7901640f4a99aeb7ea4e5bd05e7ffb1795bcf048cf39d66e97dd823",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/runtime.py"
+      }
+    },
+    {
+      "bytes": 26669,
+      "recipient_path": "package-context/tools/browser-importer/server.py",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "0ec44f6df6fb0b4bbd1976a618ecd789362339efac3473091a37aa3de64f9c84",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/server.py"
+      }
+    },
+    {
+      "bytes": 16620,
+      "recipient_path": "package-context/tools/browser-importer/web/app.mjs",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "1ca5562ed20f9fe168c269af44342ea6a16fd515d8804f577600eff76b09391c",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/web/app.mjs"
+      }
+    },
+    {
+      "bytes": 1441,
+      "recipient_path": "package-context/tools/browser-importer/web/enroll.html",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "8f82f2846caf4936011bffb0de8f3b1be417bcbc765c6a61e0d920f0f46b448b",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/web/enroll.html"
+      }
+    },
+    {
+      "bytes": 1171,
+      "recipient_path": "package-context/tools/browser-importer/web/enroll.mjs",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "a841dcfe91e4ccf09f2a4a8b88aea319b78a10fd40c7e417d3ff3c57484b09fd",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/web/enroll.mjs"
+      }
+    },
+    {
+      "bytes": 4802,
+      "recipient_path": "package-context/tools/browser-importer/web/index.html",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "b043522f6195830b4f72e0464c044beb8e1af5ceec29d2a9c4128b002e82d512",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/web/index.html"
+      }
+    },
+    {
+      "bytes": 1550,
+      "recipient_path": "package-context/tools/browser-importer/web/style.css",
+      "role": "historical_exact_wrapper_source_or_context_input",
+      "sha256": "65a306c85d6179f685464cdbf1b9cff6d26212d51378f154b8e00be50b7d7c04",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/web/style.css"
+      }
+    },
+    {
+      "bytes": 97070,
+      "recipient_path": "platform/followup/aports/inventory.json",
+      "role": "historical_platform_evidence_not_final_image_clearance",
+      "sha256": "d9611f77427ac33c5fcb16e38e4696f4048b1c33352ed1199725d8edc7a54d5a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/inventory.json"
+      }
+    },
+    {
+      "bytes": 3514,
+      "recipient_path": "platform/followup/aports/sources/alpine-base/repository-README.md",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ae4b731c5ec54ab44908c161fe2a54b7cd51b0273a447e7d961dbb7157818d5a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-base/repository-README.md"
+      }
+    },
+    {
+      "bytes": 97,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/20locale.sh",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "284a6ef56ab97a13a777c6b01ae14f2cc3d2b7a29c19e750e622e70cc3c73186",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/20locale.sh"
+      }
+    },
+    {
+      "bytes": 1545,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/aliases.conf",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "3ebaba946f213670170c7d69949f690a3854553bd0b1560f1d980cba4c83a942",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/aliases.conf"
+      }
+    },
+    {
+      "bytes": 453,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.post-install",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "dd30b63bfbe4f7d8085f57840e15b84015b3518d6f282a3e0924f73a61000016",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.post-install"
+      }
+    },
+    {
+      "bytes": 30,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.post-upgrade",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "53f570f015ac2086597ab62accc6ad08600e2994577ac622263f17e9de39d2e2",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.post-upgrade"
+      }
+    },
+    {
+      "bytes": 56,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.pre-install",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "28ecff91a36f438ca26bc8cc08d857863378aa94eab399a1f413e52501b86f85",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.pre-install"
+      }
+    },
+    {
+      "bytes": 944,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.pre-upgrade",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "3f35fa5402d397389f366e8934ba0f800a017a149f4281dc8c22762419e47e10",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/alpine-baselayout.pre-upgrade"
+      }
+    },
+    {
+      "bytes": 2247,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/blacklist.conf",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "0e9ab848289bfb20b9b066d05c8b1383a7c92b97ff8072a50806054b5d3fd739",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/blacklist.conf"
+      }
+    },
+    {
+      "bytes": 447,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/color_prompt.sh.disabled",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ba24425c6864a5d17fa0fdaf914c4d21419e47c4d62080c33830af059fe46617",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/color_prompt.sh.disabled"
+      }
+    },
+    {
+      "bytes": 283,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/crontab",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "575d810a9fae5f2f0671c9b2c0ce973e46c7207fbe5cb8d1b0d1836a6a0470e3",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/crontab"
+      }
+    },
+    {
+      "bytes": 510,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/group",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "6fb6ab5a5526e6f4896b70c7e3c350fd475158a1f0d7b5fc0f3f9bd57f1c3be8",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/group"
+      }
+    },
+    {
+      "bytes": 6855,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/hier.7",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "8a91913d8a05ad57316355ee74d966210a6eae7bd850d46dac53e799d3981cc2",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/hier.7"
+      }
+    },
+    {
+      "bytes": 122,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/i386.conf",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "6c46c4cbfb8b7594f19eb94801a350fa2221ae9ac5239a8819d15555caa76ae8",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/i386.conf"
+      }
+    },
+    {
+      "bytes": 570,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/inittab",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "7326d8ad56bf5fea63b1ca516a747ff6e6723e25ae84a93c31620b03de6c001d",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/inittab"
+      }
+    },
+    {
+      "bytes": 702,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/passwd",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "31a94f06f17bc3b9085fccab1d0fa6ee9e79c4a1e4d91f617fa5de95863be015",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/passwd"
+      }
+    },
+    {
+      "bytes": 547,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/profile",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "87e8643d3ce156de0c09370d4d39446f30bd00d264bea248abc191c4d7b9df3e",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/profile"
+      }
+    },
+    {
+      "bytes": 3514,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/repository-README.md",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ae4b731c5ec54ab44908c161fe2a54b7cd51b0273a447e7d961dbb7157818d5a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/repository-README.md"
+      }
+    },
+    {
+      "bytes": 677,
+      "recipient_path": "platform/followup/aports/sources/alpine-baselayout/usr_merge_nag.sh",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ffab41e32add88a13483309172c22da013f50a82bc552b488765254a6e92115c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-baselayout/usr_merge_nag.sh"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "9c102bcc376af1498d549b77bdbfa815ae86faa1d2d82f040e616b18ef2df2d4",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ebf31683b56410ecc4c00acd9f6e2839e237a3b62b5ae7ef686705c7ba0396a9",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "1bb2a846c0ea4ca9d0e7862f970863857fc33c32f5506098c636a62a726a847b",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "12f899e55a7691225603d6fb3324940fc51cd7f133e7ead788663c2b7eecb00c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58199dcc.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "73867d92083f2f8ab899a26ccda7ef63dfaa0032a938620eda605558958a8041",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58199dcc.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58cbb476.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "9a4cd858d9710963848e6d5f555325dc199d1c952b01cf6e64da2c15deedbd97",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58cbb476.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58e4f17d.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "780b3ed41786772cbc7b68136546fa3f897f28a23b30c72dde6225319c44cfff",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-58e4f17d.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5e69ca50.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "59c01c57b446633249f67c04b115dd6787f4378f183dff2bbf65406df93f176d",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-5e69ca50.rsa.pub"
+      }
+    },
+    {
+      "bytes": 451,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-60ac2099.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "db0b49163f07ffba64a5ca198bcf1688610b0bd1f0d8d5afeaf78559d73f2278",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-60ac2099.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "207e4696d3c05f7cb05966aee557307151f1f00217af4143c1bcaf33b8df733f",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "128d34d4aec39b0daedea8163cd8dc24dff36fd3d848630ab97eeb1d3084bbb3",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616a9724.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "10877cce0a935e46ad88cb79e174a2491680508eccda08e92bf04fb9bf37fbc1",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616a9724.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616abc23.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "4a095a9daca86da496a3cd9adcd95ee2197fdbeb84638656d469f05a4d740751",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616abc23.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616ac3bc.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "0caf5662fde45616d88cfd7021b7bda269a2fcaf311e51c48945a967a609ec0b",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616ac3bc.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616adfeb.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ebe717d228555aa58133c202314a451f81e71f174781fd7ff8d8970d6cfa60da",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616adfeb.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "d11f6b21c61b4274e182eb888883a8ba8acdbf820dcc7a6d82a7d9fc2fd2836d",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616db30d.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "40a216cbd163f22e5f16a9e0929de7cde221b9cbae8e36aa368b1e128afe0a31",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-616db30d.rsa.pub"
+      }
+    },
+    {
+      "bytes": 800,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-66ba20fe.rsa.pub",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "7cf4cb8314e6ccc985b0d7f1aa0c6e0a81e3588f69a41f383af7a63d1ba61793",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/alpine-devel@lists.alpinelinux.org-66ba20fe.rsa.pub"
+      }
+    },
+    {
+      "bytes": 3514,
+      "recipient_path": "platform/followup/aports/sources/alpine-keys/repository-README.md",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ae4b731c5ec54ab44908c161fe2a54b7cd51b0273a447e7d961dbb7157818d5a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/alpine-keys/repository-README.md"
+      }
+    },
+    {
+      "bytes": 1234,
+      "recipient_path": "platform/followup/aports/sources/netbase-6.4/debian/copyright",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "795b66147ea5ad692991caa7008ece551fb0fa88b9c53656223bd1518dc58ab2",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/netbase-6.4/debian/copyright"
+      }
+    },
+    {
+      "bytes": 3144,
+      "recipient_path": "platform/followup/aports/sources/netbase-6.4/etc/protocols",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "4959498abbadaa1e50894a266f8d0d94500101cfe5b5f09dcad82e9d5bdfab46",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/netbase-6.4/etc/protocols"
+      }
+    },
+    {
+      "bytes": 12813,
+      "recipient_path": "platform/followup/aports/sources/netbase-6.4/etc/services",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "f6183055fd949f9c53d49ee620f85d0150123ea691d25ed1bba0c641b4ee2f48",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/aports/sources/netbase-6.4/etc/services"
+      }
+    },
+    {
+      "bytes": 2489,
+      "recipient_path": "platform/followup/trust-bundle/source-delivery-references.json",
+      "role": "historical_platform_evidence_not_final_image_clearance",
+      "sha256": "bf1158a4bc4a4cb6886f8e3bf856509c75c68fc670e7af212e1387b596a77510",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source-delivery-references.json"
+      }
+    },
+    {
+      "bytes": 1583,
+      "recipient_path": "platform/followup/trust-bundle/source/Makefile",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "4e317305a283703ccc79828ebf5728acb3ae1bf8fe3e857ab39496470acaa2db",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/Makefile"
+      }
+    },
+    {
+      "bytes": 548,
+      "recipient_path": "platform/followup/trust-bundle/source/README.md",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "f035dad569493e311659b9b79be908ce75a5363a958e8ada9b3c37b58707b913",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/README.md"
+      }
+    },
+    {
+      "bytes": 9,
+      "recipient_path": "platform/followup/trust-bundle/source/VERSION",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "a0c57a29bd21b44efec475c17b0ccfb6ee78e19a32b7193f9a11d187c0885ca3",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/VERSION"
+      }
+    },
+    {
+      "bytes": 9533,
+      "recipient_path": "platform/followup/trust-bundle/source/c_rehash.c",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "a68fedc0edd976b9f35ecfdcb252d80dc12084b1bc4e945be7dc42c437d8b540",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/c_rehash.c"
+      }
+    },
+    {
+      "bytes": 1375050,
+      "recipient_path": "platform/followup/trust-bundle/source/certdata.txt",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "beb7e6dfe6499926e52c075c27bcfbe4c957f8609c575b3860273ae2806f63eb",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/certdata.txt"
+      }
+    },
+    {
+      "bytes": 24902,
+      "recipient_path": "platform/followup/trust-bundle/source/mk-ca-bundle.pl",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "8e278f4982210b37e4f9a048bd6ed23df41e4a054085bd73f8242628f03d09ca",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/mk-ca-bundle.pl"
+      }
+    },
+    {
+      "bytes": 865,
+      "recipient_path": "platform/followup/trust-bundle/source/scripts/update-version.sh",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "21b27bb720c823c459480dc246cf3ee54269551f9b8440af18caf81047120328",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/scripts/update-version.sh"
+      }
+    },
+    {
+      "bytes": 288,
+      "recipient_path": "platform/followup/trust-bundle/source/split-ca-bundle.sh",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "973dbde5636a8c7900704b536a526156ead98acf358f6e7b9869067c4fa8b41c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/split-ca-bundle.sh"
+      }
+    },
+    {
+      "bytes": 2312,
+      "recipient_path": "platform/followup/trust-bundle/source/update-ca-certificates.8",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "b3091ed40fe42a59b9e31742f4b47d99db3260298ffeafe1b129fe17ef37359c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca-certificates.8"
+      }
+    },
+    {
+      "bytes": 7736,
+      "recipient_path": "platform/followup/trust-bundle/source/update-ca.c",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "fff6ee69a2f5705e0ae5a0214f0e1fff029b14adef49359160cf9a5c867d5df4",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/followup/trust-bundle/source/update-ca.c"
+      }
+    },
+    {
+      "bytes": 56950,
+      "recipient_path": "platform/image-baseline/coverage.json",
+      "role": "historical_platform_evidence_not_final_image_clearance",
+      "sha256": "845b3f22a27f41180a4b7c3540cf0f675ee5b19b932e2cfda81fb603b120c779",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/coverage.json"
+      }
+    },
+    {
+      "bytes": 17622,
+      "recipient_path": "platform/image-baseline/notices/apk-tools--apk-tools-v3.0.8__LICENSE",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "b3c87315aae4c9f276c37168f2655dd8bd990544d7a0bbfb929664155c7ab257",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/apk-tools--apk-tools-v3.0.8__LICENSE"
+      }
+    },
+    {
+      "bytes": 3418,
+      "recipient_path": "platform/image-baseline/notices/busybox--alpine-ssl_client.c",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "f36fb83637a12fe0706f828a3e9a4181ac6ed452b59d5d30fcf4dbe1884b8aed",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/busybox--alpine-ssl_client.c"
+      }
+    },
+    {
+      "bytes": 18348,
+      "recipient_path": "platform/image-baseline/notices/busybox--busybox-1.37.0__LICENSE",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "bbfc9843646d483c334664f651c208b9839626891d8f17604db2146962f43548",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/busybox--busybox-1.37.0__LICENSE"
+      }
+    },
+    {
+      "bytes": 1999,
+      "recipient_path": "platform/image-baseline/notices/busybox--busybox-1.37.0__archival__libarchive__bz__LICENSE",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "b5a136ed67798e51fe2e0ca0b2a21cb01b904ff0c9f7d563a6292e276607e58f",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/busybox--busybox-1.37.0__archival__libarchive__bz__LICENSE"
+      }
+    },
+    {
+      "bytes": 1896,
+      "recipient_path": "platform/image-baseline/notices/bzip2--bzip2-1.0.8__LICENSE",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/bzip2--bzip2-1.0.8__LICENSE"
+      }
+    },
+    {
+      "bytes": 1144,
+      "recipient_path": "platform/image-baseline/notices/expat--expat-2.9.0__COPYING",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "31b15de82aa19a845156169a17a5488bf597e561b2c318d159ed583139b25e87",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/expat--expat-2.9.0__COPYING"
+      }
+    },
+    {
+      "bytes": 26527,
+      "recipient_path": "platform/image-baseline/notices/gcc--COPYING.LIB",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/gcc--COPYING.LIB"
+      }
+    },
+    {
+      "bytes": 3324,
+      "recipient_path": "platform/image-baseline/notices/gcc--COPYING.RUNTIME",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/gcc--COPYING.RUNTIME"
+      }
+    },
+    {
+      "bytes": 35147,
+      "recipient_path": "platform/image-baseline/notices/gcc--COPYING3",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/gcc--COPYING3"
+      }
+    },
+    {
+      "bytes": 8434,
+      "recipient_path": "platform/image-baseline/notices/gcc--libstdc++-v3__doc__html__manual__license.html",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "6ef2606fad7fce5ba388fef9d8d137178d0135f3d2c538b664229b58eae5ce06",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/gcc--libstdc++-v3__doc__html__manual__license.html"
+      }
+    },
+    {
+      "bytes": 35072,
+      "recipient_path": "platform/image-baseline/notices/gdbm--gdbm-1.26__COPYING",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "690d762f2e8e149ab1e2d6a409a3853b6151a2533b2382fae549a176d6bedecf",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/gdbm--gdbm-1.26__COPYING"
+      }
+    },
+    {
+      "bytes": 1132,
+      "recipient_path": "platform/image-baseline/notices/libffi--libffi-3.5.2__LICENSE",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "d5699fa516968e3a1550e6c902b7441c78856f2603d61bedd0b0662a26655366",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/libffi--libffi-3.5.2__LICENSE"
+      }
+    },
+    {
+      "bytes": 18698,
+      "recipient_path": "platform/image-baseline/notices/libffi--libffi-3.5.2__LICENSE-BUILDTOOLS",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/libffi--libffi-3.5.2__LICENSE-BUILDTOOLS"
+      }
+    },
+    {
+      "bytes": 1285,
+      "recipient_path": "platform/image-baseline/notices/mpdecimal--mpdecimal-4.0.1__COPYRIGHT.txt",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "dba079e24a0286052f9f36a5e0b4f6cc95bc83ada657eb26bef8c0b6473f6512",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/mpdecimal--mpdecimal-4.0.1__COPYRIGHT.txt"
+      }
+    },
+    {
+      "bytes": 2943,
+      "recipient_path": "platform/image-baseline/notices/mpdecimal--mpdecimal-4.0.1__doc__COPYRIGHT.txt",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "8d99282e76b6de2247323d6fe7cc45700872b9b761f9a644ba8db7c15a984c49",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/mpdecimal--mpdecimal-4.0.1__doc__COPYRIGHT.txt"
+      }
+    },
+    {
+      "bytes": 133,
+      "recipient_path": "platform/image-baseline/notices/musl--alpine-__stack_chk_fail_local.c",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "299a7d75a09de3e2e11e7fb4acc3182e4a14e868093d2f30938fce9bfcff13da",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/musl--alpine-__stack_chk_fail_local.c"
+      }
+    },
+    {
+      "bytes": 11614,
+      "recipient_path": "platform/image-baseline/notices/musl--alpine-getconf.c",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "d87d0cbb3690ae2c5d8cc218349fd8278b93855dd625deaf7ae50e320aad247c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/musl--alpine-getconf.c"
+      }
+    },
+    {
+      "bytes": 11656,
+      "recipient_path": "platform/image-baseline/notices/musl--alpine-getent.c",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "a6171c2db641cdd99c164169d3c5c6ca323617483cedec4cbbe3eb39c5834df0",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/musl--alpine-getent.c"
+      }
+    },
+    {
+      "bytes": 2577,
+      "recipient_path": "platform/image-baseline/notices/musl--alpine-iconv.c",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "f79a2930a2e5bb0624321589edf8b889d1e9b603e01e6b7ae214616605b3fdd7",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/musl--alpine-iconv.c"
+      }
+    },
+    {
+      "bytes": 393,
+      "recipient_path": "platform/image-baseline/notices/musl--alpine-ldconfig",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "7065021e04a5060957b5c6907af671a7028230d91927fb0c25892cadd9312b7c",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/musl--alpine-ldconfig"
+      }
+    },
+    {
+      "bytes": 6196,
+      "recipient_path": "platform/image-baseline/notices/musl--musl-1.2.6__COPYRIGHT",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "b870108ec5e7790e9f9919064f1b9421d62d5f9b0e6c230c6adf7ea2da62e97b",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/musl--musl-1.2.6__COPYRIGHT"
+      }
+    },
+    {
+      "bytes": 1447,
+      "recipient_path": "platform/image-baseline/notices/ncurses--COPYING",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "a85ca5bef8ce71f013bc5f4306c681881b248450f3b63722589891f0b69ea52d",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/ncurses--COPYING"
+      }
+    },
+    {
+      "bytes": 18011,
+      "recipient_path": "platform/image-baseline/notices/pax-utils--pax-utils-1.3.9__COPYING",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "e6d6a009505e345fe949e1310334fcb0747f28dae2856759de102ab66b722cb4",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/pax-utils--pax-utils-1.3.9__COPYING"
+      }
+    },
+    {
+      "bytes": 97,
+      "recipient_path": "platform/image-baseline/notices/pcre2--pcre2-10.49__COPYING",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "99272c55f3dcfa07a8a7e15a5c1a33096e4727de74241d65fa049fccfdd59507",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/pcre2--pcre2-10.49__COPYING"
+      }
+    },
+    {
+      "bytes": 1326,
+      "recipient_path": "platform/image-baseline/notices/pcre2--pcre2-10.49__cmake__COPYING-CMAKE-SCRIPTS",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "c666ec2313dba24523ccad88f4c04ea4b24fad6545263a35b1d4ab2b08efe50a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/pcre2--pcre2-10.49__cmake__COPYING-CMAKE-SCRIPTS"
+      }
+    },
+    {
+      "bytes": 1444,
+      "recipient_path": "platform/image-baseline/notices/pcre2--pcre2-10.49__deps__sljit__LICENSE",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "5f216505c0f6ea3273caec89e766eef93cdeb7bbb0c429f9360116d7c938feeb",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/pcre2--pcre2-10.49__deps__sljit__LICENSE"
+      }
+    },
+    {
+      "bytes": 35147,
+      "recipient_path": "platform/image-baseline/notices/readline--readline-8.3__COPYING",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/readline--readline-8.3__COPYING"
+      }
+    },
+    {
+      "bytes": 1737,
+      "recipient_path": "platform/image-baseline/notices/sqlite--sqlite-autoconf-3530400__autosetup__LICENSE",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "679b9208e67df09977456d1d2ae4d885b9badf02c47b45a28cf95ee27c14cb18",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/sqlite--sqlite-autoconf-3530400__autosetup__LICENSE"
+      }
+    },
+    {
+      "bytes": 257,
+      "recipient_path": "platform/image-baseline/notices/sqlite--sqlite-autoconf-3530400__tea__license.terms",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "66e056b6e8687f32af30d5187611b98b12a8f46f07aaf62f43585f276e8f0ac9",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/sqlite--sqlite-autoconf-3530400__tea__license.terms"
+      }
+    },
+    {
+      "bytes": 3119,
+      "recipient_path": "platform/image-baseline/notices/xz--xz-5.8.4__COPYING",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/xz--xz-5.8.4__COPYING"
+      }
+    },
+    {
+      "bytes": 607,
+      "recipient_path": "platform/image-baseline/notices/xz--xz-5.8.4__COPYING.0BSD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "0b01625d853911cd0e2e088dcfb743261034a091bb379246cb25a14cc4c74bf1",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/xz--xz-5.8.4__COPYING.0BSD"
+      }
+    },
+    {
+      "bytes": 17984,
+      "recipient_path": "platform/image-baseline/notices/xz--xz-5.8.4__COPYING.GPLv2",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/xz--xz-5.8.4__COPYING.GPLv2"
+      }
+    },
+    {
+      "bytes": 35149,
+      "recipient_path": "platform/image-baseline/notices/xz--xz-5.8.4__COPYING.GPLv3",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/xz--xz-5.8.4__COPYING.GPLv3"
+      }
+    },
+    {
+      "bytes": 26419,
+      "recipient_path": "platform/image-baseline/notices/xz--xz-5.8.4__COPYING.LGPLv2.1",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/xz--xz-5.8.4__COPYING.LGPLv2.1"
+      }
+    },
+    {
+      "bytes": 5127,
+      "recipient_path": "platform/image-baseline/notices/xz--xz-5.8.4__build-aux__license-check.sh",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "2b3fa1d23cb2ab084f3d919908159473cc0e1eed059d106e2a2857c0ec8af98a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/notices/xz--xz-5.8.4__build-aux__license-check.sh"
+      }
+    },
+    {
+      "bytes": 1507,
+      "recipient_path": "platform/image-baseline/recipes/alpine-base-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "5f3e6446e3e80b20e0f9986760b9f151e47e723e57d32c108bce617846d05b52",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-base-APKBUILD"
+      }
+    },
+    {
+      "bytes": 8670,
+      "recipient_path": "platform/image-baseline/recipes/alpine-baselayout-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "aef255516b71e39109860b92eb027a0986d90197427fb93ec91ebcd04bf59763",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-baselayout-APKBUILD"
+      }
+    },
+    {
+      "bytes": 5259,
+      "recipient_path": "platform/image-baseline/recipes/alpine-keys-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "cb352e13b9e481b424763bd36d3afdb81ac308e508abed15eb7175530050bd3f",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/alpine-keys-APKBUILD"
+      }
+    },
+    {
+      "bytes": 3962,
+      "recipient_path": "platform/image-baseline/recipes/apk-tools-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "492db5ec3ca2ca6cfd3cc4e5b52a0262ca7bd9c77299344efb4d786c596b7005",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/apk-tools-APKBUILD"
+      }
+    },
+    {
+      "bytes": 24569,
+      "recipient_path": "platform/image-baseline/recipes/busybox-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "98f019f62291aff63cb798f046fb59dfd43340885de63ca2f127651fc21d0450",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/busybox-APKBUILD"
+      }
+    },
+    {
+      "bytes": 2540,
+      "recipient_path": "platform/image-baseline/recipes/bzip2-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "7e046e9c4b1c265af9791a790049ed864c361c0949b9cd68564a48bc0f672de2",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/bzip2-APKBUILD"
+      }
+    },
+    {
+      "bytes": 2520,
+      "recipient_path": "platform/image-baseline/recipes/ca-certificates-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "0c14312c1d5c4a8b7ef74433be9db58517b17eb091bccdf2c8325bc4c9c26480",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/ca-certificates-APKBUILD"
+      }
+    },
+    {
+      "bytes": 2550,
+      "recipient_path": "platform/image-baseline/recipes/expat-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "40c194d5e234244805b965384fa6d47557aceb344e1cd92095695b17acc326f5",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/expat-APKBUILD"
+      }
+    },
+    {
+      "bytes": 31920,
+      "recipient_path": "platform/image-baseline/recipes/gcc-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "71d831dbef88c2b0ff7b36b7422e878a07751419583a44b06cda2e561cdb82d4",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/gcc-APKBUILD"
+      }
+    },
+    {
+      "bytes": 1078,
+      "recipient_path": "platform/image-baseline/recipes/gdbm-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "862f63ae6868bb40b80a3da3c97d6e603af549e05c3051ceadcfa4ad7b135f1b",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/gdbm-APKBUILD"
+      }
+    },
+    {
+      "bytes": 1053,
+      "recipient_path": "platform/image-baseline/recipes/libffi-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "7dcba5b144b4882426dbd4fcacf10c09d19e3c4347cdd8faa7c1946912b55c1f",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/libffi-APKBUILD"
+      }
+    },
+    {
+      "bytes": 947,
+      "recipient_path": "platform/image-baseline/recipes/mpdecimal-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "3838e02aad7a5984e8c1296c3741ac4f82e643d24bbc1aade02288b600d62bb7",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/mpdecimal-APKBUILD"
+      }
+    },
+    {
+      "bytes": 6282,
+      "recipient_path": "platform/image-baseline/recipes/musl-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "db4e568cdf2b256815fdfdb55704cd2efdffdc0e8ecd0cb935fdc3e89e2140f4",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/musl-APKBUILD"
+      }
+    },
+    {
+      "bytes": 4624,
+      "recipient_path": "platform/image-baseline/recipes/ncurses-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "9801a0e262437b470ddfd6c35e55c231a79b6903262fe68df8a547845d095d6a",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/ncurses-APKBUILD"
+      }
+    },
+    {
+      "bytes": 26490,
+      "recipient_path": "platform/image-baseline/recipes/nginx-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "7ad654bba0d8704a0941c41b654e13759d9d6c84b1954eceb5905111f11fb1a0",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/nginx-APKBUILD"
+      }
+    },
+    {
+      "bytes": 7297,
+      "recipient_path": "platform/image-baseline/recipes/openssl-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "ea459c051ee8d846c06f1d47d09d0f737778502c01de88c9696e96a208de5943",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/openssl-APKBUILD"
+      }
+    },
+    {
+      "bytes": 1568,
+      "recipient_path": "platform/image-baseline/recipes/pax-utils-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "f33df75f467601dcd73038b4e15029de60338a5f3f7d9a37574475a723b07c20",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/pax-utils-APKBUILD"
+      }
+    },
+    {
+      "bytes": 1871,
+      "recipient_path": "platform/image-baseline/recipes/pcre2-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "49a612c42929ff12532525282be2e7bb2146b40321e170ca8c03ec6824de25be",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/pcre2-APKBUILD"
+      }
+    },
+    {
+      "bytes": 7702,
+      "recipient_path": "platform/image-baseline/recipes/python3-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "40fd3da413d7788612a203cb0d556cfe600a0d76eb1a3cad3b85c2e37afc75a3",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/python3-APKBUILD"
+      }
+    },
+    {
+      "bytes": 2415,
+      "recipient_path": "platform/image-baseline/recipes/readline-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "d6ea7771ae1475b0f0843ed543664beba1beea893a99000dbb34ef20878cf4e9",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/readline-APKBUILD"
+      }
+    },
+    {
+      "bytes": 2972,
+      "recipient_path": "platform/image-baseline/recipes/sqlite-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "8e0cdc5e9d36fa52760c2b89b538e0125552ee0b53451a0712c33b7dcdd609dd",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/sqlite-APKBUILD"
+      }
+    },
+    {
+      "bytes": 1571,
+      "recipient_path": "platform/image-baseline/recipes/xz-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "e66901db8f5fe99356c3ccda131290c2639a940238c998fec2ce30d7c06982c3",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/xz-APKBUILD"
+      }
+    },
+    {
+      "bytes": 1134,
+      "recipient_path": "platform/image-baseline/recipes/zlib-APKBUILD",
+      "role": "retained_platform_source_recipe_or_notice_scope_requires_exact_match",
+      "sha256": "c9348892bf3857602fe74fcc1d411e263b408b7d70344170396f5993a62bbe26",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/recipes/zlib-APKBUILD"
+      }
+    },
+    {
+      "bytes": 70086,
+      "recipient_path": "platform/image-baseline/source-delivery-references.json",
+      "role": "historical_platform_evidence_not_final_image_clearance",
+      "sha256": "cfa53cd1f97a04e77b53b4bcb4755b6f34faf88cf2c5d7c47fb4fb99e0f47d2e",
+      "source": {
+        "kind": "repository_file",
+        "path": "THIRD_PARTY/platform/image-baseline/source-delivery-references.json"
+      }
+    },
+    {
+      "bytes": 1845,
+      "recipient_path": "recipe/Dockerfile",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "f62ee8f5fe238942a03b0a2d89671b91c2c67793028e1bc9a2c4cb416ed70e23",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/Dockerfile"
+      }
+    },
+    {
+      "bytes": 200495,
+      "recipient_path": "recipe/builder-apk-db.txt",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "5fce25705af80735a3190699fe6dca25ec649cf04c1d56597989d1de3345bc13",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/builder-apk-db.txt"
+      }
+    },
+    {
+      "bytes": 2711,
+      "recipient_path": "recipe/builder-apks.json",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "5ca83b21c531948a4469afa9a0312a5115d181709c33b3279dcd9f864daba3bd",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/builder-apks.json"
+      }
+    },
+    {
+      "bytes": 2045,
+      "recipient_path": "recipe/candidate.json",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "84f825a7ee511c9b4547bfd3b3f67b3fdff1ef769bec1a971bb2c932b6150991",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/candidate.json"
+      }
+    },
+    {
+      "bytes": 32971,
+      "recipient_path": "recipe/candidate.py",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "d41db22cdbe63d524b517fdf1039a3d9a8c464b430863a31a449b5903e5b6256",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/candidate.py"
+      }
+    },
+    {
+      "bytes": 18315,
+      "recipient_path": "recipe/curl-build.zig",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "2e422b3cd0669ef3d3d028b9b104f842dbbd4061bd78593b39775fefa805c092",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/curl-build.zig"
+      }
+    },
+    {
+      "bytes": 386,
+      "recipient_path": "recipe/curl-build.zig.zon",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "5a2e9e951b89a95794550cdf5d12cb6a8a7e349f1ce76092dea4fbdd2e1a8b78",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/curl-build.zig.zon"
+      }
+    },
+    {
+      "bytes": 769,
+      "recipient_path": "recipe/curl-overlay.json",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "17a76479d88f56e5cd98539647af755de453a85b6095bf3a56e4047d519a098e",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/curl-overlay.json"
+      }
+    },
+    {
+      "bytes": 2524,
+      "recipient_path": "recipe/dependency-manifests.json",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "c0c5b01d2609c3aa0b267eae2dee7ccc9227001ea47d7d922cc83a469ed99983",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/dependency-manifests.json"
+      }
+    },
+    {
+      "bytes": 2067,
+      "recipient_path": "recipe/inputs.json",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "01c83a954542c6b7470f6e91fc6cf24069582563cc1d282d5046be4e98d81006",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/inputs.json"
+      }
+    },
+    {
+      "bytes": 40259,
+      "recipient_path": "recipe/openssl-archives.json",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "b0fd578ee68e621344ecec801b9094ffdcd0c5e07c5139c6bdd95c129a7d940b",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/openssl-archives.json"
+      }
+    },
+    {
+      "bytes": 892294,
+      "recipient_path": "recipe/openssl-cache.json",
+      "role": "original_baseline_recipe_or_build_receipt",
+      "sha256": "f12932bcf9105e5954fbc435828ca0df8f26bbb89d340ae3b6c373c930f8a9fa",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/openssl-cache.json"
+      }
+    },
+    {
+      "bytes": 10303,
+      "recipient_path": "source-cache-inventory.json",
+      "role": "retained_declaration_to_source_cache_mapping",
+      "sha256": "0c9675128feda7370a81ef33781c12a82bd07d955f19409561b9d8440357582e",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/source-cache-inventory.json"
+      }
+    },
+    {
+      "bytes": 220821885,
+      "recipient_path": "sources/source-materials.tar.gz",
+      "role": "opaque_exact_corresponding_source_archive",
+      "sha256": "8ed4fc8a6b4c1acba3e4e89860a4059e490feb3efaf2a818805770f24f65654f",
+      "source": {
+        "kind": "repository_file",
+        "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz"
+      }
+    },
+    {
+      "bytes": 287,
+      "recipient_path": "test-results.json",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "11cfa058206f3a78ba428ede0ad7280d6072d2c544630f03b6c4f200c2dd69b6",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/test-results.json"
+      }
+    },
+    {
+      "bytes": 5864,
+      "recipient_path": "test_assemble.py",
+      "role": "recipient_instructions_or_machine_readable_evidence",
+      "sha256": "b2b9a92e5fcc195d5427582e8e36d5e3ceb306fa25340e1d4817a876f9ec99d9",
+      "source": {
+        "kind": "repository_file",
+        "path": "docs/license-preparation/baseline-recipient/test_assemble.py"
+      }
+    }
+  ],
+  "entry_count": 275,
+  "inventory_summary": {
+    "archive_member_count": 26600,
+    "archive_notice_files": 52,
+    "archive_type_counts": {
+      "directory": 1591,
+      "file": 24998,
+      "symlink": 11
+    },
+    "historical_wrapper_files": 24,
+    "installed_origin_count": 23,
+    "installed_package_count": 36,
+    "package_tree_count": 24
+  },
+  "schema_version": 1,
+  "selected_baseline": {
+    "adapter": {
+      "bytes": 17617,
+      "path": "build_issue3_amd64_curl_package_02/context/tools/browser-importer/runtime.py",
+      "sha256": "cfaadc5ce7901640f4a99aeb7ea4e5bd05e7ffb1795bcf048cf39d66e97dd823"
+    },
+    "architecture": "linux/amd64",
+    "curl_version": "8.23.0",
+    "executable": {
+      "bytes": 42399776,
+      "path": "build_issue3_amd64_curl_build_02/artifact/urbit",
+      "sha256": "58d07af97926e04bc17184bc18f53e5fb11d84fed63bd9daf2fe4ceb04c86698"
+    },
+    "image_id": "sha256:333864be7b25a51c4daf25156ced45424c1dfbfd27273e1aa2b320d95a356f8b",
+    "openssl_version": "3.5.9",
+    "selection": "retained-amd64-curl-baseline",
+    "source_archive": {
+      "bytes": 220821885,
+      "path": "build_issue3_amd64_curl_build_02/artifact/source-materials.tar.gz",
+      "sha256": "8ed4fc8a6b4c1acba3e4e89860a4059e490feb3efaf2a818805770f24f65654f"
+    },
+    "vere_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+    "zig_version": "0.15.2"
+  },
+  "status": "SEALED_RETAINED_BASELINE_COMPANION_WITH_EXPLICIT_GAPS"
+}

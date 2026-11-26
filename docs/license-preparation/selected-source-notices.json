@@ -1,0 +1,467 @@
+{
+  "scope": "Non-comment .c source names in ext/avahi/build.zig; includes conditional platform branches; header classification only, not exhaustive license/binary audit",
+  "files": [
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-client/browser.c",
+      "sha256": "162ce2133a738b04dfd2c8ff298324c468e580ea30fbb50ec60eb0a345413f31",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-client/check-nss.c",
+      "sha256": "52dc218025dcb48f668e7a6d3e371ccce2aea74602ea1c0712ab88258fbb3a6c",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-client/client.c",
+      "sha256": "691403a901b29fb25cedce7be0b9f3125d7f3fa71ed14e259c9c4031a4db8cbe",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-client/entrygroup.c",
+      "sha256": "1f0ffcbf228142ea5406d8326f1fc9ce1ee60c6cba60fa06da4a22a6c648b006",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-client/resolver.c",
+      "sha256": "6e449edfcb1717db1126e8239af2ca38ddc1c9e2ad50f942ca0b31890694454e",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-client/xdg-config.c",
+      "sha256": "bd408cb1d504aa497664300b0d15530d25974843be19adf224eb82b2a8438fa8",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/address.c",
+      "sha256": "c49155c733e67e274c3efb3f86f85d69a94fe348074c5ef595d9e2e9018f3fef",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/alternative.c",
+      "sha256": "f2b6f880dac4caae022953917e52917fe0d00bb25edf95d165118c04d0400b64",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/dbus-watch-glue.c",
+      "sha256": "d1f00a48ebee8850cc277ba971d703183c1667827ea5d91fa0b5f9b84948432c",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/dbus.c",
+      "sha256": "5a9d30fee89662b178a301543f4c6aa3bac55677949fa4edcff724e72977cad1",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/domain.c",
+      "sha256": "c12a74cb4e2dc92038cfaeda3fac2a3e14d8a8f0e464011de715445ccbc24c03",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/error.c",
+      "sha256": "76dfc5677d048b2f60934f0a8d9b19ec1af0dbd258e9d89eee0feea38ecd02a5",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/i18n.c",
+      "sha256": "d380b332e238b6985f7ea6b45e327e4a89971752f4197cdfb4a5929ccca377d3",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/malloc.c",
+      "sha256": "89dc7b5123c84b2fc9ac0e646699f50554ca9e28d212c3b36eab8a77d95dcb5e",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/rlist.c",
+      "sha256": "bc60a98180ce9d2c0a4c8ef0a6cf9a7184caf300f91aa332ad15b63c21b00163",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/simple-watch.c",
+      "sha256": "8dbb67d7c29095b7045c30c4dc7dd1ee479212c6bde11c0399e0773b54061dbd",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/strlst.c",
+      "sha256": "10bfde428fa636cb03288b89c4cd1853ec93a4d012a74513a53fa940793967d3",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/thread-watch.c",
+      "sha256": "bbe2d137da9218ea627a9cbaf05d8b780c3839ca52016de1de08dfd760c2d89a",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/timeval.c",
+      "sha256": "ab6dd477466df0430fb516afdd1e6ca45ea408b88d7727e3929d7a3e0c205c04",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-common/utf8.c",
+      "sha256": "96883b7bbb8a7fe6f20a5f9541702ac911e737e9e617e3bcb2b41aea46958362",
+      "notice_class": "Literal GNU Lesser GPL version 2 or later; preserve wording; GLib-derived attribution"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-compat-libdns_sd/compat.c",
+      "sha256": "b48b2b1b9791e7697e2b83e296451336f643c0c11e15d2b94acaee8f87da5f90",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-compat-libdns_sd/txt.c",
+      "sha256": "be93d5a56b2d9eae17a4e89740b262b437f2ee85282ca50d3683f5c8ec551d31",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-compat-libdns_sd/unsupported.c",
+      "sha256": "860e905f88c201142d35ae2183134c049dfabc17e7097869d34b8aeb23ebea81",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "avahi",
+      "member": "p/N-V-__8AAOLVeQDfYsiL0A86OXqDtfyLSrZXiEu8RSplOJJ5/avahi-compat-libdns_sd/warn.c",
+      "sha256": "09420d7681af83a0c453745c4955bde5fe360e5a3f1f60ce3951fcef77731623",
+      "notice_class": "LGPL-2.1-or-later"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-address.c",
+      "sha256": "734205c689c2c875480e590e5161f9f75c2d5f3b768b5a0e1d096942f9ba56c0",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-auth.c",
+      "sha256": "c30a70e3a69f37c9502f2fbbd22f3ae32d4faf037135bfcddcdd3ad391378397",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-bus.c",
+      "sha256": "fd3eb57aa49cdb8324b03e1dff2e3ff19ce7ce086b75d69ade7e4903fc3e0c62",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-connection.c",
+      "sha256": "3883e12fa1b2a3d2975e636cb1d01bac5bf729ef3311a365bd742ca9066a16dd",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-credentials.c",
+      "sha256": "90abde0d8cbdd7a4e89a65caf82e4e7661ae1c28437a3cc86a66bcac5b5bb809",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-dataslot.c",
+      "sha256": "67a60fba8aa1f5b089d317ed5d73b6c977e0bd072f8f27b46740bc978308789b",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-errors.c",
+      "sha256": "6cb7e4a9698bcfea2ee56a645d223a94ef6f3795e5603cfb60a47f3b95ee48f7",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-file-unix.c",
+      "sha256": "615e0fdd00567198be9e959fc83565c9911ff68afd13844a4ec3608a169001e2",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-file-win.c",
+      "sha256": "b3f2e42e944bfde09cda73c6fa58e2d75f1658687af78df400e40702e0b994b5",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-file.c",
+      "sha256": "22023a3eddb084d064f6d16ee5f12124818337bb7e45601af550ccd4aabc175c",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-hash.c",
+      "sha256": "9c0f63103b5673c1d0b6c21f419b2fc8605ef39faa0f2b0ccf212d02174272cc",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-internals.c",
+      "sha256": "c6dc83b6c4a13921c2a423f0a0354648523f41b2a468af5d4d18c5f383bde756",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-keyring.c",
+      "sha256": "748efa82167b2a786e71827782a722f9f2cba3b3dc6e0626123835f4459bc99e",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-list.c",
+      "sha256": "52cd0df14439c33af224b046213013074caa28a8820e29c76da3280c42720e85",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-marshal-basic.c",
+      "sha256": "5695218fd4a61e3e888395eafcae9ffaaf307bae6534f03db5cc9cb88f2c019e",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-marshal-byteswap.c",
+      "sha256": "4f3f798daa1d315e9ed1c68eace5a63862338cd69068ed797660d9c8ad9c29bc",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-marshal-header.c",
+      "sha256": "523edab210e7af838b4469c9ddacd189217a2ee237b608934d5a52c6d22eb188",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-marshal-recursive.c",
+      "sha256": "7e9237fa810b04ba5dfeaf053f1eddd98aca1f1c5894d6c9c7af5e54443d3752",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-marshal-validate.c",
+      "sha256": "e65afdc80be613b23f80592cdfe10223a498a14473ba74a5d131c63b364d05f0",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-memory.c",
+      "sha256": "fa7db65ae5a27cc9898dcdc72a80eaf918e30f1e7c040a83814420e6c8da69c7",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-mempool.c",
+      "sha256": "89c6075e5695f6dea4ad34958e26281acbc952a9a54fa603cf74350882e32ef3",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-message.c",
+      "sha256": "022de0666d41a9e014a163eb382d68dff85c202b5af91782e0bba3a031ab88e5",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-misc.c",
+      "sha256": "6d1789e9eaf5d5386deb66c0a6f467b2701911b4bd40e255243f21ef4ccd2bee",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-nonce.c",
+      "sha256": "6352bb3092fcc78d58b598908ae5bda674c27a591c038360c718b32d3f494ac6",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-object-tree.c",
+      "sha256": "4d26336fded71ca1e2a05534a605a4cf98d572759672323363f8e8f7ffc019e9",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-pending-call.c",
+      "sha256": "16dee76e1c3e758016a4d941f3d5a0ffdeace992ae5807547c69d8da19899bf0",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-pipe-unix.c",
+      "sha256": "bb6483794fd09461f0867a0cfe24a1da92f2df5c46cce4086e819c0d448ec39c",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-pipe-win.c",
+      "sha256": "50396734bfe1ee340818671bb309b6bdd13603a9f28f5e2968e58aa2d8577ea8",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-pipe.c",
+      "sha256": "c826903ff91eaccf359e043c1a8a5bf34eb347200c5c7ae5790d0e262eea2ec8",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-resources.c",
+      "sha256": "2b44fd05a842c4b5a2c9605ae025b7f421be96391ca741850a7d393bbc73e465",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-server-debug-pipe.c",
+      "sha256": "065c20be529d2dd0c335a5291be2f7752c69721f9a300aa6688fc885514dfcda",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-server-socket.c",
+      "sha256": "8592455bddad3913cb981c12ff783f6e1bdb082dd48563959b1846ab25d6fdd8",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-server-unix.c",
+      "sha256": "77b5f6b89723a1bb76addcc02fd07e49329e3737b305330fcec93bf06e7ab048",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-server-win.c",
+      "sha256": "80194acdac6ea8b813c8ae486dd0b4f0b89b5a1b08054e4f0fdab0a81d310c27",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-server.c",
+      "sha256": "c76c6c49785b320267e37ddf65e4e534c842cc91bfe00a5b37e2f46248433102",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-sha.c",
+      "sha256": "0f17343877056f7bc46a2a7911fcd5dac1f8cfe213ded79f524674d66afc5f4c",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-signature.c",
+      "sha256": "90ea486088e783e2749fdc832a256ab3ff165890cd3dc96d311163e2739e351f",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-string.c",
+      "sha256": "6d80fbd552200cd5ec7e31d0e62aec851d76a379fc4db4d4c11705012c50d94b",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-syntax.c",
+      "sha256": "8c8038a7ca6a08089651fe2efc1054bea0d3a810b18b2b47e8234bf59a5de4fd",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-sysdeps-pthread.c",
+      "sha256": "1f867e164631eb65cd574ee5c35db2b5e2a10ff61fb70eaf3b41eab0cdfcd33d",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-sysdeps-thread-win.c",
+      "sha256": "011c5faf534225786c88e50d7312bca57832c8586c63d2ea09a4085cecb3ef34",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-sysdeps-unix.c",
+      "sha256": "1d892ae9ccd9ea48f8ed7132a9af76b94d0e9f5705b7ecf025c1be2f51d5fcc7",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-sysdeps-win.c",
+      "sha256": "cbdee65152e0cc483c006ae945ec71605d1535f1445f728466d377d0dcb99d09",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-sysdeps.c",
+      "sha256": "b13dc86ada924016c585f48db8988a86fac78e07db9d3a9f906b90e6304dae29",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-threads.c",
+      "sha256": "d3b27f8aa6413f9b8502a7b6b5bca24d91940ec224055d7d8d12747375e5e2e7",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-timeout.c",
+      "sha256": "2b14cc034ed6c464b67b833a82be8f6363af7907600cf9bb3ebc049ece24ed6b",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-transport-socket.c",
+      "sha256": "c51f42326c6240f1e81376a7ef67113570378cfadfe15514555cc9bcabd79e16",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-transport-unix.c",
+      "sha256": "7de0ef9fc515b554a1e651efdfa1aaf17447308e5f68baa9025e14b63b3f0303",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-transport-win.c",
+      "sha256": "f4c256d1b2ab2225afc1c37bdbde41e71a778e89ef27370fe74845bd92f570a5",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-transport.c",
+      "sha256": "1ed1effc5d72f2698bf6e22235707a92c15deae458f8e06caea584ceac404e7d",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-userdb.c",
+      "sha256": "b828f2906e54a0a36a2f794b84789fdbf1086c4fd6a612e320e4eda9c13ea355",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-uuidgen.c",
+      "sha256": "114d57c0f2bf579e8bd0d6bb2734c88413fd9a54ac6c617767bad66b21ece3a5",
+      "notice_class": "GPL-2.0-or-later alternative"
+    },
+    {
+      "component": "dbus",
+      "member": "p/N-V-__8AAEB_jACD3zKb7YOxOD4R_51AA41kNzD31hDwAmCN/dbus/dbus-watch.c",
+      "sha256": "08df96bf42719ffa2ec2668fc62904048665f062deb576abd140f3d7bd5dc25b",
+      "notice_class": "GPL-2.0-or-later alternative"
+    }
+  ]
+}

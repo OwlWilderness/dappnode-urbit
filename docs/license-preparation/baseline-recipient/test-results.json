@@ -1,0 +1,13 @@
+{
+  "actual_baseline_materialization": false,
+  "engine_accessed": false,
+  "errors": 0,
+  "failures": 0,
+  "fixture": "public inert file/tar bytes only",
+  "network_used": false,
+  "recipe_executed": false,
+  "schema_version": 1,
+  "skipped": 0,
+  "status": "PASS",
+  "tests_run": 15
+}

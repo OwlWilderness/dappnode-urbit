@@ -1,0 +1,777 @@
+{
+  "base": "7bb526ef1c7d74733af09ddc073ac852dcf609c3",
+  "byte_count": 1144345,
+  "entries": [
+    {
+      "mode": "0644",
+      "path": "build/Dockerfile.b04",
+      "reason": "coherent_build_source_family",
+      "sha256": "2edc0fbae2ee61c6fcb317804adb5c33f6a16ef174b396044edfa4c341762a54",
+      "size": 4258,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/Dockerfile.b04.dockerignore",
+      "reason": "coherent_build_source_family",
+      "sha256": "8b53181ee103a6c55057b9a14acae56dce235742cbe3d189076c433c2ba1f77f",
+      "size": 43416,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/baseline-release-notices.json",
+      "reason": "coherent_build_source_family",
+      "sha256": "07fef577da3329150ca0e2b4ea705719b1ee4aec5eb7b782c0dc8fac780d72e5",
+      "size": 128868,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/public-package-source-unit.json",
+      "reason": "coherent_build_source_family",
+      "sha256": "d5668a31df1c0ad0b843b9d7fa209bf61f5be29f480a7b351be3e61e977cdf3a",
+      "size": 60150,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/runtime-b04.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "fced18b0aae3d540b7cfebc72eb2b2f8a924e6e3ea674f6f8e7b5ff122862db9",
+      "size": 17624,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/Dockerfile",
+      "reason": "coherent_build_source_family",
+      "sha256": "2e26f93214e9cb4b5123c086af8481e859691272c8f87599cf92aafaced9f34b",
+      "size": 1933,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/README.md",
+      "reason": "coherent_build_source_family",
+      "sha256": "f0dfade9741b5172f843e453a6bc05b18531382b8e4d8d073e32a4b967f712b6",
+      "size": 4108,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64/builder-apks.json",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/builder-apks.json",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "5942d32787fa1915c655b0c964ba24f64b0d2d2a06a427afb4da8bc5fbf4dcbf",
+      "size": 2712,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/candidate.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "8770698e786d26d189d4b396ad95f05adc6627c84a2bf03431ab95cb37ad5069",
+      "size": 29999,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/diagnostic.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "c55bc17efde0048d5e6b9f82875d30994a826e23bd73f1cd8612af1243e1cd11",
+      "size": 7439,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/inputs.json",
+      "reason": "coherent_build_source_family",
+      "sha256": "ccd3f880a1ca35ac67da9027e2488519500bebaf6c268db7c4e8c910fecdcd28",
+      "size": 1387,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/musl.patch",
+      "reason": "coherent_build_source_family",
+      "sha256": "c6501045e9dc84f458d688a1f31b88964623ac78a9c90e17da3a0b9d11f5a483",
+      "size": 1000,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/openssl.patch",
+      "reason": "coherent_build_source_family",
+      "sha256": "1d997dd5a97a22329bf72fcbd2eed33fe48d07ea59b9a65bb9b9a4f7a0a9377e",
+      "size": 2078,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/spawn.patch",
+      "reason": "coherent_build_source_family",
+      "sha256": "346811227a7b7eac3043c1dd51842ad6d83b9451bf6703c895efc8d37814a05f",
+      "size": 1461,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/target-build.patch",
+      "reason": "coherent_build_source_family",
+      "sha256": "489db474b92a822ed16b345790f4a63914ac7e1de017446239c640702e73fb78",
+      "size": 583,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/uvm_issue3_diag.h",
+      "reason": "coherent_build_source_family",
+      "sha256": "c14c631d3f4034dbe2c6db358e038dd582ae36c3c4e4b9eef78682378be5fb7f",
+      "size": 5940,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-diag/vere.patch",
+      "reason": "coherent_build_source_family",
+      "sha256": "e52687c651cade8d587268b6a0cd1a43196f8a3487e18c5f8ea0f21f68015798",
+      "size": 11800,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64-diag/Dockerfile",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/Dockerfile",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "2e26f93214e9cb4b5123c086af8481e859691272c8f87599cf92aafaced9f34b",
+      "size": 1933,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/README.md",
+      "reason": "coherent_build_source_family",
+      "sha256": "fb52e0f213bb7be02f81231a7b4ed675204d3ff87c9d74b479ef7722b6a00677",
+      "size": 394,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64/builder-apks.json",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/builder-apks.json",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "5942d32787fa1915c655b0c964ba24f64b0d2d2a06a427afb4da8bc5fbf4dcbf",
+      "size": 2712,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/candidate.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "aec9ed778025317b6a310fea6988ae6ffd2d4bb3cfff81344b112097c05180fc",
+      "size": 30802,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/diagnostic.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "8bb5450eab9f16602fb5dfb2f2028bd13865dcc8dc85781e9c69846e4c746794",
+      "size": 7463,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64-diag/inputs.json",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/inputs.json",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "ccd3f880a1ca35ac67da9027e2488519500bebaf6c268db7c4e8c910fecdcd28",
+      "size": 1387,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64-diag/musl.patch",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/musl.patch",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "c6501045e9dc84f458d688a1f31b88964623ac78a9c90e17da3a0b9d11f5a483",
+      "size": 1000,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64-diag/openssl.patch",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/openssl.patch",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "1d997dd5a97a22329bf72fcbd2eed33fe48d07ea59b9a65bb9b9a4f7a0a9377e",
+      "size": 2078,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64-diag/spawn.patch",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/spawn.patch",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "346811227a7b7eac3043c1dd51842ad6d83b9451bf6703c895efc8d37814a05f",
+      "size": 1461,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64-diag/target-build.patch",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/target-build.patch",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "489db474b92a822ed16b345790f4a63914ac7e1de017446239c640702e73fb78",
+      "size": 583,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "build/vere-openssl3-arm64-diag/uvm_issue3_diag.h",
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/uvm_issue3_diag.h",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "c14c631d3f4034dbe2c6db358e038dd582ae36c3c4e4b9eef78682378be5fb7f",
+      "size": 5940,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64-heap/vere.patch",
+      "reason": "coherent_build_source_family",
+      "sha256": "4efedc5226f21790c6fd7706cd4eb146c256c766c5af2f293e005ca0fb915ceb",
+      "size": 12376,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64/Dockerfile",
+      "reason": "coherent_build_source_family",
+      "sha256": "df86b1d66c5f38902e5795cb90eb0eb8a16c78e8d251e49614f42e2a0cc07808",
+      "size": 1826,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64/builder-apks.json",
+      "reason": "coherent_build_source_family",
+      "sha256": "5942d32787fa1915c655b0c964ba24f64b0d2d2a06a427afb4da8bc5fbf4dcbf",
+      "size": 2712,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64/candidate.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "308a042b96a364f428ac75e5156222b04f49c5eee731e02c22e7cbba93fd2fd7",
+      "size": 30534,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64/inputs.json",
+      "reason": "coherent_build_source_family",
+      "sha256": "a33c6d09be816962da0b0499d83c35781dec8290fea7c3b25b49507ed4fb8b57",
+      "size": 1468,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64/package_image.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "62de787adbb9ed01c2d771ed5543c1f16f1a0ef7a0a28cc299b1603cd93c317a",
+      "size": 20413,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64/runtime-apks.json",
+      "reason": "coherent_build_source_family",
+      "sha256": "208ca276dc0f42f7f32ae74877788b86b4cc8b9cba59b4958e415a2f9e9f0f4e",
+      "size": 3098,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-openssl3-arm64/test_package_image.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "170ba07e2b4d264855aa4b6c4ba46e3da4211b1917586fe3aa3a7b6cdc802a56",
+      "size": 6582,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "build/vere-owned-b04.json",
+      "reason": "coherent_build_source_family",
+      "sha256": "a2cbe4d1fca671e481d460505fc7ae2c54cb199ff66bd9f6c95c4efa47d2f1d9",
+      "size": 746,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "diagnostics/issue3-termination-run/test_heap_capacity.py",
+      "reason": "focused_synthetic_capacity_test_dependency",
+      "sha256": "9562ee7f92ac31ce109844a803e93145c8dca34419e41a54d739ee837bf3b1df",
+      "size": 2359,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/README.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "26cee24c352b6c15e637a1d225a10ebde16a827fde53eaf4e83010d66d4ac847",
+      "size": 2253,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/b04-recipient/BUILD-RELINK.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "4bc1570eed2fa97591d4fed44d760b84b0a6013cff291fbb489a9e9f1ba8787e",
+      "size": 20305,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/b04-recipient/layout.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "655f8d706af79e9ca8059c0f9e20a2669580554834bc809c02be0f8d3c7ef8a6",
+      "size": 4091,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/BUILD-RELINK.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "f62fb8b9fd33c1ab0530ec663954ef08f0d1cd5ee0ce63e0e532154c16bdb518",
+      "size": 8301,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/MISSING-INPUTS.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "64c0eb9cde259f73e050de3414c85cdda76649a3fb40f81fdfde4b898aa66cda",
+      "size": 3189,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/NOTICES.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "dc212f0a48fec8cb93b2cac448d6b5c89b912fdbacccbd5371c6942986c30b4b",
+      "size": 3782,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/SOURCE-LOCATIONS.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "3a010d17111ab9a5a5827e0b37301104227d694e41041d5df97dbec9a3895032",
+      "size": 4693,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/assemble.py",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "1a4b46508879b9044b9b003803f2fff2cac3edaf93947443f1c0d25fe12c4386",
+      "size": 8208,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/bindings/saved-installed-apk-db.txt",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "68bb66604f3fa2854abe7cb80213b33bdf9f95b3c8a620ef6f996be7ca4b70f8",
+      "size": 103925,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/image-source-requirements.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "3489b92747239450c6a1d1c7e14d4b8e533ee59d703b2bd0b010936450f8d440",
+      "size": 99841,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/notices/archive/openssl-3.5.9/external/perl/Text-Template-1.56/LICENSE",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "9837f05336ef3cbacb6a96e1672a0426d81ad01191f214b8d48e22ca62338181",
+      "size": 18412,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/notices/archive/openssl-3.5.9/util/perl/OpenSSL/copyright.pm",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "04213b69dbebc8ba0dd8a6216af1d9422f9b63619c1cf2f1d8aa107b83bbb608",
+      "size": 1145,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "docs/license-preparation/texts/curl-8.23.0-COPYING.txt",
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/notices/archive/p/N-V-__8AAMjlVwH79yAHsK65VUcPuhOO6BWgpLDvvnlWPLly/COPYING",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681",
+      "size": 1088,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "docs/license-preparation/texts/avahi-source-header.txt",
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/notices/texts/avahi-source-header.txt",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "a15a5d1a6e09185c5cc0d4cb73dd9d6717a9f6ef2ad228d9f47cc8964c2f93e3",
+      "size": 741,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "docs/license-preparation/texts/avahi-utf8-header.txt",
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/notices/texts/avahi-utf8-header.txt",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "dd7b81540df5905090594029a5d45c3209f8368f9fe591ece86db67961b4b157",
+      "size": 962,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "docs/license-preparation/texts/curl-8.23.0-COPYING.txt",
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/notices/texts/curl-8.23.0-COPYING.txt",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681",
+      "size": 1088,
+      "type": "file"
+    },
+    {
+      "duplicate_of": "docs/license-preparation/texts/sigsegv-runtime-header.txt",
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/notices/texts/sigsegv-runtime-header.txt",
+      "reason": "byte_identical_layout_duplicate_in_published_family",
+      "sha256": "a59cedc6343cd4a4ad326c50c9cbf5a76123f8b19002167511e4a0063efae914",
+      "size": 797,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/package-context/.dockerignore",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "b4038fa2bcfff1f288fde519a9c566ea73a28e5356484e7dc59fdd4361635828",
+      "size": 42582,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/package-context/build/Dockerfile",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "b44662fba4fb19ad02b276bc00b55082df434c7ee575a0fb05e7cff0f9fc74b7",
+      "size": 2572,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/package-context/build/vere-release.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "b632a8b5925b3f19cc73f2db8d3e639dccb7f74928343c64c01b79779633b2d2",
+      "size": 278,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/package-context/tools/browser-importer/runtime.py",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "cfaadc5ce7901640f4a99aeb7ea4e5bd05e7ffb1795bcf048cf39d66e97dd823",
+      "size": 17617,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/recipe/Dockerfile",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "f62ee8f5fe238942a03b0a2d89671b91c2c67793028e1bc9a2c4cb416ed70e23",
+      "size": 1845,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/recipe/candidate.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "84f825a7ee511c9b4547bfd3b3f67b3fdff1ef769bec1a971bb2c932b6150991",
+      "size": 2045,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/recipe/candidate.py",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "d41db22cdbe63d524b517fdf1039a3d9a8c464b430863a31a449b5903e5b6256",
+      "size": 32971,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/recipe/curl-overlay.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "17a76479d88f56e5cd98539647af755de453a85b6095bf3a56e4047d519a098e",
+      "size": 769,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/recipe/dependency-manifests.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "c0c5b01d2609c3aa0b267eae2dee7ccc9227001ea47d7d922cc83a469ed99983",
+      "size": 2524,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/recipe/inputs.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "01c83a954542c6b7470f6e91fc6cf24069582563cc1d282d5046be4e98d81006",
+      "size": 2067,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/recipe/openssl-archives.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "b0fd578ee68e621344ecec801b9094ffdcd0c5e07c5139c6bdd95c129a7d940b",
+      "size": 40259,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/test-results.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "11cfa058206f3a78ba428ede0ad7280d6072d2c544630f03b6c4f200c2dd69b6",
+      "size": 287,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/baseline-recipient/test_assemble.py",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "b2b9a92e5fcc195d5427582e8e36d5e3ceb306fa25340e1d4817a876f9ec99d9",
+      "size": 5864,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/citation-ledger.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "70cca49c40e71ad1d80b8e24a41a267e5e060cda1593efb7bc9ec28ba575d657",
+      "size": 4097,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/draft-recipient-notices.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "06f3a8f688f88dbf1cf12b309533db5e7565aeca05f7023da446f6ae2d886850",
+      "size": 7179,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/selected-source-notices.json",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "32aaac7b70a3a5a213f8f7b683f2c67e4af727171cb16a528b589288f68593ae",
+      "size": 20808,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/source-delivery-checklist.md",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "b609b0237eda808f50edb07f22a0ad757a3b86949b2745098a47d52e0d91e865",
+      "size": 8183,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/texts/avahi-source-header.txt",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "a15a5d1a6e09185c5cc0d4cb73dd9d6717a9f6ef2ad228d9f47cc8964c2f93e3",
+      "size": 741,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/texts/avahi-utf8-header.txt",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "dd7b81540df5905090594029a5d45c3209f8368f9fe591ece86db67961b4b157",
+      "size": 962,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/texts/curl-8.23.0-COPYING.txt",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681",
+      "size": 1088,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/license-preparation/texts/sigsegv-runtime-header.txt",
+      "reason": "license_and_source_delivery_material",
+      "sha256": "a59cedc6343cd4a4ad326c50c9cbf5a76123f8b19002167511e4a0063efae914",
+      "size": 797,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-b04-readiness-independent-verdicts-20261101.md",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "c04dfb075af3034b71116352e1ff385376b144f348e873025ad24556d7337add",
+      "size": 4287,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-build-storage-reassessment.md",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "388827bf3473a23c306c1e4feaf8ee879b75463af3c0a86a2c517e1e35cad0af",
+      "size": 9999,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-distribution-license-review.json",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "00f53c2dcc83b3b8721b17997a2f477c1ed394030efa9cbe098b3480930a6bba",
+      "size": 16335,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-distribution-license-review.md",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "23bfda69f217cbe2546b7e2890fe74426165739dfde592539e3fad2220f89fda",
+      "size": 20086,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-external-observer-feasibility.md",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "db3083dc4b245a703ebe4a532efb858a8ffe796e0c8678ccd35b95b8cc3a15b7",
+      "size": 9248,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/openssl-structured-capture-scope.md",
+      "reason": "technical_design_review_or_protocol",
+      "sha256": "77533637e8156bfe44982c85d42b5648f869f5e8272af1018f08c18692f8dab6",
+      "size": 5758,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/openssl_memory_accounting_probe.py",
+      "reason": "focused_build_source_test",
+      "sha256": "d25a2f5458429816fb9d3209fba83abe48d25b521a85e7a6a5eb450340e76f0e",
+      "size": 2242,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_arm64_candidate.py",
+      "reason": "focused_build_source_test",
+      "sha256": "d7fd521453991043ad9914d5ba923566734493d511cea29aeb97ccfcf8ce1119",
+      "size": 5540,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_curl_candidate.py",
+      "reason": "focused_build_source_test",
+      "sha256": "2ff9b47753fdb598687c2b4df92dd2a022dfb7f8476db0b7748a536d945a6878",
+      "size": 19531,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_failure_source.py",
+      "reason": "focused_build_source_test",
+      "sha256": "64377d9c9c107d7919ca511ee60fed6db2ef7fd6cd6005c8104911548d11ae7f",
+      "size": 3933,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_fresh_attempt_preparation.py",
+      "reason": "focused_build_source_test",
+      "sha256": "3971efadf3255ae427f3565536467770113fcc8f7430a817c83c20ce6b159f92",
+      "size": 41694,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_link_capture_next.py",
+      "reason": "focused_build_source_test",
+      "sha256": "37f457a25b7f2e72b5c4c17ce3042dd26e10f13a7df60173a029cf44299d25ca",
+      "size": 17016,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_openssl_package_image.py",
+      "reason": "focused_build_source_test",
+      "sha256": "7a003eb8395a6d70461bcfea4522346e31f11b565d4dd586c6ffe178630a0ce9",
+      "size": 10490,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_container_build/__init__.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "676ffb93e5733e91edd99af38c625bc46b6e5fd35b79fe9deb292952b7427188",
+      "size": 80,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_container_build/supervisor.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "8e60d1866eb4d675717140c93e1ff67b8bc7c7325573eaece93e4042a4d6eb4f",
+      "size": 15279,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_container_build/transport.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "2962b7b5cd71920f00f73cd512f5b0fc41a45e8ac060b210c2156080a131a629",
+      "size": 3682,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_link_capture_next/execution_capture.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "62a6a14354bf4d423341afdc07a7de6b8a1dc9d49616b8d40f1a28087bcfcf41",
+      "size": 8679,
+      "type": "file"
+    },
+    {
+      "mode": "0644",
+      "path": "tools/issue3_link_capture_next/header_capture.py",
+      "reason": "coherent_build_source_family",
+      "sha256": "0b02674ede7a9904cc2f0221d1e9b4368b93e6ef760137226b9a8eea977c7e1c",
+      "size": 9487,
+      "type": "file"
+    }
+  ],
+  "issue": 3,
+  "path_count": 94,
+  "schema": 1,
+  "source_manifest_note": "local migration manifest; path intentionally omitted from public branch",
+  "source_manifest_sha256": "2a6b02058a33b49b45d1b08075275923fea2eeaa0e26ebd76df10da9fd2a9dd2"
+}
