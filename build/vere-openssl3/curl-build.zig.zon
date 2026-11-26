@@ -1,0 +1,17 @@
+.{
+    .name = .curl,
+    .fingerprint = 0x3e01b4d06e29bb1,
+    .version = "0.0.1",
+    .dependencies = .{
+        .curl = .{
+            .url = "https://curl.se/download/curl-8.23.0.tar.gz",
+            .hash = "N-V-__8AAMjlVwH79yAHsK65VUcPuhOO6BWgpLDvvnlWPLly",
+        },
+        .openssl = .{
+            .path = "../openssl",
+        },
+    },
+    .paths = .{
+        "",
+    },
+}

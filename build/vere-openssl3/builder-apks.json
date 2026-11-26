@@ -1,0 +1,127 @@
+{
+  "repository": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main",
+  "architecture": "x86_64",
+  "index_sha256": "569c174a31a8def1d1a37d59092af67fb4751a8310161e9e4cbacb264478992b",
+  "packages": [
+    {
+      "P": "gdbm",
+      "V": "1.26-r0",
+      "C": "Q1YZST2BJP5JqO4dj3oTcs9+OXczc="
+    },
+    {
+      "P": "libbz2",
+      "V": "1.0.8-r6",
+      "C": "Q1CFZrpcevl8JUdL6LJOi0jwEWtn0="
+    },
+    {
+      "P": "libcrypto3",
+      "V": "3.5.9-r0",
+      "C": "Q1HA3ulzTPIvyXzdGBkTu9cQ5t+wg="
+    },
+    {
+      "P": "libexpat",
+      "V": "2.9.0-r0",
+      "C": "Q1tugvqnkTpj2ncbvdqmrTiEIEf3g="
+    },
+    {
+      "P": "libffi",
+      "V": "3.5.2-r1",
+      "C": "Q1L3smH3/OzE7r2LMw5/b7gHE7/jo="
+    },
+    {
+      "P": "libgcc",
+      "V": "15.2.0-r5",
+      "C": "Q1N5wVbFPgzBQOh8ecCj3SK27lFVI="
+    },
+    {
+      "P": "libncursesw",
+      "V": "6.6_p20260516-r0",
+      "C": "Q1nzGObjJNaCcnSCkZTPasavut7RI="
+    },
+    {
+      "P": "libpanelw",
+      "V": "6.6_p20260516-r0",
+      "C": "Q1FJvcQ0Iy7RH8W7l1ulGaBxVKb1Y="
+    },
+    {
+      "P": "libssl3",
+      "V": "3.5.9-r0",
+      "C": "Q1IMTJDqnSCp3ToE3q3yxsT2QjNkM="
+    },
+    {
+      "P": "libstdc++",
+      "V": "15.2.0-r5",
+      "C": "Q1X3oq12RhKLoCzA1vuUZytoRWSNU="
+    },
+    {
+      "P": "make",
+      "V": "4.4.1-r4",
+      "C": "Q16u7esOU7FzmPmdhm1ULM2FUDXoc="
+    },
+    {
+      "P": "mpdecimal",
+      "V": "4.0.1-r0",
+      "C": "Q1DIHOsOi1lms8MPVXtY2cb+RvbvY="
+    },
+    {
+      "P": "musl",
+      "V": "1.2.6-r3",
+      "C": "Q1dw6DBNlY3O2Y12mX356Podtcoy8="
+    },
+    {
+      "P": "ncurses-terminfo-base",
+      "V": "6.6_p20260516-r0",
+      "C": "Q1nVUdgo6cjuUsWAHB1gRoKOvxV1I="
+    },
+    {
+      "P": "perl",
+      "V": "5.42.2-r1",
+      "C": "Q1clvjeUcP9oH3cO1yVEehtoqhJfo="
+    },
+    {
+      "P": "pyc",
+      "V": "3.14.10-r1",
+      "C": "Q1OiqKSdPiqsA9M/nJ3hloHfvjh1I="
+    },
+    {
+      "P": "python3",
+      "V": "3.14.10-r1",
+      "C": "Q1a+qIPEy2FFJVbGshcFR98i8a51M="
+    },
+    {
+      "P": "python3-pyc",
+      "V": "3.14.10-r1",
+      "C": "Q1Pp5h8UMZU5dqp8vPe99Kci0780c="
+    },
+    {
+      "P": "python3-pycache-pyc0",
+      "V": "3.14.10-r1",
+      "C": "Q1uFY5FcOlq3gIaGi0SeqBTqJkonk="
+    },
+    {
+      "P": "readline",
+      "V": "8.3.3-r1",
+      "C": "Q1lFsW43i8AORNidTegSS7p2R/300="
+    },
+    {
+      "P": "sqlite-libs",
+      "V": "3.53.4-r0",
+      "C": "Q192MM6zfCMrZgmGGuq2zbnNEg5vo="
+    },
+    {
+      "P": "xz",
+      "V": "5.8.4-r0",
+      "C": "Q1b6Vyrwi0ZRH0+1IQ52luL1O+D8s="
+    },
+    {
+      "P": "xz-libs",
+      "V": "5.8.4-r0",
+      "C": "Q1hQEGWxhighYwF0xmO0WXRGLCluE="
+    },
+    {
+      "P": "zlib",
+      "V": "1.3.2-r1",
+      "C": "Q1T1JcjMIE+EuLTKQNs744mVjwVsY="
+    }
+  ]
+}

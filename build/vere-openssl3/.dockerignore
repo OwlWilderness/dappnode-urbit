@@ -1,0 +1,10 @@
+**
+!Dockerfile
+!.dockerignore
+!candidate.py
+!inputs.json
+!builder-apks.json
+!curl-build.zig
+!curl-build.zig.zon
+!sha-stack.c
+!h2o-socket.c

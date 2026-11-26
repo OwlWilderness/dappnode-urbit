@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "candidate": "vere-4.6-uvm-openssl-3.5.9",
+  "target": "x86_64-linux-musl",
+  "vere_revision": "8ddc4b786979574dbfcb655e3db1b634f658d0de",
+  "openssl_version": "3.5.9",
+  "curl_version": "8.23.0",
+  "curl_buffer_sha256": "6de736fbbf1a751bed4c53b1be7cbec8d409722c978ac70e95d311d95aee606d",
+  "curl_overlays": {
+    "ext/curl/build.zig": {"file": "curl-build.zig", "sha256": "2e422b3cd0669ef3d3d028b9b104f842dbbd4061bd78593b39775fefa805c092"},
+    "ext/curl/build.zig.zon": {"file": "curl-build.zig.zon", "sha256": "5a2e9e951b89a95794550cdf5d12cb6a8a7e349f1ce76092dea4fbdd2e1a8b78"}
+  },
+  "h2o_overlay": {
+    "file": "h2o-socket.c",
+    "sha256": "d61916d7de924e2337b6a73dbcd044b525bf503b11affc53fd6f6c0ca90c37b2",
+    "build_sha256": "174d1bd82eb826b626f06be07ee69aec0091ff958f8f14c2564b1aed593793b0",
+    "upstream_sha256": "a301247dbd95f7145aa1cc3c83a720c93bf5d1d3d7a5a961846eea7dbfd8476d",
+    "upstream_revision": "3bbfe369a5c31d38cc1717e5281ca6af89ecf787"
+  },
+  "zig_version": "0.15.2",
+  "inputs": {
+    "vere": {
+      "url": "https://codeload.github.com/urbit/vere/tar.gz/8ddc4b786979574dbfcb655e3db1b634f658d0de",
+      "bytes": 5421036,
+      "sha256": "d432b0c019a328bfcb905b252d1801926379f5d82baf2bcdf0c95a10174250d3",
+      "root": "vere-8ddc4b786979574dbfcb655e3db1b634f658d0de"
+    },
+    "openssl": {
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz",
+      "bytes": 53279637,
+      "sha256": "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a",
+      "root": "openssl-3.5.9"
+    },
+    "zig": {
+      "url": "https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz",
+      "bytes": 53733924,
+      "sha256": "02aa270f183da276e5b5920b1dac44a63f1a49e55050ebde3aecc9eb82f93239",
+      "root": "zig-x86_64-linux-0.15.2"
+    }
+  },
+  "sha_overlay": {
+    "file": "sha-stack.c",
+    "sha256": "accc4d1ad3b9c87b0fd133d6cc6dc3230122d7bf7578676c55986af9f32e0b2c",
+    "build_sha256": "2f934b2194aeb38606789f96b57265cb46b50fe5d3f7c400c7d03171667b4c12",
+    "upstream_sha256": "f94d7003ea8b2f9994a57ab920a695fcf31c20bf3155e05603c7668f2f184fd5",
+    "upstream_revision": "6c93535d46adffcd1495f904bac91d43b2d6d555"
+  },
+  "ca_preimages": {
+    "pkg/vere/main.c": "206929fef62b6f7246b7313675b6120ab876bc7ae8c4399342e1f0eceaf48549",
+    "pkg/vere/vere.h": "20b6fe3b20f7100ec22ac47e1ecac20df4dc8a66475573cc0290e126e90f5c06"
+  },
+  "ca_hardening": {
+    "pkg/vere/main.c": "011926db2069a1bb2135ad6c5f0e5f12e98760e515eef6ed7cde5d21469fa1a7",
+    "pkg/vere/vere.h": "8a3c84f5f61721ca702d8948d0467850c3a288510ba47b53d3d3c9a894613d33",
+    "pkg/vere/io/cttp.c": "1670a8227f0b971eee5db4f06a0face9195d03d80af508eebdd295f42be105e2"
+  },
+  "allocation_hardening": {
+    "pkg/vere/io/cttp.c": "1670a8227f0b971eee5db4f06a0face9195d03d80af508eebdd295f42be105e2",
+    "pkg/vere/io/http.c": "b4ddbb4fbbd4954b4cca10ea6e93ec3dc06657a6f46247ccdbc182b66f2cb307"
+  },
+  "source_preimages": {
+    "ext/h2o/build.zig": "942bad939c453827422ff413f20cc083f097f5f74927f20df3a1b6d6d6fe033d",
+    "ext/h2o/build.zig.zon": "f34b10dac1bf01e4de26c545c55cede029bae7b86396019279eec5ea9782cb70",
+    "pkg/vere/vere.h": "20b6fe3b20f7100ec22ac47e1ecac20df4dc8a66475573cc0290e126e90f5c06",
+    "ext/urcrypt/build.zig": "e56c7b287026d6843f3b4c2bb865194c41d6247595e292d4900a7f3a3c18fd9d",
+    "ext/urcrypt/build.zig.zon": "ece29139d60d4b43b7ea3c8e8be65627ba1556dd86852c641a9ac7b5b962749f",
+    "pkg/vere/io/cttp.c": "257caa336c71e963be0b029796ef62c9e154806927d95a1f221b7dc5341e34b4",
+    "pkg/vere/io/http.c": "7f80902b1ce7ec0adf717d6dd5b58a5b4f4a6b0d9d6bb16719271e7ed3a721cf",
+    "pkg/vere/king.c": "49d175e108cfd77e531d3346b9449680cab7e3ba4a8885c66d806af5ed969801",
+    "ext/curl/build.zig": "4dd65bc503cd544d5e084e653fa33cdc5df7aca90e4e241f5d822466708d88a3",
+    "ext/curl/build.zig.zon": "d52647076f731bab3d2e9235b796cddb23cae4d80c7ea9dec56d87171c76ab0b",
+    "pkg/noun/manage.c": "25eaa5384e190067d19a4a731d120efb8174367bb02296e4b2b2d8b53f90fa68",
+    "build.zig": "d9d728703b3f61dc9352e5e9c856221d9e9272105434e6df2bb9c02e84ea4c34",
+    "ext/openssl/build.zig": "2bfcdfc57877a763e854848f89fe2caa594cf1608f693f24f96de87079d4f0a8",
+    "ext/openssl/build.zig.zon": "8b27bcbb962fe501c0f06cadb66c74bdd3a6260bd40858843ae59e41a36e3c98"
+  }
+}
