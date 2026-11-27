@@ -1,0 +1,57 @@
+{
+  "base_commit": "e49efa80e0316c4c396b4c42b8b62ba46dfcd97b",
+  "branch": "feat/17-portable-test-derivatives",
+  "entries": [
+    {
+      "dependency_references": [
+        "tools/issue3_openssl_owned_arena"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tests/test_openssl_arena_metrics.py",
+      "original_sha256": "7dacd027a4caa13645be5d0f01bf899d36f0dc80e59838bcc65a2199e85e8a7b",
+      "original_size": 7022,
+      "published_branch": "feat/17-portable-test-derivatives",
+      "published_path": "tests/test_openssl_arena_metrics.py",
+      "published_sha256": "5a65c18a5c51cc6b587439d0f0c03882629c057ae769aa7a4ec73c569bd477e2",
+      "source_issue": 17,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/owned_report.py",
+      "original_sha256": "2f50a02668a0b959de4bbabdb03b5df87222be64ce9053d56025cee500b06091",
+      "original_size": 22664,
+      "published_branch": "feat/17-portable-test-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/owned_report.py",
+      "published_sha256": "a2a403d86ba96d8705ab91e799ed90264c363853d1379ce424cff3ba3204f41a",
+      "source_issue": 17,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    }
+  ],
+  "non_claims": [
+    "No runtime, package, image, deployment, ship, VM, or merge acceptance.",
+    "No operational harness was executed.",
+    "Hard-coded personal scratch paths were converted to synthetic /tmp fixtures; Docker Desktop user sockets were converted to the conventional /var/run/docker.sock fixture."
+  ],
+  "purpose": "portable source-preservation derivative mapping",
+  "schema_version": 1,
+  "source_issue": 17
+}

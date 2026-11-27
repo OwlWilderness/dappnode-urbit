@@ -8,6 +8,6 @@ Excluded material remains in the independent migrated originals with an exact di
 
 ## Source-only verification
 
-All eight newly preserved Python files parsed successfully. The host-only arena-sizing checks recorded eight passes. Nineteen source-extraction checks skipped explicitly because the accepted public Vere source input was not supplied; no source bytes or pass result were fabricated.
+The original source-only execution selected eight newly preserved Python files and parsed them successfully. Independent read-only review later statically parsed all 25 Python paths added by queue commit `e49efa80e0316c4c396b4c42b8b62ba46dfcd97b`—20 unique blobs across those paths—with zero parse failures. This is static source coverage, not runtime execution. The host-only arena-sizing checks recorded eight passes. Nineteen source-extraction checks skipped explicitly because the accepted public Vere source input was not supplied; no source bytes or pass result were fabricated.
 
 No build, package/image qualification, installation, deployment, ship operation, runtime acceptance, merge, or issue closure is claimed. Ownership, quiescence, native runtime, package, and lifecycle acceptance remain on issue #17.
