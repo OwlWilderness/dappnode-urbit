@@ -1,0 +1,30 @@
+{
+  "schema": "issue3-b04-lifecycle-config-v1",
+  "state": "UNBOUND",
+  "stage": "lifecycle",
+  "attempt_id": null,
+  "artifacts": {
+    "image": null,
+    "executable_sha256": "f2eba68682650ab6d9712017781612f4dbc3c01411c1ba5c7c4ecbb0f186b6b5",
+    "executable_size": 42467624,
+    "adapter_sha256": "fced18b0aae3d540b7cfebc72eb2b2f8a924e6e3ea674f6f8e7b5ff122862db9",
+    "adapter_size": 17624
+  },
+  "inputs": {},
+  "predecessors": [],
+  "recipe_dir": null,
+  "package_dir": null,
+  "docker_context": "desktop-linux",
+  "docker_host": "unix:///var/run/docker.sock",
+  "bind_prefix": "/host_mnt",
+  "scratch": "/tmp",
+  "budget": {
+    "floor_bytes": 10737418240,
+    "growth_bytes": 7516192768,
+    "admission_bytes": 18253611008,
+    "task_bytes": 134217728,
+    "timeout_seconds": 1600,
+    "settlement_seconds": 210
+  },
+  "failure_model": "attended-best-effort-stop-retain"
+}

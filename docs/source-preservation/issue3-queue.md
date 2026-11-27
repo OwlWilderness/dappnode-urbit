@@ -8,6 +8,6 @@ Excluded material remains in the independent migrated originals with an exact di
 
 ## Source-only verification
 
-All eight newly preserved Python files parsed successfully. Focused host-only checks recorded 31 passed tests for the ARM64 recipe and link-capture source plus two explicit fixture-dependent skips. The retained ARM64 package-image test recorded one pass and three errors because the current published browser-importer verifier does not match its historical preimage. That mismatch is preserved as an issue-3 packaging blocker; it is not repaired or hidden by this source snapshot.
+The original source-only execution selected eight newly preserved Python files and parsed them successfully. Independent read-only review later statically parsed all 25 Python paths added by queue commit `2321047ebed51692fa45ccebb45c6870035e96a4`—25 unique blobs—with zero parse failures. This is static source coverage, not runtime execution. Focused host-only checks recorded 31 passed tests for the ARM64 recipe and link-capture source plus two explicit fixture-dependent skips. The retained ARM64 package-image test recorded one pass and three errors because the current published browser-importer verifier does not match its historical preimage. That mismatch is preserved as an issue-3 packaging blocker; it is not repaired or hidden by this source snapshot.
 
 No Vere/image/package build, installation, deployment, ship operation, runtime acceptance, merge, or issue closure is claimed. Runtime and packaging acceptance remain on issue #3.

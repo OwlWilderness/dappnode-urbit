@@ -1,0 +1,1343 @@
+{
+  "base_commit": "2321047ebed51692fa45ccebb45c6870035e96a4",
+  "branch": "feat/3-portable-source-derivatives",
+  "entries": [
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tests/test_b04_apk_transport.py",
+      "original_sha256": "3447bee610d359df57f4e7a2383c677ba75f0e8ee140ca7c5978f072aed1ea84",
+      "original_size": 1871,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_b04_apk_transport.py",
+      "published_sha256": "3447bee610d359df57f4e7a2383c677ba75f0e8ee140ca7c5978f072aed1ea84",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_crypto_tls_probe/timeout_observer/observer.py"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tests/test_crypto_tls_timeout_observer.py",
+      "original_sha256": "97240e6179329c78e50eb403ac4abb727cb0a8c68584902379487c7511ddf030",
+      "original_size": 11351,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_crypto_tls_timeout_observer.py",
+      "published_sha256": "97240e6179329c78e50eb403ac4abb727cb0a8c68584902379487c7511ddf030",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tests/test_crypto_tls_timeout_observer_correction.py",
+      "original_sha256": "7e98144907dccd94488736f29ec9c91ba4f069d56962a9625c3bb35bc15e28c9",
+      "original_size": 4667,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_crypto_tls_timeout_observer_correction.py",
+      "published_sha256": "7e98144907dccd94488736f29ec9c91ba4f069d56962a9625c3bb35bc15e28c9",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_crypto_tls_probe/prepare.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tests/test_openssl_b04_crypto_tls_probe.py",
+      "original_sha256": "1d13f8a993eab44e8ec7bc493faf84238fd59d107c606a1cd8d5d41ce6a4460b",
+      "original_size": 18897,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_openssl_b04_crypto_tls_probe.py",
+      "published_sha256": "3e9d0c6b84fa3232574e115620e90b3ad3c436d8a06f3e55e1058d8c2e98585a",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 2,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "macOS_/tmp_symlink_sensitive_fixture_guard",
+          "occurrences": 1,
+          "replacement": "resolved tempfile.gettempdir() authorization root"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tests/test_openssl_b04_probe_engine_policy.py",
+      "original_sha256": "7eb6b21522fdd16f0862cbb066adab65e7b1ebde36b9003343179e221d926120",
+      "original_size": 3221,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_openssl_b04_probe_engine_policy.py",
+      "published_sha256": "7eb6b21522fdd16f0862cbb066adab65e7b1ebde36b9003343179e221d926120",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe",
+        "tools.issue3_crypto_tls_probe.stage",
+        "tools/issue3_crypto_tls_probe",
+        "tools/issue3_crypto_tls_probe/phase_worker.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tests/test_openssl_b04_probe_outer.py",
+      "original_sha256": "bda8703aade20e4bbbdef2d1c696d15cfce14328a4f78910316882882e9756e1",
+      "original_size": 21196,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_openssl_b04_probe_outer.py",
+      "published_sha256": "fcfbc971585228f75adfd530c552db88e1d6049fa75e077cd1a96150f5e0e50b",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tests/test_openssl_b04_probe_settlement.py",
+      "original_sha256": "2f95364e8c27a8cfc1cef4b2178b987955ece532a593d0da780e5250392f2da6",
+      "original_size": 31895,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_openssl_b04_probe_settlement.py",
+      "published_sha256": "2f95364e8c27a8cfc1cef4b2178b987955ece532a593d0da780e5250392f2da6",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe.bind_b04",
+        "tools/issue3_crypto_tls_probe/cached_inputs.py",
+        "tools/issue3_crypto_tls_probe/execution.py",
+        "tools/issue3_crypto_tls_probe/stage.py",
+        "tools/issue3_crypto_tls_probe/supervisor.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tests/test_openssl_b04_probe_supervisor.py",
+      "original_sha256": "d85c23faaf92279cde6322524979336a1b3891ba6d574cb0230f3f166183950c",
+      "original_size": 18554,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_openssl_b04_probe_supervisor.py",
+      "published_sha256": "a972c5d82c8ab3b945d3af36af0fcdc891c1b1ffb1ae6bcf1d6559403b286adf",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 2,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "macOS_/tmp_symlink_sensitive_fixture_guard",
+          "occurrences": 1,
+          "replacement": "resolved tempfile.gettempdir() authorization root"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_link_capture_next/execution_capture.py"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tests/test_openssl_execution_capture.py",
+      "original_sha256": "db737bfea2619c61ae62f5dc17e69f815043ba85d76f8a4d0a6b1704ddb3a491",
+      "original_size": 10909,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_openssl_execution_capture.py",
+      "published_sha256": "db737bfea2619c61ae62f5dc17e69f815043ba85d76f8a4d0a6b1704ddb3a491",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_systemresources_diagnostic/guest.py"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tests/test_systemresources_diagnostic.py",
+      "original_sha256": "4a03c3c8c1e2f24b978ba628716806eac8d39fb0dadf57a431532f3dec67678c",
+      "original_size": 2390,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tests/test_systemresources_diagnostic.py",
+      "published_sha256": "4a03c3c8c1e2f24b978ba628716806eac8d39fb0dadf57a431532f3dec67678c",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_crypto_tls_probe/approved_worker_a.py",
+      "original_sha256": "d91454a87994af1e8a20657f384763bb7cdd91de71fc07d90135679112cc1db6",
+      "original_size": 3679,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/approved_worker_a.py",
+      "published_sha256": "c5a6eb5630e106b36ad4222c71d68b4d1e2007e4c225545767f39323ea98c1c8",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe",
+        "tools.issue3_fresh_attempt"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/bind_b04.py",
+      "original_sha256": "b7d4bf4be448a7422fecaafdd3d0c327b29deea8ed76e38e6d230ea2394b5eb4",
+      "original_size": 7516,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/bind_b04.py",
+      "published_sha256": "b7d4bf4be448a7422fecaafdd3d0c327b29deea8ed76e38e6d230ea2394b5eb4",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_crypto_tls_probe/cached_base.py",
+      "original_sha256": "24b5a22a4d15d22d07e37ef59e25c6bf16a2d93ed9dde4eab53103eb515f3e47",
+      "original_size": 7037,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/cached_base.py",
+      "published_sha256": "40450c6f2d6cb5930b4e03c3f218e2babdc82201aede3bebd1a92d157ac02934",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_crypto_tls_probe/cached_inputs.py",
+      "original_sha256": "5c2799f91cccc199b4c19145da6290866ba719c1cb3d8d98681d2c82baee2ba7",
+      "original_size": 4495,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/cached_inputs.py",
+      "published_sha256": "30eba58b6c20601817b1993d530d32f3d019a1213ac6882d4aea0d5cde2e47b8",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe.settlement_verifier",
+        "tools.issue3_crypto_tls_probe.watchdog",
+        "tools/issue3_crypto_tls_probe"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/docker_transport.py",
+      "original_sha256": "dad54b5f072610141e1f705097934c582ed8ae14bcfd73a40f7aad2dbe9e1863",
+      "original_size": 23782,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/docker_transport.py",
+      "published_sha256": "dad54b5f072610141e1f705097934c582ed8ae14bcfd73a40f7aad2dbe9e1863",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/execution.py",
+      "original_sha256": "f84e780bd29b44f63ab1dec19f45dcea0a883c280e8c10ac65e472da19884e47",
+      "original_size": 15974,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/execution.py",
+      "published_sha256": "f84e780bd29b44f63ab1dec19f45dcea0a883c280e8c10ac65e472da19884e47",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/host_cleanup_fixture.c",
+      "original_sha256": "99baf6bfb1c09316d0260a0a543f358d4988a43be6bdc28cb6193f609540b4aa",
+      "original_size": 2369,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/host_cleanup_fixture.c",
+      "published_sha256": "99baf6bfb1c09316d0260a0a543f358d4988a43be6bdc28cb6193f609540b4aa",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_crypto_tls_probe/phase_worker.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_crypto_tls_probe/outer.py",
+      "original_sha256": "98da7150014b48f21e1049f74f68bbb47d375bf23a261a05b1adb656047b8342",
+      "original_size": 25536,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/outer.py",
+      "published_sha256": "03e0751dea6fcc94b09edd85b9629258b3e4ed8d87ea6cb6db06ab6b67956c42",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/output_contract.py",
+      "original_sha256": "2219d9abd76800dc270c3ba09b81fb029103aa8c38e87b53f996e42673d4e91e",
+      "original_size": 8027,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/output_contract.py",
+      "published_sha256": "2219d9abd76800dc270c3ba09b81fb029103aa8c38e87b53f996e42673d4e91e",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe",
+        "tools.issue3_crypto_tls_probe.stage"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/phase_worker.py",
+      "original_sha256": "5b2c0043f6beb6e17708625e7acc90a94adb9af4f676453a3e275561374d2e37",
+      "original_size": 9009,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/phase_worker.py",
+      "published_sha256": "5b2c0043f6beb6e17708625e7acc90a94adb9af4f676453a3e275561374d2e37",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/prepare.py",
+      "original_sha256": "e4f630797a9840a99b1a6d20ce5c14fa0c13eeb9fe3cd5c88b8d93204e1359c7",
+      "original_size": 9834,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/prepare.py",
+      "published_sha256": "e4f630797a9840a99b1a6d20ce5c14fa0c13eeb9fe3cd5c88b8d93204e1359c7",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/probe.c",
+      "original_sha256": "0aa203963b9c393d7ab602f00634a5183be1e165ebdf7f22f0240a7ac5ee1301",
+      "original_size": 16442,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/probe.c",
+      "published_sha256": "0aa203963b9c393d7ab602f00634a5183be1e165ebdf7f22f0240a7ac5ee1301",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/settlement.py",
+      "original_sha256": "45a9440287b42f65b529c7012d72002ec60c9b56a62f01ef2978ec41655eb1f3",
+      "original_size": 3383,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/settlement.py",
+      "published_sha256": "45a9440287b42f65b529c7012d72002ec60c9b56a62f01ef2978ec41655eb1f3",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/settlement_verifier.py",
+      "original_sha256": "6b927b40a886d5b067a2c1f303edb117d5ff7d137067b6c71e13d743d4c13b6a",
+      "original_size": 5717,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/settlement_verifier.py",
+      "published_sha256": "6b927b40a886d5b067a2c1f303edb117d5ff7d137067b6c71e13d743d4c13b6a",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/stage.py",
+      "original_sha256": "ae5c1a1261952e693cee753665ee46d86a82501095b99a778d4c36265c4f64fa",
+      "original_size": 10606,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/stage.py",
+      "published_sha256": "ae5c1a1261952e693cee753665ee46d86a82501095b99a778d4c36265c4f64fa",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_crypto_tls_probe/probe.c"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/supervisor.py",
+      "original_sha256": "54183d6a09b2412243659a73b3b22a1d27b572466bf886b34a7e134e2b4aea52",
+      "original_size": 21036,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/supervisor.py",
+      "published_sha256": "54183d6a09b2412243659a73b3b22a1d27b572466bf886b34a7e134e2b4aea52",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/timeout_observer/observer.py",
+      "original_sha256": "946c590f8a7cb077ad091501d12984549077b9667713a569d7a9f9144025e33f",
+      "original_size": 12599,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/timeout_observer/observer.py",
+      "published_sha256": "946c590f8a7cb077ad091501d12984549077b9667713a569d7a9f9144025e33f",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_crypto_tls_probe"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/toolchain_stage.py",
+      "original_sha256": "1b3649704f3cee24963c7a892cb774ed747e1d85b70108291d7d7cdd225e1adc",
+      "original_size": 5264,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/toolchain_stage.py",
+      "published_sha256": "1b3649704f3cee24963c7a892cb774ed747e1d85b70108291d7d7cdd225e1adc",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/watchdog.py",
+      "original_sha256": "827be8edfdb7fc907117c6abb406eddde8052cb4162426b07802aa64acaa17fc",
+      "original_size": 4778,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/watchdog.py",
+      "published_sha256": "827be8edfdb7fc907117c6abb406eddde8052cb4162426b07802aa64acaa17fc",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_crypto_tls_probe/wire.py",
+      "original_sha256": "d0a1fa70daad6324510fb4599b6cebdac084ec83283bd05d0d0a93043fa494b9",
+      "original_size": 186,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_crypto_tls_probe/wire.py",
+      "published_sha256": "d0a1fa70daad6324510fb4599b6cebdac084ec83283bd05d0d0a93043fa494b9",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/b04_dependency_contract.py",
+      "original_sha256": "613dfe1fde467d605ddabc404d05357c37df714a56b075ecf52346b8f147dd76",
+      "original_size": 17500,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_dependency_contract.py",
+      "published_sha256": "8d3bbc678bf230a6f83831de17903ae1e5dd25a372c6b831c2208f5e682bbac1",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/base.py",
+      "original_sha256": "e1c48ca26300c46f65f0441edb26c9129cd9231d93e198a24b7434d8b8dcb7de",
+      "original_size": 18351,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/base.py",
+      "published_sha256": "e1c48ca26300c46f65f0441edb26c9129cd9231d93e198a24b7434d8b8dcb7de",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/bind_lifecycle.py",
+      "original_sha256": "f77913ae1266ab3bc2f6466ae46980a29a328216fc40b18c95425550a864e538",
+      "original_size": 5098,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/bind_lifecycle.py",
+      "published_sha256": "02fd70354097384f8d1d6e66a2df1abbd7c45206ae1ed9d56d2572f5cb3c1f37",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "fixture_boundary": "UNBOUND source-import fixture only; image and all input bindings remain null/empty, so effectful entrypoints refuse before Docker",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/config.json",
+      "original_sha256": "82fa625830171f741e0e2a043fe4364206ccf6338660f5a905d59517d39f394e",
+      "original_size": 925,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/config.json",
+      "published_sha256": "3337e3772819a225170e431abe97a4d6a96f7f9565f93c397214656c9fb178cd",
+      "source_issue": 3,
+      "synthetic_fixture": true,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/gate.py",
+      "original_sha256": "caf6826ea49bb17c49928ab045da17c54f3871b57fa518993032065f23439ba9",
+      "original_size": 11552,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/gate.py",
+      "published_sha256": "b801246cfcfc402b07bf6238178f7de32aab98514796d9e5a2b35cdab422cd20",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/lifecycle_guest.py",
+      "original_sha256": "476895d24b7396535a53ada8232e5845ab6a7c60c5f4b0196449768c4872c551",
+      "original_size": 18132,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/lifecycle_guest.py",
+      "published_sha256": "476895d24b7396535a53ada8232e5845ab6a7c60c5f4b0196449768c4872c551",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/lifecycle_watchdog.py",
+      "original_sha256": "64c082be2c4d0963114629520adde51656b683b2bb0a54b48e5a4e3e367c4def",
+      "original_size": 4194,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/lifecycle_watchdog.py",
+      "published_sha256": "64c082be2c4d0963114629520adde51656b683b2bb0a54b48e5a4e3e367c4def",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/run_lifecycle.py",
+      "original_sha256": "0bf129ea07462c908d6f1b6e0b09951641ef4ea0ec7dc8c8f8bb2a9c5d608e50",
+      "original_size": 21197,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/run_lifecycle.py",
+      "published_sha256": "0bf129ea07462c908d6f1b6e0b09951641ef4ea0ec7dc8c8f8bb2a9c5d608e50",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/settlement.py",
+      "original_sha256": "b905aa8247397645262abe81fc6f0499e76c1acc824d18fadd7c2acffbf76466",
+      "original_size": 3123,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/settlement.py",
+      "published_sha256": "b905aa8247397645262abe81fc6f0499e76c1acc824d18fadd7c2acffbf76466",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_lifecycle/settlement_verifier.py",
+      "original_sha256": "2e75d187d293c84836f50acd3c620609a73135c9eba1c80af122ef908b0f5afb",
+      "original_size": 5786,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_lifecycle/settlement_verifier.py",
+      "published_sha256": "2e75d187d293c84836f50acd3c620609a73135c9eba1c80af122ef908b0f5afb",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_fresh_attempt",
+        "tools/issue3_fresh_attempt/b04_package_execution.py",
+        "tools/issue3_fresh_attempt/b04_package_stage.py",
+        "tools/issue3_fresh_attempt/historical/package.py.txt"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_package_execution.py",
+      "original_sha256": "b589bb67010126de6a62d35f4d89fd57b83b7e82322468fb366ea637238dbc2a",
+      "original_size": 16049,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_package_execution.py",
+      "published_sha256": "b589bb67010126de6a62d35f4d89fd57b83b7e82322468fb366ea637238dbc2a",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/local-candidate/verify_image.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/b04_package_stage.py",
+      "original_sha256": "275c672bb0dd8c8dca628e53c00db0a3213de6c295de0c5b642dcd6b31aa999e",
+      "original_size": 20900,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_package_stage.py",
+      "published_sha256": "377a92262aec4a0cac16fe5b1ada2071dfb30dd16446cc4cedeb01df0735e66f",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_source_binding.py",
+      "original_sha256": "f0594e8733ad610e651d943fb2f50be4564e7de1d9981660d1e9d6f5cebcb875",
+      "original_size": 10477,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_source_binding.py",
+      "published_sha256": "f0594e8733ad610e651d943fb2f50be4564e7de1d9981660d1e9d6f5cebcb875",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_fresh_attempt/b04_source_binding.py",
+        "tools/issue3_fresh_attempt/b04_source_companion.py"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/b04_source_companion.py",
+      "original_sha256": "d2856153420d16410d6ad7e549ae61119a0397893f2cf61d6b129ee9708ed2fe",
+      "original_size": 13453,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/b04_source_companion.py",
+      "published_sha256": "d2856153420d16410d6ad7e549ae61119a0397893f2cf61d6b129ee9708ed2fe",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/buildkit_trial.py",
+      "original_sha256": "ad84d76ee76c30acdc2fc517d4fb391d62dbf3ec4e7ef6a1334aaf0405fc5809",
+      "original_size": 26955,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/buildkit_trial.py",
+      "published_sha256": "ad191757ad5f3f1f0f3838eb6ae2c901a49dabaab874e79e1781204f71924c52",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/cache_reuse.py",
+      "original_sha256": "9181d2ded9e633ddf40b3bd088b739d18fafca2a9cce57f155cf369e574417a6",
+      "original_size": 10483,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/cache_reuse.py",
+      "published_sha256": "c9a97b29d6e9d9830b2c8deb455df64333d3ca780e124b79e8f3e0d969e325e4",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools/browser-importer/runtime.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/gate.py",
+      "original_sha256": "4b8efc18b7982cd0ff25b057a462aa04c00802e53425b24ccc035055b78df133",
+      "original_size": 15669,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/gate.py",
+      "published_sha256": "f7e46f312e08a63361ac048d5bb3e7ff4f4ce651b8d13cddee19a44f07ce439c",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/local_build.py",
+      "original_sha256": "97ef4867aa648072d5ad002fefaa36f99ef17d146c24e3e1e0b97aeb18859f3f",
+      "original_size": 6148,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/local_build.py",
+      "published_sha256": "97ef4867aa648072d5ad002fefaa36f99ef17d146c24e3e1e0b97aeb18859f3f",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/local_dependencies.py",
+      "original_sha256": "65ed0c8f3e755de19eaefc1a8238537ba6f9cc264703b09dcea0a04623c29345",
+      "original_size": 5360,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/local_dependencies.py",
+      "published_sha256": "65ed0c8f3e755de19eaefc1a8238537ba6f9cc264703b09dcea0a04623c29345",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_fresh_attempt/historical"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/prepare.py",
+      "original_sha256": "6cd5a24c0adfe39af8c446bb4a70c4460e864d19f124a06de2a3ed8f1b780866",
+      "original_size": 14532,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepare.py",
+      "published_sha256": "34bd53d8fe0b04299591b32d15dbe9eccd15f56e6409105be397faffdd24525c",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 2,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools/browser-importer/runtime.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/build/gate.py",
+      "original_sha256": "4b8efc18b7982cd0ff25b057a462aa04c00802e53425b24ccc035055b78df133",
+      "original_size": 15669,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/build/gate.py",
+      "published_sha256": "f7e46f312e08a63361ac048d5bb3e7ff4f4ce651b8d13cddee19a44f07ce439c",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/build/run_build.py",
+      "original_sha256": "b24ec87367d231ac48ddb503f98c210b2294f36111735f19493a4ff72ae7fad2",
+      "original_size": 8042,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/build/run_build.py",
+      "published_sha256": "be6c05add91796840bc78f04ada2013d4b744a4cb4dbe17dbcc62d73061b2924",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tests/test_candidate_boot.py"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/base.py",
+      "original_sha256": "248adfa9f9d0f81f66cea830a53d3e31cf8313cc3b369cad6fb2f9dfe7b4e7bf",
+      "original_size": 25102,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/base.py",
+      "published_sha256": "248adfa9f9d0f81f66cea830a53d3e31cf8313cc3b369cad6fb2f9dfe7b4e7bf",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/browser-importer/runtime.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/gate.py",
+      "original_sha256": "4b8efc18b7982cd0ff25b057a462aa04c00802e53425b24ccc035055b78df133",
+      "original_size": 15669,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/gate.py",
+      "published_sha256": "f7e46f312e08a63361ac048d5bb3e7ff4f4ce651b8d13cddee19a44f07ce439c",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/lifecycle_guest.py",
+      "original_sha256": "91c7f813efa918719113be6792f9397241f6126c02ea9b4f77d7bc7f0a7029de",
+      "original_size": 13429,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/lifecycle_guest.py",
+      "published_sha256": "91c7f813efa918719113be6792f9397241f6126c02ea9b4f77d7bc7f0a7029de",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/run_lifecycle.py",
+      "original_sha256": "0f5d2daf9a7411dec3a3c0e86aea8d583d1e46f7bedd5579e58c9d8542b46065",
+      "original_size": 16539,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/lifecycle/run_lifecycle.py",
+      "published_sha256": "0f5d2daf9a7411dec3a3c0e86aea8d583d1e46f7bedd5579e58c9d8542b46065",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/browser-importer/runtime.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/package/gate.py",
+      "original_sha256": "4b8efc18b7982cd0ff25b057a462aa04c00802e53425b24ccc035055b78df133",
+      "original_size": 15669,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/package/gate.py",
+      "published_sha256": "f7e46f312e08a63361ac048d5bb3e7ff4f4ce651b8d13cddee19a44f07ce439c",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/package/run_build.py",
+      "original_sha256": "8b68ca8e5c7b5b3e0ce5bd23f2a0aaa2f7e404f1fb4ec5ebfe50e258e8302a99",
+      "original_size": 13614,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/package/run_build.py",
+      "published_sha256": "b3a7a5461f4ae10c6b98b717e108795920f33d2b2e351c41436ea5ecef0dcf66",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools/browser-importer/runtime.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/report/gate.py",
+      "original_sha256": "4b8efc18b7982cd0ff25b057a462aa04c00802e53425b24ccc035055b78df133",
+      "original_size": 15669,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/report/gate.py",
+      "published_sha256": "f7e46f312e08a63361ac048d5bb3e7ff4f4ce651b8d13cddee19a44f07ce439c",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        },
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/report/run_report.py",
+      "original_sha256": "236df7276bb4564fa11631a8c09120c7a81d12e539170545328428fd7bf6d5bb",
+      "original_size": 8932,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/report/run_report.py",
+      "published_sha256": "236df7276bb4564fa11631a8c09120c7a81d12e539170545328428fd7bf6d5bb",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/report/supervision.py",
+      "original_sha256": "5e01d492f032ad87b06c8922852dd2a8f6191d72bcfb59fc19f319683837aca9",
+      "original_size": 2152,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/prepared-unbound-reviewed-01/report/supervision.py",
+      "published_sha256": "5e01d492f032ad87b06c8922852dd2a8f6191d72bcfb59fc19f319683837aca9",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/progress_observer.py",
+      "original_sha256": "6ce993566a328e6b9687f7d64d478d2a09cd7786b5a0b4879a88f8f717425439",
+      "original_size": 16440,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/progress_observer.py",
+      "published_sha256": "6ce993566a328e6b9687f7d64d478d2a09cd7786b5a0b4879a88f8f717425439",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_fresh_attempt/supervision.py",
+      "original_sha256": "5e01d492f032ad87b06c8922852dd2a8f6191d72bcfb59fc19f319683837aca9",
+      "original_size": 2152,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_fresh_attempt/supervision.py",
+      "published_sha256": "5e01d492f032ad87b06c8922852dd2a8f6191d72bcfb59fc19f319683837aca9",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_fresh_attempt",
+        "tools.issue3_observed_compile"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/bind_b04.py",
+      "original_sha256": "0108cb5c5052698270d769369e25d8a6248c4ec67db74aa980fdef17ace01cbe",
+      "original_size": 7516,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/bind_b04.py",
+      "published_sha256": "0108cb5c5052698270d769369e25d8a6248c4ec67db74aa980fdef17ace01cbe",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_observed_compile/cached_base.py",
+      "original_sha256": "24b5a22a4d15d22d07e37ef59e25c6bf16a2d93ed9dde4eab53103eb515f3e47",
+      "original_size": 7037,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/cached_base.py",
+      "published_sha256": "40450c6f2d6cb5930b4e03c3f218e2babdc82201aede3bebd1a92d157ac02934",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_docker_socket",
+          "occurrences": 1,
+          "replacement": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_observed_compile/cached_inputs.py",
+      "original_sha256": "5c2799f91cccc199b4c19145da6290866ba719c1cb3d8d98681d2c82baee2ba7",
+      "original_size": 4495,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/cached_inputs.py",
+      "published_sha256": "30eba58b6c20601817b1993d530d32f3d019a1213ac6882d4aea0d5cde2e47b8",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_observed_compile.settlement_verifier",
+        "tools.issue3_observed_compile.watchdog",
+        "tools/issue3_observed_compile"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/docker_transport.py",
+      "original_sha256": "dcb4e41293cdb934cbdf5f841b4da6403d13ab303fda69a5305cffed92483fb3",
+      "original_size": 24713,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/docker_transport.py",
+      "published_sha256": "dcb4e41293cdb934cbdf5f841b4da6403d13ab303fda69a5305cffed92483fb3",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/execution.py",
+      "original_sha256": "807c6b7c4f57c4d070fcf568b9cf919b05085fb287f7f28fca1fd3c92e0dac5c",
+      "original_size": 16593,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/execution.py",
+      "published_sha256": "807c6b7c4f57c4d070fcf568b9cf919b05085fb287f7f28fca1fd3c92e0dac5c",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/observation.py",
+      "original_sha256": "6eb12efcfd5ac40bd022a767f3139d246b1b96748f2c06514b21433207771920",
+      "original_size": 5216,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/observation.py",
+      "published_sha256": "6eb12efcfd5ac40bd022a767f3139d246b1b96748f2c06514b21433207771920",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_observed_compile/phase_worker.py"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_observed_compile/outer.py",
+      "original_sha256": "ffbc82dc9ed2c35a1e4246e3439dd11175bece9c7dad32466527c09c5f401add",
+      "original_size": 25943,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/outer.py",
+      "published_sha256": "2238d620e699710c681aeeebb80ac0b48783e61bc7df997d6a64825a963d855b",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 1,
+          "replacement": "/tmp"
+        }
+      ]
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/output_contract.py",
+      "original_sha256": "378b0959349f20910e4f8b99d940fd0ef4e7ea0b30896092e684d0e44ad172e4",
+      "original_size": 11718,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/output_contract.py",
+      "published_sha256": "378b0959349f20910e4f8b99d940fd0ef4e7ea0b30896092e684d0e44ad172e4",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_observed_compile",
+        "tools.issue3_observed_compile.stage"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/phase_worker.py",
+      "original_sha256": "555d7a94781351436ad80b092eb86d9761c109c00312dd5dffc5410135bf2896",
+      "original_size": 9918,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/phase_worker.py",
+      "published_sha256": "555d7a94781351436ad80b092eb86d9761c109c00312dd5dffc5410135bf2896",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/prepare.py",
+      "original_sha256": "e4f630797a9840a99b1a6d20ce5c14fa0c13eeb9fe3cd5c88b8d93204e1359c7",
+      "original_size": 9834,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/prepare.py",
+      "published_sha256": "e4f630797a9840a99b1a6d20ce5c14fa0c13eeb9fe3cd5c88b8d93204e1359c7",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/probe.c",
+      "original_sha256": "0aa203963b9c393d7ab602f00634a5183be1e165ebdf7f22f0240a7ac5ee1301",
+      "original_size": 16442,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/probe.c",
+      "published_sha256": "0aa203963b9c393d7ab602f00634a5183be1e165ebdf7f22f0240a7ac5ee1301",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_observed_compile/probe.c"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/release.py",
+      "original_sha256": "4b3c58cd4fba5e35c709e29c110ab0725372035327d5f6ae5d6992f85d2e862a",
+      "original_size": 3247,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/release.py",
+      "published_sha256": "4b3c58cd4fba5e35c709e29c110ab0725372035327d5f6ae5d6992f85d2e862a",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/settlement.py",
+      "original_sha256": "45a9440287b42f65b529c7012d72002ec60c9b56a62f01ef2978ec41655eb1f3",
+      "original_size": 3383,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/settlement.py",
+      "published_sha256": "45a9440287b42f65b529c7012d72002ec60c9b56a62f01ef2978ec41655eb1f3",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/settlement_verifier.py",
+      "original_sha256": "6b927b40a886d5b067a2c1f303edb117d5ff7d137067b6c71e13d743d4c13b6a",
+      "original_size": 5717,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/settlement_verifier.py",
+      "published_sha256": "6b927b40a886d5b067a2c1f303edb117d5ff7d137067b6c71e13d743d4c13b6a",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/stage.py",
+      "original_sha256": "ae5c1a1261952e693cee753665ee46d86a82501095b99a778d4c36265c4f64fa",
+      "original_size": 10606,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/stage.py",
+      "published_sha256": "ae5c1a1261952e693cee753665ee46d86a82501095b99a778d4c36265c4f64fa",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools/issue3_observed_compile/probe.c"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/supervisor.py",
+      "original_sha256": "c30743390ca4381344b0e45f4cbfa81eb4a1dffef8e4cefb3abc3b7fb1d4e3f4",
+      "original_size": 21685,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/supervisor.py",
+      "published_sha256": "c30743390ca4381344b0e45f4cbfa81eb4a1dffef8e4cefb3abc3b7fb1d4e3f4",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/timeout_observer.py",
+      "original_sha256": "946c590f8a7cb077ad091501d12984549077b9667713a569d7a9f9144025e33f",
+      "original_size": 12599,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/timeout_observer.py",
+      "published_sha256": "946c590f8a7cb077ad091501d12984549077b9667713a569d7a9f9144025e33f",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/toolchain_stage.py",
+      "original_sha256": "b3d030bbef259a1037f32563f6598f63b61577d81e6f1517e6ef024ce5627126",
+      "original_size": 5463,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/toolchain_stage.py",
+      "published_sha256": "b3d030bbef259a1037f32563f6598f63b61577d81e6f1517e6ef024ce5627126",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/watchdog.py",
+      "original_sha256": "827be8edfdb7fc907117c6abb406eddde8052cb4162426b07802aa64acaa17fc",
+      "original_size": 4778,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/watchdog.py",
+      "published_sha256": "827be8edfdb7fc907117c6abb406eddde8052cb4162426b07802aa64acaa17fc",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_observed_compile/wire.py",
+      "original_sha256": "d0a1fa70daad6324510fb4599b6cebdac084ec83283bd05d0d0a93043fa494b9",
+      "original_size": 186,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_observed_compile/wire.py",
+      "published_sha256": "d0a1fa70daad6324510fb4599b6cebdac084ec83283bd05d0d0a93043fa494b9",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tests/test_systemresources_diagnostic.py",
+        "tools.issue3_crypto_tls_probe.docker_transport",
+        "tools.issue3_systemresources_diagnostic.host",
+        "tools/issue3_systemresources_diagnostic/guest.py",
+        "tools/issue3_systemresources_diagnostic/host.py"
+      ],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_systemresources_diagnostic/closeout.py",
+      "original_sha256": "36f18b96cf7922baa0534c6579463e63cca03f825778ea0ee18da2ecb026cf60",
+      "original_size": 7290,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_systemresources_diagnostic/closeout.py",
+      "published_sha256": "36f18b96cf7922baa0534c6579463e63cca03f825778ea0ee18da2ecb026cf60",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [],
+      "final_disposition": "published_exact_portable_source",
+      "original_path": "tools/issue3_systemresources_diagnostic/guest.py",
+      "original_sha256": "7b1cea692af9bf059e17ff1388de777fc3108baf47a2def7046c058d876fc7e7",
+      "original_size": 7521,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_systemresources_diagnostic/guest.py",
+      "published_sha256": "7b1cea692af9bf059e17ff1388de777fc3108baf47a2def7046c058d876fc7e7",
+      "source_issue": 3,
+      "transformations": []
+    },
+    {
+      "dependency_references": [
+        "tools.issue3_crypto_tls_probe",
+        "tools.issue3_crypto_tls_probe.docker_transport",
+        "tools.issue3_crypto_tls_probe.outer"
+      ],
+      "final_disposition": "published_sanitized_portable_derivative",
+      "original_path": "tools/issue3_systemresources_diagnostic/host.py",
+      "original_sha256": "29abf37d2b0f9f18150994eafcfda577853e4caa68d34aa631303e09fe6521c9",
+      "original_size": 10681,
+      "published_branch": "feat/3-portable-source-derivatives",
+      "published_path": "tools/issue3_systemresources_diagnostic/host.py",
+      "published_sha256": "f68036af87c6d4d725af1edf6c060ca5fae05a4dddfd1d66372193f107b6458c",
+      "source_issue": 3,
+      "transformations": [
+        {
+          "from_kind": "personal_scratch_root",
+          "occurrences": 2,
+          "replacement": "/tmp"
+        }
+      ]
+    }
+  ],
+  "non_claims": [
+    "No runtime, package, image, deployment, ship, VM, or merge acceptance.",
+    "No operational harness was executed.",
+    "Hard-coded personal scratch paths were converted to synthetic /tmp fixtures; Docker Desktop user sockets were converted to the conventional /var/run/docker.sock fixture."
+  ],
+  "purpose": "portable source-preservation derivative mapping",
+  "schema_version": 1,
+  "source_issue": 3
+}
